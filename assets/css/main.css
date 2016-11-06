@@ -599,6 +599,10 @@ figure {
   margin-top: 30px;
   margin-bottom: 10px; }
 
+.highlight code {
+  background: initial;
+  padding: 0; }
+
 .highlight {
   border: 1px solid #ddd;
   padding: 10px;

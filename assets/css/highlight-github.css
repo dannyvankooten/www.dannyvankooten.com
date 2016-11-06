@@ -1,3 +1,7 @@
+.highlight code {
+  background: initial;
+  padding: 0; }
+
 .highlight {
   border: 1px solid #ddd;
   padding: 10px;
