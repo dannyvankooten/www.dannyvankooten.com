@@ -8,7 +8,7 @@ tags:
 - wordpress
 ---
 
-<p>Contact Form 7 is one of the most popular free contact form plugins for WordPress and MailChimp is an enormously powerful email marketing tool. There are quite a few guides on the internet telling you how to make the two work together. Unfortunately, most of them seem to overcomplicate things or use improper and unmaintainable code.</p>
+ontact Form 7 is one of the most popular free contact form plugins for WordPress and MailChimp is an enormously powerful email marketing tool. There are quite a few guides on the internet telling you how to make the two work together. Unfortunately, most of them seem to overcomplicate things or use improper and unmaintainable code.
 
 This post will show you how to add a MailChimp sign-up checkbox to your Contact Form 7 form without writing a single line of code.
 
@@ -16,14 +16,12 @@ This post will show you how to add a MailChimp sign-up checkbox to your Contact 
 
 People who send you a message will be able to subscribe to your MailChimp list(s) with ease. You can choose to have the checkbox pre-checked so it doesn't even require them to click.
 
-<strong>Requirements</strong>
-<ul>
-	<li><a href="http://wordpress.org/plugins/contact-form-7/">Contact Form 7</a></li>
-	<li><a title="MailChimp for WordPress" href="https://mc4wp.com/">MailChimp for WordPress Pro</a> or even <a href="http://wordpress.org/plugins/mailchimp-for-wp/">the free version</a</li>
-	<li><a href="http://eepurl.com/FLbC9">A MailChimp account</a> (referral link, we'll both get $30 in so-called MonkeyRewards if you use this link to sign-up to MailChimp)</li>
-</ul>
+**Requirements**
+- [Contact Form 7](http://wordpress.org/plugins/contact-form-7/)
+- [MailChimp for WordPress Pro](https://mc4wp.com/) or even [the free version](http://wordpress.org/plugins/mailchimp-for-wp/)
+- [A MailChimp account](http://eepurl.com/FLbC9) (referral link, we'll both get $30 in so-called MonkeyRewards if you use this link to sign-up to MailChimp)
 
-<h3>Adding the sign-up checkbox to your Contact Form 7 template</h3>
+### Adding the sign-up checkbox to your Contact Form 7 template
 To add the newsletter sign-up checkbox to your contact form we can use a simple shortcode that comes with the MailChimp for WordPress plugin when you have Contact Form 7 enabled.
 
 ```html
@@ -32,7 +30,7 @@ To add the newsletter sign-up checkbox to your contact form we can use a simple 
 
 As you can see, I added a custom label text but this is completely optional.
 
-<strong>That's it. We're done. No additional code is required. </strong> 
+<strong>That's it. We're done. No additional code is required. </strong>
 
 The plugin will automatically find the email address of the person filling out your contact form and add it to the selected list(s) in *MailChimp for WP > Checkboxes*.
 
@@ -43,7 +41,7 @@ So your list has a required field which holds the first name of every subscriber
 ```
 [text* mc4wp-FNAME]
 ```
-The part after the dash should match the "merge tag" of the list field. 
+The part after the dash should match the "merge tag" of the list field.
 
 Let's do another example but this time for a list field called `WEBSITE`. This time, we'll be using the Contact Form 7 "Generate Tag" tool.
 

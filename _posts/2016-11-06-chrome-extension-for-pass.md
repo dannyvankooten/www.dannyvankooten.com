@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gopass, a Chrome extension for Pass.
+title: Gopass, a Chrome extension for Pass
 date: '2016-11-06 15:30:00'
 tags:
 - pass
