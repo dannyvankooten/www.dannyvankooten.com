@@ -9,7 +9,7 @@ const gutil = require('gulp-util');
 const autoprefixer = require('gulp-autoprefixer');
 
 
-gulp.task('default', ['sass', 'jekyll', 'watch']);
+gulp.task('default', ['sass', 'watch']);
 
 gulp.task('sass', function () {
     var files = './assets/sass/[^_]*.scss';
