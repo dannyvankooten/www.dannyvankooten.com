@@ -1,0 +1,53 @@
+.container {
+  box-sizing: border-box;
+  max-width: 720px;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+.row {
+  display: flex;
+
+  margin: {
+    left: -20px;
+    right: -20px;
+  }
+}
+
+.col {
+  margin: {
+    left: 20px;
+    right: 20px;
+  }
+
+  box-sizing: border-box;
+}
+
+.col-1 {
+  max-width: 100%/6*1;
+}
+
+.col-2 {
+  max-width: 100%/6*2;
+}
+
+.col-3 {
+  max-width: 100%/6*3;
+}
+
+.col-4 {
+  max-width: 100%/6*4;
+}
+
+@media screen and (max-width: 640px) {
+  .row {
+    display: block;
+  }
+
+  .col {
+    max-width: 100%;
+  }
+
+}

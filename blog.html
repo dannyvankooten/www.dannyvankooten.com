@@ -1,0 +1,21 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+
+<div class="home">
+
+    <p>Sometimes, I write.</p>
+
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+            <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp;
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe to my writings via RSS</a>.</p>
+</div>

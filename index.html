@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div role="main" class="post-content">
+    <div class="row">
+        <div class="col col-3">
+            <p class="no-margin">Hi. I'm Danny, a 26 year old nerd.</p>
+            <p>I've been selling software as my sole source of income for a little over 4 years now.</p>
+            <p>While hospitalized in Vietnam a few years ago, I built a small product that started selling really well right away. (Luckily), I was blissfully unaware of a lot of the challenges that come with selling software.</p>
+            <p>I worked from warmer parts of the world for a few years and am now finally settling down in my home country, The Netherlands. At least for a little while.</p>
+            <p>If you want, read on <a href="/about">about me</a> or <a href="https://twitter.com/dannyvankooten">connect with me on Twitter</a>.</p>
+        </div>
+        <div class="col col-3">
+            <img src="/assets/img/danny-rico.jpg" height="300" width="300" alt="Danny with dog on Koh Lanta, Thailand." class="round centered" />
+        </div>
+    </div>
+
+    <h3>I blog (very little)</h3>
+    <ul class="post-list">
+        {% for post in site.posts limit:5 %}
+        <li>
+            <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp;
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p>View <a href="/blog">all posts on my blog</a>.</p>
+</div>

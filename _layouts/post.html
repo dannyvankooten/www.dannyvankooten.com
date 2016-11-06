@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="meta">
+      Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% if page.author %} by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% capture treshold %}{{'2015-07-01 00:00:00' | date: '%s'}}{% endcapture %}
+  {% capture posttime %}{{page.date | date: '%s'}}{% endcapture %}
+
+  {% if posttime < treshold %}
+
+  <div class="big-margin">
+    <div id="disqus_thread"></div>
+  </div>
+  <script>
+
+     var disqus_config = function () {
+       this.page.url = '{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}';
+     };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//dannyvankooten.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  {% endif %}
+
+</article>
+
+
