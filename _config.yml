@@ -24,4 +24,4 @@ exclude:
   - assets/sass
   - Gemfile
   - Gemfile.lock
-
+  - makefile
