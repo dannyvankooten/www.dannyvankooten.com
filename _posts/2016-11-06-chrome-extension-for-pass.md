@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gopass, a Chrome extension for Pass
+title: Browserpass, a Chrome extension for Pass
 date: '2016-11-06 15:30:00'
 tags:
 - pass
@@ -30,15 +30,15 @@ While tools like [guake (a drop down terminal)](http://guake-project.org/) allow
 
 A quick search for a Chrome extension for pass yielded no results, so I set off to build something myself.
 
-### Gopass. A Chrome extension for Pass using Golang.
+### Browserpass. A Chrome extension for Pass using Golang.
 
-The result is [chrome-gopass](https://github.com/dannyvankooten/chrome-gopass), a Chrome extension that uses native messaging to talk to a local binary written in Golang. The binary handles the interfacing between the browser extension and Pass in a secure way.
+The result is [browserpass](https://github.com/dannyvankooten/browserpass), a Chrome extension that uses native messaging to talk to a local binary written in Golang. The binary handles the interfacing between the browser extension and Pass in a secure way.
 
-![Chrome Gopass in action](/media/chrome-gopass.gif)
+![Browserpass in action](/media/chrome-gopass.gif)
 
-When using Chrome Gopass, your password store needs to have a directory structure of `DOMAIN/USERNAME.gpg` for the best results.
+When using Browserpass, your password store needs to have a directory structure of `DOMAIN/USERNAME.gpg` for the best results.
 
-Hit <strong>Ctrl + M</strong> or click the lock icon to open up Gopass. It will search for logins for the current domain by default, but the search field allows you to quickly grab any of your logins.
+Hit <strong>Ctrl + M</strong> or click the lock icon to open up Browserpass. It will search for logins for the current domain by default, but the search field allows you to quickly grab any of your logins.
 
 Cycle through the results using <strong>TAB</strong> and then hit <strong>ENTER</strong> to auto-fill & submit the login form.
 
