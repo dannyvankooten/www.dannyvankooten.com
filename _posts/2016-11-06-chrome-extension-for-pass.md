@@ -45,3 +45,5 @@ Cycle through the results using <strong>TAB</strong> and then hit <strong>ENTER<
 ### Installing the Chrome extension
 
 Prebuilt binaries for OSX and Linux are available. Please see [the README file](https://github.com/dannyvankooten/chrome-gopass/blob/master/README.md) for detailed installation instructions.
+
+_(Update Nov 28, 2016: [Browserpass is now available for Firefox as well](https://dannyvankooten.com/browserpass-for-firefox/))_
