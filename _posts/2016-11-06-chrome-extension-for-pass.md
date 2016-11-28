@@ -34,7 +34,7 @@ A quick search for a Chrome extension for pass yielded no results, so I set off 
 
 The result is [browserpass](https://github.com/dannyvankooten/browserpass), a Chrome extension that uses native messaging to talk to a local binary written in Golang. The binary handles the interfacing between the browser extension and Pass in a secure way.
 
-![Browserpass in action](/media/chrome-gopass.gif)
+![Browserpass in action](/media/browserpass.gif)
 
 When using Browserpass, your password store needs to have a directory structure of `DOMAIN/USERNAME.gpg` for the best results.
 
