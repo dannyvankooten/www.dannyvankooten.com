@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/dvk
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://dannyvankooten.com
+  * I am dvk (https://keybase.io/dvk) on keybase.
+  * I have a public key ASBHiG_tARNivYI4Uk9QPnOtfgyJYaeGhjcgCpqIIJChNgo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010132cadeb4d29f1368970177331d639013a1f9e33df490930b671a8589174a4edc0a",
+            "host": "keybase.io",
+            "kid": "012047886fed011362bd8238524f503e73ad7e0c8961a7868637200a9a882090a1360a",
+            "uid": "9b6d86d59f7380f45f37bb44f6137019",
+            "username": "dvk"
+        },
+        "service": {
+            "hostname": "dannyvankooten.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1483869435,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1483869246,
+        "hash": "f45b29ab2dc75ed9e6606ca9d3e81cc4a908fa97d7cefc53eb8ac613455b0d95a68aa2e173e7d34d9c43ca35b4991081a8da470c63ca439abc94568dab72e26f",
+        "seqno": 790700
+    },
+    "prev": "b6190514e3af9cae9f274c29cfb3c1896d1b5a3d32267542efb350524020c73e",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgR4hv7QETYr2COFJPUD5zrX4MiWGnhoY3IAqaiCCQoTYKp3BheWxvYWTFAvZ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxMzJjYWRlYjRkMjlmMTM2ODk3MDE3NzMzMWQ2MzkwMTNhMWY5ZTMzZGY0OTA5MzBiNjcxYTg1ODkxNzRhNGVkYzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNDc4ODZmZWQwMTEzNjJiZDgyMzg1MjRmNTAzZTczYWQ3ZTBjODk2MWE3ODY4NjM3MjAwYTlhODgyMDkwYTEzNjBhIiwidWlkIjoiOWI2ZDg2ZDU5ZjczODBmNDVmMzdiYjQ0ZjYxMzcwMTkiLCJ1c2VybmFtZSI6ImR2ayJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiZGFubnl2YW5rb290ZW4uY29tIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMTgifSwiY3RpbWUiOjE0ODM4Njk0MzUsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ4Mzg2OTI0NiwiaGFzaCI6ImY0NWIyOWFiMmRjNzVlZDllNjYwNmNhOWQzZTgxY2M0YTkwOGZhOTdkN2NlZmM1M2ViOGFjNjEzNDU1YjBkOTVhNjhhYTJlMTczZTdkMzRkOWM0M2NhMzViNDk5MTA4MWE4ZGE0NzBjNjNjYTQzOWFiYzk0NTY4ZGFiNzJlMjZmIiwic2Vxbm8iOjc5MDcwMH0sInByZXYiOiJiNjE5MDUxNGUzYWY5Y2FlOWYyNzRjMjljZmIzYzE4OTZkMWI1YTNkMzIyNjc1NDJlZmIzNTA1MjQwMjBjNzNlIiwic2Vxbm8iOjEwLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQGfgpX196Yrfe94QSHAkhLF/1V+YSPc1zFPkY6iuflZcwm257HAR5ks37m+fI2EIJEUsT8aYiwY5XgxRTCHKtQ2oc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCBn867WUTZrC+QO1QXzEkeA0jMjdcu7V+EXI0FEWacUxqN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dvk
+
+==================================================================
