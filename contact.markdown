@@ -18,7 +18,7 @@ This will guarantee a (_much_) faster response time.
 
 __Need support for a [free WordPress plugin](/wordpress-plugins/)?__
 
-Please use the appropriate [plugin support forum on WordPress.org](http://wordpress.org/support/).
+Please use the appropriate [plugin support forum on WordPress.org](https://wordpress.org/support/).
 
 __Need my business details?__
 
@@ -30,8 +30,10 @@ The Netherlands <br>
 CoC 65413741
 </address>
 
-Need our VAT number? Shoot me an email using the email address below.
+Need our VAT number? Please contact me using the email address below.
 
 __Need anything else?__
 
-Shoot me an email at [&#104;&#105;&#64;&#100;&#97;&#110;&#110;&#121;&#118;&#97;&#110;&#107;&#111;&#111;&#116;&#101;&#110;&#46;&#99;&#111;&#109;](mailto:&#104;&#105;&#64;&#100;&#97;&#110;&#110;&#121;&#118;&#97;&#110;&#107;&#111;&#111;&#116;&#101;&#110;&#46;&#99;&#111;&#109;).
+Send me an email at [&#104;&#105;&#64;&#100;&#97;&#110;&#110;&#121;&#118;&#97;&#110;&#107;&#111;&#111;&#116;&#101;&#110;&#46;&#99;&#111;&#109;](mailto:&#104;&#105;&#64;&#100;&#97;&#110;&#110;&#121;&#118;&#97;&#110;&#107;&#111;&#111;&#116;&#101;&#110;&#46;&#99;&#111;&#109;).
+
+Should it be private? Here's my [PGP public key](/media/public-key.txt).

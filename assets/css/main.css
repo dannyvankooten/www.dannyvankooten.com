@@ -443,7 +443,7 @@ textarea {
 body {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.4;
   padding: 20px;
   color: #222;
   overflow-y: scroll; }
@@ -602,7 +602,7 @@ blockquote {
   margin-right: 8px; }
 
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5 {
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 10px; }
 
 .highlight code {
