@@ -18,7 +18,7 @@ A few hours later my appendix was removed in surgery - I have a photo but I will
 The next week I was on a lot of painkillers, bored and sleeping the days away in my hospital bed. The room was better than the hostels I had been staying in and a team of nurses was taking great care of me (and asking me to marry them, but that's another story). I was actually enjoying my time in the hospital.
 
 <h3>First lines of code</h3>
-A Dutch friend brought me flowers and my laptop - gold. I couldn't be more exited, after all I would have plenty of time to work on that idea I had for a new plugin.
+A Dutch friend brought me flowers and my laptop - gold. I couldn't be more excited, after all I would have plenty of time to work on that idea I had for a new plugin.
 
 I started playing around (coding) and a few days later, the first version of <a href="https://mc4wp.com/">MailChimp for WordPress</a> was available for download from the WordPress.org plugin repository. It didn't do much besides adding a sign-up checkbox to your registration and comment forms but it was enough to have users provide me with valuable feedback. :)
 
