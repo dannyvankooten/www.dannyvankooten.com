@@ -27,14 +27,14 @@ Curous what blocking European customers (not businesses) entirely would actually
 | Category        | %           |
 | ------------- |:-------------:|
 | EU Consumer      | 18,5% |
-| EU Business      | 13%      |
-| Non-EU   |  68,5     |
+| EU Businesses      | 13%      |
+| Non-EU   |  68,5%     |
 
 About 18.5% of our revenue came from people (not businesses) living in one of the EU member states¹. Of that number, an average of 20% is collected taxes that we had to pay out to each member state using a rather cumbersome process. 
 
 With profit margins as high as 90% in the software industry, it's not hard to imagine this being a viable option for businesses that do not yet have the resources available to properly handle VATMOSS. 
 
-This is the sad result of VATMOSS in practice, hurting where it shouldn't.
+This is the sad result of VATMOSS in practice. Hurting where it shouldn't.
 
 <hr />
 
