@@ -72,9 +72,13 @@ table {
 
 table th,
 table td {
+  word-break: break-all;
   text-align: left;
   border: 1px solid #eee;
   padding: 3px 6px; }
+
+tbody > tr:nth-of-type(odd) {
+  background: rgba(50, 50, 50, 0.025); }
 
 hr {
   height: 0;

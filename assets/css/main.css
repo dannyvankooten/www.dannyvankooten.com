@@ -440,6 +440,14 @@ textarea {
   margin-right: auto;
   display: block; }
 
+@media (min-width: 600px) {
+  .desktop-pull-right {
+    float: right;
+    margin-left: 20px; }
+  .desktop-pull-left {
+    float: left;
+    margin-right: 20px; } }
+
 body {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   font-size: 16px;
@@ -514,9 +522,13 @@ table {
 
 table th,
 table td {
+  word-break: break-all;
   text-align: left;
   border: 1px solid #eee;
   padding: 3px 6px; }
+
+tbody > tr:nth-of-type(odd) {
+  background: rgba(50, 50, 50, 0.025); }
 
 hr {
   height: 0;

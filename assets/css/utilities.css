@@ -73,3 +73,11 @@
   margin-left: auto;
   margin-right: auto;
   display: block; }
+
+@media (min-width: 600px) {
+  .desktop-pull-right {
+    float: right;
+    margin-left: 20px; }
+  .desktop-pull-left {
+    float: left;
+    margin-right: 20px; } }

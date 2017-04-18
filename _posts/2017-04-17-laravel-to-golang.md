@@ -11,7 +11,7 @@ Earlier this year, I made an arguably bad business decision. I decided to rewrit
 
 No regrets though. 
 
-<img style="height: 400px; width: auto; margin-left: 40px;" class="pull-right small-margin" src="/media/2017-04-boxzilla-platform.jpg">
+<img style="height: 400px; width: auto;" class="desktop-pull-right small-margin" src="/media/2017-04-boxzilla-platform.jpg">
 
 Just a few weeks later I was deploying the Go application. Building it was the most fun I had in months, I learned a ton and the end result is a huge improvement over the old application. Better performance, easier deployments and higher test coverage. 
 
@@ -27,7 +27,7 @@ Last year I've been moving several services over to Go, so I wasn't completely n
 
 If I were an employee, I'd simply apply for a new job to make up for this lack of sexy tech. Being the boss, I owe it to myself to make my day-to-day work fun and not just chase more immediate $$$. If revenue allows (and it does), why not have a little fun?
 
-It's a joy to write Go code, the tooling is amazing and it's not only fast to develop in, the end result is usually crazy fast too. Just reading about [the purpose of the Go project](should be enough to convince most) sold me on the language. 
+It's a joy to write Go code, the tooling is amazing and it's not only fast to develop in, the end result is usually crazy fast too. Just reading about [the purpose of the Go project](https://golang.org/doc/faq#What_is_the_purpose_of_the_project) sold me on the language. 
 
 I think we'll see a crazy amount of people switching from dynamically typed languages like PHP, Python and JavaScript to Go in the next few years.
 
@@ -39,7 +39,7 @@ ORM's are one thing that always end up getting in my way, so I went for a mockab
 
 To support hierarchical templates and partials I open-sourced [grender](https://github.com/dannyvankooten/grender), a tiny wrapper around Go's standard html/template package. This allowed me to port the Blade template files to Go with relative ease, since I could use the same hierarchical structure and partial templates.
 
-For integrating with Stripe there is the official [stripe-go](https://github.com/stripe/stripe-go) package. For Braintree there is the unofficial [braintree-go](https://github.com/lionelbarrow/braintree-go) package, which was neglected for a little while but received some renewed attention lately. Since there was no Go package to manage invoices in Moneybird yet, I built and open-sourced [moneybird-go](https://github.com/dannyvankooten/moneybird-go).
+For integrating with Stripe there is the official [stripe-go](https://github.com/stripe/stripe-go) package. For Braintree there is the unofficial [braintree-go](https://github.com/lionelbarrow/braintree-go) package, which was neglected for a little while but received renewed attention lately. Since there was no Go package to manage invoices in Moneybird yet, I built and open-sourced [moneybird-go](https://github.com/dannyvankooten/moneybird-go).
 
 ## Comparing apples vs oranges
 
