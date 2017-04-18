@@ -74,16 +74,34 @@ Please note that I ran the benchmark from the same machine as the applications w
 Let's compare the lines of code in both applications, including all vendored dependencies.
 
 ```
-find . -name '*.php' | xargs wc -l
+$ find . -name '*.php' | xargs wc -l
+156289 total
 ```
 
-The Laravel version consists of just over 450.000 lines of code. This is excluding any development dependencies which are needed to run tests etc.
+The Laravel version consists of just over 156.000 lines of code. This is excluding development dependencies which, with Laravel, are needed to run tests etc.
 
 ```
-find . -name '*.go' | xargs wc -l
+$ find . -name '*.go' | xargs wc -l
+33624 total
 ```
 
-The Go version on the other hand consists of 154.000 lines of code. That's one third of the code for exactly the same functionality.
+The Go version on the other hand consists of 33.000 lines of code. That's one fifth of the code for exactly the same functionality.
+
+Let's exclude external dependencies in the Laravel application so we know how much lines were actually written by me. 
+
+```
+$ find . -name '*.php' -not -path "./vendor/*" | xargs wc -l
+13921 total
+```
+
+And for Go.
+
+```
+$ find . -name '*.go' -not -path "./vendor/*" | xargs wc -l
+6750 total
+```
+
+The result is slightly more even when just looking at managed lines of code. Still, it's the exact same application with half the amount of code.  
 
 #### Test coverage
 
