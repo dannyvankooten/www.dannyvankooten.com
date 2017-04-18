@@ -39,7 +39,7 @@ ORM's are one thing that always end up getting in my way, so I went for a mockab
 
 To support hierarchical templates and partials I open-sourced [grender](https://github.com/dannyvankooten/grender), a tiny wrapper around Go's standard html/template package. This allowed me to port the Blade template files to Go with relative ease, since I could use the same hierarchical structure and partial templates.
 
-For integrating with Stripe there is the official [stripe-go](https://github.com/stripe/stripe-go) package. For Braintree there is the unofficial [braintree-go](https://github.com/lionelbarrow/braintree-go) package which was neglected for a little while but has received a lot of attention lately. Since there was no Go package to create and send invoices in Moneybird yet, I built and open-sourced [moneybird-go](https://github.com/dannyvankooten/moneybird-go).
+For integrating with Stripe there is the official [stripe-go](https://github.com/stripe/stripe-go) package. For Braintree there is the unofficial [braintree-go](https://github.com/lionelbarrow/braintree-go) package, which was neglected for a little while but received some renewed attention lately. Since there was no Go package to manage invoices in Moneybird yet, I built and open-sourced [moneybird-go](https://github.com/dannyvankooten/moneybird-go).
 
 ## Comparing apples vs oranges
 
@@ -59,7 +59,7 @@ Since Go is a compiled language with a much better standard library than PHP, it
 
 Unfortunately, the Laravel application kept falling over once I increased the number of concurrent "users" past 100.
 
-To see how the server was actually holding up under all this load, [NetData](https://my-netdata.io/) provided the following graphs.
+[NetData](https://my-netdata.io/) provided the following graphs to see how the server was holding up under all this load. 
 
 **Go with 100 concurrent connections**
 ![Go with 100 concurrent connections](/media/2017-benchmark-go-c100.jpg)
