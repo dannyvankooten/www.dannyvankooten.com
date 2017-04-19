@@ -47,17 +47,17 @@ Since Go is a compiled language with a much better standard library than PHP, it
 
 #### Performance
 
-[wrk](https://github.com/wg/wrk) was used to perform some simple HTTP benchmarks for both applications returning the HTML for the login page.
+[wrk](https://github.com/wg/wrk) was used to perform some simple HTTP benchmarks for both applications returning the HTML for the login page. 
 
 | | Concurrency | Avg. latency  | Req / sec   | Transfer / sec  |
 |---|---|---|---|---|
-| Laravel | 1  | 120.88ms | 59.81 | 403.47KB |
-| Laravel | 100 | 385.88ms | 264.57 | 1.74MB |
-| Go | 1 | 325.72us | 7365.48 | 34.27MB |
+| Laravel | 1  | 3.87ms | 261.48 | 1.27MB |
+| Laravel | 100 | 108.86ms | 917.27 | 6.04MB |
+| Go | 1 | 325.72μs | 7365.48 | 34.27MB |
 | Go | 100 | 11.63ms | 19967.31 | 92.91MB |
 | Go | 200 | 37.68ms | 22653.22 | 105.41MB | 
 
-Unfortunately, the Laravel application kept falling over once I increased the number of concurrent "users" past 100.
+Unfortunately, the Laravel application (or PHP-FPM socket) kept falling over once I increased the number of concurrent "users" past 100.
 
 [NetData](https://my-netdata.io/) provided the following graphs to see how the server was holding up under all this load. 
 
@@ -121,6 +121,10 @@ In our Laravel application we mostly had integration tests that checked whether 
 ## TLDR
 
 Did something you should never do: rewrote an application in a different language because I felt like it. Had lots of fun and got a much smaller & faster application in return. 
+
+----------
+
+**Edited on April 19:** 120ms latency with lots of disk writing for the Laravel benchmark didn't seem right so I revisited it. Turns out I had `APP_DEBUG` set to `true` (this was on my development machine after all), so templates were recompiled on every request. Oops.
 
 
 
