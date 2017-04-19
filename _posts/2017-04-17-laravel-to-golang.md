@@ -62,10 +62,10 @@ Unfortunately, the Laravel application (or PHP-FPM socket) kept falling over onc
 [NetData](https://my-netdata.io/) provided the following graphs to see how the server was holding up under all this load. 
 
 **Go with 100 concurrent connections**
-![Go with 100 concurrent connections](/media/2017-benchmark-go-c100.jpg)
+[![Go with 100 concurrent connections](/media/2017-benchmark-go-c100.jpg)](/media/2017-benchmark-go-c100.jpg)
 
 **Laravel with 100 concurrent connections**
-![Laravel with 100 concurrent connections](/media/2017-benchmark-laravel-c100.jpg)
+[![Laravel with 100 concurrent connections](/media/2017-benchmark-laravel-c100.jpg)](/media/2017-benchmark-laravel-c100.jpg)
 
 Please note that I ran the benchmark from the same machine as the applications were running on, so this heavily influences both graphs. 
 
