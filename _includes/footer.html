@@ -8,3 +8,16 @@
       <span class="icon icon--github">{% include icon-twitter.svg %}</span> <a href="https://twitter.com/dannyvankooten/" rel="nofollow me">Twitter</a>.</p>
   </div>
 </footer>
+
+<script>
+// fill img placeholders
+var placeholders = document.querySelectorAll('img[data-src]');
+[].forEach.call( placeholders, function(el) {
+	el.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+	var img = document.createElement('img');
+	img.src = el.getAttribute('data-src');
+	img.onload = function( e ) {
+		el.src = e.target.src;
+	}
+});
+</script>
