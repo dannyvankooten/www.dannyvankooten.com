@@ -25,11 +25,11 @@ While Laravel worked well enough for this, some things always felt overcomplicat
 
 Last year I've been moving several services over to Go, so I wasn't completely new to the language. As a developer selling WordPress based products, part of my job is working in an ancient tech stack that is mostly focused on the end user.
 
-If I were an employee, I'd simply apply for a new job to make up for this lack of sexy tech. Being the boss, I owe it to myself to make my day-to-day work fun and not just chase more immediate $$$. If revenue allows (and it does), why not have a little fun?
+If I weren't self-employed, I would simply apply for a new job to make up for this lack of sexy tech. Being my own boss, I owe it to myself to make my day-to-day work fun and not just chase more immediate $$$. If revenue allows (and it does), why not have a little fun?
 
 It's a joy to write Go code, the tooling is amazing and it's not only fast to develop in, the end result is usually crazy fast too. Just reading about [the purpose of the Go project](https://golang.org/doc/faq#What_is_the_purpose_of_the_project) sold me on the language. 
 
-I think we'll see a crazy amount of people switching from dynamically typed languages like PHP, Python and JavaScript to Go in the next few years.
+I think we'll see a good amount of people switching from dynamically typed languages like PHP, Python and JavaScript to Go in the next few years.
 
 ## Porting the codebase
 
