@@ -27,6 +27,7 @@ kramdown:
 
 gems:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 permalink: /:title/
 
