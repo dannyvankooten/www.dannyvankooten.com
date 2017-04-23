@@ -5,7 +5,7 @@
       <div class="site-header-1">
         {% if page.url == "/" %}
         <h1 class="site-title">
-          <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }} <span class="dot"></span></a>
+          <a class="site-title" href="{{ site.url }}/">{{ site.title }} <span class="dot"></span></a>
         </h1>
        {% else %}
         <nav role="navigation">
@@ -15,9 +15,9 @@
       </div>
 
     <nav class="site-nav site-header-2" role="navigation">
-        <a href="/about/" {% if page.url == "/about/" %}class="active"{% endif %}>About Me</a>
-        <a href="/blog/" {% if page.url == "/blog/" %}class="active"{% endif %}>Blog</a>
-        <a href="/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a>
+        <a href="{{site.url}}/about/" {% if page.url == "/about/" %}class="active"{% endif %}>About Me</a>
+        <a href="{{site.url}}/blog/" {% if page.url == "/blog/" %}class="active"{% endif %}>Blog</a>
+        <a href="{{site.url}}/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a>
     </nav>
 
   </div>

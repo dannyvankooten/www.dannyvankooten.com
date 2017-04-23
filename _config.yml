@@ -7,6 +7,16 @@ url: "https://dannyvankooten.com" # the base hostname & protocol for your site
 twitter_username: dannyvankooten
 github_username:  dannyvankooten
 
+# SEO settings
+twitter:
+  username: dannyvankooten
+social:
+  name: Danny van Kooten
+  links:
+    - https://twitter.com/dannyvankooten
+    - https://github.com/dannyvankooten
+    - https://keybase.io/dvk
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
@@ -14,6 +24,9 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
   hard_wrap: false
+
+gems:
+  - jekyll-seo-tag
 
 permalink: /:title/
 
