@@ -4,7 +4,8 @@ body {
   line-height: 1.4;
   padding: 20px;
   color: #222;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  background: white; }
 
 a {
   color: #0099ff;
