@@ -371,6 +371,9 @@ textarea {
   display: inline-block;
   width: 12px;
   height: 12px; }
+  .icon svg {
+    width: 12px;
+    height: 12px; }
 
 .meta {
   color: #888;
