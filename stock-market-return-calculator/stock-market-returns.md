@@ -19,6 +19,22 @@ Below is an investment return calculator for some (random) indices. Historical d
   .smaller-text{
     font-size: 90%;
   }
+
+  select {
+    padding: 4px 6px;
+  }
+
+  button{
+    background: #09f;
+    color: white;
+    border: 1px solid #458;
+    cursor: pointer;
+    padding: 4px 12px;
+  }
+
+  button:hover {
+    background: #458;
+  }
 </style>
 
 <form id="calculate-form" class="well">
