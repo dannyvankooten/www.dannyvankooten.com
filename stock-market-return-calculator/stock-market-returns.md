@@ -42,14 +42,20 @@ Below is an investment return calculator for some (random) indices. Historical d
   <div class="input-group">
     <label>Market index</label>
     <select id="market-select">
-      <option>AEX</option>
+	<option>AEX</option>
+		<option>ATX</option>
       <option value="BFX">BEL 20</option>
       <option value="CAC40">CAC 40</option>
-      <option>DAX</option>
-      <option value="STOXX50">EURO STOXX 50</option>
-      <option>IBEX</option>
+	  <option>DAX</option>
+	  <option value="DJI">Dow Jones Industrial Average</option>
+	  <option value="N100">Euronext 100</option>
+	  <option value="STOXX50">Euro STOXX 50</option>
+	  <option value="HSI">Hang Seng</option>
+	  <option>IBEX</option>
+	  <option value="IXIC">NASDAQ Composite</option>
       <option value="N225">Nikkei 225</option>
-      <option value="SP500">S&P 500</option>
+	  <option value="SP500">S&P 500</option>
+	  <option value="SSEC">SSE Composite</option>
     </select>
   </div>
 
