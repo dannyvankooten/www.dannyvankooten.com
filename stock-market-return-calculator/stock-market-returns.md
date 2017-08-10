@@ -35,6 +35,8 @@ Below is an investment return calculator for some (random) indices. Historical d
   button:hover {
     background: #458;
   }
+
+  #chart { width: 100%; min-height: 400px; }
 </style>
 
 <form id="calculate-form" class="well">
@@ -63,15 +65,15 @@ Below is an investment return calculator for some (random) indices. Historical d
     <label>Start date</label>
     <select id="start-month-select" class="month-select">
       <option disabled>Month</option>
-      <option value="01">Jan</option>
-      <option value="02">Feb</option>
-      <option value="03">Mar</option>
-      <option value="04">Apr</option>
-      <option value="05">May</option>
-      <option value="06">Jun</option>
-      <option value="07">Jul</option>
-      <option value="08">Aug</option>
-      <option value="09">Sep</option>
+      <option value="1">Jan</option>
+      <option value="2">Feb</option>
+      <option value="3">Mar</option>
+      <option value="4">Apr</option>
+      <option value="5">May</option>
+      <option value="6">Jun</option>
+      <option value="7">Jul</option>
+      <option value="8">Aug</option>
+      <option value="9">Sep</option>
       <option value="10">Oct</option>
       <option value="11">Nov</option>
       <option value="12">Dec</option>
@@ -85,15 +87,15 @@ Below is an investment return calculator for some (random) indices. Historical d
     <label>End date</label>
     <select id="end-month-select" class="month-select">
       <option disabled>Month</option>
-      <option value="01">Jan</option>
-      <option value="02">Feb</option>
-      <option value="03">Mar</option>
-      <option value="04">Apr</option>
-      <option value="05">May</option>
-      <option value="06">Jun</option>
-      <option value="07">Jul</option>
-      <option value="08">Aug</option>
-      <option value="09">Sep</option>
+      <option value="1">Jan</option>
+      <option value="2">Feb</option>
+      <option value="3">Mar</option>
+      <option value="4">Apr</option>
+      <option value="5">May</option>
+      <option value="6">Jun</option>
+      <option value="7">Jul</option>
+      <option value="8">Aug</option>
+      <option value="9">Sep</option>
       <option value="10">Oct</option>
       <option value="11">Nov</option>
       <option value="12">Dec</option>
@@ -117,7 +119,12 @@ Below is an investment return calculator for some (random) indices. Historical d
     <strong>Annualized return: </strong><span id="annualized-return"></span> <br />
     <em class="smaller-text">The total price return of the selected index, annualized. This number basically gives your ‘return per year’ if your time period was compressed or expanded to a 12 month timeframe.</em>
   </div>
+
+  <div id="chart" style="margin-top: 20px;"></div>
+
 </div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script src="jquery-3.2.1.min.js"></script>
 <script>
@@ -152,7 +159,7 @@ Below is an investment return calculator for some (random) indices. Historical d
       var close = row[5];
       var dateparts = row[0].split('-');
       var year = dateparts[0];
-      var month = dateparts[1];
+      var month = parseInt(dateparts[1]);
       if( year == "" ) { continue; }
       if( typeof(marketData[year]) === "undefined" ) {
         marketData[year] = {};
@@ -165,7 +172,7 @@ Below is an investment return calculator for some (random) indices. Historical d
     $(".year-select option:gt(0)").remove();
     $.each(marketData, function(year, v) {
       // TODO: Add years with partial data.
-      if(typeof(marketData[year]["01"]) !== "undefined") {
+      if(typeof(marketData[year][1]) !== "undefined") {
         $('.year-select').append("<option>" + year + "</option>")
       }
     });
@@ -196,21 +203,59 @@ Below is an investment return calculator for some (random) indices. Historical d
     var end = marketData[endYearSelect.value][endMonthSelect.value];
     var start = marketData[startYearSelect.value][startMonthSelect.value];
     var months = 0;
-    for(var i=startYearSelect.value; i <= endYearSelect.value; i++) {
-      if(i == startYearSelect.value) {
-        months += ( 13 - startMonthSelect.value );
-      } else if(i === endYearSelect.value) {
-        months += endMonthSelect.value;
+    for(var cYear = startYearSelect.value; cYear <= endYearSelect.value; cYear++) {
+      if(cYear == startYearSelect.value) {
+        months += ( 13 - parseInt(startMonthSelect.value) );
+      } else if(cYear == endYearSelect.value) {
+        months += parseInt(endMonthSelect.value) - 1;
       } else {
-          months += 12;
+        months += 12;
       }
     }
     var years = parseFloat( months / 12 );
     var totalReturn = ( ( end / start ) - 1.00 ) * 100.00;
-    var annualizedReturn = ( Math.pow(end / start, ( 1.00 / years )) - 1.00 ) * 100.00;
+    var annualizedReturn = ( Math.pow(end / start, ( 1.00 / years )) - 1.00 ) * 100.00; // TODO: Fix this.
+
     resultsEl.style.display = '';
     totalReturnEl.innerHTML = roundP(totalReturn, 2) + "%";
     annualizedReturnEl.innerHTML = roundP(annualizedReturn, 2) + "%";
+
+    // loop through years
+    var chartData = new google.visualization.DataTable();
+    chartData.addColumn('string', 'Date' );
+    chartData.addColumn('number', 'Return');
+
+    (function() {
+      var startValue = marketData[startYearSelect.value][startMonthSelect.value];
+      var totalMonths = 1;
+      for( cYear = startYearSelect.value; cYear <= endYearSelect.value; cYear++ ) {
+        var cMonth = 1;
+
+        for( var cMonth = 1; cMonth <= 12; cMonth++ ) {
+          if(cYear == startYearSelect.value && cMonth <= startMonthSelect.value) {
+            continue;
+          }
+
+          // break when done
+          if(cYear == endYearSelect.value && cMonth > endMonthSelect.value) {
+            break;
+          }
+
+          var endValue = marketData[cYear][cMonth];
+          var annualizedReturn = ( Math.pow(endValue / startValue, ( 1.00 / ( parseFloat(totalMonths / 12 ) ) ) ) - 1.00 ) * 100.00;
+
+          chartData.addRows([
+            [ ( cYear + "-" + ("0" + cMonth).slice(-2) ), roundP(annualizedReturn, 2) ]
+          ]);
+
+          totalMonths++;
+        }
+
+      }
+    })();
+
+   chart.draw(chartData, chartOptions);
+
   }
 
   var marketData ={};
@@ -224,7 +269,25 @@ Below is an investment return calculator for some (random) indices. Historical d
   var resultsEl = document.getElementById('results');
   var totalReturnEl = document.getElementById('total-return');
   var annualizedReturnEl = document.getElementById('annualized-return');
+  var chart;
+  var chartOptions = {
+    vAxis: {
+      title: 'Annualized return %',
+    },
+    hAxis: {
+      title: 'Date'
+    },
+    width: 678,
+    height: 350
+  };
+
   marketSelect.addEventListener('change', onMarketSelectChange);
   calculateForm.addEventListener('submit', onCalculateFormSubmit);
   onMarketSelectChange.call(marketSelect);
+
+  google.charts.load('current', {'packages':[ 'corechart', 'line']});
+  google.charts.setOnLoadCallback(function() {
+    chart = new google.visualization.LineChart(document.getElementById('chart'));
+  });
+
 </script>
