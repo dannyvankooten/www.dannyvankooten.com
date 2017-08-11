@@ -220,18 +220,19 @@ Below is an investment return calculator for some (random) indices. Historical d
     totalReturnEl.innerHTML = roundP(totalReturn, 2) + "%";
     annualizedReturnEl.innerHTML = roundP(annualizedReturn, 2) + "%";
 
-    // loop through years
-    var chartData = new google.visualization.DataTable();
-    chartData.addColumn('string', 'Date' );
-    chartData.addColumn('number', 'Return');
-
     (function() {
+      var chartData = new google.visualization.DataTable();
+      chartData.addColumn('string', 'Date' );
+      chartData.addColumn('number', 'Return');
+
       var startValue = marketData[startYearSelect.value][startMonthSelect.value];
       var totalMonths = 1;
+
       for( cYear = startYearSelect.value; cYear <= endYearSelect.value; cYear++ ) {
         var cMonth = 1;
 
         for( var cMonth = 1; cMonth <= 12; cMonth++ ) {
+          // skip first (selected) month of first year
           if(cYear == startYearSelect.value && cMonth <= startMonthSelect.value) {
             continue;
           }
@@ -244,17 +245,18 @@ Below is an investment return calculator for some (random) indices. Historical d
           var endValue = marketData[cYear][cMonth];
           var annualizedReturn = ( Math.pow(endValue / startValue, ( 1.00 / ( parseFloat(totalMonths / 12 ) ) ) ) - 1.00 ) * 100.00;
 
+          var label = cYear + "-" + ("0" + cMonth).slice(-2);
+          var value = roundP(annualizedReturn, 2);
           chartData.addRows([
-            [ ( cYear + "-" + ("0" + cMonth).slice(-2) ), roundP(annualizedReturn, 2) ]
+            [ label, value ]
           ]);
 
           totalMonths++;
         }
-
       }
-    })();
 
-   chart.draw(chartData, chartOptions);
+      chart.draw(chartData, chartOptions);
+    })();
 
   }
 
