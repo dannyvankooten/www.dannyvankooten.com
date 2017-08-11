@@ -176,6 +176,8 @@ Below is an investment return calculator for some (random) indices. Historical d
         $('.year-select').append("<option>" + year + "</option>")
       }
     });
+
+    $("#end-year-select option:last").prop('selected', true);
   }
 
   function roundP(number, precision) {
