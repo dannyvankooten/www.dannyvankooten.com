@@ -4,7 +4,7 @@ title: Stock Market Return Calculator
 permalink: /stock-market-return-calculator/
 ---
 
-Below is an investment return calculator for some (random) indices. Historical data is taken from [Yahoo Finance](https://finance.yahoo.com/).
+The form below allows you to calculate your return on investments for various stock market indices, based on historical data taken from [Yahoo Finance](https://finance.yahoo.com/).
 
 <style type="text/css" scoped>
   label { display: block; font-weight: bold; }
@@ -56,7 +56,7 @@ Below is an investment return calculator for some (random) indices. Historical d
 	  <option>IBEX</option>
 	  <option value="IXIC">NASDAQ Composite</option>
       <option value="N225">Nikkei 225</option>
-	  <option value="SP500">S&P 500</option>
+	  <option value="SP500">S&amp;P 500</option>
 	  <option value="SSEC">SSE Composite</option>
     </select>
   </div>
@@ -121,11 +121,12 @@ Below is an investment return calculator for some (random) indices. Historical d
   </div>
 
   <div id="chart" style="margin-top: 20px;"></div>
-
 </div>
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<p>As you surely know by now, past performance is no guarantee for future results. It surely helps to know if your expected returns over your expected holding period are somewhat reasonable though.</p>
+<p>I wrote a short blog post about the why's of this <a href="/stock-market-roi-calculator/">stock market ROI calculator</a> as well.</p>
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="jquery-3.2.1.min.js"></script>
 <script>
   function onMarketSelectChange(e) {

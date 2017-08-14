@@ -6,7 +6,7 @@ tags:
 - investing
 ---
 
-In the last few weeks I have been reading up on investment strategies. While doing so, it is pretty much impossible to miss out on Jack Bogle, founder of Vanguard and the first Exchange Traded Fund, and the aptly named [Bogleheads](https://www.bogleheads.org/) community.
+During the past few months I have been reading up on investing and investment strategies. While doing so, it is pretty much impossible to miss out on Jack Bogle, founder of Vanguard and the first Exchange Traded Fund, and the aptly named [Bogleheads](https://www.bogleheads.org/) community.
 
 Basically, their philosophy comes down to the following. **No one can beat or time the market consistently, therefore it is best to buy low-cost diversified index funds, tracking markets as closely as possible.** If you believe the market you're investing in is efficient, that is.
 
@@ -28,4 +28,4 @@ I think that the tool nicely shows that as your holding period increases:
 
 Of course, past performance is no guarantee for future results.
 
-That said, past performance can be used to see if your expectations are reasonable. If you expect a 10% investment over you 20 year investment in the AEX, it helps to know that that has never happened before.
+That said, past performance can be used to see if your expectations are reasonable. If you expect an annualized 10% return over a 20 year investment in a fund tracking the AEX, it helps to know that that has never happened before.
