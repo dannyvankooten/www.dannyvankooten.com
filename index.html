@@ -5,18 +5,20 @@ layout: default
 <div role="main" class="post-content">
     <div class="row">
         <div class="col col-3">
-            <p class="no-margin">Hi. I'm Danny, a 26 year old nerd.</p>
+            <p class="no-margin">Hi. I'm Danny, a 27 year old nerd.</p>
             <p>I've been selling software as my main source of income for a little over 5 years now.</p>
-            <p>It started out with me being hospitalized in Vietnam. With time on my hands, I built a WordPress plugin that started selling really well right away. (Luckily), I was blissfully unaware of a lot of the challenges that come with selling software.</p>
-            <p>I worked from warmer parts of the world for a few years and am now finally settling down in my home country, The Netherlands. At least for a little while.</p>
-            <p>If you want, read on <a href="/about">about me</a> or <a href="https://twitter.com/dannyvankooten">connect with me on Twitter</a>.</p>
+            <p>It started out with me being hospitalized in Vietnam and thus having some time on my hands. I built <a href="https://mc4wp.com/">MailChimp for WordPress</a> which is now being used on well over 1 million websites.
+
+            <p>(Luckily), I was blissfully unaware of a lot of the challenges that come with selling software back then.</p>
+            <p>A few other products followed while I worked from warmer parts of the world for a few years. These days,  I am settling down in The Netherlands. At least for a little while.</p>
+            <p>If you want, read on <a href="{{site.url}}/about">about me</a> or <a href="https://twitter.com/dannyvankooten">connect with me on Twitter</a>.</p>
         </div>
         <div class="col col-3">
-            <img data-src="/assets/img/danny-rico.jpg" height="300" width="300" alt="Danny with dog on Koh Lanta, Thailand." class="round centered" />
+            <img data-src="{{site.url}}/assets/img/danny-rico.jpg" height="300" width="300" alt="Danny with dog on Koh Lanta, Thailand." class="round centered" />
         </div>
     </div>
 
-    <h3>I blog (very little)</h3>
+    <h3>I blog (but not much)</h3>
     <ul class="post-list">
         {% for post in site.posts limit:5 %}
         <li>
