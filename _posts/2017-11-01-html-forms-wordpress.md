@@ -16,7 +16,7 @@ Allow me to introduce you to a form plugin where you have full control over the 
 
 **You supply the form fields in normal HTML. The plugin takes care of validating & processing the form.**
 
-We really like this approach as it allows for great performance & flexibility and still saving you tons  of time. In fact, we find creating a form this way is much faster than interacting with a drag and drop interface.
+We really like this approach as it allows for great performance & flexibility while still saving you tons of time. In fact, we find creating a form this way is much faster than interacting with a drag and drop interface.
 
 ### How HTML Forms works
 
