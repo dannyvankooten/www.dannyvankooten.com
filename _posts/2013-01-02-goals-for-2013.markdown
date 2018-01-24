@@ -14,12 +14,12 @@ I follow various life-hacking or so called "self improvement" blogs and read o
 	<li>Release and offer support for a total of 5 WordPress plugins with each of them having over 10k downloads by the end of this year (4/5)</li>
 	<li>Create a Dutch portfolio website with all my client work</li>
 	<li><del>Create a new WordPress theme for this website</del></li>
-	<li><del>Release either a premium WordPress plugin OR a premium WordPress theme</del> (<a href="http://dannyvankooten.com/wordpress-plugins/mailchimp-for-wordpress/">MailChimp for WordPress</a>)</li>
+	<li><del>Release either a premium WordPress plugin OR a premium WordPress theme</del> (Done: <a href="https://mc4wp.com">MailChimp for WordPress</a>)</li>
 	<li>Stick to / focus on creating (responsive) WordPress themes when it comes to client work</li>
 	<li>Take on more (of the above) client work</li>
 	<li><del>Become a JavaScript expert.</del></li>
 </ul>
-<h3>Study goals</h3>
+<h3>Educational goals</h3>
 <ul>
 	<li><del>Finish an internship assignment for a movie production company based in Bangkok</del></li>
 	<li>Follow a minor in entrepeneurship<strong>
@@ -42,8 +42,8 @@ I follow various life-hacking or so called "self improvement" blogs and read o
 </ul>
 That is all I can come up with at the moment. All of these goals seem pretty clear to me, are definitely attainable, inspire me and have a deadline. These are not new year resolutions, these are mere items on a to do list.
 
-Did you set your goals for 2013 already? Tell me about them in the comments cause sharing goals is important, remember?!
+Did you set your goals for 2013 already? Tell me about them in the comments. Sharing your goals is important, remember?!
 
-<strong>Update 09-11: </strong>Crossed a few goals off my list: I finished my internship in Bangkok, released a premium plugins which my customers seem to LOVE, installed a new theme on this website and completely quit drinking beer. <strong>Not bad! :-)</strong>
+<strong>Update 09-11: </strong>Crossed a few goals off my list: I finished my internship in Bangkok, released a premium plugin which my customers seem to LOVE, installed a new theme on this website and completely quit drinking beer. <strong>Not bad! :-)</strong>
 
 &nbsp;
