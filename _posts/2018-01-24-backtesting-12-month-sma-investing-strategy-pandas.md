@@ -187,3 +187,4 @@ After playing with the data and looking at several time periods, I am still firm
 
 With some curve fitting, we can make the trend model outperform over some specific time periods like the 2000's. Increase the holding period and this outperformance does not last though. 
 
+_You can [find the complete Jupyter Notebook for this post here](https://github.com/dannyvankooten/dannyvankooten.com/blob/master/notebooks/12%20month%20SMA%20vs%20Buy%20and%20Hold.ipynb).
