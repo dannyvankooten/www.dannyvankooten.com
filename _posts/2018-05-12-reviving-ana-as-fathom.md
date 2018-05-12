@@ -18,7 +18,7 @@ Knowing Paul as a super knowledgeable power-user of our [MailChimp for WordPress
 
 Together, we are setting out to build **website analytics that is simple, transparent and that respects your visitor's privacy**. We're a few weeks in at this point and already running a beta version on our personal sites:
 
-![Fathom dashboard for this site](/media/2018/fathom-preview.jpg)
+![Fathom dashboard for this site](/media/2018/fathom-preview.png)
 
 If you would like to follow us on this journey, please [sign-up here](https://usefathom.com/) and we'll keep you in the loop.
 
