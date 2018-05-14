@@ -371,9 +371,6 @@ textarea {
   display: inline-block;
   width: 12px;
   height: 12px; }
-  .icon svg {
-    width: 12px;
-    height: 12px; }
 
 .meta {
   color: #888;
@@ -629,11 +626,6 @@ hr {
   .site-nav a:hover, .site-nav a:focus {
     text-decoration: none;
     border-color: #AAA; }
-
-.post-title:before {
-  color: #BBB;
-  content: "//";
-  margin-right: 8px; }
 
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5 {
   margin-top: 40px;
