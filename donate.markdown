@@ -4,12 +4,23 @@ title: Donate
 permalink: /donate/
 ---
 
-You probably got to this page because you like one of the [WordPress plugins](/wordpress-plugins/), [jQuery plugins](/jquery-plugins/) or blog posts I developed or wrote.
+Hey!
 
-Happy to hear! I spend an incredible amount of time "giving" to the community and absolutely love getting positive feedback.
+You probably got to this page via one of my [plugins for WordPress](/wordpress-plugins/). Nice!
 
-There are various ways in which you can support me.
+If you're happy with what I built (or wrote) and want to give something back, consider donating to a charity instead. Or treat your partner or parents on something nice, and tell them you love them too (if you do, don't lie). :) 
 
-- Buy one of my premium WordPress plugins, like [MailChimp for WordPress](https://mc4wp.com/) or [Boxzilla](https://boxzillaplugin.com).
-- [Tweet](https://twitter.com/intent/tweet?via=DannyvanKooten) about my work.
-- Link to my products or blog posts from your site.
+Anyways, here's some of the charities I know of and think are really important.
+
+### [Against Malaria Foundation](https://www.againstmalaria.com/)
+
+Over one million people die from malaria each year, mostly children under five years of age. 100% of the money donated to this charity buys anti-mosquito nets, a very cost effective prevention method, in areas where it is most needed.
+
+
+### [Development Media International](https://www.developmentmedia.net/)
+
+​​Development Media International runs evidence-based media campaigns to change behaviours and save lives in developing countries. They prioritise child survival, family planning and early childhood development.
+
+### [Oxfam](https://www.oxfam.org/)
+
+Millions of people endure inhumane conditions to produce the food we all eat and do not have enough to eat themselves. No one should have to work (nor live) like this.
