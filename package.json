@@ -1,8 +1,8 @@
 {
   "private": true,
   "devDependencies": {
-    "browser-sync": "^2.24.4",
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.24.6",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cssmin": "^0.2.0",
     "gulp-rename": "^1.2.2",

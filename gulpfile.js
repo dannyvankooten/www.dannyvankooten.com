@@ -7,7 +7,6 @@ const cssmin = require('gulp-cssmin');
 const gutil = require('gulp-util');
 const autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('default', ['sass', 'watch']);
 
 gulp.task('sass', function () {
     var files = './assets/sass/[^_]*.scss';
@@ -31,5 +30,8 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./assets/sass/**/*.scss', ['sass']);
+    gulp.watch('./assets/sass/**/*.scss', gulp.series(['sass']));
 });
+
+
+gulp.task('default', gulp.series(['sass', 'watch']));

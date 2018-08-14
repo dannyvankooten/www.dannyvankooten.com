@@ -85,11 +85,9 @@
     }
 
   }
-
 }
 
 .post-title{
- 
 }
 
 .post-content {
@@ -97,6 +95,14 @@
     margin-top: 40px;
     margin-bottom: 10px;
   }
+}
+
+.well {
+    background: #eef5fa;
+    border: 1px solid #dae9f4;
+    padding: 20px;
+    box-shadow: 0 0 1px 1px #eee;
+
 }
 
 @import "highlight-github.scss";
