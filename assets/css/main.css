@@ -459,10 +459,11 @@ body {
 
 a {
   color: #0099ff;
-  text-decoration: none; }
+  text-decoration: underline; }
 
 a:focus,
 a:hover {
+  color: #005c99;
   text-decoration: underline;
   cursor: pointer; }
 
@@ -574,6 +575,8 @@ hr {
 .site-header {
   margin-bottom: 40px;
   line-height: 48px; }
+  .site-header a {
+    text-decoration: none; }
 
 .site-header-1 {
   float: left; }

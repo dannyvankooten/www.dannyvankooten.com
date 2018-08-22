@@ -12,11 +12,12 @@ body {
 
 a {
   color: $main_color;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:focus,
 a:hover {
+  color: darken( $main_color, 20%);
   text-decoration: underline;
   cursor: pointer;
 }
