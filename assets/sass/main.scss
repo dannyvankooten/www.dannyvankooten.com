@@ -4,7 +4,6 @@
 @import "global.scss";
 @import "grid.scss";
 
-
 .site-header {
   margin-bottom: 40px;
   line-height: 48px;
@@ -99,17 +98,7 @@
   }
 }
 
-.well {
-    background: #eef5fa;
-    border: 1px solid #dae9f4;
-    padding: 20px;
-    box-shadow: 0 0 1px 1px #eee;
-
-}
-
 @import "highlight-github.scss";
-
-
 @media screen and (max-width: 540px) {
   .site-header-1,
   .site-header-2 {

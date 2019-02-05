@@ -17,7 +17,7 @@ $(window).scroll(function() {
 });
 ```
 
-Even the developers at <a href="http://ejohn.org/blog/learning-from-twitter/">Twitter had an issue with scroll event handlers</a> in the past. They were using infinite scroll and attached their handler directly to the scroll event using jQuery. On top of that, they were running jQuery selector queries <em>every time</em> the event handler fired (without caching them). Enough to make the scrolling experience extremely slow and the site to be unresponsive.
+Even the developers at <a href="http://ejohn.org/blog/learning-from-twitter/">Twitter had an issue with scroll event handlers</a> in the past. They were using infinite scroll and attached their handler directly to the scroll event using jQuery. On top of that, they were running jQuery selector queries <em>every time</em> the event handler fired (without caching the results). Enough to make the scrolling experience extremely slow and the site  unresponsive.
 
 <h3>The solution: delaying (or polling) your handlers</h3>
 There is a simple solution to this problem: just run your event handlers with a slight delay. This will dramatically cut down on the times your actual callback function is fired. There are multiple ways to go about this but I find a simple timeout the simplest as it requires minimal extra code.

@@ -401,6 +401,15 @@ textarea {
 .no-margin {
   margin: 0; }
 
+.italic {
+  font-style: italic; }
+
+.well {
+  background: #eef5fa;
+  border: 1px solid #dae9f4;
+  padding: 20px;
+  box-shadow: 0 0 1px 1px #eee; }
+
 .round {
   border-radius: 50%; }
 
@@ -633,12 +642,6 @@ hr {
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5 {
   margin-top: 40px;
   margin-bottom: 10px; }
-
-.well {
-  background: #eef5fa;
-  border: 1px solid #dae9f4;
-  padding: 20px;
-  box-shadow: 0 0 1px 1px #eee; }
 
 .highlight code {
   background: initial;
