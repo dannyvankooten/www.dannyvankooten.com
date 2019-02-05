@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "From Go to PHP again"
+title: "Moving from Go to PHP again"
 date: '2019-02-04'
 tags:
 - symfony
 - php
 ---
 
-Remember when [we ditched Laravel for Golang](/laravel-to-golang/)?
+Remember when [I ditched Laravel for Golang](/laravel-to-golang/)?
 
 Well, after 2 years on Go, our shop applications are powered by PHP again.
 
@@ -23,17 +23,17 @@ PHP improved a lot during the last 3 years. It added [scalar argument type decla
 
 ### Symfony4 is a game changer
 
-I've always been a big fan of [Symfony's compatibility promise](https://symfony.com/doc/current/contributing/code/bc.html) and they have the track record to prove they mean it.  
+I've always been a big fan of [Symfony's compatibility promise](https://symfony.com/doc/current/contributing/code/bc.html) and their impressive 13-year track record proves they mean it.  
 
-So when [Symfony4](https://symfony.com/4) was released a few months ago and I heard good things about it, I had to take it for a test drive by implementing a tiny part of our application in it.
+So when [Symfony4](https://symfony.com/4) was released a few months ago and I heard good things about it, I took it for a test drive by implementing a tiny part of our application in it.
 
-Conclusion: it's great.
+Conclusion: it's great. Really, really great.
 
-A lot of effort went into simplifying the setup, making it a lot faster to bootstrap a Symfony application with much less configuration. It's now rivaling Laravel's rapid development while at the same time encouraging best practices to ensure you don't shoot yourself in the foot. And [it performs really well](http://www.phpbenchmarks.com/en/).
+A lot of effort went into simplifying the setup, making it a lot faster to bootstrap a Symfony application with much less work required configuring bundles. It's now rivaling Laravel's rapid development while at the same time encouraging decent development practices to ensure you don't shoot yourself in the foot. And [it performs really well](http://www.phpbenchmarks.com/en/).
 
-It was relatively easy to port our old Laravel application to Symfony, implement some new features the Go version of our application offered and undo some of the shortcuts we took earlier (most of them because of Laravel's global helpers). 
+It was relatively easy to port our old Laravel application to Symfony, implement some new features the Go version of our application offered and undo some of the shortcuts I took earlier (most of them because of Laravel's global helpers). 
 
-A nice side effect is that we've managed to substantially increase our test coverage in the process.
+A nice side effect is that I've managed to substantially increase our test coverage in the process. Writing the same application in terms of functionality for a ~~second~~ third time really helps in that regard.
 
 ![Symfony's debug bar](/media/2019/symfony-debug-bar.png)
 
@@ -41,7 +41,7 @@ Symfony's debug bar is an amazing tool. It shows you what happened during the jo
 
 ![Symfony's profiler](/media/2019/symfony-profiler.jpg)
 
-After learning [Symfony's Form component](https://symfony.com/doc/current/forms.html), we'd rather not go without it again. It makes it trivial to render an accessible form that can be re-used in several places, validating the form upon submit and then populating a PHP object from the form data safely.
+After learning [Symfony's Form component](https://symfony.com/doc/current/forms.html), I'd rather not go without it again. It makes it trivial to render an accessible form that can be re-used in several places, validating the form upon submit and then populating a PHP object from the form data safely.
 
 ```php?start_inline=1
 $user = $this->getUser();
@@ -50,7 +50,7 @@ $form = $this->createForm(UserBillingInfoType::class, $user)
 
 if ($form->isSubmitted() && $form->isValid()) {
     // $user is already populated with the form values at this point
-    // we now it's valid, so we can update the database and be done with it
+    // it's valid, so we can update the database and redirect the user now
 }
 ```
 
@@ -62,19 +62,19 @@ $user->addLicense(new License());
 $manager->persist($user); // both user and its license will be saved
 ```
 
-In Doctrine all operations are wrapped in a SQL transaction by default. That's a big plus for us as it guarantees atomicity, something that involved more work in Eloquent.
+In Doctrine all operations are wrapped in a SQL transaction by default. That's a big plus for me as it guarantees atomicity, which involved more work to get right in Eloquent.
 
 ### Go is (still) great
 
-Honestly, Go is great and its simplicity is refreshing. We would still pick it any day if we need a small API or backend for a single page application.
+Honestly, Go is great. Its simplicity is refreshing and its performance unmatched. I would still pick it if we need a small API or something that requires high throughput.
 
-Our shops however are more monolithic, with a lot of server-side rendering going on. While that's certainly doable in Go (as the last 2 years proved), it's more maintainable for us to do it in PHP right now. 
+Our shops however are more monolithic with a lot of server-side rendering. While that's certainly doable in Go (as the last 2 years proved), it's more maintainable for us to do it in PHP right now. 
 
-### Preparing for a possible sale
+### Making the correct business decision
 
-One reason that I have not mentioned so far is that we've been approached by several companies interested to take over (part) of our business. 
+One reason not mentioned so far is that over the last year or so, I've been approached by several companies interested to take over one of our products. 
 
-They were a little surprised to hear our stack involved Golang and some flat out told us they'd prefer PHP, because that's what our actual products ([mc4wp.com](https://mc4wp.com/) & [boxzillaplugin.com](https://boxzillaplugin.com)) rely upon. And they're probably right.
+They were a little surprised to hear our stack involved Golang and some flat out told us they'd prefer PHP, because that's what most of our products ([mc4wp.com](https://mc4wp.com/), [boxzillaplugin.com](https://boxzillaplugin.com) and [htmlforms.io](https://htmlforms.io)) rely upon. And I don't blame them.
 
 
 
