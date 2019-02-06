@@ -25,7 +25,7 @@ PHP improved a lot during the last 3 years. It added [scalar argument type decla
 
 I've always been a big fan of [Symfony's compatibility promise](https://symfony.com/doc/current/contributing/code/bc.html) and their impressive 13-year track record proves they mean it.  
 
-So when [Symfony4](https://symfony.com/4) was released a few months ago and I heard good things about it, I took it for a test drive by implementing a tiny part of our application in it.
+So when [Symfony4](https://symfony.com/4) was released and I heard good things about it, I took it for a test drive by implementing a tiny part of our application in it.
 
 Conclusion: it's great. Really, really great.
 
