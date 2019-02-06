@@ -13,10 +13,6 @@ Well, after 2 years on Go, our shop applications are powered by PHP again.
 
 **Why?! You already said it was probably a bad business decision, and then you spend even more time on it?!** Well, yeah, several reasons actually.
 
-<div class="well italic">
-Side note: without the experience gained from our years on Go, I probably wouldn't have started <a href="https://usefathom.com/">Fathom Analytics</a>. So perhaps it wasn't such a bad business decision after all?
-</div>
-
 ### PHP improved a lot
 
 PHP improved a lot during the last 3 years. It added [scalar argument type declarations](https://secure.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration), [return type declarations](https://secure.php.net/manual/en/functions.returning-values.php#functions.returning-values.type-declaration), [multi-catch exceptions](https://wiki.php.net/rfc/multiple-catch), impressive [performance improvements](http://www.zend.com/en/resources/php7_infographic) and many more general improvements. 
@@ -69,6 +65,10 @@ In Doctrine all operations are wrapped in a SQL transaction by default. That's a
 Honestly, Go is great. Its simplicity is refreshing and its performance unmatched. I would still pick it if we need a small API or something that requires high throughput.
 
 Our shops however are more monolithic with a lot of server-side rendering. While that's certainly doable in Go (as the last 2 years proved), it's more maintainable for us to do it in PHP right now. 
+
+<div class="well italic">
+Side note: without the experience gained from our years on Go, I probably wouldn't have started <a href="https://usefathom.com/">Fathom Analytics</a>. So perhaps it wasn't such a bad business decision after all?
+</div>
 
 ### Making the correct business decision
 
