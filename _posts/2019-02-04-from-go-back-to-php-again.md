@@ -62,7 +62,7 @@ In Doctrine all operations are wrapped in a SQL transaction by default. That's a
 
 ### Go is (still) great
 
-Honestly, Go is great. Its simplicity is refreshing and its performance unmatched. I would still pick it if we need a small API or something that requires high throughput.
+Honestly, Go is great. Its simplicity is refreshing and you can't get anywhere near that kind of performance using PHP <sup class="muted">1</sup>. I would still pick it if we need a small API or something that requires high throughput.
 
 Our shops however are more monolithic with a lot of server-side rendering. While that's certainly doable in Go (as the last 2 years proved), it's more maintainable for us to do it in PHP right now. 
 
@@ -77,4 +77,10 @@ One reason not mentioned so far is that over the last year or so, I've been appr
 They were a little surprised to hear our stack involved Golang and some flat out told us they'd prefer PHP, because that's what most of our products ([mc4wp.com](https://mc4wp.com/), [boxzillaplugin.com](https://boxzillaplugin.com) and [htmlforms.io](https://htmlforms.io)) rely upon. And I don't blame them.
 
 
+
+<div class="big-margin muted">
+    <p><sup>1</sup> Just for fun, I compared apples and oranges again by benchmarking the login page (which doesn't hit any database) for both application versions using <a href="https://www.joedog.org/siege-home/">Siege</a>. </p>
+    
+    <p>The Symfony application (PHP 7.3, OPcache enabled, optimized autoloader) handles about 1470 req/s. The Go application (compiled using Go v1.11) averages about 18600 req/s.</p>
+</div>
 
