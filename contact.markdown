@@ -4,13 +4,11 @@ title: Contact
 permalink: /contact/
 ---
 
-Need to contact me? I'm desperately trying to limit the amount of email I get.
-
-Please read through the instructions below before contacting.
+Need to contact me? If so, please go through the questions below to help save us both some time.
 
 Do you..
 
-__Need support for [MailChimp for WordPress](https://mc4wp.com/) or [Boxzilla](https://boxzillaplugin.com/)?__
+__Need support for [Mailchimp for WordPress](https://mc4wp.com/) or [Boxzilla](https://boxzillaplugin.com/)?__
 
 Please use the email address shown in the settings pages of the plugin you need support for or simply reply to the purchase receipt.
 
@@ -24,11 +22,12 @@ __Need my business details?__
 
 <address>
 ibericode BV <br>
-Wassenaarweg 40 <br>
-6843NW Arnhem <br>
+4337XA Middelburg<br>
 The Netherlands <br>
-CoC 65413741
+Chamber of Commerce reg. no: 65413741<br>
+VAT no: NL856102337B01<br>
 </address>
+
 
 Need our VAT number? Please contact me using the email address below.
 
