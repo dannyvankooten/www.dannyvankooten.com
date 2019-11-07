@@ -89,7 +89,18 @@
 
   }
 }
+.post-list {
+  list-style: none;
+  padding: 0;
+}
 
+.post-list meta {
+  margin-right: 4px;
+}
+
+.post-list.with-excerpt li {
+  margin-bottom: 12px;
+}
 .post-title{
 }
 

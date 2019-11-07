@@ -21,8 +21,9 @@ layout: default
     <ul class="post-list">
         {% for post in site.posts limit:5 %}
         <li>
-            <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp;
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &mdash; <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
         </li>
         {% endfor %}
     </ul>

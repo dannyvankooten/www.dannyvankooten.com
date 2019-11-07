@@ -8,11 +8,11 @@ permalink: /blog/
 
     <p>Sometimes, I write.</p>
 
-    <ul class="post-list">
+    <ul class="post-list with-excerpt">
         {% for post in site.posts %}
         <li>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><br />
             <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp;
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </li>
         {% endfor %}
     </ul>
