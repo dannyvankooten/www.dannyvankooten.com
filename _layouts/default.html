@@ -12,7 +12,6 @@
 		{% seo %}
 </head>
   <body class="{% if page.url == "/" %}home{% endif %}">
-
     {% include header.html %}
 
     <div class="page-content">
@@ -22,21 +21,5 @@
     </div>
 
     {% include footer.html %}
-
-    <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
-    <script>
-    (function(f, a, t, h, o, m){
-      a[h]=a[h]||function(){
-        (a[h].q=a[h].q||[]).push(arguments)
-      };
-      o=f.createElement('script'),
-      m=f.getElementsByTagName('script')[0];
-      o.async=1; o.src=t;
-      m.parentNode.insertBefore(o,m)
-    })(document, window, '//fathom.dvk.co/tracker.js', 'fathom');
-    fathom('setTrackerUrl', '//fathom.dvk.co/collect');
-    fathom('trackPageview');
-    </script>
-    <!-- / Fathom -->
   </body>
 </html>
