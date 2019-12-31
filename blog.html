@@ -11,11 +11,11 @@ permalink: /blog/
     <ul class="post-list with-excerpt">
         {% for post in site.posts %}
         <li>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><br />
+            <a class="post-link" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a><br />
             <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp;
         </li>
         {% endfor %}
     </ul>
 
-    <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe to my writings via RSS</a>.</p>
+    <p class="rss-subscribe"><a href="{{ '/feed.xml' | prepend: site.url }}">Subscribe to my writings via RSS</a>.</p>
 </div>
