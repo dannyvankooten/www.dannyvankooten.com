@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="referrer" content="no-referrer-when-downgrade">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-		{% seo %}
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.url }}">
+    <link rel="icon" href="{{ '/favicon.ico' | prepend: site.url }}" type="image/x-icon">
+    {% seo %}
 </head>
-  <body class="{% if page.url == "/" %}home{% endif %}">
+  <body class="{% if page.url == '/' %}home{% endif %}">
     {% include header.html %}
 
     <div class="page-content">
