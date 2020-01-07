@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stepping down as Fathom maintainer"
+title: "Stepping down from Fathom"
 date: '2019-03-18'
 tags:
 - fathom

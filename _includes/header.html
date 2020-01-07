@@ -1,4 +1,4 @@
-<header class="site-header clearfix" role="banner">
+<header class="site-header clearfix">
 
   <div class="container">
 
@@ -9,12 +9,12 @@
         </h1>
        {% else %}
         <nav role="navigation">
-            <span class="small-dot"></span> &nbsp; <a href="/" rel="home">back to homepage</a>
+            <span class="small-dot"></span> &nbsp; <a href="{{ site.url }}/" rel="home">back to homepage</a>
         </nav>
         {% endif %}
       </div>
 
-    <nav class="site-nav site-header-2" role="navigation">
+    <nav class="site-nav site-header-2">
         <a href="{{site.url}}/about/" {% if page.url == "/about/" %}class="active"{% endif %}>About Me</a>
         <a href="{{site.url}}/blog/" {% if page.url == "/blog/" %}class="active"{% endif %}>Blog</a>
         <a href="{{site.url}}/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a>

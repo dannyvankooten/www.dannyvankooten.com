@@ -1,6 +1,13 @@
 @import "colors.scss";
 
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
 body {
+  margin: 0;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   font-size: 16px;
   line-height: 1.4;
@@ -11,9 +18,12 @@ body {
 }
 
 a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
   color: $main_color;
   text-decoration: underline;
 }
+
 
 a:focus,
 a:hover {
@@ -22,11 +32,32 @@ a:hover {
   cursor: pointer;
 }
 
-code {
-  display: inline-block;
-  padding: 1px 2px;
-  background-color: rgba(0,0,0,0.08);
+code[class] {
+  background-color: #f8f8f8;
 }
+
+button,
+input,
+select,
+textarea {
+  font: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+textarea {
+  overflow: auto;
+}
+
 
 iframe {
   border: 1px solid #333;
@@ -35,6 +66,7 @@ iframe {
 img{
   max-width: 100%;
   height: auto;
+  border-style: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -105,8 +137,18 @@ tbody > tr:nth-of-type(odd) {
 }
 
 hr {
+  box-sizing: content-box; /* 1 */
+  overflow: visible; /* 2 */
     height: 0;
     border-top: 1px solid #eee;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }

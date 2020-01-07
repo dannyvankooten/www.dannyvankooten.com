@@ -1,5 +1,7 @@
+---
+---
+
 @import "colors.scss";
-@import "normalize.scss";
 @import "utilities.scss";
 @import "global.scss";
 @import "grid.scss";
@@ -51,16 +53,16 @@
 }
 
 .site-footer {
-  color: #888;
+  color: #767676;
   margin-top: 40px;
   font-size: 14px;
 
   a{
-    color: #777;
+    color: #767676;
     text-decoration: underline;
 
     &:hover {
-      color: #333;
+      color: darken(#767676, 20%);
     }
   }
 }
@@ -87,7 +89,18 @@
 
   }
 }
+.post-list {
+  list-style: none;
+  padding: 0;
+}
 
+.post-list meta {
+  margin-right: 4px;
+}
+
+.post-list.with-excerpt li {
+  margin-bottom: 12px;
+}
 .post-title{
 }
 

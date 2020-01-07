@@ -41,8 +41,6 @@ function dvk_dequeue_scripts() {
 add_action( 'wp_enqueue_scripts', 'dvk_dequeue_scripts', 99 );
 ```
 
-> regular pre
-
 
 Be careful when implementing a snippet like this. If you (or your client) show a contact form using a template function or widget, the form will be missing its scripts and styles.
 

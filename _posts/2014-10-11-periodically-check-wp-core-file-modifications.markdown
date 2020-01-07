@@ -23,7 +23,7 @@ Running this command at a set interval can be very useful to monitor your WordPr
 
 I configured a cronjob on my server to run the following script every hour. 
 
-```txt
+```sh
 #!/bin/bash
 cd /my/wp/directory
 

@@ -8,8 +8,7 @@ tags:
 ---
 
 <div class="well">
-	<strong>Summary:</strong> Join me on Mastodon! It's very nice over here.<br />
-	There's more than enough room on this instance I'm running: <a href="https://stinkt.online/about">stinkt.online</a>.
+	<strong>Summary:</strong> Join <a href="https://mastodon.dvk.co/@danny">me on Mastodon</a>. It's like Twitter, but better and less angry.
 </div>
 
 I've been a happy Twitter user for years and got a lot of value out of it over the last decade. Even so, I find myself using the service very little these days. 
@@ -35,7 +34,7 @@ Here's a few things that make Mastodon great for me:
 
 I'm enthusiastic about the direction that Mastodon is heading in and am really enjoying myself on there already. If you're looking for a place that feels a bit like Twitter in the early days, give Mastodon a proper try.
 
-To further promote decentralization, I decided to run my own instance: [stinkt.online](https://stinkt.online/about) (which was super easy to set up, by the way). Feel free to join me on there!
+To further promote decentralization, I decided to run my own instance: [mastodon.dvk.co](https://mastodon.dvk.co/) (which was super easy to set up, by the way). 
 
 ### Useful Mastodon tools
 
@@ -45,7 +44,7 @@ Here are some of the tools that helped me:
 
 - [Find your Twitter friends on Mastodon](https://bridge.joinmastodon.org/)
 - [Find an instance that suits your needs and interests](https://instances.social/)
-- [Self-hosting Mastodon](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Production-guide.md)
+- [Self-hosting Mastodon](https://docs.joinmastodon.org/admin/prerequisites/)
 - iOS apps: [Tootdon](https://itunes.apple.com/us/app/tootdon-for-mastodon/id1282283934) and [Amaroq](https://itunes.apple.com/us/app/amaroq-for-mastodon/id1214116200)
 
 

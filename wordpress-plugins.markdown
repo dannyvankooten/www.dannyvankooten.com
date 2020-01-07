@@ -16,48 +16,53 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
     	<td><a href="https://mc4wp.com/">MailChimp for WordPress</a> &nbsp; <a href="https://github.com/ibericode/mailchimp-for-wordpress"><i class="icon icon-social-github"></i></a></td>
-        <td>18,000,000+</td>
+        <td>24,000,000+</td>
         <td>July 2013</td>
     </tr>
     <tr>
     	<td><a href="http://wordpress.org/plugins/newsletter-sign-up/">Newsletter Sign-Up</a></td>
-        <td>360,000+</td>
+        <td>370,000+</td>
         <td>March 2011</td>
     </tr>
        <tr>
-    	<td><a href="https://wordpress.org/plugins/recent-facebook-posts/">Recent Facebook Posts</a></td>
-        <td>290,000+</td>
+    	<td><s><a href="https://wordpress.org/plugins/recent-facebook-posts/">Recent Facebook Posts</a></s></td>
+        <td>300,000+</td>
         <td>September 2012</td>
     </tr>
      <tr>
     	<td><a href="https://wordpress.org/plugins/wysiwyg-widgets/">Widget Blocks</a></td>
-        <td>267,000+</td>
+        <td>286,000+</td>
         <td>Juny 2011</td>
     </tr>
     <tr>
-            <td><a href="https://boxzillaplugin.com/">Scroll Triggered Boxes</a> &nbsp; <a href="https://github.com/ibericode/boxzilla-wp"><i class="icon icon-social-github"></i></a></td>
-            <td>242,000+</td>
+            <td><a href="https://boxzillaplugin.com/">Boxzilla</a> &nbsp; <a href="https://github.com/ibericode/boxzilla-wp"><i class="icon icon-social-github"></i></a></td>
+            <td>344,000+</td>
             <td>November 2013</td>
      </tr>
     <tr>
         	<td><a href="https://wordpress.org/plugins/mailchimp-sync/">MailChimp User Sync</a> &nbsp; <a href="https://github.com/ibericode/mailchimp-user-sync"><i class="icon icon-social-github"></i></a></td>
-            <td>158,000+</td>
+            <td>200,000+</td>
             <td>January 2015</td>
     </tr>
     <tr>
     	<td><a href="https://wordpress.org/plugins/mailchimp-top-bar/">MailChimp Top Bar</a> &nbsp; <a href="https://github.com/ibericode/mailchimp-top-bar"><i class="icon icon-social-github"></i></a></td>
-        <td>151,000+</td>
+        <td>188,000+</td>
         <td>February 2015</td>
     </tr>
     <tr>
     	<td><a href="https://wordpress.org/plugins/dvk-social-sharing/">Social Sharing by Danny</a></td>
-        <td>61,000+</td>
+        <td>66,000+</td>
         <td>November 2013</td>
     </tr>
     <tr>
         <td><a href="https://wordpress.org/plugins/html-forms/">HTML Forms</a> &nbsp; <a href="https://github.com/ibericode/html-forms"><i class="icon icon-social-github"></i></a></td>
-        <td>15,000+</td>
+        <td>30,000+</td>
         <td>October 2017</td>
+    </tr>
+     <tr>
+        <td><a href="https://wordpress.org/plugins/koko-analytics/">Koko Analytics</a> &nbsp; <a href="https://github.com/ibericode/koko-analytics"><i class="icon icon-social-github"></i></a></td>
+        <td>2,000+</td>
+        <td>November 2019</td>
     </tr>
 </table>
 
