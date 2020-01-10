@@ -1,0 +1,123 @@
+@import "global.scss";
+@import "grid.scss";
+
+.site-header {
+  margin-bottom: 40px;
+  line-height: 48px;
+
+  a{ text-decoration: none; }
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+.dot {
+  background: $main_color;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 4px; /* to align with text */
+
+  &.small {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 2px;
+  }
+}
+
+
+.site-title {
+  margin: 0;
+
+  a{
+    font-size: 32px;
+    color: #222;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.site-footer {
+  color: #767676;
+  margin-top: 40px;
+  font-size: 14px;
+
+  a{
+    color: #767676;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: darken(#767676, 20%);
+    }
+  }
+}
+
+.site-nav {
+  a {
+    padding: 4px 8px;
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    border-bottom: 2px solid transparent;
+
+    &:active,
+    &.active {
+      border-color: #222;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      border-color: #AAA;
+    }
+
+  }
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list meta {
+  margin-right: 4px;
+}
+
+.post-list.with-excerpt li {
+  margin-bottom: 12px;
+}
+
+.post-content {
+  h1, h2, h3, h4, h5 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .site-header .l,
+  .site-header .r {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+  .site-nav a {
+    margin: 0;
+  }
+}
+
+@import "utilities.scss";
+@import "highlight-github.scss";

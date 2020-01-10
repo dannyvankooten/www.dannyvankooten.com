@@ -34,13 +34,13 @@
   }
 }
 
-.clearfix:before,
-.clearfix:after {
+.cf:before,
+.cf:after {
   content: " "; /* 1 */
   display: table; /* 2 */
 }
 
-.clearfix:after {
+.cf:after {
   clear: both;
 }
 
@@ -84,14 +84,8 @@
   overflow: hidden;
 }
 
-/* 16x9 Aspect Ratio */
-.ratio-16x9 {
+.r16x9 {
   padding-bottom: 56.25%;
-}
-
-/* 4x3 Aspect Ratio */
-.ratio-4x3 {
-  padding-bottom: 75%;
 }
 
 .iframe-container iframe {

@@ -20,16 +20,13 @@ layout: default
   {% capture posttime %}{{page.date | date: '%s'}}{% endcapture %}
 
   {% if posttime < treshold %}
-
   <div class="big-margin">
     <div id="disqus_thread"></div>
   </div>
   <script>
-
      var disqus_config = function () {
        this.page.url = '{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}';
      };
-
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
       s.src = '//dannyvankooten.disqus.com/embed.js';

@@ -1,25 +1,20 @@
-<header class="site-header clearfix">
-
+<header class="site-header cf">
   <div class="container">
-
-      <div class="site-header-1">
-        {% if page.url == "/" %}
-        <h1 class="site-title">
-          <a class="site-title" href="{{ site.url }}/">{{ site.title }} <span class="dot"></span></a>
-        </h1>
-       {% else %}
-        <nav role="navigation">
-            <span class="small-dot"></span> &nbsp; <a href="{{ site.url }}/" rel="home">back to homepage</a>
-        </nav>
-        {% endif %}
-      </div>
-
-    <nav class="site-nav site-header-2">
+    <div class="l">
+      {% if page.url == "/" %}
+      <h1 class="site-title">
+        <a href="{{ site.url }}/">{{ site.title }} <span class="dot"></span></a>
+      </h1>
+     {% else %}
+      <nav role="navigation">
+          <span class="dot small"></span> &nbsp; <a href="{{ site.url }}/" rel="home">back to homepage</a>
+      </nav>
+      {% endif %}
+    </div>
+    <nav class="site-nav r">
         <a href="{{site.url}}/about/" {% if page.url == "/about/" %}class="active"{% endif %}>About Me</a>
         <a href="{{site.url}}/blog/" {% if page.url == "/blog/" %}class="active"{% endif %}>Blog</a>
         <a href="{{site.url}}/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a>
     </nav>
-
   </div>
-
 </header>

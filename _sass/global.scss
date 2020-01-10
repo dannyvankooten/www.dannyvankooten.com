@@ -1,10 +1,4 @@
-@import "colors.scss";
-
-html {
-  font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
+$main_color: #0066ff;
 
 body {
   margin: 0;
@@ -18,49 +12,15 @@ body {
 }
 
 a {
-  background-color: transparent; /* 1 */
-  -webkit-text-decoration-skip: objects; /* 2 */
   color: $main_color;
   text-decoration: underline;
 }
-
 
 a:focus,
 a:hover {
   color: darken( $main_color, 20%);
   text-decoration: underline;
   cursor: pointer;
-}
-
-code[class] {
-  background-color: #f8f8f8;
-}
-
-button,
-input,
-select,
-textarea {
-  font: inherit; /* 1 */
-  margin: 0; /* 2 */
-}
-
-button,
-input { /* 1 */
-  overflow: visible;
-}
-
-button,
-select { /* 1 */
-  text-transform: none;
-}
-
-textarea {
-  overflow: auto;
-}
-
-
-iframe {
-  border: 1px solid #333;
 }
 
 img{
@@ -132,7 +92,7 @@ table td {
     padding: 3px 6px;
 }
 
-tbody > tr:nth-of-type(odd) {
+tr:nth-of-type(odd) {
 	background: rgba( 50, 50, 50, 0.025);
 }
 
