@@ -57,41 +57,14 @@
   border: 1px solid #dae9f4;
   padding: 20px;
   box-shadow: 0 0 1px 1px #eee;
-
 }
 
 .round {
   border-radius: 50%;
 }
 
-.slashed:before {
-  color: #BBB;
-  content: "//";
-  margin-right: 8px;
-}
-
-.pull-right {
-  float: right;
-}
-
-.pull-left {
-  float: left;
-}
-
 .centered {
   margin-left: auto;
   margin-right: auto;
   display: block;
-}
-
-@media(min-width: 600px) {
-	.desktop-pull-right {
-		float: right;
-		margin-left: 20px;
-	}
-
-	.desktop-pull-left {
-		float: left;
-		margin-right: 20px;
-	}
 }
