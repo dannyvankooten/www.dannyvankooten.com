@@ -10,13 +10,14 @@ Do you..
 
 __Need support for [Mailchimp for WordPress](https://mc4wp.com/) or [Boxzilla](https://boxzillaplugin.com/)?__
 
-Please use the email address shown in the settings pages of the plugin you need support for or simply reply to the purchase receipt.
-
+If you are a paying customer, please use the email address shown in the settings pages of the plugin you need support for or simply reply to the purchase receipt. 
 This will guarantee a (_much_) faster response time.
+
+If you are only using the free plugins, please read on below.
 
 __Need support for a [free WordPress plugin](/wordpress-plugins/)?__
 
-Please use the appropriate [plugin support forum on WordPress.org](https://wordpress.org/support/).
+Please use the appropriate [plugin support forum on WordPress.org](https://wordpress.org/support/). We're monitoring it daily, once we've handled support for our paying customers.
 
 __Need my business details?__
 
@@ -28,8 +29,6 @@ Chamber of Commerce reg. no: 65413741<br>
 VAT no: NL856102337B01<br>
 </address>
 
-
-Need our VAT number? Please contact me using the email address below.
 
 __Need anything else?__
 
