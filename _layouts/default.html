@@ -1,24 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.url }}">
-    <link rel="icon" href="{{ '/assets/img/favicon.png' | prepend: site.url }}" type="image/png">
-    {% seo %}
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.url }}">
+<link rel="icon" href="{{ '/assets/img/favicon.png' | prepend: site.url }}" type="image/png">
+{% seo %}
+
+<style>
+body { padding: 0 2em; font: 16px sans-serif; line-height: 1.6; max-width: 600px; } 
+a { color:black } 
+a:hover, a:focus { text-decoration:none } 
+body > header { margin: 2em 0; padding-bottom: 2em; border-bottom: 1px dotted;} 
+h1 a { text-decoration: none; }
+header nav { margin-top: 1em; }
+img { max-width:100% }
+h1 { margin: 0; }
+h2, h3, h4, h5 { margin: 2em 0 0; }
+ul { padding-left: 1em; }
+blockquote { font-style: italic; margin: 1em 0; }
+p { margin: 1em 0; }
+pre code { border: 1px solid; display: block; overflow-x: auto; padding: 4px; background: black; color: white; }
+footer { border-top:1px dotted; margin: 2em 0; padding-top: 2em; } 
+footer p { margin: 0; }
+hr { border:1px dotted black; margin: 1em 0; }
+@media(max-width: 720px) {
+  body{ padding: 0 0.5em; }
+}
+</style>
 </head>
-  <body class="{% if page.url == '/' %}home{% endif %}">
-    {% include header.html %}
+  <body>
+    <header>
+        {% if page.url == "/" %}
+        <h1>
+          <a href="{{ site.url }}/">Danny van Kooten</a>
+        </h1>
+       {% else %}
+        <nav>
+            <a href="{{ site.url }}/" rel="home">Danny van Kooten</a>
+        </nav>
+        {% endif %}
 
-    <div class="page-content">
-      <div class="container">
-        {{ content }}
-      </div>
-    </div>
+        <nav>
+            <a href="{{site.url}}/about/">About Me</a> &#9826; 
+            <a href="{{site.url}}/blog/">Blog</a> &#9826; 
+            <a href="{{site.url}}/contact/">Contact</a>
+        </nav>
+    </header>
 
-    {% include footer.html %}
+
+    <main>
+       {{ content }}
+    </main>
+
+    <footer>
+      <small>Find me on
+        {% include icon-github.svg %} <a href="https://github.com/dannyvankooten/" rel="me nofollow author">GitHub</a>, 
+        {% include icon-mastodon.svg %} <a rel="me nofollow author" href="https://mastodon.dvk.co/@danny">Mastodon</a> 
+        or
+        {% include icon-twitter.svg %} <a href="https://twitter.com/dannyvankooten/" rel="me nofollow author">Twitter</a>.
+      </small>
+  </footer>
   </body>
 </html>

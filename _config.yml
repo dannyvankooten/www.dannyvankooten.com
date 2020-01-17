@@ -19,13 +19,7 @@ social:
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  hard_wrap: false
-sass:
-  style: compressed
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

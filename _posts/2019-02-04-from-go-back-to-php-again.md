@@ -66,9 +66,7 @@ Honestly, Go is great. Its simplicity is refreshing and you can't get anywhere n
 
 Our shops however are more monolithic with a lot of server-side rendering. While that's certainly doable in Go (as the last 2 years proved), it's more maintainable for us to do it in PHP right now. 
 
-<div class="well italic">
-Side note: without the experience gained from our years on Go, I probably wouldn't have started <a href="https://usefathom.com/">Fathom Analytics</a>. So perhaps it wasn't such a bad business decision after all?
-</div>
+> Side note: without the experience gained from our years on Go, I probably wouldn't have started <a href="https://usefathom.com/">Fathom Analytics</a>. So perhaps it wasn't such a bad business decision after all?
 
 ### Making the correct business decision
 
@@ -77,10 +75,9 @@ One reason not mentioned so far is that over the last year or so, I've been appr
 They were a little surprised to hear our stack involved Golang and some flat out told us they'd prefer PHP, because that's what most of our products ([mc4wp.com](https://mc4wp.com/), [boxzillaplugin.com](https://boxzillaplugin.com) and [htmlforms.io](https://htmlforms.io)) rely upon. And I don't blame them.
 
 
+<hr />
+<p><sup>1</sup> Just for fun, I compared apples and oranges again by benchmarking the login page (which doesn't hit any database) for both application versions using <a href="https://www.joedog.org/siege-home/">Siege</a>. </p>
 
-<div class="big-margin muted">
-    <p><sup>1</sup> Just for fun, I compared apples and oranges again by benchmarking the login page (which doesn't hit any database) for both application versions using <a href="https://www.joedog.org/siege-home/">Siege</a>. </p>
-    
-    <p>The Symfony application (PHP 7.3, OPcache enabled, optimized autoloader) handles about 1470 req/s. The Go application (compiled using Go v1.11) averages about 18600 req/s.</p>
-</div>
+<p>The Symfony application (PHP 7.3, OPcache enabled, optimized autoloader) handles about 1470 req/s. The Go application (compiled using Go v1.11) averages about 18600 req/s.</p>
+
 

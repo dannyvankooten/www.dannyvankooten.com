@@ -7,9 +7,7 @@ tags:
 - mastodon
 ---
 
-<div class="well">
-	<strong>Summary:</strong> Join <a href="https://mastodon.dvk.co/@danny">me on Mastodon</a>. It's like Twitter, but better and less angry.
-</div>
+> **Summary:** Join [me on Mastodon](https://mastodon.dvk.co/@danny). It's like Twitter, but better and less angry.
 
 I've been a happy Twitter user for years and got a lot of value out of it over the last decade. Even so, I find myself using the service very little these days. 
 
