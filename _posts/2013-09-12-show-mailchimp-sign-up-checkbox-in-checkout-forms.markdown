@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Show a MailChimp sign-up checkbox in your checkout forms.
+title: Show a Mailchimp sign-up checkbox in your checkout forms.
 date: '2013-09-12 10:49:15'
 tags:
 - woocommerce
-- mailchimp
+- Mailchimp
 - easy-digital-downloads
 - wordpress
 ---
@@ -21,7 +21,7 @@ That's why it is important to make it as easy as possible for them to sign-up fo
 <span style="line-height: 1.5;">By presenting your customers with an easy opt-in method at your checkout forms you will surely improve your sign-up rate. With a checkbox asking them to sign-up, all they have to do is check it to subscribe to your newsletter. No extra fields need to be filled in, they already entered all the required information in your checkout form. You can even have the checkbox pre-checked by default.</span>
 
 <h3>WooCommerce and Easy Digital Downloads</h3>
-<span style="line-height: 1.5;">Recently, I added automatic integration with two popular </span><span style="line-height: 1.5;">eCommerce</span><span style="line-height: 1.5;"> plugins for WordPress to my premium plugin, <a title="MailChimp for WordPress Pro" href="https://mc4wp.com/">MailChimp for WordPress</a>, that does just this. When activated, the plugin checks if you're running any plugins it can integrate with and then presents you with an option to show a newsletter sign-up checkbox at some of the available hooks.</span>
+<span style="line-height: 1.5;">Recently, I added automatic integration with two popular </span><span style="line-height: 1.5;">eCommerce</span><span style="line-height: 1.5;"> plugins for WordPress to my premium plugin, <a title="Mailchimp for WordPress Pro" href="https://www.mc4wp.com/">Mailchimp for WordPress</a>, that does just this. When activated, the plugin checks if you're running any plugins it can integrate with and then presents you with an option to show a newsletter sign-up checkbox at some of the available hooks.</span>
 
 <img class="aligncenter size-full wp-image-1403" alt="Show a checkbox at your Easy Digital Downloads checkout form." src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704606/edd-checkout-chekcbox_oxbct3.jpg" width="937" height="304" />
 

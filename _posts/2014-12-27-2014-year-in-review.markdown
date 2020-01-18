@@ -10,12 +10,12 @@ Simply put, 2014 was probably my best year ever. I'm incredibly grateful for the
 
 This post highlights some of the things I've been doing in 2014..
 
-#### MailChimp for WordPress
-At the start of 2014, my [MailChimp for WordPress plugin](https://mc4wp.com/) had just over 100.000 free downloads and a few hundred paying customers. 
+#### Mailchimp for WordPress
+At the start of 2014, my [Mailchimp for WordPress plugin](https://www.mc4wp.com/) had just over 100.000 free downloads and a few hundred paying customers. 
 
-![](//res.cloudinary.com/dannyvankooten/image/upload/v1419701527/mailchimp-for-wordpress-830k-downloads.jpg)
+![](//res.cloudinary.com/dannyvankooten/image/upload/v1419701527/Mailchimp-for-wordpress-830k-downloads.jpg)
 
-During 2014, the plugin has grown to 830.000+ free downloads, 5.000+ paying customers (**thank you!**) and [300+ positive plugin reviews](https://wordpress.org/support/view/plugin-reviews/mailchimp-for-wp).
+During 2014, the plugin has grown to 830.000+ free downloads, 5.000+ paying customers (**thank you!**) and [300+ positive plugin reviews](https://wordpress.org/support/view/plugin-reviews/Mailchimp-for-wp).
 
 #### 1.5 million total plugin downloads
 [My combined WordPress plugins download count](http://wptally.com/?wpusername=dvankooten) has grown from 600.000 downloads to just over 1.5 million. Woah! 
@@ -42,7 +42,7 @@ I've learned _a lot_ in 2014: new technologies, web development concepts, ways o
 2015 will be fun. I'll be..
 
 - Releasing a new product (more on this later).
-- Introducing some cool new features & feature improvements in MailChimp for WordPress.
+- Introducing some cool new features & feature improvements in Mailchimp for WordPress.
 - Finally dropping PHP 5.2 support for all of my existing plugins. [Coen Jacobs has some great ideas on the whys and hows of this](http://coenjacobs.me/wordpress-plugins-require-php-5-4/).
 - Continuing my exploration of the JavaScript world. I've been working with Node.js & client-side MVC a lot lately - and loving it.
 - Hiring. Looking for a remote position? I'm [looking for someone to help me out with support](/work/).

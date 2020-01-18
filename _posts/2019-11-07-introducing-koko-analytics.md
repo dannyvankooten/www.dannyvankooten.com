@@ -8,7 +8,7 @@ tags:
 - privacy
 ---
 
-After [stepping down from Fathom](/stepping-down-fathom-maintainer/) earlier this year, I was happy working on [Mailchimp for WordPress](https://mc4wp.com/) for a good few months 
+After [stepping down from Fathom](/stepping-down-fathom-maintainer/) earlier this year, I was happy working on [Mailchimp for WordPress](https://www.mc4wp.com/) for a good few months 
 before realising that I was still thinking about how to make web analytics more private.
 
 It dawned on me that part of why I was building Fathom in Go was because I wanted a break from WordPress and because I deemed it necessary to achieve good enough performance. 

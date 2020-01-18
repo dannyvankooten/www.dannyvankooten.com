@@ -15,7 +15,7 @@ Without further ado, here are some of the most important plugins for WordPress I
         <th>Released in</th>
     </tr>
     <tr>
-    	<td><a href="https://mc4wp.com/">MailChimp for WordPress</a> &nbsp; <a href="https://github.com/ibericode/mailchimp-for-wordpress"><i class="icon icon-social-github"></i></a></td>
+    	<td><a href="https://www.mc4wp.com/">Mailchimp for WordPress</a> &nbsp; <a href="https://github.com/ibericode/Mailchimp-for-wordpress"><i class="icon icon-social-github"></i></a></td>
         <td>24,000,000+</td>
         <td>July 2013</td>
     </tr>
@@ -40,12 +40,12 @@ Without further ado, here are some of the most important plugins for WordPress I
             <td>November 2013</td>
      </tr>
     <tr>
-        	<td><a href="https://wordpress.org/plugins/mailchimp-sync/">MailChimp User Sync</a> &nbsp; <a href="https://github.com/ibericode/mailchimp-user-sync"><i class="icon icon-social-github"></i></a></td>
+        	<td><a href="https://wordpress.org/plugins/Mailchimp-sync/">Mailchimp User Sync</a> &nbsp; <a href="https://github.com/ibericode/Mailchimp-user-sync"><i class="icon icon-social-github"></i></a></td>
             <td>200,000+</td>
             <td>January 2015</td>
     </tr>
     <tr>
-    	<td><a href="https://wordpress.org/plugins/mailchimp-top-bar/">MailChimp Top Bar</a> &nbsp; <a href="https://github.com/ibericode/mailchimp-top-bar"><i class="icon icon-social-github"></i></a></td>
+    	<td><a href="https://wordpress.org/plugins/Mailchimp-top-bar/">Mailchimp Top Bar</a> &nbsp; <a href="https://github.com/ibericode/Mailchimp-top-bar"><i class="icon icon-social-github"></i></a></td>
         <td>188,000+</td>
         <td>February 2015</td>
     </tr>

@@ -15,7 +15,7 @@ I've been following Johannes' adventures for a few years already as he was one o
 
 **>> [Interview with Danny van Kooten on WebWorkTravel](http://www.webworktravel.com/interview-with-danny-van-kooten/) <<**
 
-In the interview we talk about how I got started with traveling, what I'm doing to stay sane on the road and why I like it so much. We also talk about how I started building [MailChimp for WordPress](https://mc4wp.com/) from a hospital bed in Vietnam.
+In the interview we talk about how I got started with traveling, what I'm doing to stay sane on the road and why I like it so much. We also talk about how I started building [Mailchimp for WordPress](https://www.mc4wp.com/) from a hospital bed in Vietnam.
 
 Hope you enjoy the interview! **:)**
 

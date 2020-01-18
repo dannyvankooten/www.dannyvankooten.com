@@ -6,9 +6,9 @@ tags:
 - wordpress
 ---
 
-Our most popular plugin [MailChimp for WordPress](https://mc4wp.com/) was released in 2013. Inspired by [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) we built it in such a way that you could define the fields for your sign-up forms in native HTML. This has worked very well over the last 4 years.
+Our most popular plugin [Mailchimp for WordPress](https://www.mc4wp.com/) was released in 2013. Inspired by [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) we built it in such a way that you could define the fields for your sign-up forms in native HTML. This has worked very well over the last 4 years.
 
-We kept getting questions for that type of form functionality without the MailChimp part though. CF7 still ships its own templating language, after all.
+We kept getting questions for that type of form functionality without the Mailchimp part though. CF7 still ships its own templating language, after all.
 
 Last week, we finally gave in and submitted [HTML Forms](https://www.htmlforms.io/) to the WordPress.org plugin repository. 
 

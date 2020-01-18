@@ -22,7 +22,7 @@ The blog post they link to is from late 2014, so they have been offering this fe
 
 ## Missed out revenue from EU customers
 
-Curous what blocking European customers (not businesses) entirely would actually mean in terms of revenue for our products, I pulled up the following data for [MailChimp for WordPress](https://mc4wp.com/). It is taken from sales data for the last 2 years, since the ruling came into effect.
+Curous what blocking European customers (not businesses) entirely would actually mean in terms of revenue for our products, I pulled up the following data for [Mailchimp for WordPress](https://www.mc4wp.com/). It is taken from sales data for the last 2 years, since the ruling came into effect.
 
 | Category        | %           |
 | ------------- |:-------------:|

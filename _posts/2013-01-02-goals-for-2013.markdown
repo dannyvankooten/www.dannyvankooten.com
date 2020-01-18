@@ -14,7 +14,7 @@ I follow various life-hacking or so called "self improvement" blogs and read o
 	<li>Release and offer support for a total of 5 WordPress plugins with each of them having over 10k downloads by the end of this year (4/5)</li>
 	<li>Create a Dutch portfolio website with all my client work</li>
 	<li><del>Create a new WordPress theme for this website</del></li>
-	<li><del>Release either a premium WordPress plugin OR a premium WordPress theme</del> (Done: <a href="https://mc4wp.com">MailChimp for WordPress</a>)</li>
+	<li><del>Release either a premium WordPress plugin OR a premium WordPress theme</del> (Done: <a href="https://www.mc4wp.com">Mailchimp for WordPress</a>)</li>
 	<li>Stick to / focus on creating (responsive) WordPress themes when it comes to client work</li>
 	<li>Take on more (of the above) client work</li>
 	<li><del>Become a JavaScript expert.</del></li>

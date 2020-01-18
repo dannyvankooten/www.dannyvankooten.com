@@ -8,7 +8,7 @@ Need to contact me? If so, please go through the questions below to help save us
 
 Do you..
 
-__Need support for [Mailchimp for WordPress](https://mc4wp.com/) or [Boxzilla](https://boxzillaplugin.com/)?__
+__Need support for [Mailchimp for WordPress](https://www.mc4wp.com/) or [Boxzilla](https://boxzillaplugin.com/)?__
 
 If you are a paying customer, please use the email address shown in the settings pages of the plugin you need support for or simply reply to the purchase receipt. 
 This will guarantee a (_much_) faster response time.

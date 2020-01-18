@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enabling shortcodes in widgets, quick Wordpress tip.
+title: Enabling shortcodes in widgets, quick WordPress tip.
 date: '2011-07-17 12:01:20'
 tags:
 - wordpress

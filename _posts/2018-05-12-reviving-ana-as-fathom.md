@@ -14,7 +14,7 @@ I had the same idea in late 2016 when I set out to built my own open-source webs
 
 Sadly, I got sidetracked and didn't spend any more time on it. I still firmly believe in the idea though.
 
-Knowing Paul as a super knowledgeable power-user of our [MailChimp for WordPress plugin](https://mc4wp.com/), I tweeted him that I would love to help out, if at all possible. And it was! 
+Knowing Paul as a super knowledgeable power-user of our [Mailchimp for WordPress plugin](https://www.mc4wp.com/), I tweeted him that I would love to help out, if at all possible. And it was! 
 
 Together, we are setting out to build **website analytics that is simple, transparent and that respects your visitor's privacy**. We're a few weeks in at this point and already running a beta version on our personal sites:
 

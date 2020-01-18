@@ -7,7 +7,7 @@ tags:
 - cdn
 ---
 
-To make sure the [MailChimp for WordPress](https://mc4wp.com/) site loads as fast as possible throughout the world we recently started using Amazon Cloudfront, a Content Delivery Network, for serving all public assets (CSS, JavaScript and image files). 
+To make sure the [Mailchimp for WordPress](https://www.mc4wp.com/) site loads as fast as possible throughout the world we recently started using Amazon Cloudfront, a Content Delivery Network, for serving all public assets (CSS, JavaScript and image files). 
 
 Configuring WordPress to use a CDN seemed like a straightforward and simple enough process to me. Looking at the available plugins however, nothing really seemed to work in the way I expected it to. 
 
@@ -30,7 +30,7 @@ define( 'DVK_CDN_URL', '//xxxxxx.cloudfront.net' );
 
 That's all there is to it - you're all set now! 
 
-I hope you enjoy the lightweight solution, we've been using it on [mc4wp.com](https://mc4wp.com) for a few months now, it works great! 
+I hope you enjoy the lightweight solution, we've been using it on [mc4wp.com](https://www.mc4wp.com) for a few months now, it works great! 
 
 
 

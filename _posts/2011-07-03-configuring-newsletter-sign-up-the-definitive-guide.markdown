@@ -9,7 +9,7 @@ date: '2011-07-03 13:22:45'
 > #### Table of contents
 > 1. [Downloading & Installing](#downloadinginstalling)
 > 2. [Configuring Newsletter Sign-Up](#configuring)
-> 	1. [MailChimp](#usingthemailchimpapi])
+> 	1. [Mailchimp](#usingtheMailchimpapi])
 >     2. [YMLP](#usingtheymlpapi)
 >     3. [Other newsletter services](#otherservicescustomsettings)
 > 3. [Testing](#testing)
@@ -36,16 +36,16 @@ Clicking the _settings_ link will take you to the settings page for the plugin. 
 
 If your newsletter service is included in the dropdown box, selecting it will prefill some fields for you. You could however just leave the select box at _other / advanced_ and provide all the necessary values yourself.
 
-If you're using MailChimp or YMLP then you have the option to use their API, which I recommend. Let's start with those two.
+If you're using Mailchimp or YMLP then you have the option to use their API, which I recommend. Let's start with those two.
 
-#### Using the MailChimp API
+#### Using the Mailchimp API
 
-<img src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704653/newsletter-sign-up-mailchimp-api_jqmolx.jpg" alt="" title="newsletter-sign-up-mailchimp-api" width="597" height="159" class="aligncenter size-full wp-image-585" />
+<img src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704653/newsletter-sign-up-Mailchimp-api_jqmolx.jpg" alt="" title="newsletter-sign-up-Mailchimp-api" width="597" height="159" class="aligncenter size-full wp-image-585" />
 
-_**Update June 2013:** I suggest using my [MailChimp for WordPress plugin](https://mc4wp.com/) to add sign-up methods for your MailChimp lists to WordPress. It's free and a lot easier to use._
+_**Update June 2013:** I suggest using my [Mailchimp for WordPress plugin](https://www.mc4wp.com/) to add sign-up methods for your Mailchimp lists to WordPress. It's free and a lot easier to use._
 
-1. Selecting MailChimp from the _mailinglist provider_ dropdown and tick the checkbox that says _Use MailChimp API?_
-2. Fill in your API key and MailChimp list ID. If you're not sure where to find these, click the `?`-link.
+1. Selecting Mailchimp from the _mailinglist provider_ dropdown and tick the checkbox that says _Use Mailchimp API?_
+2. Fill in your API key and Mailchimp list ID. If you're not sure where to find these, click the `?`-link.
 
 #### Using the YMLP API
 

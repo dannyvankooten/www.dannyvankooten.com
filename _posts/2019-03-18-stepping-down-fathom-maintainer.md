@@ -26,7 +26,7 @@ To think that Fathom would be so well received and grow so rapidly during its fi
 
 Have been, because going forward, I will not be actively involved with Fathom anymore. **Fathom itself is not going anywhere though.** Paul is now joined by [Jack Ellis](https://twitter.com/JackEllis) with whom he will be continuing the project. Having seen them work together during the handover phase, I completely trust in their abilities to keep making Fathom better.
 
-I am a little sad to leave Fathom behind but juggling its responsibilities with being a newbie dad and running [Mailchimp for WordPress](https://mc4wp.com/) while also wanting to spend less time behind a computer proved way harder than anticipated. 
+I am a little sad to leave Fathom behind but juggling its responsibilities with being a newbie dad and running [Mailchimp for WordPress](https://www.mc4wp.com/) while also wanting to spend less time behind a computer proved way harder than anticipated. 
 
 At the same time, I'm happy that Fathom is in good hands with Paul and Jack and am stoked to see [our (now their) plans](https://trello.com/b/x2aBwH2J/fathom-roadmap) further unfold over the next few months.
 

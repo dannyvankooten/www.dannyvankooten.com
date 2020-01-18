@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Celebrating 2 million downloads for MailChimp for WordPress
+title: Celebrating 2 million downloads for Mailchimp for WordPress
 date: '2015-09-09 12:09:14'
 tags:
-- mailchimp
+- Mailchimp
 - wordpress
 - milestone
 ---
 
-Earlier today, our [MailChimp for WordPress plugin crossed the 2 million downloads mark](https://mc4wp.com/blog/celebrating-2-million-downloads/) and we're super proud of that.
+Earlier today, our [Mailchimp for WordPress plugin crossed the 2 million downloads mark](https://www.mc4wp.com/blog/celebrating-2-million-downloads/) and we're super proud of that.
 
-I remember [announcing the plugin](https://dannyvankooten.com/my-newest-wordpress-plugin-mailchimp-for-wp/) on my blog here and receiving only a handful of responses.
+I remember [announcing the plugin](https://dannyvankooten.com/my-newest-wordpress-plugin-Mailchimp-for-wp/) on my blog here and receiving only a handful of responses.
 
-A year later, I wrote about reaching [the first big milestone: 100.000 downloads](https://dannyvankooten.com/100-000-plugin-downloads-6-months-mailchimp-wordpress/).
+A year later, I wrote about reaching [the first big milestone: 100.000 downloads](https://dannyvankooten.com/100-000-plugin-downloads-6-months-Mailchimp-wordpress/).
 
-Then, barely 6 months ago we multiplied that number by 10. That makes [1 million total downloads](https://dannyvankooten.com/one-million-downloads-mailchimp-wordpress/). 
+Then, barely 6 months ago we multiplied that number by 10. That makes [1 million total downloads](https://dannyvankooten.com/one-million-downloads-Mailchimp-wordpress/). 
 
 We doubled that number again today.
 

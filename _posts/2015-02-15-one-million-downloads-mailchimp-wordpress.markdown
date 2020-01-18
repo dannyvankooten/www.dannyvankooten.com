@@ -3,12 +3,12 @@ layout: post
 title: One million downloads
 date: '2015-02-15 05:59:42'
 tags:
-- mailchimp
+- Mailchimp
 - wordpress
 - personal
 ---
 
-Last Friday was a day of many milestones [MailChimp for WordPress](https://mc4wp.com), which is by far my biggest WordPress plugin.
+Last Friday was a day of many milestones [Mailchimp for WordPress](https://www.mc4wp.com), which is by far my biggest WordPress plugin.
 
 The plugin experienced some crazy growth since its first release, less than 2 years ago.
 
@@ -20,7 +20,7 @@ At _exactly midnight UTC_ the plugin was downloaded for the **millionth time**.
 
 Wow.
 
-In retrospect, just a little over a year ago [the plugin was still at 100.000 downloads](https://dannyvankooten.com/100-000-plugin-downloads-6-months-mailchimp-wordpress/). 
+In retrospect, just a little over a year ago [the plugin was still at 100.000 downloads](https://dannyvankooten.com/100-000-plugin-downloads-6-months-Mailchimp-wordpress/). 
 
 #### 10.000+ downloads in 24 hours
 
@@ -29,11 +29,11 @@ While this is mostly due to people updating the plugin to the latest version, it
 Last Friday, the plugin was downloaded a staggering 12.000 times.
 
 #### 20 most popular plugins of all-time
-Not sure how long this has been the case but MailChimp for WordPress is now featured on the ["Most Popular" plugins sidebar on WordPress.org](https://wordpress.org/plugins/) as #17.
+Not sure how long this has been the case but Mailchimp for WordPress is now featured on the ["Most Popular" plugins sidebar on WordPress.org](https://wordpress.org/plugins/) as #17.
 
 #### More numbers
 
-We did a post on the [MailChimp for WordPress Blog listing some numbers on the plugin](https://mc4wp.com/blog/one-million-downloads/).
+We did a post on the [Mailchimp for WordPress Blog listing some numbers on the plugin](https://www.mc4wp.com/blog/one-million-downloads/).
 
 I'm delighted to have reached those milestones and eager to continue this amazing journey.
 
