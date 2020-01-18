@@ -9,31 +9,31 @@
 <link rel="icon" href="{{ '/assets/img/favicon.png' | prepend: site.url }}" type="image/png">
 {%- seo -%}
 <style>
-body { padding: 2em; font: 16px Helvetica, Arial, sans-serif; max-width: 600px; } 
-a { color:black } 
-a:hover, a:focus { text-decoration:none } 
-header a { text-decoration: none; font-size: 32px; font-weight: bold; }
-nav { margin: 2em 0;  padding-bottom: 2em; border-bottom: 1px dotted; }
-nav a { margin-right: 1em; }
-img { max-width:100%; height: auto; }
-h1 { margin: 0; }
-h1 a { text-decoration: none; }
-main { line-height: 1.6; }
-h2, h3, h4, h5 { margin: 2em 0 0; }
-p { margin: 1em 0; }
-ul { margin: 1em 0; padding-left: 1em; }
-blockquote { font-style: italic; margin: 1em 0; }
-hr { border:1px dotted black; margin: 2em 0; }
-pre code { margin: 1em 0; border: 1px solid; display: block; overflow-x: auto; padding: 4px; background: black; color: white; }
-table { margin: 1em 0; border-collapse: collapse; }
-th, td { word-break: break-all; text-align: left; padding: 2px 4px; }
-footer { border-top:1px dotted; margin: 2em 0 0; padding-top: 2em; } 
-footer p { margin: 0; }
-footer svg { vertical-align: middle; }
-@media(max-width: 720px) {
-  body{ padding: 0.5em; }
-  nav { margin-bottom: 1em; padding-bottom: 1em; }
-  footer { padding-top: 1em; margin-top: 1em;}
+body{ padding:2em; font:18px Helvetica, Arial, sans-serif; max-width:680px; } 
+a{ color:black } 
+a:hover, a:focus{ background:black; color:white; } 
+header a{ text-decoration:none; font-size:36px; font-weight:bold;}
+nav{ margin:2em 0; padding-bottom:2em; border-bottom:1px dotted; }
+nav a{ margin-right:1em; }
+img{ max-width:100%; height:auto; }
+h1{ margin:0; }
+h1 a{ text-decoration:none; }
+main{ line-height:1.6; }
+h2,h3,h4,h5{ margin:2em 0 0; }
+p,blockquote,ul,table,pre,hr { margin:1em 0; }
+ul{ padding-left:1em; }
+blockquote{ font-style:italic; }
+hr{ border:1px dotted black;}
+pre code{ border: 1px solid; display: block; overflow-x: auto; padding: 4px; background: black; color: white; }
+table{ border-collapse: collapse; }
+th,td{ word-break:break-all; text-align:left; padding:2px 4px; }
+footer{ border-top:1px dotted; margin:2em 0 0; padding-top:2em; } 
+footer p{ margin:0; }
+footer svg{ vertical-align: middle; }
+@media(max-width:720px) {
+  body{ padding:0.5em; }
+  nav{ margin-bottom:1em; padding-bottom:1em; }
+  footer{ padding-top:1em; margin-top:1em;}
 }
 </style>
 </head>
@@ -48,9 +48,9 @@ footer svg { vertical-align: middle; }
       {% endif %}
   </header>
    <nav>
-        {% if page.url == '/about/' %}&#9865;{% else %}&#9863;{% endif %} <a href="{{site.url}}/about/">About me</a> 
-        {% if page.url == '/blog/' %}&#9865;{% else %}&#9863;{% endif %} <a href="{{site.url}}/blog/">Blog</a> 
-        {% if page.url == '/contact/' %}&#9865;{% else %}&#9863;{% endif %} <a href="{{site.url}}/contact/">Contact</a>
+        {% if page.url == '/about/' %}&#x25A0;{% else %}&#x25A1;{% endif %} <a href="{{site.url}}/about/">About me</a> 
+        {% if page.url == '/blog/' %}&#x25A0;{% else %}&#x25A1;{% endif %} <a href="{{site.url}}/blog/">Blog</a> 
+        {% if page.url == '/contact/' %}&#x25A0;{% else %}&#x25A1;{% endif %} <a href="{{site.url}}/contact/">Contact</a>
     </nav>
   <main>
      {{ content }}
