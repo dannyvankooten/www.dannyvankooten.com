@@ -9,7 +9,7 @@
 <link rel="icon" href="{{ '/assets/img/favicon.png' | prepend: site.url }}" type="image/png">
 {%- seo -%}
 <style>
-body{ margin:0 auto; padding:1em; font-family:Helvetica,Arial,sans-serif; max-width:680px; } 
+body{ margin:0 auto; padding:1em; font: 18px Helvetica,Arial,sans-serif; max-width:680px; overflow-y:scroll;} 
 a{ color:black } 
 a:hover, a:focus{ background:black; color:white; } 
 header a{ text-decoration:none; font-size:36px; font-weight:bold;}
@@ -42,9 +42,9 @@ footer svg{ vertical-align: middle; }
       {% endif %}
   </header>
    <nav>
-        {% if page.url == '/about/' %}&#x25A0;{% else %}&#x25A1;{% endif %} <a href="{{site.url}}/about/">About me</a> 
-        {% if page.url == '/blog/' %}&#x25A0;{% else %}&#x25A1;{% endif %} <a href="{{site.url}}/blog/">Blog</a> 
-        {% if page.url == '/contact/' %}&#x25A0;{% else %}&#x25A1;{% endif %} <a href="{{site.url}}/contact/">Contact</a>
+        {% if page.url == '/about/' %}&#9865;{% else %}&#9863;{% endif %} <a href="{{site.url}}/about/">About me</a> 
+        {% if page.url == '/blog/' %}&#9865;{% else %}&#9863;{% endif %} <a href="{{site.url}}/blog/">Blog</a> 
+        {% if page.url == '/contact/' %}&#9865;{% else %}&#9863;{% endif %} <a href="{{site.url}}/contact/">Contact</a>
     </nav>
   <main>
      {{ content }}
