@@ -15,7 +15,7 @@ blockquote{background:#eef5fa; padding:0 1em; border:1px solid #dae9f4;}
 hr{border:1px dotted;}
 pre code{border:1px solid #fff1d6; display:block; overflow-x:auto; padding:4px; background:#fffaf0;}
 table{border-collapse:collapse;}
-th,td{word-break:break-all; text-align:left; padding:2px 4px;}
+th,td{text-align:left; padding:2px 4px;}
 footer{border-top:1px dotted; margin:2em 0 0; padding-top:2em;} 
 footer svg{vertical-align:middle;}
 footer a{color:#595959;}
