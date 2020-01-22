@@ -6,6 +6,8 @@ tags:
 - website-analytics
 ---
 
+> Update (Mar 2019): I [left the Fathom project](/stepping-down-fathom-maintainer/).
+
 As I was browsing my Twitter feed a few weeks ago, I came across the following tweet.
 
 [![Paul's tweet about Fathom](/media/2018/paul-fathom-tweet.jpg)](https://twitter.com/pjrvs/status/985874315563286528)
@@ -20,9 +22,7 @@ Together, we are setting out to build **website analytics that is simple, transp
 
 ![Fathom dashboard for this site](/media/2018/fathom-preview.png)
 
-If you would like to follow us on this journey, please [sign-up here](https://usefathom.com/) and we'll keep you in the loop.
-
-Developer? We're developing out in the open; here's [Fathom on GitHub](https://github.com/usefathom/fathom). Contributions are welcome!
+We're developing Fathom out in the open; here's [Fathom on GitHub](https://github.com/usefathom/fathom).
 
 
 

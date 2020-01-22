@@ -28,6 +28,4 @@ Have been, because going forward, I will not be actively involved with Fathom an
 
 I am a little sad to leave Fathom behind but juggling its responsibilities with being a newbie dad and running [Mailchimp for WordPress](https://www.mc4wp.com/) while also wanting to spend less time behind a computer proved way harder than anticipated. 
 
-At the same time, I'm happy that Fathom is in good hands with Paul and Jack and am stoked to see [our (now their) plans](https://trello.com/b/x2aBwH2J/fathom-roadmap) further unfold over the next few months.
-
-Wrapping up, if you are not yet using Fathom to track your website's statistics, now's a great time to give it a test drive: [usefathom.com](https://usefathom.com/)
+At the same time, I'm stoked to see [their plans](https://trello.com/b/x2aBwH2J/fathom-roadmap) unfold over the next few months. I'm confident they will take good care of what we managed to build over the past year.

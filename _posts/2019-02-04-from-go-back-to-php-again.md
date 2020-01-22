@@ -66,13 +66,13 @@ Honestly, Go is great. Its simplicity is refreshing and you can't get anywhere n
 
 Our shops however are more monolithic with a lot of server-side rendering. While that's certainly doable in Go (as the last 2 years proved), it's more maintainable for us to do it in PHP right now. 
 
-> Side note: without the experience gained from our years on Go, I probably wouldn't have started <a href="https://usefathom.com/">Fathom Analytics</a>. So perhaps it wasn't such a bad business decision after all?
+> Side note: without the experience gained from our years on Go, I probably wouldn't have started [Fathom](https://dannyvankooten.com/reviving-ana-as-fathom/). So perhaps it wasn't such a bad business decision after all?
 
 ### Making the correct business decision
 
 One reason not mentioned so far is that over the last year or so, I've been approached by several companies interested to take over one of our products. 
 
-They were a little surprised to hear our stack involved Golang and some flat out told us they'd prefer PHP, because that's what most of our products ([mc4wp.com](https://www.mc4wp.com/), [boxzillaplugin.com](https://boxzillaplugin.com) and [htmlforms.io](https://htmlforms.io)) rely upon. And I don't blame them.
+They were a little surprised to hear our stack involved Golang and some flat out told us they'd prefer PHP, because that's what most of our products ([mc4wp.com](https://www.mc4wp.com/), [boxzillaplugin.com](https://boxzillaplugin.com) and [htmlforms.io](https://www.htmlforms.io/)) rely upon. And I don't blame them.
 
 
 <hr />
