@@ -9,7 +9,7 @@
 <link rel="icon" href="{{ '/assets/img/favicon.png' | prepend: site.url }}" type="image/png">
 {%- seo -%}
 <style>
-body{ margin:0 auto; padding:1em; font: 18px Helvetica,Arial,sans-serif; max-width:680px; overflow-y:scroll;} 
+body{ background: white; color: black; margin:0 auto; padding:1em; font: 18px Helvetica,Arial,sans-serif; max-width:680px; overflow-y:scroll;} 
 a{ color:black } 
 a:hover, a:focus{ background:black; color:white; } 
 header a{ text-decoration:none; font-size:36px; font-weight:bold;}
@@ -24,11 +24,13 @@ p,blockquote,ul,table,pre,hr { margin:1em 0; }
 ul{ padding-left:1em; }
 blockquote{ font-style:italic; }
 hr{ border:1px dotted;}
-pre code{ border:1px solid; display:block; overflow-x:auto; padding:4px; background:black; color:white; }
+pre code{ border:1px solid; display:block; overflow-x:auto; padding:4px; background: FloralWhite; }
 table{ border-collapse:collapse; }
 th,td{ word-break:break-all; text-align:left; padding:2px 4px; }
 footer{ border-top:1px dotted; margin:2em 0 0; padding-top:2em; } 
 footer svg{ vertical-align: middle; }
+footer a{ color: #595959; }
+small{ color: #595959; }
 </style>
 </head>
 <body>
@@ -55,7 +57,10 @@ footer svg{ vertical-align: middle; }
       {% include icon-mastodon.svg %} <a rel="me nofollow author" href="https://mastodon.dvk.co/@danny">Mastodon</a> 
       or
       {% include icon-twitter.svg %} <a href="https://twitter.com/dannyvankooten/" rel="me nofollow author">Twitter</a>.
-    </small>     
+    </small>
+    <br />
+    <br />
+    <small>All information on this blog is hereby released into the public domain, with no rights reserved.</small>
 </footer>
 </body>
 </html>
