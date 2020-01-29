@@ -2,29 +2,32 @@ body{background:#fff;color:#111;margin:0 auto;padding:1em;font:18px Helvetica,Ar
 a{color:#111} 
 a:hover,a:focus{background:#111;color:#fff;} 
 header{border-bottom:1px dotted;padding:0 0 0.5em;margin-bottom:1em;}
-header h1,header h3{font-size:18px;display:inline;margin:0;}
+header h1,header h3{font-size:18px;margin:0 0 6px;}
 header a {margin-right: 6px;text-decoration:none;}
 header nav{display:inline-block;}
-img{max-width:100%; height:auto;}
+img{max-width:100%;height:auto;}
 main{line-height:1.6;}
 h1{margin:0;}
 h2,h3,h4,h5{margin:2em 0 0;}
 p,blockquote,ul,table,pre,hr {margin:1em 0;}
 ul{padding-left:1em;}
-blockquote{background:#eef5fa; padding:0 1em; border:1px solid #dae9f4;}
+blockquote{background:#eef5fa;padding:0 1em;border:1px solid #dae9f4;}
 hr{border:1px dotted;}
-pre code{border:1px solid #fff1d6; display:block; overflow-x:auto; padding:4px; background:#fffaf0;}
+pre code{border:1px solid #fff1d6;display:block;overflow-x:auto;padding:4px;background:#fffaf0;}
 table{border-collapse:collapse;}
-th,td{text-align:left; padding:2px 4px;}
-footer{border-top:1px dotted; margin:1em 0 0; padding-top:1em;} 
+th,td{text-align:left;padding:2px 4px;}
+footer{border-top:1px dotted;margin:1em 0 0;padding-top:1em;} 
 footer svg{vertical-align:middle;}
 small,small a{color:#777;}
-
 @media(min-width: 460px) {
+	header h1,header h3{
+		display:inline;
+		margin-bottom:0;
+	}
 	header h1::after,
 	header h3::after {
-		content: "\2014";
-		margin-right: 6px;
+		content:"\2014";
+		margin-right:6px;
 	}
 }
 @media (prefers-color-scheme: dark) {
