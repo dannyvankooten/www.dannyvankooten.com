@@ -3,15 +3,12 @@ layout: default
 ---
 
 <article>
-
-  <header>
+  <div>
     <h1>{{ page.title }}</h1>
     <small>
-      Published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
-      {% if page.author %} by <span>{{ page.author }}</span>{% endif %}
+      Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time> on <a href="{{site.url | append: '/blog' }}">{{site.title}}'s blog</a> &mdash; <a href="{{page.url}}">Permalink</a>
     </small>
-  </header>
-
+  </div>
   <div>
     {{ content }}
   </div>

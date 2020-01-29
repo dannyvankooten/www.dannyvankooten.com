@@ -1,13 +1,13 @@
-body{background: white; color: black; margin:0 auto; padding:1em; font: 18px Helvetica,Arial,sans-serif; max-width:680px; overflow-y:scroll;} 
-a{color:black} 
-a:hover,a:focus{background:black; color:white;} 
-header a{text-decoration:none; font-size:36px; font-weight:bold;}
-nav{margin:2em 0; padding-bottom:2em; border-bottom:1px dotted;}
-nav a{margin-right:2vw;}
+body{background:#fff;color:#111;margin:0 auto;padding:1em;font:18px Helvetica,Arial,sans-serif; max-width:680px; overflow-y:scroll;} 
+a{color:#111} 
+a:hover,a:focus{background:#111;color:#fff;} 
+header{border-bottom:1px dotted;padding:0 0 0.5em;margin-bottom:1em;}
+header h1,header h3{font-size:18px;display:inline;margin:0;}
+header a {margin-right: 6px;text-decoration:none;}
+header nav{display:inline-block;}
 img{max-width:100%; height:auto;}
-h1{margin:0;}
-h1 a{text-decoration:none;}
 main{line-height:1.6;}
+h1{margin:0;}
 h2,h3,h4,h5{margin:2em 0 0;}
 p,blockquote,ul,table,pre,hr {margin:1em 0;}
 ul{padding-left:1em;}
@@ -16,7 +16,20 @@ hr{border:1px dotted;}
 pre code{border:1px solid #fff1d6; display:block; overflow-x:auto; padding:4px; background:#fffaf0;}
 table{border-collapse:collapse;}
 th,td{text-align:left; padding:2px 4px;}
-footer{border-top:1px dotted; margin:2em 0 0; padding-top:2em;} 
+footer{border-top:1px dotted; margin:1em 0 0; padding-top:1em;} 
 footer svg{vertical-align:middle;}
-footer a{color:#595959;}
-small{color:#595959;}
+small,small a{color:#777;}
+
+@media(min-width: 460px) {
+	header h1::after,
+	header h3::after {
+		content: "\2014";
+		margin-right: 6px;
+	}
+}
+@media (prefers-color-scheme: dark) {
+  body{background:#111;color:#fff;}
+  a{color:#fff} 
+  a:hover,a:focus{background:#fff;color:#111;}
+  small,small a{color:#AAA;}
+}
