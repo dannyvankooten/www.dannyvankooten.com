@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<article>
+<article class="h-entry">
   <div>
-    <h1>{{ page.title }}</h1>
+    <h1 class="p-name">{{ page.title }}</h1>
     <small>
-      Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time> on <a href="{{site.url | append: '/blog' }}">{{site.title}}'s blog</a> &mdash; <a href="{{page.url}}">Permalink</a>
+      Published <time datetime="{{ page.date | date_to_xmlschema }}" class="dt-published">{{ page.date | date: "%b %-d, %Y" }}</time> on <a href="{{site.url | append: '/blog' }}" rel="author" class="p-author h-card">{{site.title}}'s blog</a> &mdash; <a href="{{ page.url | prepend: site.url }}" class="u-url">Permalink</a>
     </small>
   </div>
-  <div>
+  <div class="e-content">
     {{ content }}
   </div>
 </article>
