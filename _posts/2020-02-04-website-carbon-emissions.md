@@ -11,9 +11,9 @@ I've spent the last month trying to reduce the carbon footprint of the websites 
 
 The simple answer is no. In fact, it is probably the most effective use of my time when it comes to reducing carbon dioxide emissions. 
 
-Just last week I reduced global emissions by about 340.000 kg per month by removing a 20 kB JavaScript dependency in [Mailchimp for WordPress](https://www.mc4wp.com/). There's no way I can have that kind of effect in other areas of my life.
+Just last week I reduced global emissions by an estimated 340.000 kg per month by removing a 20 kB JavaScript dependency in [Mailchimp for WordPress](https://www.mc4wp.com/). There's no way I can have that kind of effect in other areas of my life.
 
-### Carbon emissions from distributed code
+### CO2 emissions from distributed code
 
 All of [my WordPress plugins]({{site.url}}/wordpress-plugins/) combined run on well over 2 million different websites, each website receiving who knows how many visitors. 
 
@@ -23,7 +23,7 @@ Let's assume the average website receives about 10.000 unique visitors per month
 
 58.000 kWh of energy produced by the [current European electricity grid](https://www.eea.europa.eu/data-and-maps/indicators/overview-of-the-electricity-production-2/assessment-4) equals about `58.000 * 0,295 = 17.110 kg of CO2`.
 
-> **Shaving off a single kilobyte in a WordPress plugin running on 2 million websites reduces CO<sub>2</sub> emissions by 17.110 kg per month!**
+> **Shaving off a single kilobyte in a file that is being loaded on 2 million websites reduces CO<sub>2</sub> emissions by an estimated 17.110 kg per month.**
 
 To put this into perspective, that is the same amount of CO<sub>2</sub> saved per month as:
 
@@ -51,5 +51,9 @@ Let's do our share as web developers and stop bloating the web.
 
 
 <small>
-<sup>1</sup> Energy expenditure numbers vary a lot depending on the network you are using. "Using data volumes from the year 2010 Malmodin and colleagues estimated electricity consumption per data volume as follows: 0.08 kWh/gigabyte for averaged fixed broadband access network, compared to 2.9 kWh/gigabyte for average 3G mobile broadband access network and 37 kWh/gigabyte for average 2G mobile communication.", [doi:10.3390/su10072494](https://cris.vtt.fi/en/publications/evaluating-the-energy-consumption-of-mobile-data-transfer-from-te)
+<sup>1</sup> Energy expenditure numbers varies a lot depending on the type of network you are using. The range seems to be from 0.08 kWh per GB for fixed broadband connections to 37 kWh per GB for 2G networks. I went with 2.9 kWh in this post because it is the average energy cost for 3G networks. One could argue that is too high nowadays and I hope it is.
+</small>
+
+<small>
+Pihkola, H., Hongisto, M., Apilo, O., & Lasanen, M. (2018). Evaluating the energy consumption of mobile data transfer-from technology development to consumer behaviour and life cycle thinking. [https://doi.org/10.3390/su10072494](https://doi.org/10.3390/su10072494)
 </small>
