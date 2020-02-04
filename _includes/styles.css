@@ -4,7 +4,7 @@ a:hover,a:focus{color:#111;}
 nav{display:block;background:#A00;margin-bottom:2em; padding:0.5em 0;}
 nav > div {margin: 0 auto;}
 nav h1,nav h3,nav a{font-size: 16px; display:inline-block; margin:0 0.5em 0 0; color: white; text-decoration: none;}
-nav a:hover,nav a:focus{color:white;}
+nav a:hover,nav a:focus{color:white;text-decoration: underline}
 img{max-width:100%;height:auto;}
 main{line-height:1.6;}
 h1{margin:0;}
