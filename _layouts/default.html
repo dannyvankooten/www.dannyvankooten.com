@@ -13,31 +13,33 @@
 </style>
 </head>
 <body>
-  <header>
+  <nav>
+    <div class="c">
       {%-if page.url == "/" -%}
         <h1><a href="{{ site.url }}/">Danny van Kooten</a></h1>
       {%- else -%}
         <h3><a href="{{ site.url }}/" rel="home">Danny van Kooten</a></h3>
       {%- endif -%}
-      <nav>
-        {%- if page.url == '/about/' %}{% endif %} <a href="{{site.url}}/about/">About me</a> 
-        {%- if page.url == '/blog/' %}{%- endif %} <a href="{{site.url}}/blog/">Blog</a> 
-        {%- if page.url == '/contact/' %}{% endif %} <a href="{{site.url}}/contact/">Contact</a>
-    </nav>
-  </header>
-  <main>
+      {%- if page.url == '/about/' %}{% endif %} <a href="{{site.url}}/about/">About me</a> 
+      {%- if page.url == '/blog/' %}{%- endif %} <a href="{{site.url}}/blog/">Blog</a> 
+      {%- if page.url == '/contact/' %}{% endif %} <a href="{{site.url}}/contact/">Contact</a>
+    </div>
+  </nav>
+  <main class="c">
      {{- content -}}
   </main>
-  <footer>
-    <small>Find me on
-      {% include icon-github.svg %} <a href="https://github.com/dannyvankooten/" rel="me nofollow author">GitHub</a>, 
-      {% include icon-mastodon.svg %} <a rel="me nofollow author" href="https://mastodon.dvk.co/@danny">Mastodon</a> 
-      or
-      {% include icon-twitter.svg %} <a href="https://twitter.com/dannyvankooten/" rel="me nofollow author">Twitter</a>.
-    </small>
-    <br />
-    <br />
-    <small>All information on this blog is hereby released into the public domain, with no rights reserved.</small>
-</footer>
+  <div class="c">
+    <footer>
+      <small>Find me on
+        {% include icon-github.svg %} <a href="https://github.com/dannyvankooten/" rel="me nofollow author">GitHub</a>, 
+        {% include icon-mastodon.svg %} <a rel="me nofollow author" href="https://mastodon.dvk.co/@danny">Mastodon</a> 
+        or
+        {% include icon-twitter.svg %} <a href="https://twitter.com/dannyvankooten/" rel="me nofollow author">Twitter</a>.
+      </small>
+      <br />
+      <br />
+      <small>All information on this blog is hereby released into the public domain, with no rights reserved.</small>
+    </footer>
+  </div>
 </body>
 </html>

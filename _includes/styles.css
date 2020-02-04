@@ -1,40 +1,25 @@
-body{background:#fff;color:#111;margin:0 auto;padding:1em;font:18px Helvetica,Arial,sans-serif; max-width:680px; overflow-y:scroll;} 
-a{color:#111} 
-a:hover,a:focus{background:#111;color:#fff;} 
-header{font-size:15px;border-bottom:1px dotted;padding:0 0 0.5em;margin-bottom:1em;color:#666;}
-header h1,header h3{font-size:15px;margin:0 0 6px;}
-header a {margin-right:6px;color:#666;}
-header nav{display:inline-block;}
+body{background:#fff;color:#111;font:18px Helvetica,Arial,sans-serif;margin:0;overflow-y:scroll;}
+a{color:#A00} 
+a:hover,a:focus{color:#111;} 
+nav{display:block;background:#A00;margin-bottom:2em; padding:0.5em 0;}
+nav > div {margin: 0 auto;}
+nav h1,nav h3,nav a{font-size: 16px; display:inline-block; margin:0 0.5em 0 0; color: white; text-decoration: none;}
+nav a:hover,nav a:focus{color:white;}
 img{max-width:100%;height:auto;}
 main{line-height:1.6;}
 h1{margin:0;}
 h2,h3,h4,h5{margin:2em 0 0;}
 p,blockquote,ul,table,pre,hr{margin:1em 0;}
 ul{padding-left:1em;}
-blockquote{background:#ADE;padding:0 1em;border:1px solid #9CD;}
+blockquote{background:#F0FBFF;padding:0 1em;border:1px solid #D7EDF5;}
 hr{border:1px dotted;}
-pre code{border:1px solid #fff1d6;color:#111;display:block;overflow-x:auto;padding:4px;background:#fffaf0;}
+pre code{background:#fffaf0;color:#111;border:1px solid #fff1d6;display:block;overflow-x:auto;padding:4px;}
 table{border-collapse:collapse;}
 th,td{text-align:left;padding:2px 4px;}
-footer{border-top:1px dotted;margin:1em 0 0;padding-top:1em;} 
+footer{border-top:1px dotted;margin:2em 0;padding-top:2em;font-size: 16px;} 
 footer svg{vertical-align:middle;}
 small,small a{color:#666;}
-@media(min-width:460px) {
-	header h1,header h3{
-		display:inline;
-		margin-bottom:0;
-	}
-	header h1::after,
-	header h3::after {
-		content:"\2014";
-		margin-right:6px;
-	}
-}
-@media (prefers-color-scheme: dark) {
-  body{background:#111;color:#fff;}
-  header,header a{color:#AAA;}
-  a{color:#fff} 
-  a:hover,a:focus{background:#fff;color:#111;}
-  small,small a{color:#AAA;}
-  blockquote{background:#25A;border-color:#149;}
+.c{max-width:680px;margin-left:auto;margin-right:auto;padding-left:0.7em;padding-right:0.7em;}
+@media(max-width:400px) {
+	nav h1, nav h3{ display: block; margin-bottom:0.5em; }
 }

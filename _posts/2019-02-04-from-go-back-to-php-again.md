@@ -76,8 +76,8 @@ They were a little surprised to hear our stack involved Golang and some flat out
 
 
 <hr />
-<p><sup>1</sup> Just for fun, I compared apples and oranges again by benchmarking the login page (which doesn't hit any database) for both application versions using <a href="https://www.joedog.org/siege-home/">Siege</a>. </p>
+<p><small><sup>1</sup> Just for fun, I compared apples and oranges again by benchmarking the login page (which doesn't hit any database) for both application versions using <a href="https://www.joedog.org/siege-home/">Siege</a>.</small></p>
 
-<p>The Symfony application (PHP 7.3, OPcache enabled, optimized autoloader) handles about 1470 req/s. The Go application (compiled using Go v1.11) averages about 18600 req/s.</p>
+<p><small>The Symfony application (PHP 7.3, OPcache enabled, optimized autoloader) handles about 1470 req/s. The Go application (compiled using Go v1.11) averages about 18600 req/s.</small></p>
 
 
