@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Carbon emissions on the web'
+title: 'CO2 emissions on the web'
 date: '2020-02-04'
 tags:
 - carbon
@@ -9,29 +9,29 @@ tags:
 
 I've spent the last month trying to reduce the carbon footprint of the websites I have (some) control over. When talking about this with other people they often look at me blankly before asking "aren't you taking this a little too far?".
 
-The simple answer is no. In fact, it is probably the most effective use of my time when it comes to reducing carbon emissions by a long shot. 
+The simple answer is no. In fact, it is probably the most effective use of my time when it comes to reducing carbon dioxide emissions. 
 
-Just last week I reduced global carbon emissions by about 340.000 kg per month by removing a 20 kB JavaScript dependency in [Mailchimp for WordPress](https://www.mc4wp.com/). There's no way I can have that kind of an effect in other areas of my life.
+Just last week I reduced global emissions by about 340.000 kg per month by removing a 20 kB JavaScript dependency in [Mailchimp for WordPress](https://www.mc4wp.com/). There's no way I can have that kind of an effect in other areas of my life.
 
 ### Carbon emissions from distributed code
 
-All of [my WordPress plugins](/wordpress-plugins/) combined run on well over 2 million different websites, each website receiving who knows how many visitors. 
+All of [my WordPress plugins]({{site.url}}/wordpress-plugins/) combined run on well over 2 million different websites, each website receiving who knows how many visitors. 
 
 At an energy expenditure of [2,9 kWh per GB](https://www.researchgate.net/publication/326470455_Evaluating_the_Energy_Consumption_of_Mobile_Data_Transfer-From_Technology_Development_to_Consumer_Behaviour_and_Life_Cycle_Thinking) <sup>1</sup> this means that every kB saved equals an energy reduction of about `2,9 kWh / 1.000.000 kB * 2.000.000 websites = 5,8 kWh` if each of these websites received exactly 1 visitor.
 
-Let's assume the average website receives about 10.000 unique visitors per month and serves static assets from cache for returning visitors. The total amount of energy saved by shaving off a single kilobyte is then `5,8 kWh * 10.000 visitors = 58.000 kWh`.
+Let's assume the average website receives about 10.000 unique visitors per month and serves files from cache for returning visitors. The total amount of energy saved by shaving off a single kilobyte is then `5,8 kWh * 10.000 visitors = 58.000 kWh`.
 
 58.000 kWh of energy produced by the [current European electricity grid](https://www.eea.europa.eu/data-and-maps/indicators/overview-of-the-electricity-production-2/assessment-4) equals about `58.000 * 0,295 = 17.110 kg of CO2`.
 
-> **Shaving off a single kilobyte in a plugin running on 2 million websites reduces CO<sub>2</sub> emissions by 17.110 kg per month!**
+> **Shaving off a single kilobyte in a WordPress plugin running on 2 million websites reduces CO<sub>2</sub> emissions by 17.110 kg per month!**
 
-To put this into perspective, that is the same amount of CO<sub>2</sub> as:
+To put this into perspective, that is the same amount of CO<sub>2</sub> saved per month as:
 
 - Driving my Toyota Yaris for 114.000 kilometers. ([158 g CO<sub>2</sub> per km](https://car-emissions.com/cars/index/toyota%20yaris%201.3%20vvt-i%20tr/))
 - 25 flights from Amsterdam to New York. ([679 kg CO<sub>2</sub> per flight](https://www.costtotravel.com/flight/from-new-york-to-amsterdam))
 - Eating 684 kg of beef ([25 kg CO<sub>2</sub> per kg of beef](https://eprints.lancs.ac.uk/79432/4/1_s2.0_S0959652616303584_main.pdf))
 
-I do not see myself reducing my personal beef intake with 684 kg per month, so instead I try to make my website and distributed plugins as efficient as possible. 
+Ignoring the absurdity of those numbers, I already work from home, am a vegetarian and didn't take any flights in the last 3 years so it seems I am stuck trying to make the web more efficient.
 
 ### What can we do?
 
