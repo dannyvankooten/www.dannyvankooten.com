@@ -10,6 +10,8 @@ github_username:  dannyvankooten
 # SEO settings
 twitter:
   username: dannyvankooten
+  card: summary
+  
 social:
   name: Danny van Kooten
   links:
