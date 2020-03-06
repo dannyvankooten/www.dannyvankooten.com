@@ -8,7 +8,7 @@ tags:
 - bytecode
 ---
 
-Some time during 2016 I got my hands on [Writing an interpreter in Go](https://thorstenball.com/) by [Thorsten Ball](https://thorstenball.com/). I skimmed through the first few chapters, really liked what I read and then life happened and I never actually got around to building an interpreter.
+Some time during 2016 I got my hands on [Writing an interpreter in Go](http://interpreterbook.com/) by [Thorsten Ball](https://thorstenball.com/). I skimmed through the first few chapters, really liked what I read and then life happened and I never actually got around to building an interpreter.
 
 Until last month. I cleared out my schedule and finally started going through the book. For double the fun, I picked C as my language of choice.
 
