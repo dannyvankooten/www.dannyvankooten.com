@@ -24,7 +24,7 @@ After getting the virtual machine up and running, calculating the 35th fibonacci
 
 More importantly, some of the magic surrounding interpreters and compilers has been cleared up for me. I highly recommend these two books for anyone with some time and interest in how interpreted languages usually work. 
 
-Unrelated to the actual books was my surprise at how elegant the C programming language  is. The language is so small and simple, yet so incredibly powerful.
+Unrelated to the actual books was my surprise at how elegant the C programming language  is. It's so small and simple, yet so incredibly powerful.
 
 #### Resources 
 
