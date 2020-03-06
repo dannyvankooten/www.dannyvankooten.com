@@ -14,7 +14,7 @@ Until last month. I cleared out my schedule and finally started going through th
 
 After finishing the book, I had an interpreter (codenamed [Monkey-C Monkey-Do](https://github.com/dannyvankooten/monkey-c-monkey-do)) capable of running the [Monkey programming language](https://monkeylang.org/).
 
-The interpreter calculates the 35th fibonacci number in about 6 seconds on my machine. Which is certainly not bad given its simple tree-walking approach, but also not great. For reference, Python 3.8 needs 2.3 seconds and Node only needs a whopping 200 miliseconds.
+The interpreter calculates the 35th fibonacci number in about 6 seconds on my machine. Which is certainly not bad given its simple tree-walking approach, but also not great. For reference, Python needs 2.3 seconds and Node only needs a whopping 200 miliseconds.
 
 ### Writing a bytecode compiler and virtual machine
 
