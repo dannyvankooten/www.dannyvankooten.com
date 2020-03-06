@@ -12,7 +12,7 @@ h2,h3,h4,h5{margin:2em 0 0;}
 p,blockquote,ul,table,pre,hr{margin:1em 0;}
 ul{padding-left:1em;}
 blockquote{background:#F0FBFF;padding:0 1em;border:1px solid #D7EDF5;}
-hr{border:1px dotted;}
+hr{border:1px dotted;margin:2em 0;}
 pre code{background:#fffaf0;color:#111;border:1px solid #fff1d6;display:block;overflow-x:auto;padding:4px;}
 table{border-collapse:collapse;}
 th,td{text-align:left;padding:2px 4px;}
