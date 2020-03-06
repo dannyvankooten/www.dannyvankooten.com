@@ -12,17 +12,17 @@ While getting along well is very important to me, I do have some other requireme
  
 - Good English writing skills
 - Experience in supporting WordPress users
-- You don't need to be a full-fletched developer but having _some_ knowledge about HTML, CSS and WP development is a huge plus.
-- Having played with Mailchimp for WordPress (free or paid) before would be cool.
-- Responsibility. When working with me you'll be _very free_ in how exactly and when you do work.
+- Having _some_ knowledge about HTML, CSS, JavaScript and PHP.
+- Having played with Mailchimp for WordPress is not a hard requirement, but would be a plus.
+- Responsibility. When working with me you'll be _very free_ in how exactly and when you work.
 
 ### What I offer..
 
-- A decent salary
+- A good salary
 - Flexible work times
 - The ability to work from wherever you like
 - A behind the scenes look into developing & marketing WordPress plugins.
 
 
 ### Let's talk
-Interested? Let's talk. Shoot me an email at [hi@dannyvankooten.com](mailto:hi@dannyvankooten.com?Subject=Support position)
+Interested? Let's talk. Please contact me over email at [hi@dannyvankooten.com](mailto:hi@dannyvankooten.com?Subject=Support position)
