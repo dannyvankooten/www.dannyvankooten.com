@@ -18,9 +18,11 @@ I set out with two goals in mind:
 - To finish all challenges within a single month.
 - To solve them all in under 1 second of runtime (on a single CPU core).
 
-For this last goal I was inspired by [Tim Visee](https://timvisee.com/blog/solving-aoc-2020-in-under-a-second/). It sounded like a really fun thing to do and I was already well underway for such a thing anyway. 
+For this last goal I was inspired by [Tim Visee](https://timvisee.com/blog/solving-aoc-2020-in-under-a-second/) who did a really great write-up of some of the tricks he used to efficiently solve this year's challenges. It sounded like a really fun thing to do and I was already well underway for such a thing anyway. 
 
-Two weeks later, iet ies done! All solutions combined run in 880 ms on my laptop, so I'm quite pleased with the results. 
+Two weeks later, iet ies done! Total runtime is 880 ms on my laptop, so I'm quite pleased with the results. 
+
+I could probably squeeze out a few more miliseconds here and there, but I see no options for getting the 2 bottlenecks ([day 15](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/15.c) and [day 23](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/23.c)) to run any faster (except for throwing more hardware at it).
 
 The code is on GitHub here: [dannyvankooten/advent-of-code-2020](https://github.com/dannyvankooten/advent-of-code-2020)
 
@@ -32,7 +34,7 @@ So, what did it take and what did I learn?
 - Preallocate all the things.
 - Array lookups or alternatively hashmaps are your friends. Linear time complexity is not.
 - Don't forget `-Ofast` and `-march=native` as [optimization flags](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html) for your compiler.
-- You can't brute force your way out of everything. Sometimes,  math is required. Looking at you, day 13 and [Chinese Remainder Theorem](https://en.wikipedia.org/wiki/Chinese_remainder_theorem).
+- You can't brute force your way out of everything. Sometimes,  math is required. Looking at you, [day 13](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/13.c) and [Chinese Remainder Theorem](https://en.wikipedia.org/wiki/Chinese_remainder_theorem).
 - Tooling! I wouldn't want to write C without [Valgrind](https://valgrind.org/) and [Gprof](https://sourceware.org/binutils/docs/gprof/index.html). [Cachegrind](https://valgrind.org/docs/manual/cg-manual.html) can be useful too.
-- You can represent a [hexagonal grid](https://www.redblobgames.com/grids/hexagons/) in a 2D array by simplify shifting every odd column or row. 
-- [Linear probing](https://en.wikipedia.org/wiki/Linear_probing) is simpler a simpler way to deal with hash collissions than using a linked list and results in less cache misses too. Still, I miss [std::collections::HashMap](https://doc.rust-lang.org/std/collections/struct.HashMap.html).
+- You can represent a [hexagonal grid](https://www.redblobgames.com/grids/hexagons/) in a 2D array by simplify shifting every odd column or row ([day 24](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/24.c)). 
+- [Linear probing](https://en.wikipedia.org/wiki/Linear_probing) is a simpler way to deal with hash collissions than a linked list and results in less cache misses. Still, I miss [std::collections::HashMap](https://doc.rust-lang.org/std/collections/struct.HashMap.html).
