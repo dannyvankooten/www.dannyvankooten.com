@@ -4,11 +4,19 @@ title: What I am now working on
 permalink: /now/
 ---
 
-- [Mailchimp for WordPress](https://www.mc4wp.com/).
+**Programming**
+- Solving this year's [Advent of Code challengs in C](https://github.com/dannyvankooten/advent-of-code-2020).
 - [Koko Analytics](https://kokoanalytics.com/), a privacy-friendly website analytics plugin for WordPress.
-- Spending time with my BFF and our 2 daughters.
-- Learning [Rust](https://www.rust-lang.org/) because I want to build more efficient software that can run on "old" hardware.
+- Improving my [Monkey compiler](https://github.com/dannyvankooten/monkey-c-monkey-do).
 
-_Last updated: Jan 13, 2019._
+**Environment**
+- Learning about [food forests](https://edepot.wur.nl/448781) and scouting for land to start one myself.
+- Growing more plants in our kitchen garden. 
+- Improving biodiversity & soil quality in our garden.
+
+**Health & Exercise**
+- Trying to improve at bouldering (climbing) so I can climb a 7A in 2021. 
+
+_Last updated: Apr 8, 2021._
 
 Do you have a [/now](https://nownownow.com/) page yet?
