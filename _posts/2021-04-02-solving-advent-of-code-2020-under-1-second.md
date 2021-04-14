@@ -137,13 +137,15 @@ To make sure the hashed key value is within the bounds of the backing array, I m
 
 ---
 
-**[Day 15](https://adventofcode.com/2020/day/15)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/15.c) / runtime: 461113 μs (461 ms)
+**[Day 15](https://adventofcode.com/2020/day/15)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/15.c) / runtime: 360147 μs (360 ms)
 
 Today would have made the 1-second goal impossible without good enough hardware and a language that compiles to machine code. The solution is fairly straightforward and doesn't leave much room for optimization.
 
-For values lower than ~500K, I used an array to look-up the previous position of a number in constant time. 
+~~For values lower than ~500K, I used an array to look-up the previous position of a number in constant time. 
 
-Since values larger than 500K were further apart (sparse), I used an optimized hashmap implementation for these values to store the previous positions. It uses a really limited amount (< 10) of linear probing attempts to prevent spending too much time on values that have not been seen before.
+Since values larger than 500K were further apart (sparse), I used an optimized hashmap implementation for these values to store the previous positions. It uses a really limited amount (< 10) of linear probing attempts to prevent spending too much time on values that have not been seen before.~~
+
+I used a lookup array that stores the previous index of a number. The array was allocated using `mmap` with 2MB page sizes in combination with a bitset that is checked before even indexing into the array. This shaved off another 100ms compared to the array + hashmap approach.
 
 ---
 
@@ -202,9 +204,11 @@ Because of the special rule this meant that player 1 would eventually emerge as 
 
 ---
 
-**[Day 23](https://adventofcode.com/2020/day/23)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/23.c) / runtime: 223818 μs (223 ms)
+**[Day 23](https://adventofcode.com/2020/day/23)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/23.c) / runtime: 172981 μs (173 ms)
 
 A slow day today with not much room for making it run faster. I used an array where the value simply contained the next cup, thus resembling a singly linked list. This meant just changing  2 values on every iteration, 10 million times...
+
+Like for day 15, I used 2MB page sizes again. This resulted in a 22% performance improvement (51 ms faster) than using the default 4096 kB page size.
 
 ---
 
