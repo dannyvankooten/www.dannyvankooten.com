@@ -104,19 +104,22 @@ Dynamic programming! It took me a while to realise this though. For part 2 I go 
 
 ---
 
-**[Day 11](https://adventofcode.com/2020/day/11)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/11.c) / runtime: 3186 μs
+**[Day 11](https://adventofcode.com/2020/day/11)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/11.c) / runtime: 2163 μs
 
 A 2D square-grid problem where we have to look at all 8 neighbors for every point. I optimized this solution by keeping a list of neighbor indices for each seat, so these do not have to be recomputed on every transmutation.
 
-Another optimization is to keep a list of seats to check and remove a seat from this list once it reached its permanent state. If a seat is occupied and has less than 5 occupied neighbors, it is permanently occupied. A seat is permanently empty if it has a permanently occupied neighboring seat. 
+Another optimization is to keep a list of seats to check and remove a seat from this list once it reached its permanent state:
+
+- If a seat is occupied and has less than 5 occupied neighbors, it is permanently occupied.
+- If a seat has a permanently occupied neighboring seat, it is permanently empty.
 
 ---
 
-**[Day 12](https://adventofcode.com/2020/day/12)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/12.c) / runtime: 79 μs
+**[Day 12](https://adventofcode.com/2020/day/12)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/12.c) / runtime: 61 μs
 
-A ship that moves towards a waypoint that is positioned relative to itself according to instructions in the puzzle input. I didn't optimize this solution that much since the straightforward approach was already plenty fast. 
+A ship that moves towards a waypoint positioned relative to the ship, according to directions  in the puzzle input. I didn't optimize this solution that much since the straightforward approach was already plenty fast. 
 
-I used `sin()` and `cos()` for [rotating](https://en.wikipedia.org/wiki/Rotation_matrix) the waypoint, but since the rotation amount is fixed to a multiple of `90` I should probably get rid of those.
+I used `sin()` and `cos()` for [rotating](https://en.wikipedia.org/wiki/Rotation_matrix) the waypoint, but since the rotation amount is fixed to a multiple of `90` I could get rid of these.
 
 ---
 
@@ -126,11 +129,11 @@ This day required the [Chinese Remainder Theorem](https://en.wikipedia.org/wiki/
 
 ---
 
-**[Day 14](https://adventofcode.com/2020/day/14)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/14.c) / runtime: 1611 μs
+**[Day 14](https://adventofcode.com/2020/day/14)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/14.c) / runtime: 1334 μs
 
 Updating "memory addresses" with certain values from the puzzle input after applying a (changing) mask to the address. Since addresses were so large and wouldn't fit in an array, I wrote a simple hashmap with integer keys and values.
 
-To make sure the hashed key value is within the bounds of the backing array, I made sure capacity itself was a power of 2 and then used a bitwise `&` on the capacity - 1. This is a lot faster than using the modulo operator.
+To make sure the hashed key value is within the bounds of the backing array, I made sure capacity itself was a power of 2 and then used a bitwise `&` on the `capacity - 1`. This is a lot faster than using the modulo operator.
 
 ---
 
@@ -144,8 +147,77 @@ Since values larger than 500K were further apart (sparse), I used an optimized h
 
 ---
 
-**[Day 16](https://adventofcode.com/2020/day/16)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/16.c) / runtime: 360 μs 
+**[Day 16](https://adventofcode.com/2020/day/16)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/16.c) / runtime: 183 μs 
 
-Parse a bunch of field rules and values. We can deduce the position of each field by picking the only available option and removing it from all other fields. Repeat until we know the position for each field. 
+Today we had to parse a bunch of rules and find which values corresponded to which rule. We could deduce the position of each field by first creating a list of possible options and then picking the only available option and removing it from all other fields, repeating that latter part until we know the position for each field. 
 
-Today's optimization was to ensure we're breaking out of each loop or skipping to the next iteration as soon as possible.
+Today's optimization was to simply ensure we're breaking out of each loop or skipping to the next iteration as soon as possible.
+
+---
+
+**[Day 17](https://adventofcode.com/2020/day/17)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/17.c) / runtime: 2136 μs 
+
+Day 17 was another game of life inspired challenge, but using a 4D grid. 
+
+The largest performance gain came from precomputing the neighbor count by looping over the active tiles and then adding 1 to each neighbor. This saves a ton of iterations versus doing it the other way around.
+
+---
+
+**[Day 18](https://adventofcode.com/2020/day/18)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/18.c) / runtime: 449 μs 
+
+For day 18 we got to write a simple math parser with different operator precedence than what we're used to in human math. I used what I learned from the [interpreterbook.com](https://interpreterbook.com/) to implement an [operator precedence parser](https://en.wikipedia.org/wiki/Operator-precedence_parser).
+
+---
+
+**[Day 19](https://adventofcode.com/2020/day/19)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/19.c) / runtime: 516 μs 
+
+I forgot the specifics of day 19. It was about implementing a form of regex and preventing infinite recursion. All I recall is that I did a simple recursion check on the two rules that caused the infinite recursion, and it worked... 
+
+---
+
+**[Day 20](https://adventofcode.com/2020/day/20)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/20.c) / runtime: 877 μs 
+
+Day 20 was about putting together an image from various tiles that had to be rotated and flipped into the correct orientation in order to fit together. This was the challenge that cost me the most time, but also probably the one I enjoyed the most.
+
+My solution simply started with the first tile in the top-left corner in the image and then fitted any of the other tiles on any of its edges until all tiles were in the image. Instead of rotating the entire tile and then checking whether it fit, I only compared the edges of the tile and only rotated or flipped it when a match was found.
+
+If another tile fitted on the northern or western edge of the starting tile, I shifted all the tile in the image. Another option was to first find a corner tile and then work from there, but this approach proved to be faster.
+
+---
+
+**[Day 21](https://adventofcode.com/2020/day/21)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/21.c) / runtime: 276 μs 
+
+
+Day 21 resembled day 16 in that we could decude which ingredients contained an allergen by repeatedly picking the only available option until we were done. 
+
+---
+
+**[Day 22](https://adventofcode.com/2020/day/22)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/22.c) / runtime: 104 μs 
+
+Today was fun! A game of cards with recursion. 
+
+Pre-allocating enough memory for at most 50 games gave a slight performance increase. The biggest improvement came from not recursing into a sub-game (and all of its descedentants) when the sub-game started with player 1 holding the highest card. 
+
+Because of the special rule this meant that player 1 would eventually emerge as the winner, so we could declare him winner right away and save on an awful lot of recursion.
+
+---
+
+**[Day 23](https://adventofcode.com/2020/day/23)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/23.c) / runtime: 223818 μs (223 ms)
+
+A slow day today with not much room for making it run faster. I used an array where the value simply contained the next cup, thus resembling a singly linked list. This meant just changing  2 values on every iteration, 10 million times...
+
+---
+
+**[Day 24](https://adventofcode.com/2020/day/24)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/24.c) / runtime: 3102 μs 
+
+Another 2D grid problem but using a [hexagonal grid](https://www.redblobgames.com/grids/hexagons/), flipping to either black or white based on directions from the puzzle input. Part 2 introduced a form of game of life again. I re-used the same optimizations from before, pre-computing neighbor counts.
+
+One more thing was to allocate a grid large enough to hold our entire "infinite" grid, but only iterating over the values neighboring any black tile.
+
+Whenever a tile was flipped to black, I extended the grid bounds to iterate over and updated the neighbor count for each of that tile's neighbors.
+
+---
+
+**[Day 25](https://adventofcode.com/2020/day/25)** / [code](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/25.c) / runtime: 58 μs 
+
+Day 25 involved finding the discrete log, so I used the [Baby-Step-Giant-Step](https://en.wikipedia.org/wiki/Baby-step_giant-step) algorithm while re-using my integer hashmap from an earlier day. This turned out to be really fast, clocking it at just 58 microseconds of runtime.
