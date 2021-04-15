@@ -9,7 +9,7 @@ ruby RUBY_VERSION
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.6.3"
+gem "jekyll"
 gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 
@@ -21,3 +21,5 @@ gem "jekyll-sitemap"
 # group :jekyll_plugins do
 #   gem "jekyll-github-metadata", "~> 1.0"
 # end
+
+gem "webrick", "~> 1.7"

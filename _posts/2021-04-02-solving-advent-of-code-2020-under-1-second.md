@@ -20,7 +20,7 @@ I set out with two goals in mind:
 
 For this last goal I was inspired by [Tim Visee](https://timvisee.com/blog/solving-aoc-2020-in-under-a-second/) who did a really great write-up of some of the tricks he used to efficiently solve this year's challenges. It sounded like a really fun thing to do and I was already well underway for such a thing anyway. 
 
-Two weeks later, iet ies done! Total runtime is 880 ms on my laptop, so I'm quite pleased with the results. 
+Two weeks later, iet ies done! Total runtime is 548 ms on my laptop, so I'm quite pleased with the results. 
 
 I could probably squeeze out a few more miliseconds here and there, but I see no options for making the 2 bottlenecks ([day 15](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/15.c) and [day 23](https://github.com/dannyvankooten/advent-of-code-2020/blob/main/23.c)) run any faster (except for throwing more hardware at it).
 
@@ -141,9 +141,9 @@ To make sure the hashed key value is within the bounds of the backing array, I m
 
 Today would have made the 1-second goal impossible without good enough hardware and a language that compiles to machine code. The solution is fairly straightforward and doesn't leave much room for optimization.
 
-~~For values lower than ~500K, I used an array to look-up the previous position of a number in constant time. 
+~~For values lower than ~500K, I used an array to look-up the previous position of a number in constant time.~~ 
 
-Since values larger than 500K were further apart (sparse), I used an optimized hashmap implementation for these values to store the previous positions. It uses a really limited amount (< 10) of linear probing attempts to prevent spending too much time on values that have not been seen before.~~
+~~Since values larger than 500K were further apart (sparse), I used an optimized hashmap implementation for these values to store the previous positions. It uses a really limited amount (< 10) of linear probing attempts to prevent spending too much time on values that have not been seen before.~~
 
 I used a lookup array that stores the previous index of a number. The array was allocated using `mmap` with 2MB page sizes in combination with a bitset that is checked before even indexing into the array. This shaved off another 100ms compared to the array + hashmap approach.
 

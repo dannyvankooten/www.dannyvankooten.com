@@ -10,7 +10,7 @@ Our most popular plugin [Mailchimp for WordPress](https://www.mc4wp.com/) was re
 
 We kept getting questions for that type of form functionality without the Mailchimp part though. CF7 still ships its own templating language, after all.
 
-Last week, we finally gave in and submitted [HTML Forms](https://www.htmlforms.io/) to the WordPress.org plugin repository. 
+Last week, we finally gave in and submitted [HTML Forms](https://www.htmlformsplugin.com/) to the WordPress.org plugin repository. 
 
 Allow me to introduce you to a form plugin where you have full control over the frontend output.
 
@@ -28,7 +28,7 @@ Here's a quick screenshot of what editing a form in HTML Forms looks like.
 
 [![Screenshot of HTML Forms](/media/2017/html-forms.png)](/media/2017/html-forms.png)
 
-Check out the [HTML Forms features](https://www.htmlforms.io/features/) page for a more complete list of features.
+Check out the [HTML Forms features](https://www.htmlformsplugin.com/features/) page for a more complete list of features.
 
 ##### Wrapping up
 
