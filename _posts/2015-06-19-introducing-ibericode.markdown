@@ -36,7 +36,7 @@ You can read all about our new brand on the ibericode blog: [introducing iberico
 
 I'm very much looking forward to continue our amazing growth under this new name. Hope you like it as much as I do!
 
-_[@ibericode](https://twitter.com/ibericode) is on Twitter. Please follow us if you would like to stay updated of our work & some related ramblings._
+~~_[@ibericode](https://twitter.com/ibericode) is on Twitter. Please follow us if you would like to stay updated of our work & some related ramblings._~~
 
 
 

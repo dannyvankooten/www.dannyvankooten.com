@@ -7,13 +7,13 @@ tags:
 - mastodon
 ---
 
-> **Summary:** Join [me on Mastodon](https://mastodon.dvk.co/@danny). It's like Twitter, but better and less angry.
+> **Summary:** [Join me on Mastodon](https://joinmastodon.org/). It's like Twitter, but less angry and more decentralized.
 
 I've been a happy Twitter user for years and got a lot of value out of it over the last decade. Even so, I find myself using the service very little these days. 
 
 While I can't say for certain what is the cause of that, the non-chronological timeline and algorithms that seem to excel at showing me rage-inducing tweets come to mind. An extensive mute list helped for a little while, but even that is falling short nowadays.
 
-That's part of why I was happily surprised when revisiting [Mastodon](https://joinmastodon.org/) a few weeks ago. 
+That's part of why I was happily surprised when revisiting Mastodon a few weeks ago. 
 
 A lot had improved since I last checked in early 2017. I connected to a few people that seemed to be sharing interesting content, found some I already knew and had a really good time exploring the "fediverse" since then.
 

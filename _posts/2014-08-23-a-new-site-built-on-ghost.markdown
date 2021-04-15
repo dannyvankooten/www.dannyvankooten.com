@@ -6,6 +6,18 @@ tags:
 - wordpress
 - ghost-tag
 ---
+<style scoped>
+.well {
+    background: #eef5fa;
+    border: 1px solid #dae9f4;
+    padding: 0 20px;
+    box-shadow: 0 0 1px 1px #eee;
+    margin: 1em 0;
+}
+</style>
+<div class="well">
+    <p>The below is vastly outdated. I've since moved to a static website powered by Jekyll. <a href="https://github.com/dannyvankooten/www.dvk.co/">Source code is here on GitHub</a>. </p>
+</div>
 
 It was about time I spent some time to work on my personal site. 
 
