@@ -145,7 +145,7 @@ Today would have made the 1-second goal impossible without good enough hardware 
 
 ~~Since values larger than 500K were further apart (sparse), I used an optimized hashmap implementation for these values to store the previous positions. It uses a really limited amount (< 10) of linear probing attempts to prevent spending too much time on values that have not been seen before.~~
 
-I used a lookup array that stores the previous index of a number. The array was allocated using `mmap` with 2MB page sizes in combination with a bitset that is checked before even indexing into the array. This shaved off another 100ms compared to the array + hashmap approach.
+I used a lookup array that stores the previous index of a number. The array was allocated using `mmap` with 2 MB "huge" page sizes in combination with a bitset that is checked before even indexing into the array. This shaved off another 100ms compared to the array + hashmap approach.
 
 ---
 
@@ -208,7 +208,7 @@ Because of the special rule this meant that player 1 would eventually emerge as 
 
 A slow day today with not much room for making it run faster. I used an array where the value simply contained the next cup, thus resembling a singly linked list. This meant just changing  2 values on every iteration, 10 million times...
 
-Like for day 15, I used 2MB page sizes again. This resulted in a 22% performance improvement (51 ms faster) than using the default 4096 kB page size.
+Like for day 15, I used 2 MB page sizes again. This resulted in a 22% performance improvement (51 ms faster) than using the default 4 kB page size.
 
 ---
 
