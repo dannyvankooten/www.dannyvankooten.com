@@ -36,3 +36,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - makefile
+  - scripts

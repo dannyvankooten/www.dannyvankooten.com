@@ -1,3 +1,6 @@
+echo "Updating download numbers"
+python ./scripts/update-wp-downloads.py 
+
 echo "Building Jekyll site"
 bundle exec jekyll build --config=_config.yml,_config_prod.yml
 
