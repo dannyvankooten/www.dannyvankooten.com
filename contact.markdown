@@ -8,27 +8,36 @@ Need to contact me? If so, please go through the questions below to help save us
 
 Do you..
 
-__Need support for [Mailchimp for WordPress](https://www.mc4wp.com/) or [Boxzilla](https://boxzillaplugin.com/)?__
+<hr />
+
+__Need support for [Mailchimp for WordPress](https://www.mc4wp.com/), [HTML Forms](https://www.htmlformsplugin.com/) or [Koko Analytics](https://www.kokoanalytics.com/)?__
 
 If you are a paying customer, please use the email address shown in the settings pages of the plugin you need support for or simply reply to the purchase receipt. 
 This will guarantee a (_much_) faster response time.
 
 If you are only using the free plugins, please read on below.
 
-__Need support for a [free WordPress plugin](/wordpress-plugins/)?__
+<hr />
 
-Please use the appropriate [plugin support forum on WordPress.org](https://wordpress.org/support/). We're monitoring it daily, once we've handled support for our paying customers.
+__Need support for one of my [free WordPress plugins](/wordpress-plugins/)?__
+
+Please use the appropriate [plugin support forum on WordPress.org](https://wordpress.org/support/). 
+
+Me and my team are usually monitoring the forums on a daily basis, but only after we've handled support requests for our paying customers.
+
+<hr />
 
 __Need my business details?__
 
 <address>
 ibericode BV <br>
-4337XA Middelburg<br>
+6533BP Nijmegen<br>
 The Netherlands <br>
 Chamber of Commerce reg. no: 65413741<br>
 VAT no: NL856102337B01<br>
 </address>
 
+<hr />
 
 __Need anything else?__
 
