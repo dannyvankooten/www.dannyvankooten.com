@@ -175,16 +175,16 @@ This shows us that **a simple buy & hold investing approach actually outperforme
 
 Looking at the graph above, you can see that the trend did well during ongoing bear markets but sometimes failed to pick up on quick market recoveries. 
 
-Let's cheat a little bit and look at "the lost decade", which contains not just one but two relatively long bear markets!
+So let's cheat a little and look at just "the lost decade", which contains not just one but two relatively long bear markets!
 
 ![](/media/2018/buy-and-hold-vs-sma-365-2000s.png)
 
-This shows us that our trend strategy resulted in considerable outperformance during the last 2 decades, but only because of the two bear markets.
+This shows us that our trend strategy resulted in considerable outperformance during these 2 decades, but only because of the two bear markets.
 
 ### Conclusion: Trend following over Buy & Hold?
 
-After playing with the data and looking at several time periods, I am still firmly in the "buy & hold" camp and think it is the way to go for most individual investors.
+After playing with the data and looking at performance of the 2 strategies over different time periods, I think it's safe to say that simple buy and hold is the way to go for most individual investors. Especially as the above does not take transaction costs into account just yet.
 
-With some curve fitting, we can make the trend model outperform over some specific time periods like the 2000's. Increase the holding period and this outperformance does not last though. 
+With some hindsight we can make the trend following model outperform, but in real life we obviously do not have that luxury. Luckily, buy and hold has always made up for the difference in returns, even if you bought in just before 2 decades of bear markets.
 
 _You can [find the complete Jupyter Notebook for this post here](https://github.com/dannyvankooten/dannyvankooten.com/blob/master/notebooks/12%20month%20SMA%20vs%20Buy%20and%20Hold.ipynb)._

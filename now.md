@@ -4,19 +4,26 @@ title: What I am now working on
 permalink: /now/
 ---
 
-**Programming**
-- Solving this year's [Advent of Code challengs in C](https://github.com/dannyvankooten/advent-of-code-2020).
-- [Koko Analytics](https://kokoanalytics.com/), a privacy-friendly website analytics plugin for WordPress.
-- Improving my [Monkey compiler](https://github.com/dannyvankooten/monkey-c-monkey-do).
+
+**Work**
+
+- Maintaining and support my [WordPress plugins](/wordpress-plugins/). Most of my time is spent on [Mailchimp for WordPress](https://www.mc4wp.com/) and [Koko Analytics](https://www.kokoanalytics.com).
+
+**Education**
+
+- Working my way through all of [Khan Academy](https://www.khanacademy.org/)'s math courses for a much needed refresher.
+- Attending school again in September 2022 to get pre-university certificates for Math, Physics, Dutch and English.
 
 **Environment**
+
 - Learning about [food forests](https://edepot.wur.nl/448781) and scouting for land to start one myself.
-- Growing more plants in our kitchen garden. 
-- Improving biodiversity & soil quality in our garden.
+- Having fun in our home garden, which is just 200 square meters but full of life nonetheless.
 
 **Health & Exercise**
-- Trying to improve at bouldering (climbing) so I can climb a 7A in 2021. 
 
-_Last updated: Apr 8, 2021._
+- Training for Limburgs Mooiste, a cycling event with a distance of 245km containing 3000m of elevation.
+- Attempting to finally stave off (and hopefully fix) the sinus issues ("idiopathic rhinitis") I've been having for years now.  
+
+_Last updated: June 1, 2022._
 
 Do you have a [/now](https://nownownow.com/) page yet?
