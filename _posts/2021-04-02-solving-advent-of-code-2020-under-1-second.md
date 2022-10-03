@@ -24,7 +24,7 @@ Two weeks later, iet ies done! Total runtime is 548 ms on my laptop, so I'm quit
 
 I could probably squeeze out a few more miliseconds here and there, but I see no options for making the 2 bottlenecks ([day 15](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/15.c) and [day 23](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/23.c)) run any faster (except for throwing more hardware at it).
 
-The code is on GitHub here: [dannyvankooten/advent-of-code-2020](https://github.com/dannyvankooten/advent-of-code/tree/main/2020)
+The code is on GitHub here: [dannyvankooten/advent-of-code](https://github.com/dannyvankooten/advent-of-code/tree/main/2020)
 
 To be honest, finishing all challenges was harder than getting them all to run in under a second. I really enjoy optimising code for performance and trying out different algorithms.
 

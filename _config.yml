@@ -15,9 +15,10 @@ twitter:
 social:
   name: Danny van Kooten
   links:
-    - https://twitter.com/dannyvankooten
     - https://github.com/dannyvankooten
-    - https://keybase.io/dvk
+
+sass:
+    style: compressed
 
 # Build settings
 markdown: kramdown

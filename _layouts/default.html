@@ -8,35 +8,37 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.url }}">
 <link rel="icon" href="{{ '/assets/img/favicon.png' | prepend: site.url }}" type="image/png">
 {%- seo -%}
-<style>
-{%- include styles.css -%}
-</style>
+<link rel="stylesheet" href="{{site.url}}/assets/styles.css">
 </head>
 <body>
-  <nav>
+  <header class="sh">
     <div class="c">
       {%-if page.url == "/" -%}
         <h1><a href="{{ site.url }}/">Danny van Kooten</a></h1>
       {%- else -%}
         <h3><a href="{{ site.url }}/" rel="home">Danny van Kooten</a></h3>
       {%- endif -%}
-      {%- if page.url == '/about/' %}{% endif %} <a href="{{site.url}}/about/">About me</a> 
-      {%- if page.url == '/blog/' %}{%- endif %} <a href="{{site.url}}/blog/">Blog</a> 
-      {%- if page.url == '/contact/' %}{% endif %} <a href="{{site.url}}/contact/">Contact</a>
+      <nav>
+        <a href="{{site.url}}/about/" {%- if page.url == '/about/' %}class="active"{% endif %}>About me</a> 
+        <a href="{{site.url}}/blog/" {%- if page.url == '/blog/' %}class="active"{% endif %}>Blog</a> 
+        <a href="{{site.url}}/contact/" {%- if page.url == '/contact/' %}class="active"{% endif %}>Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
   <main class="c">
      {{- content -}}
   </main>
-  <div class="c">
+  
     <footer>
+      <div class="c">
       <small>Find me on
         {% include icon-github.svg %} <a href="https://github.com/dannyvankooten/" rel="me nofollow author">GitHub</a>.
       </small>
       <br />
       <br />
       <small>All information on this blog is hereby released into the public domain, with no rights reserved.</small>
+    </div>
     </footer>
-  </div>
+  
 </body>
 </html>
