@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>{{ page.title }} | Danny van Kooten</title>
+<link rel="canonical" href="{{ page.permalink | safe}}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:url" content="{{ page.permalink | safe }}" />
+<meta property="og:site_name" content="Danny van Kooten" />
+<meta property="article:published_time" content="{{ page.date | date(format='%+')}}" />
+{% if page.extra.image -%} 
+<meta property="og:image" content="{{ get_url(path=page.extra.image) }}" />
+{%- endif %}
+{% endblock %}
+
+{% block content %}
+<article class="h-entry">
+    <header>
+        <h1 class="p-name">{{ page.title }}</h1>
+        <p><small>
+        Published <time datetime="{{ page.date | date(format='%Y-%m-%d') }}" class="dt-published">{{ page.date | date(format="%b %-d, %Y") }}</time> on <a href="{{ page.permalink | safe }}" class="u-url">Permalink</a>
+    </small></p>
+    </header>
+    <div class="e-content">
+        {{ page.content | safe }}
+    </div>
+    </article>
+  
+{% endblock content %}
+
+

@@ -1,0 +1,11 @@
+base_url = "https://www.dannyvankooten.com"
+compile_sass = false
+build_search_index = false
+generate_feed = true
+minify_html = false
+
+[markdown]
+highlight_code = false
+
+[extra]
+# Put all your custom variables here

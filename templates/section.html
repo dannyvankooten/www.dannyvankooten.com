@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>{{ section.title }} | Danny van Kooten</title>
+{% endblock %}
+
+{% block content %}
+  <h1>Blog</h1>
+  <p>Sometimes, I write.</p>
+
+  <ul>
+  {% for post in section.pages %}
+      <li>
+          <a href="{{ post.permalink | safe }}">{{ post.title }}</a><br />
+          <small>{{ post.date | date(format="%b %-d, %Y") }}</small>
+      </li>
+  {% endfor %}
+  </ul>
+
+  <p><a href="{{ get_url(path='/atom.xml') }}">Subscribe to my writings via RSS</a>.</p>  
+{% endblock content %}

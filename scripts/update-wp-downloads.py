@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests 
 import re
 import time
@@ -21,7 +23,7 @@ plugins = [
     "dvk-social-sharing"
 ]
 
-with open('wordpress-plugins.markdown', 'r') as file :
+with open('content/wordpress-plugins.md', 'r') as file :
     contents = file.read()
 
     for p in plugins:
@@ -32,5 +34,5 @@ with open('wordpress-plugins.markdown', 'r') as file :
         contents = re.sub(r'<td id="' + p + '-downloads">(.+)</td>', f"<td id=\"{p}-downloads\">{n}</td>", contents)
 
 
-with open('wordpress-plugins.markdown', 'w') as file:
+with open('content/wordpress-plugins.md', 'w') as file:
   file.write(contents)
