@@ -1,8 +1,6 @@
 +++
-
 title = "Introducing Koko Analytics"
 date = 2019-11-07
-
 +++
 
 After [stepping down from Fathom](/stepping-down-fathom-maintainer/) earlier this year, I was happy working on [Mailchimp for WordPress](https://www.mc4wp.com/) for a good few months 

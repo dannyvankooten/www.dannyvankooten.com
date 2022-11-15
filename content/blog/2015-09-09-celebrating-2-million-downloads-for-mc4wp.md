@@ -1,8 +1,6 @@
 +++
-
 title = "Celebrating 2 million downloads for Mailchimp for WordPress"
 date = 2015-09-09 12:09:14
-
 +++
 
 Earlier today, our [Mailchimp for WordPress plugin crossed the 2 million downloads mark](https://www.mc4wp.com/blog/celebrating-2-million-downloads/) and we're super proud of that.

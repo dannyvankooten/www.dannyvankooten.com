@@ -23,6 +23,7 @@ The blog post they link to is from late 2014, so they have been offering this fe
 
 Curous what blocking European customers (not businesses) entirely would actually mean in terms of revenue for our products, I pulled up the following data for [Mailchimp for WordPress](https://www.mc4wp.com/). It is taken from sales data for the last 2 years, since the ruling came into effect.
 
+<div style="overflow-x: auto;">
 <table>
     <thead>
         <tr>
@@ -42,6 +43,7 @@ Curous what blocking European customers (not businesses) entirely would actually
         </tr>
     </tbody>
 </table>
+</div>
 
 About 18.5% of our revenue came from people (not businesses) living in one of the EU member states¹. Of that number, an average of 20% is collected taxes that we had to pay out to each member state using a rather cumbersome process. 
 
@@ -49,6 +51,6 @@ With profit margins as high as 90% in the software industry, it's not hard to im
 
 This is the sad result of VATMOSS in practice. Hurting where it shouldn't.
 
-<hr />
+---
 
 ¹ _Since the [ibericode](https://ibericode.com/) business is located in The Netherlands, the actual missed out revenue would be about 2-3% lower. Blocking EU countries becomes more viable when your business itself is located in one of the larger member states._

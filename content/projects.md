@@ -17,7 +17,7 @@ An interpreted programming language with a bytecode compiler and virtual machine
 
 An interpreted programming language hosted in C. This was my result of going through the wonderful [interpreter book](https://interpreterbook.com/) by Thorsten Ball.
 
-[Github](https://github.com/dannyvankooten/monkey-c-monkey-do)
+[Github](https://github.com/dannyvankooten/monkey-c-monkey-do) | [Blog post](@/blog/2020-03-06-writing-an-interpreter-compiler.md)
 
 ---
 
@@ -33,7 +33,7 @@ Open-source and privacy friendly analytics plugin for WordPress.
 
 Open-source and privacy friendly analytics. The project is still going strong and has turned into a flourishing business, but I [stepped away from it](https://www.dannyvankooten.com/blog/stepping-down-fathom-maintainer/) in early 2019 as its success was hard to combine with 2 young children.
 
-[GitHub](https://github.com/usefathom/fathom) | [Website](https://usefathom.com/) | [Introduction post on my blog](https://www.dannyvankooten.com/blog/reviving-ana-as-fathom/)
+[Website](https://usefathom.com/) | [GitHub](https://github.com/usefathom/fathom) | [Introduction post on my blog](https://www.dannyvankooten.com/blog/reviving-ana-as-fathom/)
 
 ---
 
@@ -67,4 +67,4 @@ At the time of writing (2022) it has been downloaded well over 40 million times 
 
 A flexible routing class for PHP projects. My very first open-source project.
 
-[Website](https://altorouter.com/) | [GitHub](https://github.com/dannyvankooten/AltoRouter)
+[Website](https://altorouter.com/) | [GitHub](https://github.com/dannyvankooten/AltoRouter) | [Introduction post on my blog](@/blog/2012-07-31-altorouter-php-routing-class.md)

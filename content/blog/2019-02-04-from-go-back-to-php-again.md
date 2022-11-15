@@ -1,8 +1,6 @@
 +++
-
 title = "Moving from Go to PHP again"
 date = 2019-02-04
-
 +++
 
 Remember when [I ditched Laravel for Golang](/laravel-to-golang/)?

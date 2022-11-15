@@ -23,6 +23,7 @@ The old one was vastly outdated in terms of content and technologies used. I als
 
 Anyway, here it is: my new site. Pretty much everything in the way it is served has changed.
 
+<div style="overflow-x: auto;">
 <table>
 	<tr>
     	<th></th>
@@ -55,7 +56,7 @@ Anyway, here it is: my new site. Pretty much everything in the way it is served 
         <td><a href="https://disqus.com/">Disqus</a></td>
     </tr>
 </table>
-
+</div>
 
 So far I am pretty pleased with the results. Working with Ghost and writing in Markdown has been a bless so far. Also, the new site speed is just incredible.
 

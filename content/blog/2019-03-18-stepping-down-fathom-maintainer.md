@@ -1,8 +1,6 @@
 +++
-
 title = "Stepping down from Fathom"
 date = 2019-03-18
-
 +++
 
 I have an announcement to make. Less than a year ago, Paul Jarvis and I [started working on Fathom](https://dannyvankooten.com/reviving-ana-as-fathom/) (simple and transparent website analytics). 

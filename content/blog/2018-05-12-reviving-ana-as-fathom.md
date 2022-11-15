@@ -1,8 +1,6 @@
 +++
-
 title = "Reviving Ana as Fathom: simple & transparent website analytics"
 date = 2018-05-12
-
 +++
 
 > Update (Mar 2019): I [left the Fathom project](/stepping-down-fathom-maintainer/).

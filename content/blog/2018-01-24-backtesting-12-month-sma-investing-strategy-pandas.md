@@ -1,8 +1,6 @@
 +++
-
 title = "Backtesting 12-month SMA investing strategy with Pandas"
 date = 2018-01-24 11:42:00
-
 +++
 
 In my quest to learn more about investing, I came across [this post](https://ofdollarsanddata.com/follow-the-money-eb1ae0c9a3bd).  The author writes _"How One Simple Rule Can Beat Buy and Hold Investing"_ and then explains how following the trend is likely to beat a more traditional buy and hold investment approach.
@@ -27,6 +25,7 @@ sp500 = pd.read_csv('data/SP500.csv', sep=',', parse_dates=True, index_col='Date
 sp500.head()
 ```
 
+<div style="overflow-x: auto;">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -57,6 +56,7 @@ sp500.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ### Calculating the 12 month simple moving average
 
@@ -68,6 +68,7 @@ sp500['SMA 365'] = sp500['Adj Close'].rolling(window=365).mean()
 sp500.dropna().head()
 ```
 
+<div style="overflow-x: auto;">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -110,6 +111,7 @@ sp500.dropna().head()
     </tr>
   </tbody>
 </table>
+</div>
 
 This leaves us with all the data we need to compare our two investment strategies.
 

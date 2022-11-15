@@ -1,8 +1,6 @@
 +++
-
 title = "Periodically check WordPress core for (malicious) modifications"
 date = 2014-10-11 15:13:04
-
 +++
 
 Last Thursday I was at a WordPress meetup where [Jaime Martinez](http://www.jaimemartinez.nl/) did a talk about [WP-CLI](http://wp-cli.org/), a command line interface for WordPress.
@@ -18,7 +16,7 @@ Error: WordPress install does not verify against checksums.
 
 Running this command at a set interval can be very useful to monitor your WordPress installations for malicious modifications. 
 
-I configured a cronjob on my server to run the following script every hour. 
+I configured a cronjob on my server to run the following script every day. 
 
 ```sh
 #!/bin/bash

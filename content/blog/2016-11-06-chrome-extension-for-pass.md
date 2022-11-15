@@ -1,8 +1,6 @@
 +++
-
 title = "Browserpass, a Chrome extension for Pass"
 date = 2016-11-06 15:30:00
-
 +++
 
 Last week I treated myself to some hardware upgrades for my desktop, which will be my main workstation from now on.

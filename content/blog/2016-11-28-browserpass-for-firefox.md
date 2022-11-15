@@ -1,8 +1,6 @@
 +++
-
 title = "Browserpass for Firefox"
 date = 2016-11-28 11:13:00
-
 +++
 
 Two weeks ago I announced Browserpass, a simple Chrome extension to access the [pass' passwordstore](https://www.passwordstore.org/) directly from your browser.

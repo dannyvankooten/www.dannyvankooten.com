@@ -1,8 +1,6 @@
 +++
-
 title = "Join me on Mastodon"
 date = 2018-08-14
-
 +++
 
 > **Summary:** [Join me on Mastodon](https://joinmastodon.org/). It's like Twitter, but less angry and more decentralized.

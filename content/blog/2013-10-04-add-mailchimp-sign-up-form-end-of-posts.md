@@ -1,8 +1,6 @@
 +++
-
 title = "Automatically add a Mailchimp sign-up form to all posts"
 date = 2013-10-04 15:40:32
-
 +++
 
 When someone gets to the end of your post, they surely love what you have to say. It makes the end of your posts the perfect spot to ask your visitors to sign-up to your newsletter. It converts well and you're asking right when they're feeling great about your content.

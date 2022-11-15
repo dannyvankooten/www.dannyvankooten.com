@@ -1,8 +1,6 @@
 +++
-
 title = "Interview on WebWorkTravel"
 date = 2015-03-13 12:43:27
-
 +++
 
 I was recently interviewed by Johannes Voelkner, the guy behind [WebWorkTravel](http://www.webworktravel.com/) who seems to have visited just about any country in the world. We ran into each other last year while on a workation in Tarifa, a small kitesurfing town in Southern Spain.

@@ -49,7 +49,7 @@ Personally I constrained myself to not use more than 1 kB of CSS for the website
 
 Let's do our share as web developers and stop bloating the web. 
 
-+++
+---
 
 <small>
  Energy costs of data transfer varies a lot depending on the type of network that is used. The range seems to be from 0,08 kWh per GB for fixed broadband connections to 37 kWh per GB for 2G networks.</small>
@@ -60,7 +60,7 @@ Let's do our share as web developers and stop bloating the web.
 The most important thing I attempted to convey is that the choices we make in developing for the web have consequences that really add up at scale.
 </small>
 
-+++
+---
 
 <small>**References**</small>
 

@@ -1,8 +1,6 @@
 +++
-
 title = "Interview on NomadList"
 date = 2015-05-07 17:01:40
-
 +++
 
 NomadList.com is a website that lists the best places to live and work remotely. I've been a huge fan of the site ever since it was created by [Pieter Levels](https://levels.io/) during his [12 startups in 12 months](https://levels.io/12-startups-12-months/).

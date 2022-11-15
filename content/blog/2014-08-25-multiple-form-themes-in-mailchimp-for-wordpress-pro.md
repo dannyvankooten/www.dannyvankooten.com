@@ -1,8 +1,6 @@
 +++
-
 title = "Multiple form themes in Mailchimp for WordPress Pro"
 date = 2014-08-25 19:51:44
-
 +++
 
 <p class="intro">A long requested feature has just made its way into Mailchimp for WordPress Pro: <strong>the ability to create multiple form themes using the Styles Builder</strong>. It's one of those features of which I wonder why I didn't include it in the plugin to begin with.</p>

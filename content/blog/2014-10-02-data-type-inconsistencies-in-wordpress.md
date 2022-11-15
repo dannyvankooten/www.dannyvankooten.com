@@ -1,8 +1,6 @@
 +++
-
 title = "Data type inconsistencies in WordPress"
 date = 2014-10-02 13:38:15
-
 +++
 
 Yesterday I [tweeted about data type inconsistencies in WordPress plugins](https://twitter.com/DannyvanKooten/status/517432423475589120), something that has been bothering me for a while now.

@@ -1,8 +1,6 @@
 +++
-
 title = "WordPress plugin structure, don't load unnecessary code"
 date = 2013-11-20 12:00:58
-
 +++
 
 When developing WordPress plugins it is important to decide whether code needs to be loaded or not as early in the request lifecycle as possible. Why bother loading unnecessary code and hooking into actions and filters that will never run for the request being made? Having said that, it is also important to keep your code structured and not go overboard with this.

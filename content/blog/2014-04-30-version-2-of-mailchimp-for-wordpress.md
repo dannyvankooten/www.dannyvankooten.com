@@ -1,8 +1,6 @@
 +++
-
 title = "Version 2.0 of Mailchimp for WordPress"
 date = 2014-04-30 13:17:30
-
 +++
 
 Almost a year after its initial release (June 2013) and close to 300.000 downloads later, I just pushed version 2.0 of <a href="http://wordpress.org/plugins/Mailchimp-for-wp/">Mailchimp for WordPress to the WordPress.org plugin repository</a>. Although the update doesn't come with too many changes or new features it brings some cool new features to the plugin.
@@ -32,4 +30,4 @@ All new features and changes described in this post are (obviously) also include
 <h3>GitHub project</h3>
 Although not directly related to the 2.0 release, the <a href="https://github.com/dannyvankooten/Mailchimp-for-wordpress">Mailchimp for WordPress project is now on GitHub</a>. If you would like to follow development of the plugin (or even contribute some code yourself), feel free to drop by.
 
-Found a bug? Please <a href="https://github.com/dannyvankooten/Mailchimp-for-wordpress/issues">raise an issue on GitHub.</a>
+Found a bug? Please <a href="https://github.com/ibericode/mailchimp-for-wordpress/issues">raise an issue on GitHub.</a>

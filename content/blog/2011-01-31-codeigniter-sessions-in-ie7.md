@@ -15,10 +15,10 @@ After checking my code and some more testing I excluded my code from being the p
 A few google queries later I found out that more CodeIgniter users have been experiencing the same problem with Internet Explorer 7 and CodeIgniter sessions not being stored.
 
 ### IE7 and the CI_Session class
-Since CodeIgniter sessions work fine in some IE7 browsers and fail miserably in others there's no definite fix for this problem. 
+Since CodeIgniter sessions work fine in some IE7 browsers and fail miserably in others there currently seems to be no definite fix for this problem. 
 
 #### Underscore in the CodeIgniter session cookie
-One thing that might be causing it is the underscore `_` in the cookie name that stores the session variables.
+One thing that at least seems related it is the underscore `_` in the cookie name that stores the session variables.
 
 The default CI cookie name is 'ci_session'. Renaming that to `cisession`, without the underscore, did the trick for me.
 

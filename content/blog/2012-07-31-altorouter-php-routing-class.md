@@ -1,8 +1,6 @@
 +++
-
 title = "AltoRouter, another PHP Routing class."
 date = 2012-07-31 19:07:20
-
 +++
 
 A few months earlier I blogged about developing <a href="http://dannyvankooten.com/718/php-routing-class-with-rest-routes/" title="PHP Routing Class which supports REST routing">PHP Router</a>, a PHP5.3+ routing class with support for REST routing and reversed routing. 
