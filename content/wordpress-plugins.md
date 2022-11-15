@@ -3,7 +3,7 @@ template = "page.html"
 title = "WordPress Plugins"
 +++
 
-In the last few years I developed quite a few WordPress plugins, together totalling well over **38 million downloads** now. All of these plugins combined are running on over a million websites right now.
+In the last few years I developed quite a few WordPress plugins, together totalling well over **42 million downloads** now. All of these plugins combined are running on over a million websites right now.
 
 Without further ado, here are some of the most important plugins for WordPress I developed.
 
