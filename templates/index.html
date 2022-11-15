@@ -2,6 +2,10 @@
 
 {% block head %}
 <title>Danny van Kooten</title>
+<link rel="canonical" href="{{ section.permalink | safe}}" />
+<meta property="og:title" content="{{ section.title }}" />
+<meta property="og:url" content="{{ section.permalink | safe }}" />
+<meta property="og:type" content="website" />
 {% endblock %}
 
 {% block content %}
@@ -10,7 +14,7 @@
   </article>
 
   {% set blog_section = get_section(path="blog/_index.md") %}
-  <h3>Writings</h2>
+  <h3>Writings</h3>
   <ul>
       {% for post in blog_section.pages | slice(end=5) %}
       <li>

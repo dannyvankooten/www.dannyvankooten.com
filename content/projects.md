@@ -1,5 +1,6 @@
 +++
 title = "Projects"
+template = "page.html"
 +++
 
 These are some (but not all) of the projects I've worked on over the years.
@@ -22,9 +23,9 @@ An interpreted programming language hosted in C. This was my result of going thr
 
 #### Koko Analytics
 
-A self-hosted and privacy friendly analytics plugin for WordPress.
+Open-source and privacy friendly analytics plugin for WordPress.
 
-[Website](https://www.kokoanalytics.com/) | [GitHub](https://github.com/ibericode/koko-analytics)
+[Website](https://www.kokoanalytics.com/) | [GitHub](https://github.com/ibericode/koko-analytics) | [Introduction post on my blog](https://www.dannyvankooten.com/blog/introducing-koko-analytics/)
 
 ---
 
@@ -58,7 +59,7 @@ A WordPress plugin that adds various sign-up methods to ones WordPress website. 
 
 At the time of writing (2022) it has been downloaded well over 40 million times and is in active use on well over 2 million websites.
 
-[Website](https://www.mc4wp.com/) | [GitHub](https://github.com/ibericode/mailchimp-for-wordpress) | [Introduction post on my blog](https://www.dannyvankooten.com/blog/my-newest-wordpress-plugin-mailchimp-for-wp/)
+[Website](https://www.mc4wp.com/) | [GitHub](https://github.com/ibericode/mailchimp-for-wordpress) | [Introduction post on my blog](/blog/my-newest-wordpress-plugin-mailchimp-for-wp/)
 
 --- 
 
