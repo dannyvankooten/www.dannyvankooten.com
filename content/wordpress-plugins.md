@@ -49,7 +49,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
     	<td><a href="https://wordpress.org/plugins/wysiwyg-widgets/">Widget Blocks</a></td>
-        <td id="wysiwyg-widgets-downloads">308K</td>
+        <td id="wysiwyg-widgets-downloads">309K</td>
         <td>Juny 2011</td>
     </tr>
     <tr>

@@ -54,7 +54,7 @@ A PHP library for dealing with European VAT rules.
 
 #### Mailchimp for WordPress
 
-A WordPress plugin that adds various sign-up methods to ones WordPress website. I built the first version of this from a hospital bed in Vietnam and it immediately turned into a rollercoaster of events.
+A WordPress plugin that adds various sign-up methods to ones WordPress website. I built the first version of this from [a hospital bed in Vietnam](/blog/100-000-plugin-downloads-6-months-mailchimp-wordpress/) and it immediately turned into a rollercoaster of events.
 
 At the time of writing (2022) it has been downloaded well over 40 million times and is in active use on well over 2 million websites.
 
