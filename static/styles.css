@@ -1,33 +1,28 @@
 
-body{
-    background:#fff;
-    color:#111;
-    font:1.2em Helvetica,Arial,sans-serif;
-    margin:0;
-    overflow-y:scroll
+body {
+    margin: 0;
+    font:18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color:#333;
 }
-a{
-    color:#A00
+
+a {
+    color:#00A;
 }
-a:hover,a:focus{
-    color:#111
-}
+
 .sh {
     display:block;
-    background:#A00;
-    margin-bottom:3em;
+    border-bottom: 1px dotted;
+    margin-bottom:2em;
     padding:1em 0
 }
 .sh h1, 
 .sh h3 {
     margin: 0 0 1em 0;
-    color: white;
     font-size:1em;
 }
 .sh a{
     font-size:1em;
     margin-right: 1em;
-    color: white;
     text-decoration:none
 }
 nav{
@@ -35,23 +30,27 @@ nav{
 }
 nav a:hover,
 nav a:focus{
-    color:white;
     text-decoration:underline
 }
 nav a.active{
     text-decoration:underline dotted
 }
+
+li {
+    margin: 4px 0;
+}
 img{
     max-width:100%;
     height:auto
 }
-main{
-    line-height:1.6
-}
+
 h1{
+    line-height: 1.2;
     margin:1em 0 0
+
 }
 h2,h3,h4,h5{
+    line-height: 1.2;
     margin:3em 0 1em
 }
 p,blockquote,ul,table,pre,hr{
@@ -71,14 +70,15 @@ hr{
     margin:2em 0
 }
 pre code{
-    font-family: monospace;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
     font-size: 16px;
-    background:#555;
+    background:rgb(39, 43, 51);
     color:#FFF;
     border:1px solid #444;
     display:block;
     overflow-x:auto;
-    padding:4px
+    padding: 12px;
+    color: rgb(240, 243, 246);
 }
 table{
     width: 100%;
@@ -87,18 +87,16 @@ table{
     border: 1px solid #EEE;
     line-break: strict;
 }
-thead th {
-    background: #444;
-    color: white;
-    min-width: 120px;
-}
+
 th,
 td{
     border: 0;
     text-align:left;
     padding: 4px 8px;
 }
-tr:nth-child(odd) {
+
+thead,
+tr:nth-child(even) {
     background: #F8F7F8
 }
 
@@ -110,16 +108,49 @@ footer{
 footer svg{
     vertical-align:middle
 }
-small,small a{
+small, 
+small a{
     color:#565656
 }
 .c{
-    max-width: 70ch;
+    /* optimal line length is 50-75 chars */
+    max-width: 65ch;
     margin-left:auto;
     margin-right:auto;
     padding-left:1em;
     padding-right:1em
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color:#c9d1d9;
+        background:#0d1117
+    }
+
+    a {
+        color: rgb(113, 183, 255)
+    }
+
+    small, 
+    small a{
+        color:#AAA
+    }
+
+    thead tr,
+    tr:nth-child(even) {
+        background: #1d2633
+    }
+
+    table{
+        border: 1px solid #111;
+    }
+
+    blockquote {
+        background: rgba(64, 158, 255, 0.15);
+        border-color: rgb(49, 117, 188)
+    }
+} 
+
 @media(min-width:620px) {
    .sh h1, 
    .sh h3{ 

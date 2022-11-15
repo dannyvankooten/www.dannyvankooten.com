@@ -4,18 +4,10 @@ title = "A new site, built on Ghost"
 date = 2014-08-23 19:17:57
 
 +++
-<style scoped>
-.well {
-    background: #eef5fa;
-    border: 1px solid #dae9f4;
-    padding: 0 20px;
-    box-shadow: 0 0 1px 1px #eee;
-    margin: 1em 0;
-}
-</style>
-<div class="well">
+
+<blockquote>
     <p>The below is vastly outdated. I've since moved to a static site generator called <s>Jekyll</s> <a href="https://www.getzola.org/">Zola</a>. <a href="https://github.com/dannyvankooten/www.dvk.co/">Source code is here on GitHub</a>. </p>
-</div>
+</blockquote>
 
 It was about time I spent some time to work on my personal site. 
 
