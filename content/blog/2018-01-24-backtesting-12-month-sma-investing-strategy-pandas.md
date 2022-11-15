@@ -30,12 +30,8 @@ sp500.head()
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
-      <th>Adj Close</th>
-    </tr>
-    <tr>
       <th>Date</th>
-      <th></th>
+      <th>Adj Close</th>
     </tr>
   </thead>
   <tbody>
@@ -75,16 +71,10 @@ sp500.dropna().head()
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
+      <th>Date</th>
       <th>Adj Close</th>
       <th>Pct Change</th>
       <th>SMA 365</th>
-    </tr>
-    <tr>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>

@@ -71,20 +71,37 @@ hr{
     margin:2em 0
 }
 pre code{
-    background:#111;
-    color:#fffaf0;
-    border:1px solid #fff1d6;
+    font-family: monospace;
+    font-size: 16px;
+    background:#555;
+    color:#FFF;
+    border:1px solid #444;
     display:block;
     overflow-x:auto;
     padding:4px
 }
 table{
-    border-collapse:collapse
+    width: 100%;
+    table-layout: auto;
+    border-collapse:collapse;
+    border: 1px solid #EEE;
+    line-break: strict;
 }
-th,td{
+thead th {
+    background: #444;
+    color: white;
+    min-width: 120px;
+}
+th,
+td{
+    border: 0;
     text-align:left;
-    padding:2px 4px
+    padding: 4px 8px;
 }
+tr:nth-child(odd) {
+    background: #F8F7F8
+}
+
 footer{
     border-top:1px dotted;
     margin:3em 0;

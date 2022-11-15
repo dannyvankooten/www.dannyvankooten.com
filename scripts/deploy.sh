@@ -1,3 +1,5 @@
+set -e
+
 echo "Updating download numbers"
 python ./scripts/update-wp-downloads.py 
 

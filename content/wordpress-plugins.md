@@ -7,12 +7,16 @@ In the last few years I developed quite a few WordPress plugins, together totall
 
 Without further ado, here are some of the most important plugins for WordPress I developed.
 
+<div style="overflow-x: auto;">
 <table>
+    <thead>
 	<tr>
     	<th>Plugin Name</th>
         <th># of downloads</th>
         <th>Released in</th>
     </tr>
+    </thead>
+    <tbody>
     <tr>
     	<td><a href="https://www.mc4wp.com/">Mailchimp for WordPress</a> &nbsp; <a href="https://github.com/ibericode/mailchimp-for-wordpress"><i class="icon icon-social-github"></i></a></td>
         <td id="mailchimp-for-wp-downloads">41.8M</td>
@@ -63,7 +67,9 @@ Without further ado, here are some of the most important plugins for WordPress I
             <td>200K</td>
             <td>January 2015</td>
     </tr>
+    </tbody>
 </table>
+</div>
 
 
 For a full list of plugins I developed, please have a look at [my WordPress.org profile](http://profiles.wordpress.org/dvankooten/).

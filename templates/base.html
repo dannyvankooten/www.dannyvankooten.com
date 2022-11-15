@@ -16,11 +16,11 @@
 <body>
   <header class="sh">
     <div class="c">
-      {% if current_path == '/' %}
+      {%- if current_path == '/' -%}
       <h1><a href="{{ get_url(path='/') }}">Danny van Kooten</a></h1>
-      {% else %} 
+      {%- else -%} 
       <h3><a href="{{ get_url(path='/') }}" rel="home">Danny van Kooten</a></h3>
-      {% endif %}        
+      {%- endif -%}        
       <nav>
         <a href="{{ get_url(path='/about/') }}" {% if current_path == '/about/' %}class="active" {% endif %}>About me</a> 
         <a href="{{ get_url(path='/blog/') }}" {% if current_path == '/blog/' %}class="active" {% endif %}>Blog</a> 

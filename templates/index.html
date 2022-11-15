@@ -6,10 +6,7 @@
 
 {% block content %}
   <article>
-    <header><h1>{{ section.title }}</h1></header>
-    <div>
-      {{ section.content | safe }}
-    </div>
+    {{ section.content | safe }}
   </article>
 
   {% set blog_section = get_section(path="blog/_index.md") %}
