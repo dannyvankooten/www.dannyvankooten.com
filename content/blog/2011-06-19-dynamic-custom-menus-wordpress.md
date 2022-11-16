@@ -39,6 +39,6 @@ So there we have it, we hooked a menu to a post.
 
 Now, if we wanted to make things easier we would get all nav menus with <a href="http://core.trac.wordpress.org/browser/tags/3.1.3/wp-includes/nav-menu.php#l409">`wp_get_nav_menus()`</a> and add a select box to the edit post screen where users can choose their which menu to show.
 
-In fact, I might create a <a href="https://dannyvankooten.com/wordpress-plugins/">WordPress plugin</a> that does just that if it turns out people are actually interesting in such a thing. Are you? Let's vote in the comments. When we reach at least 50 +1's, I'll build it.
+In fact, I might create a <a href="https://www.dannyvankooten.com/wordpress-plugins/">WordPress plugin</a> that does just that if it turns out people are actually interesting in such a thing. Are you? Let's vote in the comments. When we reach at least 50 +1's, I'll build it.
 
 _<strong>Update (November 2013):</strong> The <a href="http://wordpress.org/plugins/ce-wp-menu-per-page/">CE WP-Menu Per Page</a> plugin seems to do just this._

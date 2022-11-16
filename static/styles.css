@@ -1,40 +1,77 @@
-
+:root {
+    --default: #24292F;
+    --muted: #57606A;
+    --header-bg: #24292F;
+    --header-text: white;
+    --links: #0969DA;
+    --borders: #EEE;
+}
 body {
     margin: 0;
     font:18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    color:#333;
+    background: var(--header-bg);
+    color: var(--header-text); 
 }
-
+main {
+    background: white;
+    color: var(--default);
+    padding: 3em 0;
+}
 a {
-    color:#00A;
+    color: var(--links);
+    text-decoration: underline;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
 }
 
-.sh {
-    display:block;
-    border-bottom: 1px dotted;
-    margin-bottom:2em;
-    padding:1em 0
+.container {
+    /* optimal line length is 50-75 chars */
+    max-width: 650px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:1em;
+    padding-right:1em
 }
-.sh h1, 
-.sh h3 {
+.site-header {
+    padding:1em 0;
+}
+.site-header h1, 
+.site-header h3 {
     margin: 0 0 1em 0;
-    font-size:1em;
+    font-size: 1em;
 }
-.sh a{
-    font-size:1em;
+.site-header a{
     margin-right: 1em;
-    text-decoration:none
 }
-nav{
+.site-header a,
+.site-footer a {
+    text-decoration: none;
+    color: var(--header-text);
+}
+.site-header nav{
     display:inline-block
 }
-nav a:hover,
-nav a:focus{
+.site-header a:hover,
+.site-header a:focus,
+.site-footer a:hover {
     text-decoration:underline
 }
-nav a.active{
+.site-header a.active{
     text-decoration:underline dotted
 }
+.site-footer{
+    font-size: 0.9em;
+    margin: 3em 0 0;
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding-bottom: 3em;
+}
+.site-footer svg{
+    vertical-align:middle
+}
+
 
 li {
     margin: 4px 0;
@@ -43,11 +80,10 @@ img{
     max-width:100%;
     height:auto
 }
-
 h1{
     line-height: 1.2;
-    margin:1em 0 0
-
+    margin: 0;
+    font-size: 26px;
 }
 h2,h3,h4,h5{
     line-height: 1.2;
@@ -60,32 +96,38 @@ ul{
     padding-left:1em
 }
 blockquote{
-    background:#F0FBFF;
+    background:#FFF8C5;
     padding:0 1em;
-    border:1px solid #D7EDF5
+    border:1px solid rgba(212, 167, 44, 0.4);
 }
 hr{
-    border: 0;
-    border-top:1px dotted;
+    display: block;
+    height: 1px;
+    background: var(--borders);
+    border: 0; 
     margin:2em 0
 }
 pre code{
     font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
     font-size: 16px;
     background:rgb(39, 43, 51);
-    color:#FFF;
     border:1px solid #444;
     display:block;
     overflow-x:auto;
     padding: 12px;
     color: rgb(240, 243, 246);
 }
+
 table{
     width: 100%;
     table-layout: auto;
     border-collapse:collapse;
-    border: 1px solid #EEE;
+    border: 1px solid var(--borders);
     line-break: strict;
+}
+
+img {
+    border: 1px solid var(--borders);
 }
 
 th,
@@ -95,71 +137,33 @@ td{
     padding: 4px 8px;
 }
 
-thead,
+thead {
+    background: var(--header-bg);
+    color: var(--header-text);
+}
 tr:nth-child(even) {
-    background: #F8F7F8
+    background: rgba(0, 0, 0, 0.02);
 }
 
-footer{
-    border-top:1px dotted;
-    margin:3em 0;
-    padding-top:3em;
-}
-footer svg{
-    vertical-align:middle
-}
+
 small, 
 small a{
-    color:#565656
-}
-.c{
-    /* optimal line length is 50-75 chars */
-    max-width: 65ch;
-    margin-left:auto;
-    margin-right:auto;
-    padding-left:1em;
-    padding-right:1em
+    color:var(--muted)
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        color:#c9d1d9;
-        background:#0d1117
-    }
 
-    a {
-        color: rgb(113, 183, 255)
-    }
-
-    small, 
-    small a{
-        color:#AAA
-    }
-
-    thead tr,
-    tr:nth-child(even) {
-        background: #1d2633
-    }
-
-    table{
-        border: 1px solid #111;
-    }
-
-    blockquote {
-        background: rgba(64, 158, 255, 0.15);
-        border-color: rgb(49, 117, 188)
-    }
-} 
 
 @media(min-width:620px) {
-   .sh h1, 
-   .sh h3{ 
+    /* move header inline on large screens */
+   .site-header h1, 
+   .site-header h3{ 
         display: inline-block; 
         margin: 0; 
     }
-   .sh nav:before{ 
-    content: "\2014"; 
-    margin-right: 1em; 
-    color: white; 
+   .site-header nav{ 
+        float: right;
+    }
+    .site-header nav a:last-child {
+        margin-right: 0;
     }
 }

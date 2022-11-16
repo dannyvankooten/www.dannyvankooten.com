@@ -59,6 +59,6 @@ function my_add_social_sharing_links($content) {
 
 You can of course modify the snippet and maybe add a few CSS rules to your theme stylesheet to make it look prettier.
 
-I built a small plugin around this called <a href="http://dannyvankooten.com/wordpress-plugins/social-sharing-by-danny/" title="Social Sharing by Danny">Social Sharing by Danny</a>. Included are a few simple but pretty icons and a very small (under 500 bytes) JavaScript file which will make the links open in a pop-up window. Hope you like it!
+I built a small plugin around this called <a href="http://www.dannyvankooten.com/wordpress-plugins/social-sharing-by-danny/" title="Social Sharing by Danny">Social Sharing by Danny</a>. Included are a few simple but pretty icons and a very small (under 500 bytes) JavaScript file which will make the links open in a pop-up window. Hope you like it!
 
 Know of another simple and lightweight sharing plugin? Let me know please. :)

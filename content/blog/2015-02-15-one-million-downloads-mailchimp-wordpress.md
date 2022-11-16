@@ -9,7 +9,7 @@ The plugin experienced some crazy growth since its first release, less than 2 ye
 
 
 #### 1.000.000 downloads
-Just a little over a year ago [the plugin was still at 100.000 downloads](https://dannyvankooten.com/100-000-plugin-downloads-6-months-Mailchimp-wordpress/). 
+Just a little over a year ago [the plugin was still at 100.000 downloads](@/blog/2013-12-06-100-000-plugin-downloads-6-months-mailchimp-wordpress.md). 
 
 At _exactly midnight UTC last Friday_ the plugin was downloaded for the **millionth time**.
 

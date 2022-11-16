@@ -19,7 +19,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     <tbody>
     <tr>
     	<td><a href="https://www.mc4wp.com/">Mailchimp for WordPress</a> &nbsp; <a href="https://github.com/ibericode/mailchimp-for-wordpress"><i class="icon icon-social-github"></i></a></td>
-        <td id="mailchimp-for-wp-downloads">41.8M</td>
+        <td id="mailchimp-for-wp-downloads">41.9M</td>
         <td>July 2013</td>
     </tr>
     <tr>
@@ -29,7 +29,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
         <td><a href="https://wordpress.org/plugins/html-forms/">HTML Forms</a> &nbsp; <a href="https://github.com/ibericode/html-forms"><i class="icon icon-social-github"></i></a></td>
-        <td id="html-forms-downloads">93.4K</td>
+        <td id="html-forms-downloads">94.3K</td>
         <td>October 2017</td>
     </tr>
      <tr>

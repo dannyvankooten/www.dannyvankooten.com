@@ -3,7 +3,7 @@ title = "Introducing Koko Analytics"
 date = 2019-11-07
 +++
 
-After [stepping down from Fathom](/stepping-down-fathom-maintainer/) earlier this year, I was happy working on [Mailchimp for WordPress](https://www.mc4wp.com/) for a good few months 
+After [stepping down from Fathom](@/blog/2019-03-18-stepping-down-fathom-maintainer.md) earlier this year, I was happy working on [Mailchimp for WordPress](https://www.mc4wp.com/) for a good few months 
 before realising that I was still thinking about how to make web analytics more private.
 
 It dawned on me that part of why I was building Fathom in Go was because I wanted a break from WordPress and because I deemed it necessary to achieve good enough performance. 
@@ -37,7 +37,7 @@ Most likely, you won't even notice that Koko Analytics is there. Even when your 
 
 To achieve this, the plugin uses an append-only buffer file in which pageviews are temporarily stored until they are aggregated using a background process that runs every 60 seconds.
 
-In my tests it was able to handle well over 15.000 requests per second, meaning you don't have to worry about being on the first page of Hacker News. [PHP has really come a long way](/from-go-back-to-php-again/) in the last few years.
+In my tests it was able to handle well over 15.000 requests per second, meaning you don't have to worry about being on the first page of Hacker News. [PHP has really come a long way](@/blog/2019-02-04-from-go-back-to-php-again.md) in the last few years.
 
 ### Downloading the plugin 
 

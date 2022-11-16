@@ -3,7 +3,7 @@ title = "AltoRouter, another PHP Routing class."
 date = 2012-07-31 19:07:20
 +++
 
-A few months earlier I blogged about developing <a href="http://dannyvankooten.com/718/php-routing-class-with-rest-routes/" title="PHP Routing Class which supports REST routing">PHP Router</a>, a PHP5.3+ routing class with support for REST routing and reversed routing. 
+A few months earlier I blogged about developing [PHP Router](@/blog/2011-11-30-php-routing-class-with-rest-routes.md), a PHP5.3+ routing class with support for REST routing and reversed routing. 
 
 Well, last week I came across <a href="http://github.com/chriso/klein.php/">klein.php</a>, a lightweight PHP router developed by Chris O'Hara. I particularly liked the fact that it's pretty easy to specify certain type restrictions for your URL parameters so I decided to create my own version of klein.php. The aim was to create something that worked in a similar way as my own PHP Router class, but with the easiness of klein.php. 
 

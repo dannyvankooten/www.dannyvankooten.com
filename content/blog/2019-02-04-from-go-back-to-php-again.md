@@ -3,7 +3,7 @@ title = "Moving from Go to PHP again"
 date = 2019-02-04
 +++
 
-Remember when [I ditched Laravel for Golang](/laravel-to-golang/)?
+Remember when [I ditched Laravel for Golang](@/blog/2017-04-17-laravel-to-golang.md)?
 
 Well, after 2 years on Go, our shop applications are powered by PHP again.
 
@@ -62,7 +62,7 @@ Honestly, Go is great. Its simplicity is refreshing and you can't get anywhere n
 
 Our shops however are more monolithic with a lot of server-side rendering. While that's certainly doable in Go (as the last 2 years proved), it's more maintainable for us to do it in PHP right now. 
 
-> Side note: without the experience gained from our years on Go, I probably wouldn't have started [Fathom](https://dannyvankooten.com/reviving-ana-as-fathom/). So perhaps it wasn't such a bad business decision after all?
+> Side note: without the experience gained from our years on Go, I probably wouldn't have started [Fathom](https://www.dannyvankooten.com/blog/reviving-ana-as-fathom/). So perhaps it wasn't such a bad business decision after all?
 
 ### Making the correct business decision
 

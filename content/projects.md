@@ -41,7 +41,7 @@ Open-source and privacy friendly analytics. The project is still going strong an
 
 A browser extension for [Pass](https://www.passwordstore.org/), the unix password manager. I started hacking on this as I wanted to give [native messaging](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) a try, which was pretty new at the time.
 
-[GitHub](https://github.com/browserpass/browserpass-legacy) | [Introduction post on my blog](https://dannyvankooten.com/blog/chrome-extension-for-pass/)
+[GitHub](https://github.com/browserpass/browserpass-legacy) | [Introduction post on my blog](https://www.dannyvankooten.com/blog/chrome-extension-for-pass/)
 
 ---
 

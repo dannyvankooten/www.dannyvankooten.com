@@ -5,7 +5,7 @@ date = 2015-06-19 10:40:20
 
 For the last 5 years, I've been doing business under my somewhat boring personal name.  The official name of my company was just "Danny van Kooten".
 
-For me, this made perfect sense as I was on my own, working for clients and [selling some of my WordPress plugins](https://dannyvankooten.com/wordpress-plugins/). 
+For me, this made perfect sense as I was on my own, working for clients and [selling some of my WordPress plugins](https://www.dannyvankooten.com/wordpress-plugins/). 
 
 It did cause some confusion every now and then though. Also, I've been getting more and more help handling the ever increasing workload and since a few months, I'm working with two wonderful people on a daily basis.
 

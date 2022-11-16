@@ -15,7 +15,7 @@ Just last week I reduced global emissions by an estimated 59.000 kg CO<sub>2</su
 
 ### CO2 emissions from distributed code
 
-All of [my WordPress plugins]({{site.url}}/wordpress-plugins/) combined run on well over 2 million different websites, each website receiving who knows how many visitors. 
+All of [my WordPress plugins](/wordpress-plugins/) combined run on well over 2 million different websites, each website receiving who knows how many visitors. 
 
 At an average energy expenditure of [0,5 kWh per GB <sup>1</sup>](#f1) of data transfer this means that every kB equals `0,5 kWh / 1.000.000 kB * 2.000.000 websites = 1 kWh` if each of these websites received exactly 1 visitor.
 

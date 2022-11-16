@@ -3,7 +3,7 @@ title = "Reviving Ana as Fathom: simple & transparent website analytics"
 date = 2018-05-12
 +++
 
-> Update (Mar 2019): I [left the Fathom project](/stepping-down-fathom-maintainer/).
+> Update (Mar 2019): I [left the Fathom project](@/blog/2019-03-18-stepping-down-fathom-maintainer.md).
 
 As I was browsing my Twitter feed a few weeks ago, I came across the following tweet.
 
