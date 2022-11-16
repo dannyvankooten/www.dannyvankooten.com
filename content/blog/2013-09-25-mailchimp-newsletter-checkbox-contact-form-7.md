@@ -14,9 +14,9 @@ This post will show you how to add a Mailchimp sign-up checkbox to your Contact 
 People who send you a message will be able to subscribe to your Mailchimp list(s) with ease. You can choose to have the checkbox pre-checked so it doesn't even require them to click.
 
 **Requirements**
-- [Contact Form 7](http://wordpress.org/plugins/contact-form-7/)
-- [Mailchimp for WordPress Pro](https://www.mc4wp.com/) or even [the free version](http://wordpress.org/plugins/Mailchimp-for-wp/)
-- [A Mailchimp account](http://eepurl.com/FLbC9) (referral link, we'll both get $30 in so-called MonkeyRewards if you use this link to sign-up to Mailchimp)
+- [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
+- [Mailchimp for WordPress Pro](https://www.mc4wp.com/) or even [the free version](https://wordpress.org/plugins/mailchimp-for-wp/)
+- [A Mailchimp account](https://eepurl.com/FLbC9) (referral link, we'll both get $30 in so-called MonkeyRewards if you use this link to sign-up to Mailchimp)
 
 ### Adding the sign-up checkbox to your Contact Form 7 template
 To add the newsletter sign-up checkbox to your contact form we can use a simple shortcode that comes with the Mailchimp for WordPress plugin when you have Contact Form 7 enabled.

@@ -25,12 +25,12 @@ From there, I iterated on a weekly basis, continuously improving the plugin, add
 <a href="https://www.mc4wp.com/"><img src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704526/100discount_fwtdgh.png" alt="100discount" width="400" height="225" class="alignright size-full wp-image-3923" /></a>
 
 <h3>100.000 plugin downloads!</h3>
-Today, barely 6 months later the plugin <a href="http://wordpress.org/plugins/Mailchimp-for-wp/stats/">has been downloaded</a> over <strong>100.000 times</strong>, I can't be more happy about that. It was well received by the WordPress community and the <a href="http://wordpress.org/support/view/plugin-reviews/Mailchimp-for-wp">plugin reviews</a> reflect that - thanks everyone.
+Today, barely 6 months later the plugin <a href="https://wordpress.org/plugins/Mailchimp-for-wp/stats/">has been downloaded</a> over <strong>100.000 times</strong>, I can't be more happy about that. It was well received by the WordPress community and the <a href="https://wordpress.org/support/view/plugin-reviews/Mailchimp-for-wp">plugin reviews</a> reflect that - thanks everyone.
 
-<a href="http://wordpress.org/support/view/plugin-reviews/Mailchimp-for-wp"><img src="https://res.cloudinary.com/dannyvankooten/image/upload/h_116,w_300/v1408704527/reviews_x3sidd.png" alt="reviews" width="300" height="116" class="size-medium wp-image-3917" /></a>
+<a href="https://wordpress.org/support/view/plugin-reviews/Mailchimp-for-wp"><img src="https://res.cloudinary.com/dannyvankooten/image/upload/h_116,w_300/v1408704527/reviews_x3sidd.png" alt="reviews" width="300" height="116" class="size-medium wp-image-3917" /></a>
 
 I learned a ton and really enjoyed every minute I spent on the plugin.
 
-My mind is buzzing with ideas so I'll definitely be focusing on developing more and better plugins in 2014. If you like to stay in touch: <a href="http://twitter.com/dannyvankooten">follow me on Twitter</a> or <a href="#mc4wp-form-1">subscribe to the newsletter</a> I send out occasionally.
+My mind is buzzing with ideas so I'll definitely be focusing on developing more and better plugins in 2014. If you like to stay in touch: <a href="https://twitter.com/dannyvankooten">follow me on Twitter</a> or <a href="#mc4wp-form-1">subscribe to the newsletter</a> I send out occasionally.
 
 <em>PS. Starting in February I will be doing my graduation internship at a company most (if not all) of you know, more about that later. :D </em>

@@ -48,7 +48,7 @@ Also, if you're worrying about stuff like this, make sure you have proper cachin
 <h3>Plugin developers: load your scripts in the footer</h3>
 In most cases, it makes sense to load your plugin scripts in the footer. This also has the benefit you can only add them to the footer if your plugin actually needs them. 
 
-Just call <a href="http://codex.wordpress.org/Function_Reference/wp_enqueue_script">`wp_enqueue_scripts`</a> from your display function (your shortcode callback, template function, ...) and set the last parameter <code>$in_footer</code> to <code>true</code>. 
+Just call <a href="https://codex.wordpress.org/Function_Reference/wp_enqueue_script">`wp_enqueue_scripts`</a> from your display function (your shortcode callback, template function, ...) and set the last parameter <code>$in_footer</code> to <code>true</code>. 
 
 I usually register the script as early as possible so users have the chance to replace them, should they want to.
 

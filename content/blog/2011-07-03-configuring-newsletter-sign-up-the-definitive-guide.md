@@ -24,7 +24,7 @@ You can download and install the Newsletter Sign-Up plugin just like you would i
 1. Search for **Newsletter Sign-Up** in the plugin repository.
 1. Install right away or download the ZIP file and upload the contents of it to your `/wp-content/plugins/` folder.
 
-Not familiar with installing WordPress plugins? The [WordPress codex has a helpful article on installing plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins) that might help.
+Not familiar with installing WordPress plugins? The [WordPress codex has a helpful article on installing plugins](https://codex.wordpress.org/Managing_Plugins#Installing_Plugins) that might help.
 
 <img src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704655/newsletter-sign-up-activated-plugin_qzt5ib.jpg" alt="" title="newsletter-sign-up-activated-plugin" width="726" height="45" class="aligncenter size-full wp-image-581" />
 
@@ -92,7 +92,7 @@ Make sure to use an email address that is not already on your list as most newsl
 #### Still a bit lost? Try this.
 <ul>
 	<li><a href="http://unwireme.com/boost-your-e-mail-newsletter-sign-up-conversion-rate-with-this-free-tip/">Configuration guide by UnwireMe</a></li>
-	<li>Drop me a line trough the <a href="http://wordpress.org/tags/newsletter-sign-up?forum_id=10">support forums for Newsletter Sign-Up</a>, include your sign-up form and me or someone else will extract the correct values as soon as we find a spare minute!</li>
+	<li>Drop me a line trough the <a href="https://wordpress.org/tags/newsletter-sign-up?forum_id=10">support forums for Newsletter Sign-Up</a>, include your sign-up form and me or someone else will extract the correct values as soon as we find a spare minute!</li>
 </ul>
 
 

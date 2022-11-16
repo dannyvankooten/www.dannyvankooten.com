@@ -7,7 +7,7 @@ Yesterday I [tweeted about data type inconsistencies in WordPress plugins](https
 
 Inconsistent data types is quite common in PHP development as it is a "weak typed" language. In PHP version 5.3 and up, you can force the type of some non-scalar function parameters. 
 
-[Hack](http://hacklang.org/) further improved on this by introducing **type annotations**, which _allow for PHP code to be explicitly typed on parameters, class member variables and return values_. Very cool.
+[Hack](https://hacklang.org/) further improved on this by introducing **type annotations**, which _allow for PHP code to be explicitly typed on parameters, class member variables and return values_. Very cool.
 
 Unfortunately, both improvements can not be used when developing for WordPress. Yet.
 

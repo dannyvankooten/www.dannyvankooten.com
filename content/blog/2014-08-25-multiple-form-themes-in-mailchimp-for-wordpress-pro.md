@@ -19,5 +19,5 @@ Selecting a form will load any previous form styles you may have created for thi
 
 The best part: __all this without writing a single line of CSS__.
 
-For those of you still on the [free version of the plugin](http://wordpress.org/plugins/Mailchimp-for-wp/); what are you waiting for? Now would be a great time to [upgrade to Mailchimp for WordPress Pro](https://www.mc4wp.com/).
+For those of you still on the [free version of the plugin](https://wordpress.org/plugins/Mailchimp-for-wp/); what are you waiting for? Now would be a great time to [upgrade to Mailchimp for WordPress Pro](https://www.mc4wp.com/).
 

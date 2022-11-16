@@ -34,4 +34,4 @@ If that didn't do the trick for you you might try checking you're server's time 
 
 The last thing you can do is to drop the CodeIgniter session library and start using PHP's default session handling using `session_start()`, `$_SESSION[]`, `unset` and `session_destroy`. 
 
-Have a look at the <a href="http://codeigniter.com/wiki/Native_session/">CodeIgniter Native Session Library</a> if you really need to use a library to handle your sessions.
+Have a look at the <a href="https://codeigniter.com/wiki/Native_session/">CodeIgniter Native Session Library</a> if you really need to use a library to handle your sessions.

@@ -9,7 +9,7 @@ In this post I'll show you a small snippet you can use on your WordPress website
 
 <strong>Requirements</strong>
 <ul>
-	<li><a href="http://wordpress.org/plugins/Mailchimp-for-wp/">Mailchimp for WordPress</a></li>
+	<li><a href="https://wordpress.org/plugins/Mailchimp-for-wp/">Mailchimp for WordPress</a></li>
 </ul>
 There are various ways to go about this but the easiest way is to use a filter, like I did in the following code snippet. All you need to do is to add this snippet to your theme <strong>functions.php </strong>file (use the Theme Editor or FTP for this) and you're good to go.
 

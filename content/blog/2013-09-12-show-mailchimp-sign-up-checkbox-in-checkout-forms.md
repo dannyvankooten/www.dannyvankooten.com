@@ -29,16 +29,16 @@ There is a live demo available on this website on the checkout page but here is 
 
 The plugin currently automatically integrates with the following eCommerce plugins.
 <ul>
-	<li><a href="http://www.woothemes.com/woocommerce/">WooCommerce</a></li>
+	<li><a href="https://woocommerce.com/">WooCommerce</a></li>
 	<li><a href="https://easydigitaldownloads.com/">Easy Digital Downloads</a></li>
 </ul>
 Besides these plugins, it also integrates with some other (non eCommerce) plugins.
 <ul>
-	<li><a href="http://wp-events-plugin.com/">Events Manager</a></li>
-	<li><a href="http://contactform7.com/">Contact Form 7</a></li>
-	<li><a href="http://bbpress.org/">bbPress</a></li>
+	<li><a href="https://wp-events-plugin.com/">Events Manager</a></li>
+	<li><a href="https://contactform7.com/">Contact Form 7</a></li>
+	<li><a href="https://bbpress.org/">bbPress</a></li>
 	<li>MultiSite</li>
-	<li><a href="http://buddypress.org/">BuddyPress</a></li>
+	<li><a href="https://buddypress.org/">BuddyPress</a></li>
 </ul>
 
 Want to see a plugin added to this list? Great, I'm constantly looking to improve my product so just drop me a line in the comments and I will start looking into it.

@@ -3,7 +3,7 @@ title = "Writing a bytecode interpreter - in C"
 date = 2020-03-06
 +++
 
-Some time during 2016 I got my hands on the book [Writing an interpreter in Go](http://interpreterbook.com/) by [Thorsten Ball](https://thorstenball.com/). I skimmed through the first few chapters, liked what I read and then... life happened and I never actually got around to building an interpreter. :(
+Some time during 2016 I got my hands on the book [Writing an interpreter in Go](https://interpreterbook.com/) by [Thorsten Ball](https://thorstenball.com/). I skimmed through the first few chapters, liked what I read and then... life happened and I never actually got around to building an interpreter. :(
 
 Until last month, that is. I cleared out my schedule and finally started going through the book. 
 

@@ -3,7 +3,7 @@ title = "Periodically check WordPress core for (malicious) modifications"
 date = 2014-10-11 15:13:04
 +++
 
-Last Thursday I was at a WordPress meetup where [Jaime Martinez](http://www.jaimemartinez.nl/) did a talk about [WP-CLI](http://wp-cli.org/), a command line interface for WordPress.
+Last Thursday I was at a WordPress meetup where [Jaime Martinez](https://www.jaimemartinez.nl/) did a talk about [WP-CLI](https://wp-cli.org/), a command line interface for WordPress.
 
 One of the very useful commands he showed is `wp core verify-checksums`, which verifies the checksum of all WordPress core files. It will tell you exactly which of your core files do not match the original file in the WordPress.org repository.
 

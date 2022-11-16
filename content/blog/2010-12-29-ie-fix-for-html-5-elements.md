@@ -22,7 +22,7 @@ Another way is to use the HTML 5 shiv that's hosted on googlecode by Remy Sharp.
 
 ```javascript
 <!--[if IE]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 ```
 

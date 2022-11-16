@@ -5,9 +5,9 @@ date = 2012-07-31 19:07:20
 
 A few months earlier I blogged about developing [PHP Router](@/blog/2011-11-30-php-routing-class-with-rest-routes.md), a PHP5.3+ routing class with support for REST routing and reversed routing. 
 
-Well, last week I came across <a href="http://github.com/chriso/klein.php/">klein.php</a>, a lightweight PHP router developed by Chris O'Hara. I particularly liked the fact that it's pretty easy to specify certain type restrictions for your URL parameters so I decided to create my own version of klein.php. The aim was to create something that worked in a similar way as my own PHP Router class, but with the easiness of klein.php. 
+Well, last week I came across <a href="https://github.com/chriso/klein.php/">klein.php</a>, a lightweight PHP router developed by Chris O'Hara. I particularly liked the fact that it's pretty easy to specify certain type restrictions for your URL parameters so I decided to create my own version of klein.php. The aim was to create something that worked in a similar way as my own PHP Router class, but with the easiness of klein.php. 
 
-So, here it is: <a href="http://github.com/dannyvankooten/AltoRouter">AltoRouter</a>, a tiny routing class which will help you in your future PHP projects.
+So, here it is: <a href="https://github.com/dannyvankooten/AltoRouter">AltoRouter</a>, a tiny routing class which will help you in your future PHP projects.
 
 <ul>
 <li>Usage of different HTTP Methods</li>
@@ -21,7 +21,7 @@ So, here it is: <a href="http://github.com/dannyvankooten/AltoRouter">AltoRouter
 
 <a href="https://github.com/dannyvankooten/AltoRouter">AltoRouter is hosted on GitHub</a> and also available as a <a href="https://packagist.org/packages/altorouter/altorouter">Composer package from Packagist</a>. Feel free to take a look at the code or contribute to the routing class.
 
-<strong>Update (April 2014):</strong> <a href="http://longren.io/basic-routing-in-php-with-altorouter/">Tyler Longren (a contributor to the project) wrote a great "getting started" post for AltoRouter</a>.
+<strong>Update (April 2014):</strong> <a href="https://longren.io/basic-routing-in-php-with-altorouter/">Tyler Longren (a contributor to the project) wrote a great "getting started" post for AltoRouter</a>.
 
-**Update (October 2014):** [AltoRouter](http://altorouter.com/) now has its own site containing detailed usage instructions.
+**Update (October 2014):** [AltoRouter](https://altorouter.com/) now has its own site containing detailed usage instructions.
 

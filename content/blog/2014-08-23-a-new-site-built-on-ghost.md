@@ -34,13 +34,13 @@ Anyway, here it is: my new site. Pretty much everything in the way it is served 
     </tr>
     <tr>
     	<th>CMS</th>
-        <td><a href="http://wordpress.org/">WordPress</a></td>
+        <td><a href="https://wordpress.org/">WordPress</a></td>
         <td><a href="https://ghost.org/about/">Ghost</a></td>
     </tr>
     <tr>
     	<th>Theme</th>
         <td>Custom WordPress theme</td>
-        <td>Modified version of <a href="https://github.com/daleanthony/uno">Uno</a>, a Ghost theme by <a href="http://www.daleanthony.com/">Dale Anthony</a></td>
+        <td>Modified version of <a href="https://github.com/daleanthony/uno">Uno</a>, a Ghost theme by <a href="https://www.daleanthony.com/">Dale Anthony</a></td>
       </tr>
       <tr>
     	<th>Comments</th>

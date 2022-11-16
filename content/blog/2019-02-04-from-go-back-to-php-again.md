@@ -11,7 +11,7 @@ Well, after 2 years on Go, our shop applications are powered by PHP again.
 
 ### PHP improved a lot
 
-PHP improved a lot during the last 3 years. It added [scalar argument type declarations](https://secure.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration), [return type declarations](https://secure.php.net/manual/en/functions.returning-values.php#functions.returning-values.type-declaration), [multi-catch exceptions](https://wiki.php.net/rfc/multiple-catch), impressive [performance improvements](http://www.zend.com/en/resources/php7_infographic) and many more general improvements. 
+PHP improved a lot during the last 3 years. It added [scalar argument type declarations](https://secure.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration), [return type declarations](https://secure.php.net/manual/en/functions.returning-values.php#functions.returning-values.type-declaration), [multi-catch exceptions](https://wiki.php.net/rfc/multiple-catch), impressive [performance improvements](https://www.zend.com/en/resources/php7_infographic) and many more general improvements. 
 
 ### Symfony4 is a game changer
 

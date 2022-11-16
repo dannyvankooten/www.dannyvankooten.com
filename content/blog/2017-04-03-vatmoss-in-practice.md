@@ -5,7 +5,7 @@ date = 2017-04-03 19:20:00
 
 +++
 
-If you're selling a product or service online, you probably know how much harder accepting payments from Europan consumers got since the [2015 VATMOSS rulings](http://euvataction.org/key-facts/#key_regulations).
+If you're selling a product or service online, you probably know how much harder accepting payments from Europan consumers got since the new 2015 VATMOSS rulings.
 
 You now have several VAT rates to keep track of and apply and taking care of the required location evidence can be a real pain (try selling to someone who's traveling). 
 
