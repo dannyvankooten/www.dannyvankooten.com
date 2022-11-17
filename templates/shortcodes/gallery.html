@@ -1,0 +1,16 @@
+<style>
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+}
+.gallery div {
+    height: 185px;
+    width: 325px;
+}
+</style>
+<div class="gallery">
+{% for asset in page.extra.assets -%}
+    {%- set image = resize_image(path=asset, width=315, height=175) -%}
+    <div><a href="{{ get_url(path=asset) }}" target="_blank"><img src="{{ image.url }}" /></a></div>
+{%- endfor %}
+</div>
