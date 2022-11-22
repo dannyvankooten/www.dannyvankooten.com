@@ -62,7 +62,7 @@ Fast forward some time, we now have a first draft of a working interpreter that 
 
 We'll be starting our optimization work from [this commit](https://github.com/dannyvankooten/nederlang/commit/873a737bfa22d1222e2904aa52f6386175250f87).
 
-The source code is parsed into this tree-like structure where each node is a variant of the `Expr` enum:
+The source code is first turned into tokens and then parsed into an Abstract Syntax Tree (AST), where each node is a variant of the `Expr` enum:
 
 ```rust
 enum Expr {
@@ -107,7 +107,7 @@ When resolving a variable by its name, we look up the name in the `symbols` Hash
 
 <div id="aliases"></div>
 
-Before we start our work, let's define some useful aliases for our current shell session so we don't have to deal with typing out the same commands over and over again.
+Before we start our work, let's define some useful aliases for the current shell session so we don't have to deal with typing out the same commands over and over again.
 
 ```bash
 alias fb="cargo build --release && hyperfine --runs 10 'target/release/nederlang fib.nl' --export-markdown /tmp/hf.md && cat /tmp/hf.md"
@@ -116,13 +116,13 @@ alias ff="cargo flamegraph -- target/release/nederlang fib.nl"
 alias fc="perf stat -e task-clock,cycles,instructions,cache-references,cache-misses target/release/nederlang fib.nl"
 ```
 
-Now we're ready for our very first benchmark.... **drum roll**
+Now we're ready to run a very first benchmark.... **~drum roll~**
 
 ```
 fb
 ```
 
-(_Note: `fb` is the name of one of [the aliases defined here](#aliases)._)
+_(Note: `fb` is the name of one of [the aliases defined here](#aliases).)_
 
 <div style="overflow-x: scroll;">
 
@@ -132,11 +132,11 @@ fb
 
 </div>
 
-**39 seconds**. Ouch. I know tree walking is not supposed to be fast, but given our C implementation manages to do it in under 5 seconds, surely we should be able to do the same in Rust?
+**39 seconds**. Ouch. I know tree walking is not supposed to be fast, but given the C implementation manages to do it in under 5 seconds, surely we should be able to come close to that in Rust?
 
 ### Optimizing Rust code for performance
 
-Let's take a look at where all this time is spent by running `fp` (another one of [the aliases defined here](#aliases)):
+Let's take a look at where all this time is spent by running `fp` (another one of [the aliases defined here](#aliases), which simply calls into `perf` to generate a call graph):
 
 ```
 100.00%     8.34%   [.] nederlang::eval::eval_expr
@@ -149,11 +149,11 @@ Let's take a look at where all this time is spent by running `fp` (another one o
  27.49%     0.00%   [.] hashbrown::map::HashMap<K,V,S,A>::get_inner (inlined)
 ```
 
-Right away we can see that a whopping 59% of time is spent in `Environment::resolve`, which resolves variables by their name. Let's optimize that.
+Right away it shows that a whopping 59% of time is spent in `Environment::resolve`, which resolves variables by their name. Let's optimize that.
 
 #### Using a faster HashMap implementation
 
-What if we switch to a faster HashMap implementation like [fxhash](https://crates.io/crates/fxhash)?
+What if we switch to a faster (but not cryptographically secure) HashMap implementation like [fxhash](https://crates.io/crates/fxhash)?
 
 We add the dependency to `Cargo.toml`:
 
@@ -162,7 +162,7 @@ We add the dependency to `Cargo.toml`:
 fxhash = "0.2.1"
 ```
 
-And then import the HashMap under an alias, so the rest of our code can remain untouched:
+And then import the new HashMap type under an alias, so the rest of our code can remain untouched:
 
 ```rust
 use fxhash::FxHashMap as HashMap;
@@ -178,7 +178,7 @@ Let's run another benchmark (using the `fb` alias) to see what Hyperfine thinks 
 
 </div>
 
-We're **down to 32 seconds** now, a 18% performance improvement. Not bad, but still slow... We need to rethink the way we store and resolve variables.
+Down to **32 seconds**, a 18% performance improvement. Not bad, but still slow... We need to rethink the way we store and resolve variables.
 
 #### Using a Vec instead of a Hashmap 
 
@@ -186,9 +186,9 @@ In Nederlang there exists a global scope and a local scope. Each function call c
 
 We could represent that as a `Vec<HashMap<String, Object>>`, pushing a new HashMap before evaluating a function body and then popping it afterwards.
 
-But also, in a typical program we'll have just a handful of variables per scope. So what if we drop the `HashMap` entirely and use a `Vec<Vec<(String, Object)>>` instead? 
+But also, in a typical program there will only be a handful of variables per scope. What if we drop the `HashMap` entirely and use a `Vec<Vec<(String, Object)>>` instead? 
 
-Our look-up time will be `O(n)` instead of `O(1)` but since we have only a handful of variables to iterate over, I have a feeling it will be faster than going through a hash function.
+The look-up time will be **_O(n)_** instead of **_O(1)_** but since there are only a handful of variables to iterate over, I have a feeling it will be faster than going through a hash function.
 
 ```rust
 type Scope = Vec<(String, Object)>;
@@ -237,13 +237,13 @@ You can see the entire [commit here](https://github.com/dannyvankooten/nederlang
 
 48% of the time is still spent inside `Environment::resolve`. What else can we do to speed this up?
 
-Our current `O(n)` approach is iterating over a bunch of separately allocated `Vec` instances holding a tuple consisting of the variable name and the value. 
+To resolve a variable value by its name, it is currently iterating over a bunch of separately allocated `Vec` instances holding a tuple consisting of the variable name and the value. 
 
-We could speed-up resolving functions by their name by enforcing in the language specification that function names can not be shadowed. That way we can start looking for a function in the global scope and only then start traversing all the local scopes. A cool trick, but not really Rust related so let's think of what else there is.
+Changing the language specificiation of Nederlang to enforce that function names can not be shadowed would allow us to speed-up resolving functions by their name. That way we can start by looking at the outer-most (global) scope and only then start traversing all of the inner scopes. A cool trick, but not really Rust related so let's think of what else there is.
 
-What about using a single `Vec<(String, Object)>` then? We could keep track of the length before each function call and then after the function body is evaluated, call `Vec::truncate()` to get rid of all variables used in that function. 
+What about using a single `Vec<(String, Object)>` then? If we store the number of declared variables before evaluating the function body, we can then call [Vec::truncate()](https://doc.rust-lang.org/std/vec/struct.Vec.html#method.truncate) to get rid of all variables declared in that function. 
 
-While we're at it, let's use a separate `Vec` for `names` and `values` too. That should speed-up resolving variables by their name since we're really only interested in the value of the variable we're looking for, discarding all the rest.
+While we're at it, let's use a separate `Vec` for `names` and `values`. That should speed-up resolving variables by their name since we're really only interested in the value of the variable we're looking for. 
 
 ```rust
 struct Environment {
@@ -365,7 +365,7 @@ Here's the [full commit](https://github.com/dannyvankooten/nederlang/commit/17f7
 |:---|---:|---:|---:|
 | `nederlang fib.nl` | 4.222 ± 0.059 | 4.177 | 4.322 | 
 
-Down to **4.2 seconds**! That's the 80% improvement we needed! Surely that is worth introducing the lifetime constraints and sleeping sound at night knowing our code is safe. 
+Down to **4.2 seconds**. That's the 80% improvement we needed! Surely that is worth introducing the lifetime constraints and sleeping sound at night knowing our code is safe. 
 
 ```diff
 - fn eval_expr(expr: &Expr, env: &mut Environment) -> Result<Object, Error> {
@@ -396,7 +396,7 @@ Another 12% faster and now on par with the tree-walking interpreter hosted in C.
 
 ### Representing dynamically typed values
 
-Now we've gotten rid of most allocation related performance hogs, it's about time we look at our Object type.
+Now we've gotten rid of most allocation related performance hogs, it's about time we look at the `Object` type.
 
 ```rust
 enum Object<'a> {
@@ -441,7 +441,7 @@ print-type-size     variant `Null`: 0 bytes
 
 > Any enum value consumes as much memory as the largest variant for its corresponding enum type, as well as the size needed to store a discriminant.
 
-Well, that explains. Our largest variant is `Object::String`, holding a `String` type of 24 bytes. Our discriminant is taking up a single byte, but because of alignment it will use 8 bytes instead.  
+That explains. The largest variant is `Object::String`, holding a `String` type of 24 bytes. The discriminant is taking up a single byte, but because of alignment it will add another 7 bytes of padding.  
 
 Using 32 bytes while most of our variants could theoretically fit into just 8 bytes does not sound optimal. What can we do to shrink it?
 
@@ -456,7 +456,7 @@ Sure! We can do [pointer tagging](https://www.npopov.com/2012/02/02/Pointer-magi
 
 Right now our Object type owns the `String` value it holds, which means a lot of cloning just passing objects (of this variant) around. 
 
-We should probably allocate our String objects elsewhere and have our `Object` store a reference (or pointer) instead. That also means we need some kind of garbage collection though, but I will (happily) ignore that for this post as we're not really working with any heap allocated values in our recursive fibonnacci program anyway.
+We should probably allocate our String objects elsewhere and have our `Object` store a reference (or pointer) instead. That also means we need some kind of garbage collection to manage that memory for us, but I will (happily) ignore that for this post as we're not really working with any heap allocated values in our recursive fibonnacci program anyway.
 
 What if we get our `Object` type to look something like this?
 
@@ -469,13 +469,13 @@ enum Object {
 }
 ```
 
-This way the size of our `Object` will be 16 bytes. 8 bytes for the `i64` or raw pointer and another 8 bytes for the enum discriminant. But what if we store the discriminant inside the value?
+This way the size of our `Object` will be 16 bytes. 8 bytes for the `i64` or raw pointer and another 8 bytes for the enum discriminant. But what if we store the discriminant _inside_ the pointer or value?
 
-Because of said memory alignment, [memory addresses on 64-bit architectures](https://en.wikipedia.org/wiki/Tagged_pointer#Folding_tags_into_the_pointer) will also be byte aligned. This leaves the 3 most significant bits unused, as these will always be 0. 
+Because of said memory alignment, [memory addresses on 64-bit architectures](https://en.wikipedia.org/wiki/Tagged_pointer#Folding_tags_into_the_pointer) will also be byte aligned. This leaves the 3 least significant bits unused, as these will always be 0. 
 
-We have only 6 different object types in Nederlang, so we can use these last 3 bits to store our type information in. 
+There are currently only 6 different types of values in Nederlang, so 3 bits will be sufficient to store our type information in. 
 
-Our Object type will be a thin wrapper type around a raw pointer:
+The new `Object` type will be a thin wrapper around a raw pointer:
 
 ```rust
 struct Object(*mut u8);
@@ -541,7 +541,7 @@ impl<'a> Object {
 }
 ```
 
-Storing and retrieving a raw pointer is very similar, except to retrieve the address we reset the lowest 3 bits to `0` instead of shifting to the right. 
+Storing and retrieving a raw pointer is very similar, except to retrieve the address we reset the lowest 3 bits to `0` instead of shifting.
 
 ```rust
 impl<'a> Object {
@@ -579,7 +579,7 @@ What does that yield us in terms of performance? Let's run `fb` again to find ou
 BOOM! **2.1 seconds**, down from 3.7. A 43% performance improvement. Worth it if you ask me.
 
 
-#### Inlining the hot path
+#### (Manually) inlining the hot path
 
 We've squeezed most performance out of the tree walker by now, but there are still some things we can do. We can compile an optimized binary using [profile guided optimization](https://doc.rust-lang.org/rustc/profile-guided-optimization.html). While that shaved off another few percent for me, it feels a bit too much like cheating. 
 
@@ -590,14 +590,14 @@ ls -lh target/release/nederlang
 -rwxr-xr-x 2 danny danny 4.9M Nov 22 09:57 target/release/nederlang*
 ```
 
-And after [inling all of the hot path](https://github.com/dannyvankooten/nederlang/commit/5f88a7ac769c317873dd5bfb88732ba5703dfab6):
+And after [inlinig all of the hot path](https://github.com/dannyvankooten/nederlang/commit/5f88a7ac769c317873dd5bfb88732ba5703dfab6):
 
 ```
 ls -lh target/release/nederlang
 -rwxr-xr-x 2 danny danny 4.9M Nov 22 09:59 target/release/nederlang*
 ```
 
-No change in size! Yet we know it worked since running `perf` now shows us that our hot functions were inlined:
+No change in size! Yet we know it worked since running `perf` now shows us that all of our hot functions were inlined:
 
 ```
 99.99%    84.80%  [.] nederlang::eval::eval_expr (inlined)
