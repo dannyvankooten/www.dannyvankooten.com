@@ -241,7 +241,7 @@ To resolve a variable value by its name, it is currently iterating over a bunch 
 
 Changing the language specificiation of Nederlang to enforce that function names can not be shadowed would allow us to speed-up resolving functions by their name. That way we can start by looking at the outer-most (global) scope and only then start traversing all of the inner scopes. A cool trick, but not really Rust related so let's think of what else there is.
 
-What about using a single `Vec<(String, Object)>` then? If we store the number of declared variables before evaluating the function body, we can then call [Vec::truncate()](https://doc.rust-lang.org/std/vec/struct.Vec.html#method.truncate) to get rid of all variables declared in that function. 
+What about using a single `Vec<(String, Object)>` then? If we store the number of declared variables before evaluating the function body, we can then call [Vec::truncate()](https://doc.rust-lang.org/std/vec/struct.Vec.html#method.truncate) afterwards to get rid of all variables declared in that function. 
 
 While we're at it, let's use a separate `Vec` for `names` and `values`. That should speed-up resolving variables by their name since we're really only interested in the value of the variable we're looking for. 
 
