@@ -38,7 +38,7 @@ hyperfine \
     -n pepper-tree-walker "pepper --tree-walker fib35.pr" \
     -n pepper-vm "pepper --vm fib35.pr" \
     -n python-3.10 "python fib35.py"  \
-    --runs 3 --export-markdown /tmp/hf.md && cat /tmp/hf.md
+    --runs 10 --export-markdown /tmp/hf.md && cat /tmp/hf.md
 ```
 
 
@@ -105,10 +105,12 @@ struct Environment<'a> {
 
 When resolving a variable by its name, we look up the name in the `symbols` HashMap, traversing upwards to the outermost `Environment` until we have a match. 
 
-Before we start profiling and optimizing the code, let's define some useful aliases for our current shell session.
+<div id="aliases"></div>
+
+Before we start our work, let's define some useful aliases for our current shell session so we don't have to deal with typing out the same commands over and over again.
 
 ```bash
-alias fb="cargo build --release && hyperfine --runs 3 'target/release/nederlang fib.nl' --export-markdown /tmp/hf.md && cat /tmp/hf.md"
+alias fb="cargo build --release && hyperfine --runs 10 'target/release/nederlang fib.nl' --export-markdown /tmp/hf.md && cat /tmp/hf.md"
 alias fp="cargo build --release && perf record --call-graph dwarf  target/release/nederlang fib.nl && perf report"
 alias ff="cargo flamegraph -- target/release/nederlang fib.nl"
 alias fc="perf stat -e task-clock,cycles,instructions,cache-references,cache-misses target/release/nederlang fib.nl"
@@ -120,7 +122,7 @@ Now we're ready for our very first benchmark.... **drum roll**
 fb
 ```
 
-(_Note: `fb` is the name of the alias we defined earlier._)
+(_Note: `fb` is the name of one of [the aliases defined here](#aliases)._)
 
 <div style="overflow-x: scroll;">
 
@@ -134,7 +136,7 @@ fb
 
 ### Optimizing Rust code for performance
 
-Let's take a look at where all this time is spent by running `fp`:
+Let's take a look at where all this time is spent by running `fp` (another one of [the aliases defined here](#aliases)):
 
 ```
 100.00%     8.34%   [.] nederlang::eval::eval_expr
@@ -496,13 +498,18 @@ enum Type {
 }
 ```
 
-And then a helper method to create a new Object with some value while including the type tag.
+We'll introduce some helper methods for creating a new object with a given type and retrieving just the type tag.
 
 ```rust
 impl<'a> Object {
     /// Creates a new object from the value (or address) with the given type mask applied
     fn with_type(raw: *mut u8, t: Type) -> Self {
         Self((raw as usize | t as usize) as _)
+    }
+
+    fn get_type(self) -> Type {
+        // Safety: self.0 with TAG_MASK applied will always yield a correct Type
+        unsafe { std::mem::transmute((self.0 as usize & 0b111) as u8) }
     }
 }
 ```
@@ -535,6 +542,25 @@ impl<'a> Object {
 ```
 
 Storing and retrieving a raw pointer is very similar, except to retrieve the address we reset the lowest 3 bits to `0` instead of shifting to the right. 
+
+```rust
+impl<'a> Object {
+    fn as_ptr(self) -> *mut u8 {
+        (self.0 as usize & !0b111) as _
+    }
+
+    unsafe fn get<T>(self) -> &'a T {
+        &*(self.as_ptr() as *const T)
+    }
+}
+```
+
+So now if we have an `Object` we can do the following to get a reference to the `String` value it points to:
+
+```rust
+assert_eq!(obj.get_type(), Type::String);
+let str = obj.get::<String>();
+```
 
 You can [view the complete tagged pointer implementation in this commit](https://github.com/dannyvankooten/nederlang/commit/6bacf8a7107beed13a46262ba6aeb02c003dca05).
 
@@ -614,6 +640,7 @@ This really only applies to newcomers (like me) though. In hindsight most of the
 
 <small>
 
-I've prepared a [GitHub branch containing the various optimizations described in this post](https://github.com/dannyvankooten/nederlang/commits/tree-walker), so you can easily look at the actual code. Note that the order of things might differ slightly from this post.
+I've prepared a [GitHub branch containing the various optimizations described here](https://github.com/dannyvankooten/nederlang/commits/tree-walker), so you can look at all of the actual code. Note that the order of optimizations might differ slightly from the order in this post.
 
 </small>
+
