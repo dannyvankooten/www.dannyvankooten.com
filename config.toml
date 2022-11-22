@@ -5,7 +5,7 @@ generate_feed = true
 minify_html = true
 
 [markdown]
-highlight_code = false
+highlight_code = true
 
 [extra]
 # Put all your custom variables here

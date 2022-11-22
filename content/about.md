@@ -2,7 +2,7 @@
 title = "About Danny"
 
 [extra]
-assets = [ "/img/about/1.jpg", "/img/about/2.jpg", "/img/about/3.jpg", "/img/about/4.webp"]
+assets = [ "/img/about/1.jpg", "/img/about/2.jpg", "/img/about/3.jpg", "/img/about/4.webp", "/img/about/5.jpg", "/img/about/6.jpg"]
 +++
 
 Hi, my name is Danny van Kooten.
