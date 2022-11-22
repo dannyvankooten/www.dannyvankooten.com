@@ -24,12 +24,12 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
         <td><a href="https://wordpress.org/plugins/koko-analytics/">Koko Analytics</a> &nbsp; <a href="https://github.com/ibericode/koko-analytics"><i class="icon icon-social-github"></i></a></td>
-        <td id="koko-analytics-downloads">275K</td>
+        <td id="koko-analytics-downloads">276K</td>
         <td>November 2019</td>
     </tr>
     <tr>
         <td><a href="https://wordpress.org/plugins/html-forms/">HTML Forms</a> &nbsp; <a href="https://github.com/ibericode/html-forms"><i class="icon icon-social-github"></i></a></td>
-        <td id="html-forms-downloads">94.7K</td>
+        <td id="html-forms-downloads">95.2K</td>
         <td>October 2017</td>
     </tr>
      <tr>

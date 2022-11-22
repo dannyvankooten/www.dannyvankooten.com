@@ -17,7 +17,6 @@ plugins = [
     "koko-analytics",
     "html-forms",
     "boxzilla",
-    "newsletter-sign-up",
     "mailchimp-top-bar",
     "wysiwyg-widgets",
     "dvk-social-sharing"
