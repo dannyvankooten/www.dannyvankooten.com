@@ -42,4 +42,4 @@ Cycle through the results using <strong>TAB</strong> and then hit <strong>ENTER<
 
 Prebuilt binaries for OSX and Linux are available. Please see [the README file](https://github.com/dannyvankooten/chrome-gopass/blob/master/README.md) for detailed installation instructions.
 
-_(Update Nov 28, 2016: [Browserpass is now available for Firefox as well](https://www.dannyvankooten.com/blog/browserpass-for-firefox/))_
+_(Update Nov 28, 2016: [Browserpass is now available for Firefox as well](@/blog/2016/2016-11-28-browserpass-for-firefox.md))_

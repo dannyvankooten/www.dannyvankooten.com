@@ -3,7 +3,7 @@ date = 2022-11-17
 title = "(Re)writing an interpreter in Rust"
 +++
 
-Two years ago I [wrote my first interpreter](@/blog/2020-03-06-writing-an-interpreter-compiler.md) for a toy programming language called Monkey, in C.
+Two years ago I [wrote my first interpreter](@/blog/2020/2020-03-06-writing-an-interpreter-compiler.md) for a toy programming language called Monkey, in C.
 
 The thing works and is pretty fast, but I remember a lot of frustration dealing with segfaults or hard-to-track down memory leaks as soon as I introduced heap allocated values. 
 
@@ -643,4 +643,5 @@ This really only applies to newcomers (like me) though. In hindsight most of the
 I've prepared a [GitHub branch containing the various optimizations described here](https://github.com/dannyvankooten/nederlang/commits/tree-walker), so you can look at all of the actual code. Note that the order of optimizations might differ slightly from the order in this post.
 
 </small>
+
 

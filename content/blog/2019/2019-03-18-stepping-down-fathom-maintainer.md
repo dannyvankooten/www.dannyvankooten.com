@@ -3,7 +3,7 @@ title = "Stepping down from Fathom"
 date = 2019-03-18
 +++
 
-I have an announcement to make. Less than a year ago, Paul Jarvis and I [started working on Fathom](@/blog/2018-05-12-reviving-ana-as-fathom.md) (simple and transparent website analytics). 
+I have an announcement to make. Less than a year ago, Paul Jarvis and I [started working on Fathom](@/blog/2018/2018-05-12-reviving-ana-as-fathom.md) (simple and transparent website analytics). 
 
 We managed to make a lot of progress during our first year and I'm more than a little proud of what Fathom is today. I'm running it on most of my sites and I'd say it's very much a viable alternative for Google Analytics for a lot of websites already.
 
