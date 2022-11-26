@@ -587,14 +587,14 @@ One other thing is to manually instruct the compiler what functions to inline, t
 
 ```
 ls -lh target/release/nederlang
--rwxr-xr-x 2 danny danny 4.9M Nov 22 09:57 target/release/nederlang*
+-rwxr-xr-x 2 danny danny 2.1M Nov 22 09:57 target/release/nederlang*
 ```
 
-And after [inlinig all of the hot path](https://github.com/dannyvankooten/nederlang/commit/5f88a7ac769c317873dd5bfb88732ba5703dfab6):
+And after [inlining all of the hot path](https://github.com/dannyvankooten/nederlang/commit/5f88a7ac769c317873dd5bfb88732ba5703dfab6):
 
 ```
 ls -lh target/release/nederlang
--rwxr-xr-x 2 danny danny 4.9M Nov 22 09:59 target/release/nederlang*
+-rwxr-xr-x 2 danny danny 2.1M Nov 22 09:59 target/release/nederlang*
 ```
 
 No change in size! Yet we know it worked since running `perf` now shows us that all of our hot functions were inlined:
@@ -632,7 +632,7 @@ In the past few weeks I've grown considerably more comfortable writing Rust code
 
 I've now implemented and optimized a simple interpreted programming language in both C and Rust. I think it is easy to write performant C code, but it's very hard to write safe/leak-free C code. Especially for a newcomer. 
 
-Rust manages to reverse that default. It is very easy to write safe/leak-free Rust code, yet a newcomer to the language might have to spend some time optimizating that code for performance. 
+Rust manages to reverse that default. It is very easy to write safe/leak-free Rust code, yet a newcomer to the language might have to spend some time optimizing that code for performance. 
 
 This really only applies to newcomers (like me) though. In hindsight most of the performance optimizations in this post were pretty obvious and trivial to fix, now I know what to watch for.
 
