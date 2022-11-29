@@ -144,7 +144,11 @@ thead {
 tr:nth-child(even) {
     background: rgba(0, 0, 0, 0.02);
 }
-
+sup a {
+    font-size: 0.8em;
+    color: var(--default);
+    vertical-align: text-top;
+}
 
 small, 
 small a{
