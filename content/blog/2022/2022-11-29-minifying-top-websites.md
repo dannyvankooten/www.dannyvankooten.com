@@ -1,10 +1,10 @@
 +++
-title = "Minifying the most popular websites on the internet"
+title = "On minifying web assets, gzip compression and cache lifetimes"
 +++
 
 While comparing various minification tools recently I soon discovered that there are plenty of options available. 
 
-Some minifiers focus on performance and only strip whitespace, remove comments (except for license notices) and maybe rename local variables to use shorter names. That usually accounts for the biggest reduction in size anyway, but the effect is dampened because pretty much any webserver already compresses static files with [gzip](https://en.wikipedia.org/wiki/Gzip) nowadays.
+Some minifiers focus on performance and only strip whitespace, remove comments (except for license notices) and maybe rename local variables to use shorter names. That usually accounts for the biggest reduction in size, but the same effect is usually already accomplishing by using [gzip compression](https://en.wikipedia.org/wiki/Gzip).
 
 Other minifiers are more comprehensive and some even apply dead code elimination, which usually requires evaluating the source internally (and therefore is a lot slower).
 
@@ -28,20 +28,20 @@ What follows is a summary of the results:
 
 <div style="overflow-x: scroll;">
 
-|       |   html_savings |   css_savings |   js_savings |   combined |
+|       |   html_savings |   css_savings |   js_savings |   combined_savings |
 |:------|---------------:|--------------:|-------------:|-------------------:|
-| count |         500    |       500     |       500    |             500    |
-| mean  |        1745.33 |       689.042 |      6731.67 |            9166.05 |
-| std   |        4131.57 |      3376.42  |     13374.8  |           14939.5  |
-| min   |         -17    |     -3701     |      -822    |               0    |
-| 25%   |         202.75 |         0     |       128.75 |            1099.5  |
-| 50%   |         684.5  |         0     |      1838.5  |            3799.5  |
-| 75%   |        1799.25 |       635.75  |      7969.75 |           11336.8  |
-| max   |       58872    |     68793     |    144248    |          150255    |
+| count |         606    |       606     |        606   |              606   |
+| mean  |        1693 |       889 |       8283 |            10864 |
+| std   |        3447 |      3178  |      17124 |            18285 |
+| min   |           0    |         0     |          0   |                0   |
+| 25%   |         205    |         0     |        257 |             1232   |
+| 50%   |         631    |        56   |       2083   |             4648 |
+| 75%   |        2090 |       876     |       9708   |            14081 |
+| max   |       58872    |     68793     |     158072   |           158345   |
 
 </div>
 
-On average, about 9.2 kB worth of data could be saved by using these minification tools instead of whatever these websites are using now.
+On average, about 11 kB worth of data could be saved by using these minification tools instead of whatever these websites are using now.
 
 Compared to what certain page builders are outputting nowadays, this is actually really good!
 
@@ -55,53 +55,41 @@ While downloading the asset files, I inspected the HTTP headers for cache direct
 
 |       |     expires (s) |   expires (h)   |
 |:------|----------------:|----------------:|
-| count |   500           |          500    |
-| mean  |     2.32891e+07 |         6469.19 |
-| std   |     7.01929e+07 |        19498    |
+| count |   499           |          499    |
+| mean  |     3.0e+07 |         8328 |
+| std   |     7.0e+07 |        19451  |
 | min   |     0           |            0    |
-| 10%   |   296.4         |            0    |
-| 25%   |  3342.25        |            1    |
-| 50%   | 86400           |           24    |
-| 75%   |     8.424e+06   |         2340    |
-| 90%   |     3.1536e+07  |         8760    |
-| max   |     3.65e+08    |       101389    |
+| 10%   |   292           |            0    |
+| 25%   | 70994           |           19  |
+| 50%   |     2.6e+06   |          720    |
+| 75%   |     2.7e+07 |         7533    |
+| max   |     5.5e+08  |       153300    |
 
-The median cache lifetime encountered was 24 hours. 
-
-25% of websites cached their assets for only an hour and 10% either did not set any cache directive or explicitly asked the browser to re-download the asset file.
-
-### Energy use of data transfer
+The median cache lifetime encountered was 1 month. 25% of websites asked the browser to cache their assets for 24 hours and 10% asked for just 3 minutes.
 
 First, I think the above is quite good already. Even taking into account that the results might be underestimating things because it only looks at assets defined in the static HTML.
 
 It shows that these popular websites are pretty much all applying best practices we've known for years: 
 
-- Less than 4 requests out of several thousands did not have gzip enabled for their responses<sup>3</sup>.
-- On average, only a few kilobytes worth of data could be saved by using better minification tools.
-- Over 50% of requests had a cache directive of at least 1 day.
+- [Use gzip compression](https://docs.nginx.com/nginx/admin-guide/web-server/compression/). Less than 4 requests out of several thousand did not have gzip compression enabled for their responses<sup>3</sup>.
+- Minify your assets in production. Across the top 500 websites, only a few kilobytes worth of data could be saved by using better minification tools (on average).
+- [Instruct the browser that your assets can be cached](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) in between requests. Over 50% of these popular websites had an average cache directive of about 1 month.
 
-If I had to pick one thing that I would wish to see improved, it is the latter. Certainly a lot more of these assets could be cached for more than just a single day and then invalidated when needed using some sort of cache busting?
 
-But, just to get some appreciation for the gigantic scale these websites are operating on, let's run some quick math on how much energy could be saved if all these websites applied the minification optimization described here.
+### Energy cost of data transmission 
 
-As described, the median amount of data saved was only 4 kB. The median cache lifetime was 1 day. 
+In 2021, [data transmission was good for about 1.4% of global electricy usage](https://www.iea.org/reports/data-centres-and-data-transmission-networks). Imagine what this number would be if we did not have gzip compression, browser caches and minification.
 
-Assuming 1M unique visitors per day and a cache that is functioning optimally, this amounts to a total of 4 GB of data per day or 120 GB per month. Per website.
-
-A few years ago I wrote about [CO2 emissions on the web](@/blog/2020/2020-02-04-website-carbon-emissions.md) where I went with an estimate of 0.5 kWh per GB of data transfered. Since then I've seen a lot of discussion about the energy use of data transfer, with estimates still varying wildly.
+A few years ago I wrote about [CO2 emissions on the web](@/blog/2020/2020-02-04-website-carbon-emissions.md) where I went with an estimate of 0.5 kWh per GB of data transfered. Since then I've seen a lot of additional discussion about the energy use of data transfer, with estimates still varying wildly.
 
 The team behind [WebsiteCarbon.com estimate it](https://sustainablewebdesign.org/calculating-digital-emissions/) at about 0.8 kWh per GB while [other research](https://www.researchgate.net/figure/Trends-for-ICT-electric-power-overall-2030_fig5_342643762) estimates it closer to 0.1 kWh per GB for 2020. 
 
-Whatever the actual number is, the good news is that data transmission still seems to be getting more efficient by the year.
-
-If we go with the lower estimate of 0.1 kWh per GB, the average top-500 website could save about 12 kWh of energy each month by applying better minification. 
-
-And that's just for minifying some code. Now imagine if websites actually started shipping less bullshit?
+Whatever the actual number is, the good news is that data transmission still seems to be getting more efficient. Let's make sure these efficiency gains aren't negated because of [Jevon's paradox](https://en.wikipedia.org/wiki/Jevons_paradox), shall we?
 
 
 ---
 
-<small id="1"><sup>1</sup> You can [find the code and results for this experiment here](/foobart).</small>
+<small id="1"><sup>1</sup> You can [find the code and results for this experiment here](https://github.com/dannyvankooten/www.dvk.co/tree/master/code/minify-top-500-websites).</small>
 
 <small><sup>2</sup> This approach ignores any dynamically inserted assets, because only assets linked from the static HTML are downloaded and evaluated. </small>
 
