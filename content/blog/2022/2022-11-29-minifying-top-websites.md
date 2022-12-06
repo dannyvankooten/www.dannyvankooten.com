@@ -97,7 +97,7 @@ Whatever the actual number is, the good news is that data transmission still see
 
 ---
 
-<small id="1"><sup>1</sup> You can [find the code and results for this experiment here](https://github.com/dannyvankooten/www.dvk.co/tree/master/code/minify-top-500-websites).</small>
+<small id="1"><sup>1</sup> You can [find the code and results for this experiment here](https://git.sr.ht/~dvko/dannyvankooten.com/tree/master/code/minify-top-500-websites).</small>
 
 <small><sup>2</sup> This approach ignores any dynamically inserted assets, because only assets linked from the static HTML are downloaded and evaluated. </small>
 

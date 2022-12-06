@@ -6,7 +6,7 @@ date = 2014-08-23 19:17:57
 +++
 
 <blockquote>
-    <p>The below is vastly outdated. I've since moved to a static site generator called <s>Jekyll</s> <a href="https://www.getzola.org/">Zola</a>. <a href="https://github.com/dannyvankooten/www.dvk.co/">Source code is here on GitHub</a>. </p>
+    <p>The below is vastly outdated. I've since moved to a static site generator called <s>Jekyll</s> <a href="https://www.getzola.org/">Zola</a>. <a href="https://git.sr.ht/~dvko/dannyvankooten.com">Source code is here on GitHub</a>. </p>
 </blockquote>
 
 It was about time I spent some time to work on my personal site. 

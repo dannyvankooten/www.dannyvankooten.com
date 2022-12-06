@@ -63,7 +63,7 @@ Without further ado, here are some of the most important plugins for WordPress I
         <td>September 2012</td>
     </tr>
     <tr>
-    <td><s><a href="https://wordpress.org/plugins/mailchimp-sync/">Mailchimp User Sync</a> &nbsp; <a href="https://github.com/ibericode/mailchimp-user-sync"><i class="icon icon-social-github"></i></a></s></td>
+    <td><s><a href="https://wordpress.org/plugins/mailchimp-sync/">Mailchimp User Sync</a></s></td>
             <td>200K</td>
             <td>January 2015</td>
     </tr>

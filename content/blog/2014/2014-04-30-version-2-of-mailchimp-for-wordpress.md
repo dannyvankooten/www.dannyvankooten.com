@@ -15,7 +15,7 @@ Previously the only translatable part were the actual sign-up forms and checkbox
 
 <img class="aligncenter size-full wp-image-4076" src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704524/License-API-Settings-Mailchimp-for-WP-Pro-_-WP-Latest-_-WordPress-2014-04-30-13-14-09-2014-04-30-13-14-57_gpuonn.jpg" alt="Dutch settings page" width="613" height="279" />
 
-As of now, the plugin only comes with English (default) and Dutch language files. If you're good at <a href="https://codex.wordpress.org/Translating_WordPress">translating</a>, feel free to send in your translation files so I can include them in the plugin. <a href="https://plugins.svn.wordpress.org/Mailchimp-for-wp/trunk/languages/">You can download the latest .po files here.</a>
+As of now, the plugin only comes with English (default) and Dutch language files. If you're good at <a href="https://codex.wordpress.org/Translating_WordPress">translating</a>, feel free to send in your translation files so I can include them in the plugin. <a href="https://plugins.svn.wordpress.org/mailchimp-for-wp/trunk/languages/">You can download the latest .po files here.</a>
 <h3>Other changes</h3>
 <ul>
 	<li>Stylesheets are no longer combined and served through a <code>.php</code> file but are now served as static (and minified) CSS. This allows the use of a plugin like W3 Total Cache to combine the various stylesheets loaded by Mailchimp for WP.</li>
@@ -28,6 +28,6 @@ In case you don't know, <a href="https://www.mc4wp.com/">Mailchimp for WordPress
 
 All new features and changes described in this post are (obviously) also included in the Pro version of the plugin.
 <h3>GitHub project</h3>
-Although not directly related to the 2.0 release, the <a href="https://github.com/dannyvankooten/Mailchimp-for-wordpress">Mailchimp for WordPress project is now on GitHub</a>. If you would like to follow development of the plugin (or even contribute some code yourself), feel free to drop by.
+Although not directly related to the 2.0 release, the <a href="https://github.com/ibericode/mailchimp-for-wordpress">Mailchimp for WordPress project is now on GitHub</a>. If you would like to follow development of the plugin (or even contribute some code yourself), feel free to drop by.
 
 Found a bug? Please <a href="https://github.com/ibericode/mailchimp-for-wordpress/issues">raise an issue on GitHub.</a>
