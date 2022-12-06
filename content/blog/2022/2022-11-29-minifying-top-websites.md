@@ -1,5 +1,5 @@
 +++
-title = "On minifying web assets, gzip compression and cache lifetimes"
+title = "Minification and cache directives for the most popular websites of the internet"
 +++
 
 While comparing various minification tools recently I soon discovered that there are plenty of options available. 
@@ -16,7 +16,13 @@ From  my findings and [related benchmarks](https://github.com/privatenumber/mini
 - [LightningCSS](https://lightningcss.dev/) for CSS files. 
 - [html-minifier-terser](https://github.com/terser/html-minifier-terser) for HTML files. This is a fork of [html-minifier](https://github.com/kangax/html-minifier) and also maintained by the Terser people.
 
-Just for fun, I decided to pull in the top 500 websites by Alexa rank and run them through these tools to see what potential savings there could be. 
+Just for fun, I decided to pull in the most popular websites (by Alexa rank) and run them through these tools to see what potential savings there could be. 
+
+The good news is that most websites are doing really well, as I was only able to shave off about 11 kilobytes on average. 
+
+The bad news is that a really popular porn website out there with 45M monthly visitors is serving unminified JavaScript and thereby forcing each and every one of their visitors to download 122 kB more than strictly necessary! ;-)
+
+### Minifying the most popular websites on the intermet
 
 Using a list of the most popular websites out there, I fired up a Python script<sup><a href="#1">1</a></sup> to download the HTML for each homepage<sup>2</sup>. 
 
@@ -24,7 +30,7 @@ It then parsed the HTML to look for any stylesheets and scripts and downloaded t
 
 Only safe minification techniques were used, so more aggressive techniques that could affect functionality were omitted.
 
-What follows is a summary of the results: 
+What follows is a summary of the results (in bytes):
 
 <div style="overflow-x: scroll;">
 
@@ -47,7 +53,9 @@ Compared to what certain page builders are outputting nowadays, this is actually
 
 But then the websites using these page builders are not visited anywhere close to 87 billion times per month ([google.com](https://google.com), #1 on the list) or 187 million times per month ([washingtonpost.com](https://washingtonpost.com), #500). 
 
-Anything multiplied by such gigantic numbers will amount to a lot. To better understand just how much data this might amount to in total, we have to look at cache lifetimes too.
+Anything multiplied by such gigantic numbers will amount to a lot. And this is only using safe minification techniques, so normally quite trivial to improve upon.
+
+To better understand just how much data this might amount to in total, we have to look at cache lifetimes too.
 
 ### Cache lifetimes
 
@@ -65,14 +73,14 @@ While downloading the asset files, I inspected the HTTP headers for cache direct
 | 75%   |     2.7e+07 |         7533    |
 | max   |     5.5e+08  |       153300    |
 
-The median cache lifetime encountered was 1 month. 25% of websites asked the browser to cache their assets for 24 hours and 10% asked for just 3 minutes.
+The median cache lifetime encountered was 1 month. 25% of websites asked the browser to cache their assets for 24 hours and 10% asked for just 5 minutes.
 
-First, I think the above is quite good already. Even taking into account that the results might be underestimating things because it only looks at assets defined in the static HTML.
+I think the above is quite good already. Even taking into account that the results might be underestimating things because it only looks at assets defined in the static HTML.
 
 It shows that these popular websites are pretty much all applying best practices we've known for years: 
 
-- [Use gzip compression](https://docs.nginx.com/nginx/admin-guide/web-server/compression/). Less than 4 requests out of several thousand did not have gzip compression enabled for their responses<sup>3</sup>.
-- Minify your assets in production. Across the top 500 websites, only a few kilobytes worth of data could be saved by using better minification tools (on average).
+- [Use gzip compression](https://docs.nginx.com/nginx/admin-guide/web-server/compression/). Only a handful requests out of several thousand did not have gzip compression enabled for their responses<sup>3</sup>, and IIRC most of these were for error responses.
+- Minify your assets in production. Across the top 500 websites, I was only able to shave off an average of 11 kilobytes per website.
 - [Instruct the browser that your assets can be cached](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) in between requests. Over 50% of these popular websites had an average cache directive of about 1 month.
 
 
@@ -80,7 +88,7 @@ It shows that these popular websites are pretty much all applying best practices
 
 In 2021, [data transmission was good for about 1.4% of global electricy usage](https://www.iea.org/reports/data-centres-and-data-transmission-networks). Imagine what this number would be if we did not have gzip compression, browser caches and minification.
 
-A few years ago I wrote about [CO2 emissions on the web](@/blog/2020/2020-02-04-website-carbon-emissions.md) where I went with an estimate of 0.5 kWh per GB of data transfered. Since then I've seen a lot of additional discussion about the energy use of data transfer, with estimates still varying wildly.
+A few years ago I wrote about [CO2 emissions on the web](@/blog/2020/2020-02-04-website-carbon-emissions.md) where I went with an estimate of 0.5 kWh per GB of data transfered. Since then I've seen a lot of additional discussion about the energy cost of data transfer, with estimates still varying wildly.
 
 The team behind [WebsiteCarbon.com estimate it](https://sustainablewebdesign.org/calculating-digital-emissions/) at about 0.8 kWh per GB while [other research](https://www.researchgate.net/figure/Trends-for-ICT-electric-power-overall-2030_fig5_342643762) estimates it closer to 0.1 kWh per GB for 2020. 
 
