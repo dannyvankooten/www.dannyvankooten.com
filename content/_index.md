@@ -10,6 +10,6 @@ It all started out with me hospitalized in Vietnam due to acute appendicitis and
 
 Some more software products followed while I worked from Asia over the next few years. Nowadays, I am usually working from home in The Netherlands while trying to be a good father for my 2 daughters.
 
-You can read [what I'm currently working on or excited about](/now) or [look at an overview of some of the projects I've worked on](/projects).
+Still here? See what I'm working on [now](@/now.md), some [projects](@/projects.md) I've done or a more general list of [code](@/code.md) I put out there.
 
 ![/assets/img/danny-rico.jpg](/img/danny-rico.jpg)
