@@ -14,18 +14,20 @@ class Repo:
     created: datetime
     updated: datetime
 
-
-GITHUB_TOKEN = os.getenv('GITHUB_ACCESS_TOKEN', '')
-SOURCEHUT_TOKEN = os.getenv('SOURCEHUT_ACCESS_TOKEN', '')
-
 def from_sourcehut(username: str):
     """ Fetch git repositories from Sourcehut """
+    SOURCEHUT_TOKEN = os.getenv('SOURCEHUT_ACCESS_TOKEN', '').strip()
+    if SOURCEHUT_TOKEN == '':
+        print("Please set the SOURCEHUT_ACCESS_TOKEN env variable")
+        exit()
+
     repos = []
-    res = requests.get('https://git.sr.ht/api/~'+username+'/repos', headers={
-        'Authorization': 'token ' + SOURCEHUT_TOKEN
-        })
+    res = requests.get(f'https://git.sr.ht/api/~{username}/repos', headers={
+        'Authorization': f'token {SOURCEHUT_TOKEN}'
+    })
+    print(f'token {SOURCEHUT_TOKEN}')
 
-
+    print(res.content)
     data = res.json()
     for repo in data['results']:
         if repo['visibility'] != 'public':
@@ -39,6 +41,7 @@ def from_sourcehut(username: str):
 
 def from_github(source: str):
     """Fetch git repositories from GitHub"""
+    GITHUB_TOKEN = os.getenv('GITHUB_ACCESS_TOKEN', '')
     repos = []
     res = requests.get('https://api.github.com/' + source + '/repos',
                        headers={
