@@ -1,3 +1,4 @@
+#!/usr/bin/env python3 
 import requests
 from dataclasses import dataclass 
 from datetime import datetime 
@@ -25,9 +26,7 @@ def from_sourcehut(username: str):
     res = requests.get(f'https://git.sr.ht/api/~{username}/repos', headers={
         'Authorization': f'token {SOURCEHUT_TOKEN}'
     })
-    print(f'token {SOURCEHUT_TOKEN}')
 
-    print(res.content)
     data = res.json()
     for repo in data['results']:
         if repo['visibility'] != 'public':
