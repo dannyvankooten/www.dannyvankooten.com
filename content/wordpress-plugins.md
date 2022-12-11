@@ -19,12 +19,12 @@ Without further ado, here are some of the most important plugins for WordPress I
     <tbody>
     <tr>
     	<td><a href="https://www.mc4wp.com/">Mailchimp for WordPress</a> &nbsp; <a href="https://github.com/ibericode/mailchimp-for-wordpress"><i class="icon icon-social-github"></i></a></td>
-        <td id="mailchimp-for-wp-downloads">42.5M</td>
+        <td id="mailchimp-for-wp-downloads">42.6M</td>
         <td>July 2013</td>
     </tr>
     <tr>
         <td><a href="https://wordpress.org/plugins/koko-analytics/">Koko Analytics</a> &nbsp; <a href="https://github.com/ibericode/koko-analytics"><i class="icon icon-social-github"></i></a></td>
-        <td id="koko-analytics-downloads">301K</td>
+        <td id="koko-analytics-downloads">302K</td>
         <td>November 2019</td>
     </tr>
     <tr>
