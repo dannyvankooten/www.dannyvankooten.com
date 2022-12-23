@@ -25,4 +25,5 @@ ___stay together 			<br />
 learn the flowers 			<br />
 go light___
 
-_~ Gary Snyder_
+
+_~ Gary Snyder in Turtle Island (1974)_
