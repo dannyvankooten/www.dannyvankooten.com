@@ -3,7 +3,7 @@ template = "page.html"
 title = "WordPress Plugins"
 +++
 
-In the last few years I developed quite a few WordPress plugins, together totalling well over **42 million downloads** now. All of these plugins combined are running on over a million websites right now.
+In the last few years I developed quite a few WordPress plugins, together totalling well over **43 million downloads** now. All of these plugins combined are running on over 2 million websites right now.
 
 Without further ado, here are some of the most important plugins for WordPress I developed.
 
@@ -43,8 +43,8 @@ Without further ado, here are some of the most important plugins for WordPress I
             <td>November 2013</td>
      </tr>
     <tr>
-    	<td><a href="http://wordpress.org/plugins/newsletter-sign-up/">Newsletter Sign-Up</a></td>
-        <td id="newsletter-sign-up">400K</td>
+    	<td style="text-decoration: line-through"><a href="http://wordpress.org/plugins/newsletter-sign-up/">Newsletter Sign-Up</a></td>
+        <td>400K</td>
         <td>March 2011</td>
     </tr>
     <tr>
