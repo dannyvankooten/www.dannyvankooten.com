@@ -6,18 +6,19 @@ body {
     margin: 0;
     font:18px/1.5 sans-serif;
     background: #24292F;
-    color: white; 
 }
 main {
     display: block;
     background: white;
-    color: #24202F;
+    color: #111;
     padding: 3em 0;
 }
+
 a {
-    color: #0959DA;
+    color: rgb(0, 0, 238);
     text-decoration: underline;
 }
+
 .container {
     /* optimal line length is 50-75 chars */
     max-width: 650px;
@@ -49,9 +50,6 @@ a {
 .site-header a:focus,
 .site-footer a:hover {
     text-decoration:underline
-}
-.site-header a.active{
-    text-decoration:underline dotted
 }
 .site-footer{
     font-size: 0.9em;
@@ -104,17 +102,19 @@ hr{
 code,
 pre { 
     font-family: monospace, monospace;
-    font-size: 1em;
+    font-size: 16px;
+    background: #EEE;
+}
+
+code {
+    padding: 4px;
+    border: 1px solid #CCC;
 }
 
 pre code{
-    font-size: 16px;
-    background:rgb(39, 43, 51);
-    border:1px solid #444;
     display:block;
+    padding: 6px 10px;
     overflow-x:auto;
-    padding: 12px;
-    color: rgb(240, 243, 246);
 }
 
 table{
@@ -163,7 +163,7 @@ small {
 }
 small, 
 small a{
-    color:#57606A
+    color: #555;
 }
 
 .icon:before {
