@@ -1,31 +1,23 @@
-:root {
-    --default: #24292F;
-    --muted: #57606A;
-    --header-bg: #24292F;
-    --header-text: white;
-    --links: #0969DA;
-    --borders: #EEE;
+html {
+    -webkit-text-size-adjust: 100%;
 }
+
 body {
     margin: 0;
-    font:18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    background: var(--header-bg);
-    color: var(--header-text); 
+    font:18px/1.5 sans-serif;
+    background: #24292F;
+    color: white; 
 }
 main {
+    display: block;
     background: white;
-    color: var(--default);
+    color: #24202F;
     padding: 3em 0;
 }
 a {
-    color: var(--links);
+    color: #0959DA;
     text-decoration: underline;
 }
-a:hover,
-a:focus {
-    text-decoration: none;
-}
-
 .container {
     /* optimal line length is 50-75 chars */
     max-width: 650px;
@@ -48,7 +40,7 @@ a:focus {
 .site-header a,
 .site-footer a {
     text-decoration: none;
-    color: var(--header-text);
+    color: white;
 }
 .site-header nav{
     display:inline-block
@@ -64,15 +56,16 @@ a:focus {
 .site-footer{
     font-size: 0.9em;
     margin: 3em 0 0;
-    background: var(--header-bg);
-    color: var(--header-text);
+    background: #24292F;
+    color: white;
     padding-bottom: 3em;
 }
 .site-footer svg{
     vertical-align:middle
 }
-
-
+b, strong {
+    font-weight: bolder;
+}
 li {
     margin: 4px 0;
 }
@@ -103,12 +96,13 @@ blockquote{
 hr{
     display: block;
     height: 1px;
-    background: var(--borders);
+    background: #EEE;
     border: 0; 
     margin:2em 0
 }
+pre,
 pre code{
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font-family: monospace, monospace;
     font-size: 16px;
     background:rgb(39, 43, 51);
     border:1px solid #444;
@@ -122,12 +116,12 @@ table{
     width: 100%;
     table-layout: auto;
     border-collapse:collapse;
-    border: 1px solid var(--borders);
+    border: 1px solid #EEE;
     line-break: strict;
 }
 
 img {
-    border: 1px solid var(--borders);
+    border: 1px solid #EEE;
 }
 
 th,
@@ -138,21 +132,33 @@ td{
 }
 
 thead {
-    background: var(--header-bg);
-    color: var(--header-text);
+    background: #24292F;
+    color: white;
 }
 tr:nth-child(even) {
     background: rgba(0, 0, 0, 0.02);
 }
+sub,
+sup {
+    font-size: 80%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
 sup a {
     font-size: 0.8em;
-    color: var(--default);
+    color: #24202F;
     vertical-align: text-top;
 }
 
+small {
+    font-size: 80%;
+}
 small, 
 small a{
-    color:var(--muted)
+    color:#57606A
 }
 
 
