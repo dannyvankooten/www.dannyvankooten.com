@@ -6,10 +6,10 @@
   <meta name="referrer" content="no-referrer-when-downgrade">
   {% block rss %}
   <link rel="alternate" type="application/rss+xml" title="RSS"
-    href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
+    href="/atom.xml">
   {% endblock %}
-  <link rel="icon" href="{{ get_url(path='/img/favicon.png') }}" type="image/png">
-  <link rel="stylesheet" href="{{ get_url(path='/styles.css', cachebust=true) }}">
+  <link rel="icon" href="/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/styles.css">
 
   {% block head %}{% endblock %}
 </head>
@@ -17,14 +17,14 @@
   <header class="site-header">
     <div class="container">
       {%- if current_path == '/' -%}
-      <h1><a href="{{ get_url(path='@/_index.md') }}">Danny van Kooten</a></h1>
+      <h1><a href="/">Danny van Kooten</a></h1>
       {%- else -%}
-      <h3><a href="{{ get_url(path='@/_index.md') }}" rel="home">Danny van Kooten</a></h3>
+      <h3><a href="/" rel="home">Danny van Kooten</a></h3>
       {%- endif -%}
       <nav>
-        <a href="{{ get_url(path='@/about.md') }}" {% if current_path=='/about/' %}class="active" {% endif %}>About me</a>
-        <a href="{{ get_url(path='@/blog/_index.md') }}" {% if current_path=='/blog/' %}class="active" {% endif %}>Blog</a>
-        <a href="{{ get_url(path='@/contact.md') }}" {% if current_path=='/contact/' %}class="active" {% endif
+        <a href="/about/" {% if current_path=='/about/' %}class="active" {% endif %}>About me</a>
+        <a href="/blog/" {% if current_path=='/blog/' %}class="active" {% endif %}>Blog</a>
+        <a href="/contact/" {% if current_path=='/contact/' %}class="active" {% endif
           %}>Contact</a>
       </nav>
     </div>

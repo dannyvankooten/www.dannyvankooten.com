@@ -18,10 +18,10 @@
   <ul>
       {% for post in blog_section.pages | slice(end=5) %}
       <li>
-        <a href="{{ post.permalink | safe}}">{{ post.title }}</a><small> &mdash; {{ post.date | date(format="%b %-d, %Y") }}</small>
+        <a href="{{ post.path | safe}}">{{ post.title }}</a><small> &mdash; {{ post.date | date(format="%b %-d, %Y") }}</small>
       </li>
       {% endfor %}
   </ul>
-  <p>View <a href="{{ get_url(path='@/blog/_index.md') }}">all posts on my blog</a>.</p>
+  <p>View <a href="/blog/">all posts on my blog</a>.</p>
   
 {% endblock content %}

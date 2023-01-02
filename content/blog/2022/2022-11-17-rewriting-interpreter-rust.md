@@ -638,10 +638,6 @@ This really only applies to newcomers (like me) though. In hindsight most of the
 
 ---
 
-<small>
-
-I've prepared a [GitHub branch containing the various optimizations described here](https://github.com/dannyvankooten/nederlang/commits/tree-walker), so you can look at all of the actual code. Note that the order of optimizations might differ slightly from the order in this post.
-
-</small>
+<small>I've prepared a [GitHub branch containing the various optimizations described here](https://github.com/dannyvankooten/nederlang/commits/tree-walker), so you can look at all of the actual code. Note that the order of optimizations might differ slightly from the order in this post.</small>
 
 

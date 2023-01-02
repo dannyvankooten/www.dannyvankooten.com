@@ -15,11 +15,11 @@
   <ul>
   {% for post in section.pages %}
       <li>
-          <a href="{{ post.permalink | safe }}">{{ post.title }}</a><br />
+          <a href="{{ post.path | safe }}">{{ post.title }}</a><br />
           <small>{{ post.date | date(format="%b %-d, %Y") }}</small>
       </li>
   {% endfor %}
   </ul>
 
-  <p><a href="{{ get_url(path='/atom.xml') }}">Subscribe to new posts on my blog via RSS</a>.</p>  
+  <p><a href="/atom.xml">Subscribe to new posts on my blog via RSS</a>.</p>  
 {% endblock content %}
