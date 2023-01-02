@@ -12,4 +12,4 @@ Some [more software](@/projects.md) products followed while I worked from Asia o
 
 Still here? See what I'm working on [now](@/now.md), some [projects](@/projects.md) I've done or a more general list of [code](@/code.md) I put out there.
 
-![/assets/img/danny-rico.jpg](/img/danny-rico.jpg)
+![Danny with stray dog](/img/danny-rico.jpg)
