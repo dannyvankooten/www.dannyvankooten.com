@@ -10,6 +10,6 @@ It all started out with me hospitalized in Vietnam due to acute appendicitis and
 
 Some [more software](/projects/) products followed while I worked from Asia over the next few years. Nowadays, I am usually working from home in The Netherlands while trying to be a good father for my 2 daughters.
 
-Still here? See what I'm working on [now](/now/), some [projects](/projects/) I've done or a more general list of [code](/code/) I put out there.
+Still here? See what I'm working on [now](/now/), some [projects](/projects/) I've done, some of my [favorite bookmarks](/bookmarks/) or a more general list of [code](/code/) I put out there.
 
 ![Danny with stray dog](/img/danny-rico.jpg)
