@@ -10,17 +10,20 @@ A collection of links on the WWW which I use, admire or agree with.
 I've been happily running Linux on my laptop since 2016. Made possible by the following open-source software (although the list is not exhaustive).
 
 - [Debian](https://www.debian.org/), a Linux distribution.
-- [Sway](https://swaywm.org/), a tiling window manager.
-- [Fish](https://fishshell.com/), a command line shell with nice defaults.
-- [Neovim](https://neovim.io/), powerful text editor for in your terminal.
+- [Gnome](https://www.gnome.org/) Desktop environment.
+- [Todoist](https://todoist.com) To-do app that runs my life.
+- [Firefox](https://www.mozilla.org/en-US/firefox/) Web browser.
+- [Bash](https://www.gnu.org/software/bash/) sh compatibe shell. I like Fish too, but it's just so damn convenient to find Bash pre-installed pretty much anywhere.
 - [Imagemagick](https://imagemagick.org/index.php), image manipulation.
-- [Foot](https://codeberg.org/dnkl/foot), terminal emulator for Wayland.
+
 
 ## Web development 
 
 - [MDN documentation](https://developer.mozilla.org/en-US/), all the documentation you need.
 - [A11Y accessibility checklist](https://www.a11yproject.com/checklist/)
 - [Sustainable Web Manifesto](https://www.sustainablewebmanifesto.com/)
+- [Symfony](https://symfony.com/), PHP web framework.
+- [Doctrine](https://www.doctrine-project.org/) Object Relational Mapper and Database Abstraction Layer for PHP.
 - [Zola](https://www.getzola.org/), static site generator. 
 - [Jekyll](https://jekyllrb.com/), another really good static site generator. Only downside for me is that it is Ruby based.
 - [WordPress](https://wordpress.org/), content management system. Most themes suck, sadly.
@@ -40,15 +43,13 @@ I've been happily running Linux on my laptop since 2016. Made possible by the fo
 ## Programming 
 
 - [The C Programming Language](https://en.wikipedia.org/wiki/The_C_Programming_Language), book that helped me understand every other language better.
-- [Crafting Interpreters](https://craftinginterpreters.com/)
-- [Project Gemini](https://gemini.circumlunar.space)
-- [Gopher protocol](https://en.wikipedia.org/wiki/Gopher_(protocol)), an early alternative to HTTP.
-- [Golang](https://go.dev/)
-- [Rust](https://www.rust-lang.org/)
+- [PHP](https://www.php.net/) Hate it or love it, but it's the language that runs the web. 
+- [Golang](https://go.dev/) Compiled and GC'ed language with great concurrency.
+- [Rust](https://www.rust-lang.org/) Like C or C++, but without the footguns. 
 - [Advent of Code](https://adventofcode.com/), annual event in December hosting fun programming puzzles.
 - [Project Euler](https://projecteuler.net/), math based programming puzzles.
 - [GNU Make](https://www.gnu.org/software/make/) 
-
+- [Composer](https://getcomposer.org/) The best package manager of any programming language I've tried. 
 
 ## Blogs
 

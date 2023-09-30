@@ -79,4 +79,4 @@ $rectorConfig->sets([\Rector\Set\ValueObject\LevelSetList::UP_TO_PHP_82]);
 
 There are hundreds of available [Rector rules](https://getrector.com/documentation/rules-overview) available. My guess is that if you're refactoring something on a language or framework level, Rector has you covered.
 
-Kudos the the Rector authors for building such a great tool!
+Kudos to the Rector authors for building such a great tool!

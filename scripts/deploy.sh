@@ -5,7 +5,7 @@ echo "Building Zola site"
 zola build
 
 echo "Minify stylesheet"
-lightningcss --minify -o public/styles.css public/styles.css
+minify -o public/styles.css public/styles.css
 
 echo "Tidying HTML"
 find public/. -name "*.html" -type f -print -exec tidy -q -i -m --tidy-mark no {} \;
