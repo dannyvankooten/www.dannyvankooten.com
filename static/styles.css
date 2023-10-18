@@ -31,7 +31,7 @@ a {
 .site-header {
     padding:1em 0;
 }
-.site-header h1, 
+.site-header h1,
 .site-header h3 {
     margin: 0 0 1em 0;
     font-size: 1em;
@@ -59,7 +59,7 @@ a {
     color: white;
     padding-bottom: 3em;
 }
-.site-footer h3 { 
+.site-footer h3 {
     margin-top: 0;
 }
 .site-footer svg{
@@ -100,12 +100,12 @@ hr{
     display: block;
     height: 1px;
     background: #EEE;
-    border: 0; 
+    border: 0;
     margin:2em 0
 }
 
 code,
-pre { 
+pre {
     font-family: monospace, monospace;
     font-size: 16px;
     background: #EEE;
@@ -133,7 +133,6 @@ table{
 img {
     border: 1px solid #EEE;
 }
-
 th,
 td{
     border: 0;
@@ -166,7 +165,7 @@ sup a {
 small {
     font-size: 80%;
 }
-small, 
+small,
 small a{
     color: #555;
 }
@@ -191,15 +190,17 @@ small a{
 }
 
 .mb { margin-bottom: 40px; }
+.nolist {list-style: none; padding: 0; }
+.nolist a { padding: 4px 0; }
 
 @media(min-width:620px) {
     /* move header inline on large screens */
-   .site-header h1, 
-   .site-header h3{ 
-        display: inline-block; 
-        margin: 0; 
+   .site-header h1,
+   .site-header h3{
+        display: inline-block;
+        margin: 0;
     }
-   .site-header nav{ 
+   .site-header nav{
         float: right;
     }
     .site-header nav a:last-child {
