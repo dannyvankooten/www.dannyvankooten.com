@@ -10,11 +10,12 @@
 
 {% block content %}
   <article>
+      <h1 style="display: none;">{{ section.title }}</h1>
     {{ section.content | safe }}
   </article>
 
   {% set blog_section = get_section(path="blog/_index.md") %}
-  <h3>Writings</h3>
+  <h2>Writings</h2>
   <ul>
       {% for post in blog_section.pages | slice(end=5) %}
       <li>
@@ -23,5 +24,5 @@
       {% endfor %}
   </ul>
   <p>View <a href="/blog/">all posts on my blog</a>.</p>
-  
+
 {% endblock content %}

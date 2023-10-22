@@ -1,7 +1,3 @@
-html {
-    -webkit-text-size-adjust: 100%;
-}
-
 body {
     margin: 0;
     font:18px/1.5 sans-serif;
@@ -9,16 +5,14 @@ body {
 }
 main {
     display: block;
-    background: white;
-    color: #111;
+    background: #EFEFEF;
+    color: #222;
     padding: 3em 0;
 }
-
 a {
     color: rgb(0, 0, 238);
     text-decoration: underline;
 }
-
 .container {
     /* optimal line length is 50-75 chars */
     max-width: 650px;
@@ -31,25 +25,32 @@ a {
 .site-header {
     padding:1em 0;
 }
-.site-header h1,
-.site-header h3 {
-    margin: 0 0 1em 0;
-    font-size: 1em;
-}
 .site-header a{
     margin-right: 1em;
 }
-.site-header a,
-.site-footer a {
+.site-header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.site-header li {
+    display: inline-block;
+}
+.site-header li.home {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.site-header a {
+    color: white;
     text-decoration: none;
+}
+.site-footer a {
     color: white;
 }
-.site-header nav{
-    display:inline-block
-}
 .site-header a:hover,
-.site-header a:focus,
-.site-footer a:hover {
+.site-header a:focus {
     text-decoration:underline
 }
 .site-footer{
@@ -65,8 +66,8 @@ a {
 .site-footer svg{
     vertical-align:middle
 }
-
-b, strong {
+b,
+strong {
     font-weight: bolder;
 }
 li {
@@ -194,17 +195,9 @@ small a{
 .nolist a { padding: 4px 0; }
 
 @media(min-width:620px) {
-    /* move header inline on large screens */
-   .site-header h1,
-   .site-header h3{
+    .site-header li.home {
         display: inline-block;
-        margin: 0;
-    }
-   .site-header nav{
-        float: right;
-    }
-    .site-header nav a:last-child {
-        margin-right: 0;
+        margin-bottom: 0;
     }
     .footer-col { float: left; width:50%; padding-right: 20px; box-sizing: border-box; }
 }

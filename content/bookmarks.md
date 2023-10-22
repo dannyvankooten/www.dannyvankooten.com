@@ -7,53 +7,62 @@ A collection of links on the WWW which I use, admire or agree with.
 
 ## Software
 
-I've been happily running Linux on my laptop since 2016. It realy just works nowadays (yes, even printers!). 
+I've been happily running Linux on my laptop since 2016.
 
-Made possible by the following list of open-source software (not exhaustive).
+Made possible by the following list of mostly open-source software (not exhaustive).
 
-- [Debian](https://www.debian.org/), a Linux distribution.
-- [Gnome](https://www.gnome.org/), Linux desktop environment.
+- [Debian](https://www.debian.org/), the Linux distribution I use as my daily driver.
+- [Gnome](https://www.gnome.org/), desktop environment.
 - [Firefox](https://www.mozilla.org/en-US/firefox/), web browser.
-- [Bash](https://www.gnu.org/software/bash/), sh compatibe shell. I like Fish too, but it's just so damn convenient to find Bash pre-installed pretty much anywhere.
-- [Todoist](https://todoist.com), to-do app that runs my life (proprietary).
+- [uBlock Origin](https://ublockorigin.com/), ad-blocker.
+- [Bitwarden](https://bitwarden.com/), password manager.
+- [Bash](https://www.gnu.org/software/bash/), sh compatibe shell. I like Fish too, but it's just too convenient to find Bash pre-installed pretty much anywhere.
 - [Imagemagick](https://imagemagick.org/index.php), image manipulation.
+- [Todoist](https://todoist.com), to-do app that runs my life (proprietary).
+- [GIMP](https://www.gimp.org/), image editor.
+- [Inkscape](https://inkscape.org/), SVG editor.
 
 
-## Web development 
+## Web development
 
-- [MDN documentation](https://developer.mozilla.org/en-US/), all the documentation you need.
+- [PHP](https://www.php.net/) It's getting much better lately and still powers the vast majority of web backends.
+- [PHP The Right Way](https://phptherightway.com/) Needed if you want to write PHP that scales.
+- [Symfony](https://symfony.com/), PHP web framework and components.
+- [Nginx](https://nginx.org/), web server software.
+- [PostgreSQL](https://www.postgresql.org/), [MariaDB](https://mariadb.org/), or [SQLite](https://www.sqlite.org/index.html). SQL database servers.
+- [MDN documentation](https://developer.mozilla.org/en-US/), all the HTML, CSS and JS documentation you need.
+- [Doctrine](https://www.doctrine-project.org/), ORM and Database Abstraction Layer for PHP.
+- [PHPStorm](https://www.jetbrains.com/phpstorm/), IDE (proprietary).
+- [Zola](https://www.getzola.org/), static site generator (in Rust, so compiles to a single binary).
+- [Jekyll](https://jekyllrb.com/), alternative static site generator with lots of plugins. Requires Ruby though.
+- [WordPress](https://wordpress.org/), content management system. Sadly, most themes are bloated.
 - [A11Y accessibility checklist](https://www.a11yproject.com/checklist/)
 - [Sustainable Web Manifesto](https://www.sustainablewebmanifesto.com/)
-- [Symfony](https://symfony.com/), PHP web framework.
-- [Doctrine](https://www.doctrine-project.org/), ORM and Database Abstraction Layer for PHP.
-- [Zola](https://www.getzola.org/), static site generator (in Rust, so compiles to a single binary). 
-- [Jekyll](https://jekyllrb.com/), alternative static site generator with lots of plugins. Requires Ruby though.
-- [WordPress](https://wordpress.org/), content management system. Sadle, most themes are bloated.
-- [Nginx](https://nginx.org/), web server software.
-- [PHPStorm](https://www.jetbrains.com/phpstorm/), IDE, wouldn't want to write PHP without it.
-- Minifiers: [HTML](https://terser.org/html-minifier-terser/), [JS](https://terser.org/), [CSS](https://lightningcss.dev/)
+- [sourcehut](https://git.sr.ht/), git hosting service.
+
+I strive to not use any CSS frameworks and only use JavaScript sparingly. Have also been intrigued by [#NoBuild](https://world.hey.com/dhh/you-can-t-get-faster-than-no-build-7a44131c) lately.
 
 
 ## State of the web
 
 - [motherfuckingwebsite.com](http://motherfuckingwebsite.com/), [bettermotherfuckingwebsite.com](http://bettermotherfuckingwebsite.com/) and [perfectmotherfuckingwebsite.com](https://perfectmotherfuckingwebsite.com/)
 - [HTTP Archive Web Almanac 2022: Page weight](https://almanac.httparchive.org/en/2022/page-weight)
-- [Internet obesity crisis](https://idlewords.com/talks/website_obesity.htm) 
+- [Internet obesity crisis](https://idlewords.com/talks/website_obesity.htm)
 - [Death to bullshit](https://deathtobullshit.com/)
 - [Rez Mason's beliefs](https://www.rezmason.net/beliefs.html)
+- [Introduction to web sustainability, MDN](https://developer.mozilla.org/en-US/blog/introduction-to-web-sustainability/)
+- [The Cost Of JavaScript - Addy Osmani (2023)](https://www.youtube.com/watch?v=ZKH3DLT4BKw)
 
 
-## Programming 
+## Programming
 
-- [The C Programming Language](https://en.wikipedia.org/wiki/The_C_Programming_Language), book that helped me understand every other language better.
-- [PHP](https://www.php.net/) Hate it or love it, but it's the language that runs the web. 
-- [Golang](https://go.dev/) Compiled and GC'ed language with great concurrency.
-- [Rust](https://www.rust-lang.org/) Like C or C++, but without the footguns. 
+- [The C Programming Language](https://en.wikipedia.org/wiki/The_C_Programming_Language), helped me understand every other language better.
+- [Golang](https://go.dev/) Memory managed language with great concurrency.
+- [Rust](https://www.rust-lang.org/) C or C++, but without the footguns.
 - [Advent of Code](https://adventofcode.com/), annual event in December hosting fun programming puzzles.
 - [Project Euler](https://projecteuler.net/), math based programming puzzles.
-- [GNU Make](https://www.gnu.org/software/make/) 
-- [Composer](https://getcomposer.org/) The best package manager of any programming language I've tried. 
-- [HTML & CSS](https://developer.mozilla.org/en-US/docs/Web/HTML) Mostly plain HTML and CSS, preferrably server-side rendered.
+- [GNU Make](https://www.gnu.org/software/make/)
+- [Composer](https://getcomposer.org/) The best package manager of any programming language I've tried.
 
 
 ## Blogs
@@ -64,19 +73,21 @@ Made possible by the following list of open-source software (not exhaustive).
 - [Permacomputing](https://permacomputing.net/)
 
 
-## Social 
+## Social
 
-- [Merveilles.town](https://merveilles.town/about), a Mastodon instance with lots of interesting people.
+- [Mastodon](https://joinmastodon.org/), decentralized and open-source microblogging network. I'm on [toot.re](https://toot.re/@dvk), which is run by [Marcel](https://marcelbootsman.nl/).
+- [phpc.social](https://phpc.social/about), PHP community on Mastodon.
+- [Nitter](https://nitter.net/), gateway to Twitter content, but usable.
 - [Lobsters](https://lobste.rs/), programming related link aggregation and discussion.
 - [Hacker News](https://news.ycombinator.com/), same, but older and very popular.
-- [Mastodown](https://joinmastodon.org/), like Twitter, but decentralized and open-source.
 
 
 ## Ecology
 
 - [Land van Ons](https://landvanons.nl/)
 - [Permaculture](https://en.wikipedia.org/wiki/Permaculture)
-- [Food Forest Ketelbroek](https://www.youtube.com/watch?v=M5B3f5gxHkA) 
+- [Food Forest Ketelbroek](https://www.youtube.com/watch?v=M5B3f5gxHkA), amazing agriculture experiment using mostly perennial plants.
 - [Mobilisation for the Environment](https://mobilisation.nl/nl/)
-- [Herenboeren](https://www.herenboeren.nl/)
+- [Herenboeren](https://www.herenboeren.nl/), community supported agriculture.
+- [Partij voor de Dieren](https://www.partijvoordedieren.nl/), Dutch political party that thinks beyond the next election.
 

@@ -3,7 +3,7 @@ template = "page.html"
 title = "WordPress Plugins"
 +++
 
-In the last few years I developed quite a few WordPress plugins, together totalling well over **43 million downloads** now. All of these plugins combined are running on over 2 million websites right now.
+In the last few years I developed quite a few WordPress plugins, together totalling well over **52 million downloads** now. All of these plugins combined are running on over 2 million websites right now.
 
 Without further ado, here are some of the most important plugins for WordPress I developed.
 
@@ -24,7 +24,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
         <td><a href="https://www.kokoanalytics.com">Koko Analytics</a></td>
-        <td id="koko-analytics-downloads">452K</td>
+        <td id="koko-analytics-downloads">454K</td>
         <td>November 2019</td>
     </tr>
     <tr>
@@ -54,7 +54,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
     	<td><a href="https://wordpress.org/plugins/dvk-social-sharing/">Social Sharing by Danny</a></td>
-        <td id="dvk-social-sharing-downloads">97.9K</td>
+        <td id="dvk-social-sharing-downloads">98K</td>
         <td>November 2013</td>
     </tr>
     <tr>
