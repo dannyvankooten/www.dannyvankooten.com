@@ -19,7 +19,7 @@
     <h2>{{ post.year }}</h2>
     <ul>
     {%- endif -%}
-    <li><a href="{{ post.path | safe }}">{{ post.title }}</a><br />
+    <li><a href="{% if post.extra.external %}{{ post.extra.external | safe }}{% else %}{{ post.path | safe }}{% endif %}">{{ post.title }}</a><br />
     <small>{{ post.date | date(format="%b %-d, %Y") }}</small></li>
 {%- set_global year = post.year -%}
 {%- endfor -%}

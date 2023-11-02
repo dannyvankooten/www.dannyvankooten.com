@@ -18,7 +18,7 @@
     <ul>
     {% for post in blog_section.pages | slice(end=5) %}
         <li>
-            <a href="{{ post.path | safe}}">{{ post.title }}</a><small> &mdash; {{ post.date | date(format="%b %-d, %Y") }}</small>
+            <a href="{% if post.extra.external %}{{ post.extra.external }}{% else %}{{ post.path | safe}}{% endif %}">{{ post.title }}</a><small> &mdash; {{ post.date | date(format="%b %-d, %Y") }}</small>
         </li>
     {% endfor %}
     </ul>

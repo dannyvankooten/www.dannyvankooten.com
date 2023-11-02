@@ -11,6 +11,10 @@
 {% if page.extra.image -%}
 <meta property="og:image" content="{{ get_url(path=page.extra.image) }}" />
 {%- endif %}
+{% if page.extra.external %}
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="refresh" content="0; url={{ page.extra.external }}">
+{% endif %}
 {% endblock %}
 
 {% block content %}
