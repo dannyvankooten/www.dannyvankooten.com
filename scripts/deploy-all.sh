@@ -11,7 +11,7 @@ echo "Updating download numbers"
 echo "Building Zola site"
 zola build
 
-#echo "Minify stylesheet"
+echo "Minify stylesheet"
 minify -o public/styles.css public/styles.css
 
 ./scripts/optimize-images.sh

@@ -12,4 +12,4 @@ Some [more software](/projects/) products followed while I worked from Asia over
 
 Still here? See what I'm working on [now](/now/), some [projects](/projects/) I've done, some of my [favorite bookmarks](/bookmarks/) or a more general list of [code](/code/) I put out there.
 
-![Danny with stray dog](/img/danny-rico.jpg)
+<img src="/img/danny-rico.jpg" alt="Danny with stray dog" loading="lazy" width="300" height="300" />

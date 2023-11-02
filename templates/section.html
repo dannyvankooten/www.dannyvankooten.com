@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block content %}
+<div class="container">
 <h1>Blog</h1>
 <p>Sometimes, I write.</p>
 {%- set_global year = 0 -%}
@@ -24,4 +25,5 @@
 {%- endfor -%}
     </ul>
 <p><a href="/atom.xml">Subscribe to new posts on my blog via RSS</a>.</p>
+</div>
 {% endblock content %}

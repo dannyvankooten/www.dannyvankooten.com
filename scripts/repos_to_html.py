@@ -17,17 +17,18 @@ class Repo:
 
 def from_sourcehut(username: str):
     """ Fetch git repositories from Sourcehut """
-    SOURCEHUT_TOKEN = os.getenv('SOURCEHUT_ACCESS_TOKEN', '').strip()
+    SOURCEHUT_TOKEN = os.getenv('SOURCEHUT_ACCESS_TOKEN', '')
     if SOURCEHUT_TOKEN == '':
         print("Please set the SOURCEHUT_ACCESS_TOKEN env variable")
         exit()
 
     repos = []
     res = requests.get(f'https://git.sr.ht/api/~{username}/repos', headers={
-        'Authorization': f'token {SOURCEHUT_TOKEN}',
+        'Authorization': 'token ' + SOURCEHUT_TOKEN,
         'Accepts': 'application/json'
     })
     data = res.json()
+
     for repo in data['results']:
         if repo['visibility'] != 'public':
             continue
@@ -57,7 +58,7 @@ def from_github(source: str):
             continue
 
         r = Repo(repo['name'], repo['description'], repo['html_url'], '', parser.parse(repo['created_at']),
-                          parser.parse(repo['updated_at']))
+                          parser.parse(repo['pushed_at']))
         if repo['license']:
             r.license = repo['license']['spdx_id']
 
@@ -66,14 +67,15 @@ def from_github(source: str):
     return repos
 
 repos = []
-# repos += from_sourcehut('dvko')
+repos += from_sourcehut('dvko')
 repos += from_github('users/dannyvankooten')
 repos += from_github('orgs/ibericode')
 
 # sort list by last activity, most recent first
 repos.sort(key=lambda r: r.updated, reverse=True)
 
-html = ''
+now = datetime.now().strftime('%b %d, %Y')
+html = f'<p>This page was last updated on {now}.'
 for r in repos:
     updated = r.updated.strftime('%b %d, %Y')
     created = r.created.strftime('%b %d, %Y')
@@ -82,8 +84,8 @@ for r in repos:
     html += f'<h4>{r.name}</h4>'
     html += f'<p>{r.desc}</p>'
     html += '<p><small>'
-    html += f'Created on {created}<br />'
-    html += f'Last active on {updated}<br />'
+    html += f'First commit on <time>{created}</time><br />'
+    html += f'Last commit on <time>{updated}</time><br />'
     if r.license:
         html += f'Licensed under {r.license}<br />'
     html += f'<a href="{r.url}">{r.url}</a>'

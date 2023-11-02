@@ -55,7 +55,7 @@ a {
 }
 .site-footer{
     font-size: 0.9em;
-    margin: 3em 0 0;
+    margin-top: 3em;
     background: #24292F;
     color: white;
     padding-bottom: 3em;
@@ -191,8 +191,9 @@ small a{
 }
 
 .mb { margin-bottom: 40px; }
-.nolist {list-style: none; padding: 0; }
-.nolist a { padding: 4px 0; }
+.nolist { list-style: none; padding: 0; margin: 0; }
+.nolist li { margin: 0; }
+.nolist a, .site-footer a, .site-header a { padding: 6px 0; display: inline-block; }
 
 @media(min-width:620px) {
     .site-header li.home {
