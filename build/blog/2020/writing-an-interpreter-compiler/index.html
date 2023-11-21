@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles.css?v=202310222">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+</head>
+<body>
+  <header class="site-header">
+      <nav class="container">
+          <ul>
+              <li class="home"><a href="/" rel="home">Danny van Kooten</a></li>
+              <li><a href="/about/">About me</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/contact/">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+  <main>
+      <div class="container">
+        <p>Some time during 2016 I got my hands on the book <a href="https://interpreterbook.com/">Writing an interpreter in Go</a> by <a href="https://thorstenball.com/">Thorsten Ball</a>. I skimmed through the first few chapters, liked what I read and then... life happened and I never actually got around to building an interpreter. :(</p>
+<p>Until last month, that is. I cleared out my schedule and finally started going through the book.</p>
+<p>For double the fun, I picked C as my programming language of choice instead of Go. This turned out to be a great decision as it really forced me to understand what was going on, instead of always having the easy option of just copying the author's code.</p>
+<p>I codenamed my implementation <a href="https://github.com/dannyvankooten/monkey-c-monkey-do">Monkey-C Monkey-Do</a>.</p>
+<p>The book takes you through all the stages to get an interpreter for the <a href="https://monkeylang.org/">Monkey programming language</a> up and running:</p>
+<ul>
+<li>Tokenize the input</li>
+<li>Parse the tokens into an Abstract Syntax Tree (AST)</li>
+<li>Evaluate the tree</li>
+</ul>
+<p>This tree-walking evaluator needs about 6 seconds to calculate the 35th fibonacci number using <a href="https://github.com/dannyvankooten/monkey-c-monkey-do/blob/946311e77d33d584e6fcfd9f87d0199242973947/examples/fib35.monkey">a very sub-optimal algorithm with lots of recursion</a>. That is certainly not bad, but it's also not great compared to any of today's production-grade interpreted languages.</p>
+<p>For comparison, on the same machine Python 3.7 needs 2.3 seconds for that exact same algorithm and Node 15 only needs a whopping 200 miliseconds (due to its JIT compilation).</p>
+<p>Can we do better, without talking to the hardware directly?</p>
+<h3>Writing a bytecode compiler and virtual machine</h3>
+<p>Luckily, the author of the book didn't stop there. In his second book (<a href="https://compilerbook.com/">Writing a compiler in Go</a>) the author walks you through the steps of building a bytecode interpreter.</p>
+<p>Reusing the AST from the first book, it shows you how to build a compiler outputting bytecode. Simultaneously, you start building a virtual machine capable of executing that bytecode.</p>
+<p>After getting the virtual machine up and running, calculating the 35th fibonacci number now only takes 0.82 seconds. That's much closer or even faster than some other interpreted languages already.</p>
+<p>I wholeheartedly recommend the two books. Not only is it a lot of fun to write your own interpreter, it also cleared up a lot of the magic for me surrounding how interpreters actually work and what happens behind the scene when a program is evaluated by an interpreter.</p>
+<h3>Programming in C</h3>
+<p>This was my first experience programming in C and it surprised me to discover that I really enjoyed using it. Because of the small language specification very little time was spent reading documentation.</p>
+<p>That's not to say I did not shoot myself in the foot a good few times or struggled with memory management. Using C really cemented my understanding of some of the languages that came after it though. And what problems they attempt to solve or improve upon over C.</p>
+<p>Given the right tooling, I've grown quite fond of C... Sorry, not sorry.</p>
+<h4>Resources</h4>
+<ul>
+<li>Book: <a href="https://en.wikipedia.org/wiki/The_C_Programming_Language">The C Programming Language</a> by Kernighan &amp; Ritchie. Still the best resource for learning C.</li>
+<li>Tools: <a href="https://valgrind.org/">Valgrind</a>, <a href="https://sourceware.org/binutils/docs/gprof/">Gprof</a>, <a href="https://www.gnu.org/software/make/manual/make.html">GNU make</a>, <a href="https://www.gnu.org/software/gdb/">GNU Debugger</a></li>
+<li><a href="https://github.com/python/cpython/blob/master/Python/ceval.c#L775">This comment in the CPython source</a> explaining the use of computed GOTO's in the VM for a performance gain due to better CPU branch prediction over using a switch statement.</li>
+<li><a href="https://www.gingerbill.org/series/memory-allocation-strategies/">Memory allocation strategies</a> by Ginger Bill.</li>
+</ul>
+
+      </div>
+  </main>
+  <footer class="container site-footer">
+      <div class="footer-col mb">
+          <ul class="nolist">
+            <li><a href="/about/" style="font-weight: bold; text-decoration: none;">About me</a></li>
+            <li><a href="/bookmarks/">Bookmarks</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/code/">Code</a></li>
+            <li><a href="/contact/">Contact me</a></li>
+          </ul>
+      </div>
+      <div class="footer-col mb">
+          <ul class="nolist">
+              <li><a href="/projects/" style="font-weight: bold; text-decoration: none;">Projects</a></li>
+              <li><a href="https://www.mc4wp.com/">Mailchimp for WordPress</a></li>
+            <li><a href="https://www.kokoanalytics.com/">Koko Analytics</a></li>
+            <li><a href="https://www.htmlformsplugin.com/">HTML Forms plugin</a></li>
+          </ul>
+      </div>
+      <p style="clear:both;">Find me on <a href="https://git.sr.ht/~dvko/" class="icon sourcehut" rel="me nofollow author">sourcehut</a>,
+        <a href="https://github.com/dannyvankooten/" class="icon github" rel="me nofollow author">GitHub</a> and <a rel="me" href="https://toot.re/@dvk" class="icon mastodon">Mastodon</a>.
+      </p>
+      <p>This website is statically built using <a href="https://www.getzola.org/">Zola</a>. You can find <a href="https://git.sr.ht/~dvko/dannyvankooten.com" rel="nofollow">its source code here</a>.</p>
+      <p>Pageviews for this site are counted using a standalone spin-off of Koko Analytics, code-named <a href="https://teller.dvk.co/">Teller</a>.</p>
+  </footer>
+<script>
+((t, cnf) => {
+    window[t] = cnf;
+    let s = document.createElement('script');
+    s.defer = true;
+    s.src = [cnf.url, '/assets/', t, '.min.js'].join('');
+    document.body.appendChild(s)
+})('teller', {
+    url: 'https://teller.dvk.co',
+    site: '433ca337-2a49-4391-a340-e3c3bbbb32d3'
+})
+</script>
+</body>
+</html>

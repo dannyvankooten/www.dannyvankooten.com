@@ -5,28 +5,34 @@ title = "Contact"
 
 Need to contact me? If so, please go through the questions below to help save us both some time.
 
-Do you..
+Do you...
 
-<hr />
+----
 
-__Need support for [Mailchimp for WordPress](https://www.mc4wp.com/), [HTML Forms](https://www.htmlformsplugin.com/) or [Koko Analytics](https://www.kokoanalytics.com/)?__
+__...want to hire me?__
 
-If you are a paying customer, please use the email address shown in the settings pages of the plugin you need support for or simply reply to the purchase receipt. 
-This will guarantee a (_much_) faster response time.
+You can [hire me](/hire-me/) for your web/performance related projects. Email me at [hi@dvk.co](mailto:hi@dvk.co) and we'll take it from there.
 
-If you are only using the free plugins, please read on below.
+----
 
-<hr />
+__...need support for [Mailchimp for WordPress](https://www.mc4wp.com/), [HTML Forms](https://www.htmlformsplugin.com/) or [Koko Analytics](https://www.kokoanalytics.com/)?__
 
-__Need support for one of my [free WordPress plugins](/wordpress-plugins/)?__
+If you are a paying customer, please use the email address shown in the settings pages of the plugin you need support for or simply reply to the purchase receipt.
+This will guarantee a (_much_) faster response time because they end up in my team's support inbox versus just in mine.
 
-Please use the appropriate [plugin support forum on WordPress.org](https://wordpress.org/support/). 
+If you are using one of our free plugins without paying for priority support, read the below.
+
+----
+
+__...need support for one of my [free WordPress plugins](/wordpress-plugins/)?__
+
+Please use the appropriate [plugin support forum on WordPress.org](https://wordpress.org/support/).
 
 Me and my team are usually monitoring the forums on a daily basis, but only after we've handled support requests for our paying customers.
 
-<hr />
+----
 
-__Need my business details?__
+__...need my business details?__
 
 <address>
 ibericode BV <br>

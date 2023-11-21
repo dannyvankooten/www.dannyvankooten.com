@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles.css?v=202310222">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+</head>
+<body>
+  <header class="site-header">
+      <nav class="container">
+          <ul>
+              <li class="home"><a href="/" rel="home">Danny van Kooten</a></li>
+              <li><a href="/about/">About me</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/contact/">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+  <main>
+      <div class="container">
+        <blockquote>
+<p><em>Update (Sep 2013):</em> Wow. 50.000 downloads in just 3 months! I did not expect this plugin to grow so popular this fast. There is now a Pro version containing some more advanced features: <a href="https://www.mc4wp.com/">Mailchimp for WordPress Pro</a>.</p>
+</blockquote>
+<p>Around 2 years ago I started development of <a href="https://wordpress.org/plugins/newsletter-sign-up/">Newsletter Sign-Up</a>, my most popular WordPress plugin which has been downloaded close to 150.000 times by now.</p>
+<p>A lot of people using this plugin were using it with Mailchimp which is why I decided to develop a completely new plugin dedicated to just this newsletter service: <a title="Mailchimp plugin for WordPress" href="https://www.mc4wp.com/">Mailchimp for WordPress</a>.</p>
+<p>It does everything that Newsletter Sign-Up did, plus more. Because the plugin only supports Mailchimp I could add specific features and greatly simplify other parts of the code base. It utilizes the Mailchimp API so configuring the plugin got a lot easier as well. All you need is your Mailchimp API key and the plugin will fetch all of your list and other settings to ease configuring the rest of the plugin.</p>
+<p>I tried to make the plugin as flexible as possible. You can build your own form HTML (yes, anything), but the plugin tries to give you a (big) hand by providing you with a field wizard which will generate the HTML for you.</p>
+<p>Also, almost <strong>all</strong> plugin settings are optional. Install the plugin, enter your API key, use the form shortcode or form widget to add a sign-up form somewhere and off you go.</p>
+<p>The plugin can be downloaded for free from the WordPress repository <a href="https://wordpress.org/plugins/mailchimp-for-wp/">here</a>.</p>
+<p>Hope you like it, enjoy!</p>
+
+      </div>
+  </main>
+  <footer class="container site-footer">
+      <div class="footer-col mb">
+          <ul class="nolist">
+            <li><a href="/about/" style="font-weight: bold; text-decoration: none;">About me</a></li>
+            <li><a href="/bookmarks/">Bookmarks</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/code/">Code</a></li>
+            <li><a href="/contact/">Contact me</a></li>
+          </ul>
+      </div>
+      <div class="footer-col mb">
+          <ul class="nolist">
+              <li><a href="/projects/" style="font-weight: bold; text-decoration: none;">Projects</a></li>
+              <li><a href="https://www.mc4wp.com/">Mailchimp for WordPress</a></li>
+            <li><a href="https://www.kokoanalytics.com/">Koko Analytics</a></li>
+            <li><a href="https://www.htmlformsplugin.com/">HTML Forms plugin</a></li>
+          </ul>
+      </div>
+      <p style="clear:both;">Find me on <a href="https://git.sr.ht/~dvko/" class="icon sourcehut" rel="me nofollow author">sourcehut</a>,
+        <a href="https://github.com/dannyvankooten/" class="icon github" rel="me nofollow author">GitHub</a> and <a rel="me" href="https://toot.re/@dvk" class="icon mastodon">Mastodon</a>.
+      </p>
+      <p>This website is statically built using <a href="https://www.getzola.org/">Zola</a>. You can find <a href="https://git.sr.ht/~dvko/dannyvankooten.com" rel="nofollow">its source code here</a>.</p>
+      <p>Pageviews for this site are counted using a standalone spin-off of Koko Analytics, code-named <a href="https://teller.dvk.co/">Teller</a>.</p>
+  </footer>
+<script>
+((t, cnf) => {
+    window[t] = cnf;
+    let s = document.createElement('script');
+    s.defer = true;
+    s.src = [cnf.url, '/assets/', t, '.min.js'].join('');
+    document.body.appendChild(s)
+})('teller', {
+    url: 'https://teller.dvk.co',
+    site: '433ca337-2a49-4391-a340-e3c3bbbb32d3'
+})
+</script>
+</body>
+</html>

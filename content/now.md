@@ -9,8 +9,9 @@ title = "Now"
 
 **Work**
 
-- Building [Koko Analytics Pro](https://pro.kokoanalytics.com/)
-- Maintaining and supporting my [WordPress plugins](/wordpress-plugins/). 
+- Building [Teller](https://teller.dvk.co/), open-source and self-hosted website analytics that uses minimal resources.
+- Building [Koko Analytics Pro](https://pro.kokoanalytics.com/), open-source and self-hosted website analytics on top of WordPress.
+- Maintaining and supporting my [WordPress plugins](/wordpress-plugins/).
 
 **Health & Exercise**
 
@@ -18,4 +19,4 @@ title = "Now"
 - Preparing for La Marmotte 2024, a cyclosportive in the Alps.
 
 
-_Last updated: Sep 29, 2023_
+_Last updated: Nov 8, 2023_

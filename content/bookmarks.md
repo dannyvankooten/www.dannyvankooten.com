@@ -26,7 +26,6 @@ Made possible by the following list of mostly open-source software (not exhausti
 ## Web development
 
 - [PHP](https://www.php.net/) It's getting much better lately and still powers the vast majority of web backends.
-- [PHP The Right Way](https://phptherightway.com/) Needed if you want to write PHP that scales.
 - [Symfony](https://symfony.com/), PHP web framework and components.
 - [Nginx](https://nginx.org/), web server software.
 - [PostgreSQL](https://www.postgresql.org/), [MariaDB](https://mariadb.org/), or [SQLite](https://www.sqlite.org/index.html). SQL database servers.

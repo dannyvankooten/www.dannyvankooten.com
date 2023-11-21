@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="referrer" content="no-referrer-when-downgrade">
-  {% block rss %}
-  <link rel="alternate" type="application/rss+xml" title="RSS"
-    href="/atom.xml">
-  {% endblock %}
-  <link rel="icon" href="/img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="/styles.css?v=202310222">
-  {% block head %}{% endblock %}
+    <link rel="stylesheet" href="/styles.css?v=202310222">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="icon" href="/img/favicon.png" type="image/png">
 </head>
 <body>
   <header class="site-header">
       <nav class="container">
           <ul>
-              <li class="home"><a href="/" rel="home" {% if current_path =='/about/' %}aria-current="true"{% endif %}>Danny van Kooten</a></li>
-              <li><a href="/about/" {% if current_path =='/about/' %}class="active" aria-current="true"{% endif %}>About me</a></li>
-              <li><a href="/blog/" {% if current_path =='/blog/' %}class="active" aria-current="true"{% endif %}>Blog</a></li>
-              <li><a href="/contact/" {% if current_path =='/contact/' %}class="active" aria-current="true"{% endif
-          %}>Contact</a></li>
+              <li class="home"><a href="/" rel="home">Danny van Kooten</a></li>
+              <li><a href="/about/">About me</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/contact/">Contact</a></li>
           </ul>
       </nav>
   </header>
   <main>
-    {% block content %} {% endblock %}
+      <div class="container">
+        {{$.Content}}
+      </div>
   </main>
   <footer class="container site-footer">
       <div class="footer-col mb">
@@ -48,8 +44,20 @@
       <p style="clear:both;">Find me on <a href="https://git.sr.ht/~dvko/" class="icon sourcehut" rel="me nofollow author">sourcehut</a>,
         <a href="https://github.com/dannyvankooten/" class="icon github" rel="me nofollow author">GitHub</a> and <a rel="me" href="https://toot.re/@dvk" class="icon mastodon">Mastodon</a>.
       </p>
-      <p><a href="https://git.sr.ht/~dvko/dannyvankooten.com" rel="nofollow">Source code for this website</a>.</p>
-      <p>All information on this blog is hereby released into the public domain, with no rights reserved.</p>
+      <p>This website is statically built using <a href="https://www.getzola.org/">Zola</a>. You can find <a href="https://git.sr.ht/~dvko/dannyvankooten.com" rel="nofollow">its source code here</a>.</p>
+      <p>Pageviews for this site are counted using a standalone spin-off of Koko Analytics, code-named <a href="https://teller.dvk.co/">Teller</a>.</p>
   </footer>
+<script>
+((t, cnf) => {
+    window[t] = cnf;
+    let s = document.createElement('script');
+    s.defer = true;
+    s.src = [cnf.url, '/assets/', t, '.min.js'].join('');
+    document.body.appendChild(s)
+})('teller', {
+    url: 'https://teller.dvk.co',
+    site: '433ca337-2a49-4391-a340-e3c3bbbb32d3'
+})
+</script>
 </body>
 </html>

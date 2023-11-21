@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles.css?v=202310222">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+</head>
+<body>
+  <header class="site-header">
+      <nav class="container">
+          <ul>
+              <li class="home"><a href="/" rel="home">Danny van Kooten</a></li>
+              <li><a href="/about/">About me</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/contact/">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+  <main>
+      <div class="container">
+        <p>To make sure the <a href="https://www.mc4wp.com/">Mailchimp for WordPress</a> site loads as fast as possible throughout the world we recently started using Amazon Cloudfront, a Content Delivery Network, for serving all public assets (CSS, JavaScript and image files).</p>
+<p>Configuring WordPress to use a CDN seemed like a straightforward and simple enough process to me. Looking at the available plugins however, nothing really seemed to work in the way I expected it to.</p>
+<p>I was looking for something lightweight that only replaced certain URL's on the public section of a WordPress site, but everything I found did way more than that, was poorly coded or simply broken. That's why I decided to write my own little CDN plugin for WordPress.</p>
+<h3>WordPress CDN Loader, a microplugin.</h3>
+<p>In the last few months, I've been creating more and more <strong>#microplugins</strong> which do one thing and do it well. Since others might benefit from a simple CDN URL rewriter as well, I made the <a href="https://github.com/dannyvankooten/wp-cdn-loader">CDN Loader plugin for WordPress</a> publicly available on GitHub.</p>
+<p>We're using it ourself with Amazon Cloudfront (which is free for low-bandwidth sites) but you can configure it with any CDN service. Configuring the plugin is very straightforward, although the plugin does not come with a dedicated settings page as I figured that would be overkill for the one setting it actually requires: your CDN url.</p>
+<h3>Installing the CDN Loader</h3>
+<p>To use the plugin on your own site, take the following steps.</p>
+<ol>
+<li>First, install the plugin from GitHub: <a href="https://github.com/dannyvankooten/wp-cdn-loader">dannyvankooten/wp-cdn-loader</a></li>
+<li>Configure your CDN url in <code>wp-config.php</code> by defining the following PHP constant.</li>
+</ol>
+<pre><code class="language-php?start_inline=1">define( 'DVK_CDN_URL', '//xxxxxx.cloudfront.net' );
+</code></pre>
+<p>That's all there is to it - you're all set now!</p>
+<p>I hope you enjoy the lightweight solution, we've been using it on <a href="https://www.mc4wp.com">mc4wp.com</a> for a few months now, it works great!</p>
+
+      </div>
+  </main>
+  <footer class="container site-footer">
+      <div class="footer-col mb">
+          <ul class="nolist">
+            <li><a href="/about/" style="font-weight: bold; text-decoration: none;">About me</a></li>
+            <li><a href="/bookmarks/">Bookmarks</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/code/">Code</a></li>
+            <li><a href="/contact/">Contact me</a></li>
+          </ul>
+      </div>
+      <div class="footer-col mb">
+          <ul class="nolist">
+              <li><a href="/projects/" style="font-weight: bold; text-decoration: none;">Projects</a></li>
+              <li><a href="https://www.mc4wp.com/">Mailchimp for WordPress</a></li>
+            <li><a href="https://www.kokoanalytics.com/">Koko Analytics</a></li>
+            <li><a href="https://www.htmlformsplugin.com/">HTML Forms plugin</a></li>
+          </ul>
+      </div>
+      <p style="clear:both;">Find me on <a href="https://git.sr.ht/~dvko/" class="icon sourcehut" rel="me nofollow author">sourcehut</a>,
+        <a href="https://github.com/dannyvankooten/" class="icon github" rel="me nofollow author">GitHub</a> and <a rel="me" href="https://toot.re/@dvk" class="icon mastodon">Mastodon</a>.
+      </p>
+      <p>This website is statically built using <a href="https://www.getzola.org/">Zola</a>. You can find <a href="https://git.sr.ht/~dvko/dannyvankooten.com" rel="nofollow">its source code here</a>.</p>
+      <p>Pageviews for this site are counted using a standalone spin-off of Koko Analytics, code-named <a href="https://teller.dvk.co/">Teller</a>.</p>
+  </footer>
+<script>
+((t, cnf) => {
+    window[t] = cnf;
+    let s = document.createElement('script');
+    s.defer = true;
+    s.src = [cnf.url, '/assets/', t, '.min.js'].join('');
+    document.body.appendChild(s)
+})('teller', {
+    url: 'https://teller.dvk.co',
+    site: '433ca337-2a49-4391-a340-e3c3bbbb32d3'
+})
+</script>
+</body>
+</html>

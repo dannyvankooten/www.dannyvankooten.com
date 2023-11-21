@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles.css?v=202310222">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+</head>
+<body>
+  <header class="site-header">
+      <nav class="container">
+          <ul>
+              <li class="home"><a href="/" rel="home">Danny van Kooten</a></li>
+              <li><a href="/about/">About me</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/contact/">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+  <main>
+      <div class="container">
+        <p>Remember when <a href="@/blog/2017/2017-04-17-laravel-to-golang.md">I ditched Laravel for Golang</a>?</p>
+<p>Well, after 2 years on Go, our shop applications are powered by PHP again.</p>
+<p><strong>Why?! You already said it was probably a bad business decision, and then you spend even more time on it?!</strong> Well, yeah, several reasons actually.</p>
+<h3>PHP improved a lot</h3>
+<p>PHP improved a lot during the last 3 years. It added <a href="https://secure.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration">scalar argument type declarations</a>, <a href="https://secure.php.net/manual/en/functions.returning-values.php#functions.returning-values.type-declaration">return type declarations</a>, <a href="https://wiki.php.net/rfc/multiple-catch">multi-catch exceptions</a>, impressive <a href="https://www.zend.com/en/resources/php7_infographic">performance improvements</a> and many more general improvements.</p>
+<h3>Symfony4 is a game changer</h3>
+<p>I've always been a big fan of <a href="https://symfony.com/doc/current/contributing/code/bc.html">Symfony's compatibility promise</a> and their impressive 13-year track record proves they mean it.</p>
+<p>So when <a href="https://symfony.com/4">Symfony4</a> was released and I heard good things about it, I took it for a test drive by implementing a tiny part of our application in it.</p>
+<p>Conclusion: it's great. Really, really great.</p>
+<p>A lot of effort went into simplifying the setup, making it a lot faster to bootstrap a Symfony application with much less work required configuring bundles. It's now rivaling Laravel's rapid development while at the same time encouraging decent development practices to ensure you don't shoot yourself in the foot. And <a href="http://www.phpbenchmarks.com/en/">it performs really well</a>.</p>
+<p>It was relatively easy to port our old Laravel application to Symfony, implement some new features the Go version of our application offered and undo some of the shortcuts I took earlier (most of them because of Laravel's global helpers).</p>
+<p>A nice side effect is that I've managed to substantially increase our test coverage in the process. Writing the same application in terms of functionality for a <del>second</del> third time really helps in that regard.</p>
+<p><img src="/media/2019/symfony-debug-bar.png" alt="Symfony's debug bar"></p>
+<p>Symfony's debug bar is an amazing tool. It shows you what happened during the journey from request to response, notifies you of warnings &amp; deprecations and comes with a built-in profiler that you can easily hook into to benchmark parts of your own code.</p>
+<p><img src="/media/2019/symfony-profiler.jpg" alt="Symfony's profiler"></p>
+<p>After learning <a href="https://symfony.com/doc/current/forms.html">Symfony's Form component</a>, I'd rather not go without it again. It makes it trivial to render an accessible form that can be re-used in several places, validating the form upon submit and then populating a PHP object from the form data safely.</p>
+<pre><code class="language-php?start_inline=1">$user = $this-&gt;getUser();
+$form = $this-&gt;createForm(UserBillingInfoType::class, $user)
+             -&gt;handleRequest($request);
+
+if ($form-&gt;isSubmitted() &amp;&amp; $form-&gt;isValid()) {
+    // $user is already populated with the form values at this point
+    // it's valid, so we can update the database and redirect the user now
+}
+</code></pre>
+<p>Doctrine is another piece of software that really improved our overall application. Your models (<a href="https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#basic-mapping">entities</a>) are normal PHP classes and relations (<a href="https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/working-with-associations.html#working-with-associations">associations</a>) are normal references, making it easy to test your domain logic without having to worry about the database implementation.</p>
+<pre><code class="language-php?start_inline=1">$user = new User();
+$user-&gt;addLicense(new License());
+$manager-&gt;persist($user); // both user and its license will be saved
+</code></pre>
+<p>In Doctrine all operations are wrapped in a SQL transaction by default. That's a big plus for me as it guarantees atomicity, which involved more work to get right in Eloquent.</p>
+<h3>Go is (still) great</h3>
+<p>Honestly, Go is great. Its simplicity is refreshing and you can't get anywhere near that kind of performance using PHP <sup class="muted">1</sup>. I would still pick it if we need a small API or something that requires high throughput.</p>
+<p>Our shops however are more monolithic with a lot of server-side rendering. While that's certainly doable in Go (as the last 2 years proved), it's more maintainable for us to do it in PHP right now.</p>
+<blockquote>
+<p>Side note: without the experience gained from our years on Go, I probably wouldn't have started <a href="@/blog/2018/2018-05-12-reviving-ana-as-fathom.md">Fathom</a>. So perhaps it wasn't such a bad business decision after all?</p>
+</blockquote>
+<h3>Making the correct business decision</h3>
+<p>One reason not mentioned so far is that over the last year or so, I've been approached by several companies interested to take over one of our products.</p>
+<p>They were a little surprised to hear our stack involved Golang and some flat out told us they'd prefer PHP, because that's what most of our products (<a href="https://www.mc4wp.com/">mc4wp.com</a>, <a href="https://boxzillaplugin.com">boxzillaplugin.com</a> and <a href="https://www.htmlformsplugin.com/">htmlformsplugin.com</a>) rely upon. And I don't blame them.</p>
+<hr />
+<p><small><sup>1</sup> Just for fun, I compared apples and oranges again by benchmarking the login page (which doesn't hit any database) for both application versions using <a href="https://www.joedog.org/siege-home/">Siege</a>.</small></p>
+<p><small>The Symfony application (PHP 7.3, OPcache enabled, optimized autoloader) handles about 1470 req/s. The Go application (compiled using Go v1.11) averages about 18600 req/s.</small></p>
+      </div>
+  </main>
+  <footer class="container site-footer">
+      <div class="footer-col mb">
+          <ul class="nolist">
+            <li><a href="/about/" style="font-weight: bold; text-decoration: none;">About me</a></li>
+            <li><a href="/bookmarks/">Bookmarks</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/code/">Code</a></li>
+            <li><a href="/contact/">Contact me</a></li>
+          </ul>
+      </div>
+      <div class="footer-col mb">
+          <ul class="nolist">
+              <li><a href="/projects/" style="font-weight: bold; text-decoration: none;">Projects</a></li>
+              <li><a href="https://www.mc4wp.com/">Mailchimp for WordPress</a></li>
+            <li><a href="https://www.kokoanalytics.com/">Koko Analytics</a></li>
+            <li><a href="https://www.htmlformsplugin.com/">HTML Forms plugin</a></li>
+          </ul>
+      </div>
+      <p style="clear:both;">Find me on <a href="https://git.sr.ht/~dvko/" class="icon sourcehut" rel="me nofollow author">sourcehut</a>,
+        <a href="https://github.com/dannyvankooten/" class="icon github" rel="me nofollow author">GitHub</a> and <a rel="me" href="https://toot.re/@dvk" class="icon mastodon">Mastodon</a>.
+      </p>
+      <p>This website is statically built using <a href="https://www.getzola.org/">Zola</a>. You can find <a href="https://git.sr.ht/~dvko/dannyvankooten.com" rel="nofollow">its source code here</a>.</p>
+      <p>Pageviews for this site are counted using a standalone spin-off of Koko Analytics, code-named <a href="https://teller.dvk.co/">Teller</a>.</p>
+  </footer>
+<script>
+((t, cnf) => {
+    window[t] = cnf;
+    let s = document.createElement('script');
+    s.defer = true;
+    s.src = [cnf.url, '/assets/', t, '.min.js'].join('');
+    document.body.appendChild(s)
+})('teller', {
+    url: 'https://teller.dvk.co',
+    site: '433ca337-2a49-4391-a340-e3c3bbbb32d3'
+})
+</script>
+</body>
+</html>
