@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"bytes"
 	"encoding/xml"
 	"errors"
+	"fmt"
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/extension"
 	"github.com/yuin/goldmark/renderer/html"
@@ -11,8 +13,10 @@ import (
 	"io"
 	"io/fs"
 	"log"
+	"net/http"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 	"time"
 )
@@ -25,7 +29,11 @@ var md = goldmark.New(
 	),
 )
 
-var templates = template.Must(template.ParseFS(os.DirFS("templates/"), "*.html", "*.xml"))
+var templates = template.Must(template.ParseFS(os.DirFS("templates/"), "*.html"))
+
+type Config struct {
+	SiteUrl string `xml:"site_url"`
+}
 
 type Page struct {
 	Title      string
@@ -37,8 +45,22 @@ type Page struct {
 	LastMod    time.Time
 }
 
+func (p *Page) URLPath() string {
+	path := strings.TrimSuffix(strings.TrimSuffix(p.Dest(), "/index.html"), "/")
+	if len(path) > 0 {
+		if path[0] == '/' {
+			path = path[1:]
+		}
+
+		if path[len(path)-1] != '/' {
+			path += "/"
+		}
+	}
+	return path
+}
+
 func (p *Page) Dest() string {
-	d := strings.TrimPrefix(p.Path, "content/")
+	d := strings.TrimPrefix(p.Path, "content")
 
 	if p.PrettyName != "" {
 		d = strings.TrimSuffix(d, filepath.Base(d))
@@ -47,70 +69,71 @@ func (p *Page) Dest() string {
 
 	d = strings.TrimSuffix(d, ".md")
 	d = strings.TrimSuffix(d, ".html")
-
-	if strings.HasSuffix(d, "_index") {
-		d = strings.TrimSuffix(d, "_index")
-	}
+	d = strings.TrimSuffix(d, "_index")
 
 	d += "/index.html"
 	return d
 }
 
-func parseFrontMatter(p *Page, content string) string {
-	parts := strings.Split(content, "+++")
-	lines := strings.Split(parts[1], "\n")[1:]
-	content = strings.TrimSpace(parts[2])
-
-	for _, l := range lines {
-		l = strings.TrimSpace(l)
-		if l == "" {
-			continue
-		}
-
-		if l == "+++" {
-			break
-		}
-
-		parts := strings.Split(l, " = ")
-		if len(parts) != 2 {
-			log.Printf("Warning, invalid front matter in %s: %s", p.Path, l)
-			continue
-		}
-
-		left := strings.TrimSpace(parts[0])
-		right := strings.TrimSpace(parts[1])
-		var err error
-		switch left {
-		case "title":
-			p.Title = right[1 : len(right)-1]
-		case "date":
-			if len(right) == len("2006-01-02 15:04:05") {
-				p.Date, err = time.Parse("2006-01-02 15:04:05", right)
-			} else {
-				p.Date, err = time.Parse("2006-01-02", right)
-			}
-			if err != nil {
-				log.Fatalf("Error parsing date in %s: %s", p.Path, err)
-			}
-		case "template":
-			p.Template = right[1 : len(right)-1]
-		default:
-			log.Printf("Weird front-matter encountered in file %s: %s\n", p.Path, left)
-		}
-	}
-
-	return content
-}
-
-func process(p *Page) error {
-	b, err := os.ReadFile(p.Path) // just pass the file name
+func parseFrontMatter(p *Page) error {
+	// open file to read front matter
+	fh, err := os.Open(p.Path)
 	if err != nil {
 		return err
 	}
-	content := string(b)
+	defer fh.Close()
+	scanner := bufio.NewScanner(fh)
+	scanner.Scan()
 
-	if strings.HasPrefix(content, "+++") {
-		content = parseFrontMatter(p, content)
+	for scanner.Scan() {
+		line := scanner.Text()
+		if line == "+++" {
+			break
+		}
+
+		pos := strings.Index(line, "=")
+		if pos == -1 {
+			continue
+		}
+
+		name := strings.TrimSpace(line[0:pos])
+		value := strings.TrimSpace(line[pos+1:])
+		if value[0] == '"' {
+			value = strings.Trim(value, "\"")
+		}
+
+		switch name {
+		case "title":
+			p.Title = value
+		case "template":
+			p.Template = value
+		case "date":
+			// discard, we get this from filename only now
+		default:
+			log.Printf("Unsupported front-matter key: %#v\n", name)
+		}
+
+	}
+
+	return nil
+}
+
+func process(p *Page, posts []Page) error {
+	fileContent, err := os.ReadFile(p.Path)
+	if err != nil {
+		return err
+	}
+
+	// Skip front matter
+	pos := bytes.Index(fileContent[3:], []byte("+++"))
+	if pos > -1 {
+		fileContent = fileContent[pos+6:]
+	}
+
+	// TODO: Only process Markdown if this is a .md file
+	var buf bytes.Buffer
+	if err := md.Convert(fileContent, &buf); err != nil {
+		return err
 	}
 
 	if err := os.MkdirAll("build/"+filepath.Dir(p.Dest()), 0755); err != nil {
@@ -123,14 +146,15 @@ func process(p *Page) error {
 	}
 	defer fh.Close()
 
-	// TODO: Only process Markdown if this is a .md file
-	var buf bytes.Buffer
-	if err := md.Convert([]byte(content), &buf); err != nil {
-		log.Fatalf("error processing markdown: %s", err)
+	tmpl := templates.Lookup(p.Template)
+	if tmpl == nil {
+		return errors.New(fmt.Sprintf("Invalid template name: %s", p.Template))
 	}
 
-	return templates.Lookup("base.html").Execute(fh, map[string]any{
+	return tmpl.Execute(fh, map[string]any{
 		"Page":    p,
+		"Posts":   posts,
+		"Title":   p.Title,
 		"Content": template.HTML(buf.Bytes()),
 	})
 }
@@ -197,8 +221,9 @@ func readPages() ([]Page, error) {
 
 		p := Page{
 			Path:       path,
-			IsBlogPost: strings.HasPrefix(path, "content/blog"),
+			IsBlogPost: strings.HasPrefix(path, "content/blog/") && !strings.HasSuffix(path, "index.md"),
 			LastMod:    info.ModTime(),
+			Template:   "default.html",
 		}
 
 		// parse date from filename
@@ -211,13 +236,17 @@ func readPages() ([]Page, error) {
 			}
 		}
 
+		if err := parseFrontMatter(&p); err != nil {
+			return err
+		}
+
 		pages = append(pages, p)
 		return nil
 	})
 	return pages, err
 }
 
-func createSitemap(pages []Page) error {
+func createSitemap(siteUrl string, pages []Page) error {
 	type Url struct {
 		XMLName xml.Name `xml:"url"`
 		Loc     string   `xml:"loc"`
@@ -236,7 +265,7 @@ func createSitemap(pages []Page) error {
 	urls := make([]Url, 0, len(pages))
 	for _, p := range pages {
 		urls = append(urls, Url{
-			Loc:     p.Dest(),
+			Loc:     siteUrl + p.URLPath(),
 			LastMod: p.LastMod.Format(time.RFC3339),
 		})
 	}
@@ -253,31 +282,75 @@ func createSitemap(pages []Page) error {
 	if err != nil {
 		return err
 	}
+	defer wr.Close()
+
 	enc := xml.NewEncoder(wr)
-	wr.WriteString(`<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//0.0.0.0:8000/sitemap.xsl"?>` + "\n")
+	if _, err := wr.WriteString(`<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//0.0.0.0:8000/sitemap.xsl"?>` + "\n"); err != nil {
+		return err
+	}
 	if err := enc.Encode(env); err != nil {
 		return err
 	}
-	wr.Close()
 
 	// copy xml stylesheet
 	return copyFile("sitemap.xsl", "build/sitemap.xsl")
 }
 
+func parseConfig() (*Config, error) {
+	wr, err := os.Open("config.xml")
+	if err != nil {
+		return nil, err
+	}
+	defer wr.Close()
+	var config Config
+	if err := xml.NewDecoder(wr).Decode(&config); err != nil {
+		return nil, err
+	}
+
+	config.SiteUrl = strings.TrimSuffix(config.SiteUrl, "/") + "/"
+
+	return &config, nil
+}
+
 func main() {
+	timeStart := time.Now()
+
+	// read config.xml
+	config, err := parseConfig()
+	if err != nil {
+		log.Fatalf("Error reading config.xml: %w\n", err)
+	}
+
+	// read all pages
 	pages, err := readPages()
 	if err != nil {
 		log.Fatal(err)
 	}
 
+	// create list of blog posts
+	var posts []Page
+	for _, p := range pages {
+		if !p.IsBlogPost {
+			continue
+		}
+
+		posts = append(posts, p)
+	}
+
+	// sort posts by date
+	sort.Slice(posts, func(i int, j int) bool {
+		return posts[i].Date.After(posts[j].Date)
+	})
+
 	// build each individual page
 	for _, p := range pages {
-		if err := process(&p); err != nil {
+		if err := process(&p, posts); err != nil {
 			log.Printf("Error processing %s: %w\n", p.Path, err)
 		}
 	}
 
-	if err := createSitemap(pages); err != nil {
+	// create sitemap
+	if err := createSitemap(config.SiteUrl, pages); err != nil {
 		log.Fatalf("Error creating sitemap: %w\n", err)
 	}
 
@@ -286,6 +359,12 @@ func main() {
 		log.Fatal(err)
 	}
 
+	log.Printf("Built site containing %d pages in %d ms\n", len(pages), time.Since(timeStart).Milliseconds())
+
+	if len(os.Args) > 1 && os.Args[1] == "serve" {
+		log.Printf("Listening on http://localhost:8080\n")
+		log.Fatal(http.ListenAndServe("localhost:8080", http.FileServer(http.Dir("build/"))))
+	}
 }
 
 // TODO:

@@ -1,5 +1,6 @@
 +++
 title = "Danny van Kooten"
+template = "home.html"
 +++
 
 Hello,

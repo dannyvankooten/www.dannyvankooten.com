@@ -1,0 +1,11 @@
+{{ template "_header.html" }}
+    {{$.Content}}
+
+
+    <h2>Latest blog posts</h2>
+    <ul>
+    {{ range (slice $.Posts 0 5) }}
+        <li><a href="/{{.URLPath}}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+{{ template "_footer.html" }}
