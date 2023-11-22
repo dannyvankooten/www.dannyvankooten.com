@@ -185,10 +185,13 @@ sup a {
 }
 
 small,
-small a,
-.muted,
-.muted a {
+.muted {
     font-size: 80%;
+    color: #555;
+}
+
+small a,
+.muted a {
     color: #555;
 }
 

@@ -12,7 +12,10 @@
             <ul>
             {{- $year = .Date.Year -}}
         {{ end }}
-        <li><a href="/{{.URLPath}}">{{ .Title }}</a></li>
+        <li>
+            <a href="/{{.URLPath}}">{{ .Title }}</a><br />
+            <small>{{ .Date.Format "Jan 2, 2006" }}</small>
+        </li>
     {{- end -}}
     </ul>
 
