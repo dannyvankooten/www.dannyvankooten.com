@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Automatically add a Mailchimp sign-up form to all posts</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2013/add-mailchimp-sign-up-form-end-of-posts/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Automatically add a Mailchimp sign-up form to all posts</h1>
-    <p>When someone gets to the end of your post, they surely love what you have to say. It makes the end of your posts the perfect spot to ask your visitors to sign-up to your newsletter. It converts well and you're asking right when they're feeling great about your content.</p>
+
+<p class="muted">Published <time datetime="2013-10-04">2013-10-04</time> on <a href="https://www.dannyvankooten.com/blog/2013/add-mailchimp-sign-up-form-end-of-posts/">Permalink</a></p>
+
+
+<p>When someone gets to the end of your post, they surely love what you have to say. It makes the end of your posts the perfect spot to ask your visitors to sign-up to your newsletter. It converts well and you're asking right when they're feeling great about your content.</p>
 <p>In this post I'll show you a small snippet you can use on your WordPress website. This snippet will automatically add a sign-up form to the end of all your posts, without having to go through all of them individually (which is madness).</p>
 <p><strong>Requirements</strong></p>
 <ul>
@@ -55,6 +62,7 @@ add_filter( 'the_content', 'myprefix_add_form_to_posts' );
 <p>If you're using the premium version of <a title="Mailchimp for WordPress" href="https://www.mc4wp.com/">Mailchimp for WordPress</a>, don't forget to change <code>$form_id</code> into the ID of the sign-up form you wish to show.</p>
 <p><em>Please be careful implementing the above snippet if you're not comfortable with PHP and/or editing functions.php files. It's easy to break your website if you're not following the correct PHP syntax.</em></p>
 <p>Questions? Ask away in the comments!</p>
+
 
 </div>
 </main>

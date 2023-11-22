@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 import csv
-import glob 
+import glob
 from main import get_filesize
 
-with open('results.csv','r') as csvinput:
+with open('results.csv', 'r') as csvinput:
     with open('output.csv', 'w') as csvoutput:
         writer = csv.writer(csvoutput)
         results = csv.reader(csvinput)
@@ -26,6 +26,6 @@ with open('results.csv','r') as csvinput:
                 row.append(total_size)
             else:
                 row.append("")
-                        
+
             writer.writerow(row)
 

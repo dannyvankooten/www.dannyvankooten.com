@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import requests
-import re 
+import re
 import os
 import time
 import csv
@@ -29,10 +29,10 @@ def parse_cache_header(headers):
         expires_date = parse_http_date(headers['Expires'])
         if expires_date:
             return max(0, round((expires_date - datetime.now()).total_seconds()))
-    
+
     return 0
 
-with open('results.csv','r') as csvinput:
+with open('results.csv', 'r') as csvinput:
     with open('output.csv', 'w') as csvoutput:
         writer = csv.writer(csvoutput)
         results = csv.reader(csvinput)
@@ -45,7 +45,7 @@ with open('results.csv','r') as csvinput:
 
         # loop through domains
         for row in results:
-            # already seen this 
+            # already seen this
             if len(row) >= 7:
                 writer.writerow(row)
                 continue
@@ -62,7 +62,7 @@ with open('results.csv','r') as csvinput:
                 print("\tException occurred during request. Skipping.")
                 continue
 
-            # parse HTML 
+            # parse HTML
             soup = BeautifulSoup(req.content, 'html.parser')
             scripts = list(filter(lambda el: el.has_attr('src') and not el['src'].startswith('data'), soup.find_all("script")))
             scripts += list(filter(lambda el: el.has_attr('href') and not el['href'].startswith('data'), soup.find_all(rel="stylesheet")))
@@ -79,16 +79,16 @@ with open('results.csv','r') as csvinput:
                 try:
                     response = download(url)
                     if not response.ok:
-                        continue 
+                        continue
                 except:
                     print("\tException occurred during request. Skipping.")
                     continue
-                
+
                 # Parse cache lifetime header
                 expires = parse_cache_header(response.headers)
                 lifetimes.append(expires)
                 print("\tFound Cache-Control or Expires header of {} seconds".format(expires))
-               
+
                 # Sleep for tiny bit so we're not firewalled
                 time.sleep(0.05)
 

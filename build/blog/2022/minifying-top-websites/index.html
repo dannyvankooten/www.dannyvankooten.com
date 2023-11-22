@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Minification and cache directives for the most popular websites of the internet</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2022/minifying-top-websites/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Minification and cache directives for the most popular websites of the internet</h1>
-    <p>While comparing various minification tools recently I soon discovered that there are plenty of options available.</p>
+
+<p class="muted">Published <time datetime="2022-11-29">2022-11-29</time> on <a href="https://www.dannyvankooten.com/blog/2022/minifying-top-websites/">Permalink</a></p>
+
+
+<p>While comparing various minification tools recently I soon discovered that there are plenty of options available.</p>
 <p>Some minifiers focus on performance and only strip whitespace, remove comments (except for license notices) and maybe rename local variables to use shorter names. That usually accounts for the biggest reduction in size, but the same effect is usually already accomplishing by using <a href="https://en.wikipedia.org/wiki/Gzip">gzip compression</a>.</p>
 <p>Other minifiers are more comprehensive and some even apply dead code elimination, which usually requires evaluating the source internally (and therefore is a lot slower).</p>
 <p>For websites that are pushed into production, minification performance is usually less important and achieving the highest reduction in file size (using only safe minifications) is what counts.</p>
@@ -191,6 +198,7 @@
 <p><small id="1"><sup>1</sup> You can <a href="https://git.sr.ht/~dvko/dannyvankooten.com/tree/master/code/minify-top-500-websites">find the code and results for this experiment here</a>.</small></p>
 <p><small><sup>2</sup> This approach ignores any dynamically inserted assets, because only assets linked from the static HTML are downloaded and evaluated. </small></p>
 <p><small><sup>3</sup> gzip is probably the real hero of this story. It's mind boggling to think of how much data is saved because of this compression algorithm.</small></p>
+
 
 </div>
 </main>

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Moving from PHP (Laravel) to Go</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2017/laravel-to-golang/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Moving from PHP (Laravel) to Go</h1>
-    <p>Earlier this year, I made an arguably bad business decision. I decided to rewrite the Laravel application powering <a href="https://my.boxzillaplugin.com/">Boxzilla</a> in <a href="https://golang.org/">Go</a>.</p>
+
+<p class="muted">Published <time datetime="2017-04-17">2017-04-17</time> on <a href="https://www.dannyvankooten.com/blog/2017/laravel-to-golang/">Permalink</a></p>
+
+
+<p>Earlier this year, I made an arguably bad business decision. I decided to rewrite the Laravel application powering <a href="https://my.boxzillaplugin.com/">Boxzilla</a> in <a href="https://golang.org/">Go</a>.</p>
 <p>No regrets though.</p>
 <img style="height: 400px; width: auto;" class="small-margin" src="/media/2017/2017-04-boxzilla-platform.jpg">
 <p>Just a few weeks later I was deploying the Go application. Building it was the most fun I had in months, I learned a ton and the end result is a huge improvement over the old application. Better performance, easier deployments and higher test coverage.</p>
@@ -132,6 +139,7 @@ subscription_test.go
 <p>Did something you should never do: rewrote an application in a different language because I felt like it. Had lots of fun and got a much smaller &amp; faster application in return.</p>
 <hr>
 <p><strong>Edited on April 19:</strong> 120ms latency with lots of disk writing for the Laravel benchmark didn't seem right so I revisited it. Turns out I had <code>APP_DEBUG</code> set to <code>true</code>, so templates were recompiled on every request. Oops. The post has been updated with the correct benchmarking results.</p>
+
 
 </div>
 </main>

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Data type inconsistencies in WordPress</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2014/data-type-inconsistencies-in-wordpress/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Data type inconsistencies in WordPress</h1>
-    <p>Yesterday I <a href="https://twitter.com/DannyvanKooten/status/517432423475589120">tweeted about data type inconsistencies in WordPress plugins</a>, something that has been bothering me for a while now.</p>
+
+<p class="muted">Published <time datetime="2014-10-02">2014-10-02</time> on <a href="https://www.dannyvankooten.com/blog/2014/data-type-inconsistencies-in-wordpress/">Permalink</a></p>
+
+
+<p>Yesterday I <a href="https://twitter.com/DannyvanKooten/status/517432423475589120">tweeted about data type inconsistencies in WordPress plugins</a>, something that has been bothering me for a while now.</p>
 <p>Inconsistent data types is quite common in PHP development as it is a &quot;weak typed&quot; language. In PHP version 5.3 and up, you can force the type of some non-scalar function parameters.</p>
 <p><a href="https://hacklang.org/">Hack</a> further improved on this by introducing <strong>type annotations</strong>, which <em>allow for PHP code to be explicitly typed on parameters, class member variables and return values</em>. Very cool.</p>
 <p>Unfortunately, both improvements can not be used when developing for WordPress. Yet.</p>
@@ -38,6 +45,7 @@
 <li><a href="https://wordpress.org/search/Trying+to+get+property+of+non-object">Notice: Trying to get property of non-object..</a></li>
 </ul>
 <p>Consistency is so important. In everything.</p>
+
 
 </div>
 </main>

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Backtesting 12-month SMA investing strategy with Pandas</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2018/backtesting-12-month-sma-investing-strategy-pandas/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Backtesting 12-month SMA investing strategy with Pandas</h1>
-    <p>In my quest to learn more about investing, I came across <a href="https://ofdollarsanddata.com/follow-the-money-eb1ae0c9a3bd">this post</a>.  The author writes <em>&quot;How One Simple Rule Can Beat Buy and Hold Investing&quot;</em> and then explains how following the trend is likely to beat a more traditional buy and hold investment approach.</p>
+
+<p class="muted">Published <time datetime="2018-01-24">2018-01-24</time> on <a href="https://www.dannyvankooten.com/blog/2018/backtesting-12-month-sma-investing-strategy-pandas/">Permalink</a></p>
+
+
+<p>In my quest to learn more about investing, I came across <a href="https://ofdollarsanddata.com/follow-the-money-eb1ae0c9a3bd">this post</a>.  The author writes <em>&quot;How One Simple Rule Can Beat Buy and Hold Investing&quot;</em> and then explains how following the trend is likely to beat a more traditional buy and hold investment approach.</p>
 <p>Intrigued, I decided to dive into the data to see if I could replicate his results.</p>
 <p>In this post I'll walk you through the code and results for backtesting a 12-month simple moving average trend strategy on S&amp;P 500 stock market data.</p>
 <p>We'll compare entering the market when it is trending up and moving to cash when it is trending down to simply staying invested at all times. The latter approach is known as buy &amp; hold, or <a href="https://en.wikipedia.org/wiki/HODL">HODL</a> depending on what corner of the internet you're from.</p>
@@ -152,6 +159,7 @@ Name: Criteria, dtype: int64
 <p>After playing with the data and looking at performance of the 2 strategies over different time periods, I think it's safe to say that simple buy and hold is the way to go for most individual investors. Especially as the above does not take transaction costs into account just yet.</p>
 <p>With some hindsight we can make the trend following model outperform, but in real life we obviously do not have that luxury. Luckily, buy and hold has always made up for the difference in returns, even if you bought in just before 2 decades of bear markets.</p>
 <p><em>You can <a href="https://github.com/dannyvankooten/dannyvankooten.com/blob/master/static/notebooks/12%20month%20SMA%20vs%20Buy%20and%20Hold.ipynb">find the complete Jupyter Notebook for this post here</a>.</em></p>
+
 
 </div>
 </main>

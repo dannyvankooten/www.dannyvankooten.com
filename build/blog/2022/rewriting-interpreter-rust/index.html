@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>(Re)writing an interpreter in Rust</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2022/rewriting-interpreter-rust/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>(Re)writing an interpreter in Rust</h1>
-    <p>Two years ago I <a href="@/blog/2020/2020-03-06-writing-an-interpreter-compiler.md">wrote my first interpreter</a> for a toy programming language called Monkey, in C.</p>
+
+<p class="muted">Published <time datetime="2022-11-17">2022-11-17</time> on <a href="https://www.dannyvankooten.com/blog/2022/rewriting-interpreter-rust/">Permalink</a></p>
+
+
+<p>Two years ago I <a href="@/blog/2020/2020-03-06-writing-an-interpreter-compiler.md">wrote my first interpreter</a> for a toy programming language called Monkey, in C.</p>
 <p>The thing works and is pretty fast, but I remember a lot of frustration dealing with segfaults or hard-to-track down memory leaks as soon as I introduced heap allocated values.</p>
 <p>Much of this is undoubtedly due to me not being very experienced with C. But, and I know this for a fact now, it's also because C makes it very easy for issues like this to pop-up at all.</p>
 <h2>Rewrite it in Rust</h2>
@@ -613,6 +620,7 @@ let str = obj.get::&lt;String&gt;();
 <p>This really only applies to newcomers (like me) though. In hindsight most of the performance optimizations in this post were pretty obvious and trivial to fix, now I know what to watch for.</p>
 <hr>
 <p><small>I've prepared a <a href="https://github.com/dannyvankooten/nederlang/commits/tree-walker">GitHub branch containing the various optimizations described here</a>, so you can look at all of the actual code. Note that the order of optimizations might differ slightly from the order in this post.</small></p>
+
 
 </div>
 </main>

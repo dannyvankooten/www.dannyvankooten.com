@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Preparing videos for Mastodon using ffmpeg</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2023/resize-downsample-video-ffmpeg/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Preparing videos for Mastodon using ffmpeg</h1>
-    <p>Recently I was recording a screencast of <a href="https://toot.re/@dvk/111342580812680580">me launching Koko Analytics as a Progressive Web App from my OS launcher</a>.
+
+<p class="muted">Published <time datetime="2023-11-02">2023-11-02</time> on <a href="https://www.dannyvankooten.com/blog/2023/resize-downsample-video-ffmpeg/">Permalink</a></p>
+
+
+<p>Recently I was recording a screencast of <a href="https://toot.re/@dvk/111342580812680580">me launching Koko Analytics as a Progressive Web App from my OS launcher</a>.
 Trying to upload the video to Mastodon failed with the following error message:</p>
 <blockquote>
 <p>422 1000fps videos are not supported</p>
@@ -60,6 +67,7 @@ It also limits the framerate to 60 fps.</p>
 <li><a href="https://trac.ffmpeg.org/wiki/ChangingFrameRate">Changing the framerate - ffmpeg</a></li>
 <li><a href="https://trac.ffmpeg.org/wiki/Limiting%20the%20output%20bitrate">Limiting the output bitrate - ffmpeg</a></li>
 </ul>
+
 
 </div>
 </main>

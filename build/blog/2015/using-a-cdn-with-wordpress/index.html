@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>CDN URL rewriting plugin for WordPress</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2015/using-a-cdn-with-wordpress/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>CDN URL rewriting plugin for WordPress</h1>
-    <p>To make sure the <a href="https://www.mc4wp.com/">Mailchimp for WordPress</a> site loads as fast as possible throughout the world we recently started using Amazon Cloudfront, a Content Delivery Network, for serving all public assets (CSS, JavaScript and image files).</p>
+
+<p class="muted">Published <time datetime="2015-05-22">2015-05-22</time> on <a href="https://www.dannyvankooten.com/blog/2015/using-a-cdn-with-wordpress/">Permalink</a></p>
+
+
+<p>To make sure the <a href="https://www.mc4wp.com/">Mailchimp for WordPress</a> site loads as fast as possible throughout the world we recently started using Amazon Cloudfront, a Content Delivery Network, for serving all public assets (CSS, JavaScript and image files).</p>
 <p>Configuring WordPress to use a CDN seemed like a straightforward and simple enough process to me. Looking at the available plugins however, nothing really seemed to work in the way I expected it to.</p>
 <p>I was looking for something lightweight that only replaced certain URL's on the public section of a WordPress site, but everything I found did way more than that, was poorly coded or simply broken. That's why I decided to write my own little CDN plugin for WordPress.</p>
 <h3>WordPress CDN Loader, a microplugin.</h3>
@@ -38,6 +45,7 @@
 </code></pre>
 <p>That's all there is to it - you're all set now!</p>
 <p>I hope you enjoy the lightweight solution, we've been using it on <a href="https://www.mc4wp.com">mc4wp.com</a> for a few months now, it works great!</p>
+
 
 </div>
 </main>

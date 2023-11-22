@@ -12,7 +12,6 @@ import (
 	"html/template"
 	"io"
 	"io/fs"
-	"log"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -110,7 +109,7 @@ func parseFrontMatter(p *Page) error {
 		case "date":
 			// discard, we get this from filename only now
 		default:
-			log.Printf("Unsupported front-matter key: %#v\n", name)
+			log.Warn("Unknown front-matter key in %s: %#v\n", p.Path, name)
 		}
 
 	}
@@ -118,10 +117,14 @@ func parseFrontMatter(p *Page) error {
 	return nil
 }
 
-func process(p *Page, posts []Page) error {
+func (p *Page) ParseContent() (string, error) {
 	fileContent, err := os.ReadFile(p.Path)
 	if err != nil {
-		return err
+		return "", err
+	}
+
+	if len(fileContent) < 6 {
+		return "", errors.New("missing front matter")
 	}
 
 	// Skip front matter
@@ -133,6 +136,15 @@ func process(p *Page, posts []Page) error {
 	// TODO: Only process Markdown if this is a .md file
 	var buf bytes.Buffer
 	if err := md.Convert(fileContent, &buf); err != nil {
+		return "", err
+	}
+
+	return string(buf.Bytes()), nil
+}
+
+func (s *Site) buildPage(p *Page) error {
+	content, err := p.ParseContent()
+	if err != nil {
 		return err
 	}
 
@@ -153,9 +165,11 @@ func process(p *Page, posts []Page) error {
 
 	return tmpl.Execute(fh, map[string]any{
 		"Page":    p,
-		"Posts":   posts,
+		"Posts":   s.posts,
+		"Pages":   s.pages,
+		"SiteUrl": s.config.SiteUrl,
 		"Title":   p.Title,
-		"Content": template.HTML(buf.Bytes()),
+		"Content": template.HTML(content),
 	})
 }
 
@@ -207,8 +221,14 @@ func copyDirRecursively(src string, dst string) error {
 	})
 }
 
-func readPages() ([]Page, error) {
-	pages := make([]Page, 0)
+type Site struct {
+	pages  []Page
+	posts  []Page
+	config *Config
+}
+
+func (s *Site) readContent() error {
+
 	err := filepath.WalkDir("content", func(path string, d fs.DirEntry, err error) error {
 		if d.IsDir() {
 			return nil
@@ -240,13 +260,23 @@ func readPages() ([]Page, error) {
 			return err
 		}
 
-		pages = append(pages, p)
+		s.pages = append(s.pages, p)
+
+		if p.IsBlogPost {
+			s.posts = append(s.posts, p)
+		}
 		return nil
 	})
-	return pages, err
+
+	// sort posts by date
+	sort.Slice(s.posts, func(i int, j int) bool {
+		return s.posts[i].Date.After(s.posts[j].Date)
+	})
+
+	return err
 }
 
-func createSitemap(siteUrl string, pages []Page) error {
+func (s *Site) createSitemap() error {
 	type Url struct {
 		XMLName xml.Name `xml:"url"`
 		Loc     string   `xml:"loc"`
@@ -262,11 +292,11 @@ func createSitemap(siteUrl string, pages []Page) error {
 		Urls           []Url    `xml:""`
 	}
 
-	urls := make([]Url, 0, len(pages))
-	for _, p := range pages {
+	urls := make([]Url, 0, len(s.pages))
+	for _, p := range s.pages {
 		urls = append(urls, Url{
-			Loc:     siteUrl + p.URLPath(),
-			LastMod: p.LastMod.Format(time.RFC3339),
+			Loc:     s.config.SiteUrl + p.URLPath(),
+			LastMod: p.LastMod.Format(time.RFC1123Z),
 		})
 	}
 
@@ -285,7 +315,7 @@ func createSitemap(siteUrl string, pages []Page) error {
 	defer wr.Close()
 
 	enc := xml.NewEncoder(wr)
-	if _, err := wr.WriteString(`<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//0.0.0.0:8000/sitemap.xsl"?>` + "\n"); err != nil {
+	if _, err := wr.WriteString(`<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>` + "\n"); err != nil {
 		return err
 	}
 	if err := enc.Encode(env); err != nil {
@@ -294,6 +324,79 @@ func createSitemap(siteUrl string, pages []Page) error {
 
 	// copy xml stylesheet
 	return copyFile("sitemap.xsl", "build/sitemap.xsl")
+}
+
+func (s *Site) createRSSFeed() error {
+
+	type Item struct {
+		Title       string `xml:"title"`
+		Link        string `xml:"link"`
+		Description string `xml:"description"`
+		PubDate     string `xml:"pubDate"`
+		GUID        string `xml:"guid"`
+	}
+
+	type Channel struct {
+		Title         string `xml:"title"`
+		Link          string `xml:"link"`
+		Description   string `xml:"description"`
+		Generator     string `xml:"generator"`
+		LastBuildDate string `xml:"lastBuildDate"`
+		Items         []Item `xml:"item"`
+	}
+
+	type Feed struct {
+		XMLName xml.Name `xml:"rss"`
+		Version string   `xml:"version,attr"`
+		Atom    string   `xml:"xmlns:atom,attr"`
+		Channel Channel  `xml:"channel"`
+	}
+
+	// add 10 most recent posts to feed
+	n := min(len(s.posts), 10)
+	items := make([]Item, 0, n)
+	for _, p := range s.posts[0:n] {
+		pageContent, err := p.ParseContent()
+		if err != nil {
+			continue
+		}
+
+		items = append(items, Item{
+			Title:       p.Title,
+			Link:        s.config.SiteUrl + p.URLPath(),
+			Description: pageContent,
+			PubDate:     p.Date.Format(time.RFC1123Z),
+			GUID:        s.config.SiteUrl + p.URLPath(),
+		})
+	}
+
+	feed := Feed{
+		Version: "2.0",
+		Atom:    "http://www.w3.org/2005/Atom",
+		Channel: Channel{
+			Title:         "Site title",
+			Link:          s.config.SiteUrl,
+			Generator:     "Gosite",
+			LastBuildDate: time.Now().Format(time.RFC1123Z),
+			Items:         items,
+		},
+	}
+
+	wr, err := os.Create("build/feed.xml")
+	if err != nil {
+		return err
+	}
+	defer wr.Close()
+
+	enc := xml.NewEncoder(wr)
+	if _, err := wr.WriteString(`<?xml version="1.0" encoding="UTF-8"?>` + "\n"); err != nil {
+		return err
+	}
+	if err := enc.Encode(feed); err != nil {
+		return err
+	}
+
+	return nil
 }
 
 func parseConfig() (*Config, error) {
@@ -313,57 +416,49 @@ func parseConfig() (*Config, error) {
 }
 
 func main() {
+	var err error
 	timeStart := time.Now()
 
+	site := Site{}
+
 	// read config.xml
-	config, err := parseConfig()
+	site.config, err = parseConfig()
 	if err != nil {
-		log.Fatalf("Error reading config.xml: %w\n", err)
+		log.Fatal("Error reading config.xml: %w\n", err)
 	}
 
-	// read all pages
-	pages, err := readPages()
-	if err != nil {
-		log.Fatal(err)
+	// read content
+	if err := site.readContent(); err != nil {
+		log.Fatal("Error reading content/: %s", err)
 	}
-
-	// create list of blog posts
-	var posts []Page
-	for _, p := range pages {
-		if !p.IsBlogPost {
-			continue
-		}
-
-		posts = append(posts, p)
-	}
-
-	// sort posts by date
-	sort.Slice(posts, func(i int, j int) bool {
-		return posts[i].Date.After(posts[j].Date)
-	})
 
 	// build each individual page
-	for _, p := range pages {
-		if err := process(&p, posts); err != nil {
-			log.Printf("Error processing %s: %w\n", p.Path, err)
+	for _, p := range site.pages {
+		if err := site.buildPage(&p); err != nil {
+			log.Warn("Error processing %s: %s\n", p.Path, err)
 		}
 	}
 
 	// create sitemap
-	if err := createSitemap(config.SiteUrl, pages); err != nil {
-		log.Fatalf("Error creating sitemap: %w\n", err)
+	if err := site.createSitemap(); err != nil {
+		log.Warn("Error creating sitemap: %s\n", err)
+	}
+
+	// create sitemap
+	if err := site.createRSSFeed(); err != nil {
+		log.Warn("Error creating RSS feed: %s\n", err)
 	}
 
 	// static files
 	if err := copyDirRecursively("public", "build"); err != nil {
-		log.Fatal(err)
+		log.Fatal("Error copying public/ directory: %s", err)
 	}
 
-	log.Printf("Built site containing %d pages in %d ms\n", len(pages), time.Since(timeStart).Milliseconds())
+	log.Info("Built site containing %d pages in %d ms\n", len(site.pages), time.Since(timeStart).Milliseconds())
 
 	if len(os.Args) > 1 && os.Args[1] == "serve" {
-		log.Printf("Listening on http://localhost:8080\n")
-		log.Fatal(http.ListenAndServe("localhost:8080", http.FileServer(http.Dir("build/"))))
+		log.Info("Listening on http://localhost:8080\n")
+		log.Fatal("Hello", http.ListenAndServe("localhost:8080", http.FileServer(http.Dir("build/"))))
 	}
 }
 

@@ -1,3 +1,6 @@
-{{ template "_header.html" }}
-    {{$.Content}}
+{{ template "_header.html" .}}
+
+<h1>{{ .Title }}</h1>
+{{ $.Content }}
+
 {{ template "_footer.html" }}

@@ -1,4 +1,4 @@
-module github.com/dannyvankooten/gosite
+module github.com/dannyvankooten/gozer
 
 go 1.21.4
 

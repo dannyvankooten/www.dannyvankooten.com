@@ -2,18 +2,18 @@
     <h1>{{$.Title}}</h1>
     {{$.Content}}
 
-        {{ $year := 0 }}
-        {{ range $.Posts }}
-            {{if not (eq .Date.Year $year)}}
-                {{ $year = .Date.Year }}
-                {{ if gt $year 0 }}</ul>{{ end }}
-                <h2>{{ $year }}</h2>
-                <ul>
-                {{end}}
-            <li><a href="/{{.URLPath}}">{{ .Title }}</a></li>
-
-
+    {{ $year := 0 }}
+    {{ range $.Posts }}
+        {{- if not (eq .Date.Year $year) }}
+            {{- if gt $year 0 }}
+                </ul>
+            {{- end }}
+            <h2>{{ .Date.Year }}</h2>
+            <ul>
+            {{- $year = .Date.Year -}}
         {{ end }}
+        <li><a href="/{{.URLPath}}">{{ .Title }}</a></li>
+    {{- end -}}
     </ul>
 
 {{ template "_footer.html" }}

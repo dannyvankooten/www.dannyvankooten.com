@@ -1,6 +1,5 @@
-{{ template "_header.html" }}
+{{ template "_header.html" .}}
     {{$.Content}}
-
 
     <h2>Latest blog posts</h2>
     <ul>
@@ -8,4 +7,5 @@
         <li><a href="/{{.URLPath}}">{{ .Title }}</a></li>
         {{ end }}
     </ul>
+    <p>View <a href="/blog/">all posts on my blog</a>.</p>
 {{ template "_footer.html" }}

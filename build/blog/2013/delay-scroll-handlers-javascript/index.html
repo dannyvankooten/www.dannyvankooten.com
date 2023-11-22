@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Delay scroll (and resize) handlers in JavaScript</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2013/delay-scroll-handlers-javascript/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Delay scroll (and resize) handlers in JavaScript</h1>
-    <p>While working on my latest <a href="@/wordpress-plugins.md">WordPress plugin</a> I had to attach a handler to the scroll event of the browser window to determine whether a user scrolled down far enough. While the logic for this is pretty simple, I had to put some thought into handling this the correct way.</p>
+
+<p class="muted">Published <time datetime="2013-11-14">2013-11-14</time> on <a href="https://www.dannyvankooten.com/blog/2013/delay-scroll-handlers-javascript/">Permalink</a></p>
+
+
+<p>While working on my latest <a href="@/wordpress-plugins.md">WordPress plugin</a> I had to attach a handler to the scroll event of the browser window to determine whether a user scrolled down far enough. While the logic for this is pretty simple, I had to put some thought into handling this the correct way.</p>
 <p>Directly attaching a handler to the scroll event is considered bad practice because (depending on the browser) this event can fire <strong>many times within a few milliseconds</strong>. I did some testing and just logging a message in the scroll handler caused my debugger to crash in Internet Explorer. The sames goes for other events like mousemove, keypress and resize.</p>
 <pre><code class="language-javascript">$(window).scroll(function() {
 	console.log( &quot;Firing!&quot; );
@@ -70,6 +77,7 @@ $(window).scroll(function() {
 });
 </code></pre>
 <p>Hope this saves someone a headache! There are various throttle or debounce plugins available for jQuery that do the same thing but in my opinion you don't really need another dependency for a simple thing as this. As you can see from my code examples, we just added throttling with just 3 or 4 lines of code.</p>
+
 
 </div>
 </main>

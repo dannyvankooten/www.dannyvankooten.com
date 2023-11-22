@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Enabling shortcodes in widgets, quick WordPress tip.</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2011/enabling-shortcodes-in-widgets-quick-wordpress-tip/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Enabling shortcodes in widgets, quick WordPress tip.</h1>
-    <p>Let's say you're developing a plugin that registers a shortcode so that a user can output some kind of form in his posts. Now, the user wants to output the form in one of his widget area's. One way to accomplish this would be to explicitly create a widget for it, add some fields like 'text_before'  and 'text_after' and use that to output the form along with some text before and after the actual form.</p>
+
+<p class="muted">Published <time datetime="2011-07-17">2011-07-17</time> on <a href="https://www.dannyvankooten.com/blog/2011/enabling-shortcodes-in-widgets-quick-wordpress-tip/">Permalink</a></p>
+
+
+<p>Let's say you're developing a plugin that registers a shortcode so that a user can output some kind of form in his posts. Now, the user wants to output the form in one of his widget area's. One way to accomplish this would be to explicitly create a widget for it, add some fields like 'text_before'  and 'text_after' and use that to output the form along with some text before and after the actual form.</p>
 <p>An easier approach would be to just enable the shortcode so that your user can type some text in one of WordPress its default text widgets (or a <a href="https://www.dannyvankooten.com/wordpress-plugins/wysiwyg-widgets/">WYSIWYG Widget</a>, to make things a bit easier) and use the shortcode wherever he wants to output the form, or whatever it is your shortcode provides.</p>
 <p>By default, shortcodes in text widgets are not enabled in WordPress. However, since the text from a text widget runs trough a filter called 'widget_text', enabling them would be pretty easy. In short,everything that's needed is one simple line of code:</p>
 <pre><code class="language-php?start_inline=1">add_filter('widget_text', 'do_shortcode');
@@ -43,6 +50,7 @@ echo $output_text;
 </code></pre>
 <p>Another, more flexible way would be to create a filter for your widget and hook the do_shortcode function to that filter. But, if enabling shortcodes is all that you're looking for, the above snippet will do just fine!</p>
 <p>Got a nice addition to this post? <a href="#respond">Please add it to the comments</a>. :-)</p>
+
 
 </div>
 </main>

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Browserpass for Firefox</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2016/browserpass-for-firefox/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Browserpass for Firefox</h1>
-    <p>Two weeks ago I announced Browserpass, a simple Chrome extension to access the <a href="https://www.passwordstore.org/">pass' passwordstore</a> directly from your browser.</p>
+
+<p class="muted">Published <time datetime="2016-11-28">2016-11-28</time> on <a href="https://www.dannyvankooten.com/blog/2016/browserpass-for-firefox/">Permalink</a></p>
+
+
+<p>Two weeks ago I announced Browserpass, a simple Chrome extension to access the <a href="https://www.passwordstore.org/">pass' passwordstore</a> directly from your browser.</p>
 <p><img src="/media/browserpass.gif" alt="Browserpass in action"></p>
 <p>After sharing my work on <a href="https://www.reddit.com/r/linux/comments/5bhg0t/gopass_a_chrome_extension_for_pass/">/r/linux</a> and being generally well received, people started asking whether this could be ported to Firefox.</p>
 <p>After doing some searching, this turned out to be much easier than expected due to the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions">Firefox WebExtensions API</a> which landed in Firefox 50 (released last week).</p>
@@ -41,6 +48,7 @@
 <h3>Directory structure of your password store</h3>
 <p>In the initial version of Browserpass a simple but rather limiting directory structure was assumed. I've changed this so that you can now simply search for the name of your password file, regardless of the directory structure.</p>
 <p>If the password file contains a line prefixed with either <code>login:</code> or <code>username:</code>, the extension will use that as the login name. Otherwise, the name of the password file will be used.</p>
+
 
 </div>
 </main>

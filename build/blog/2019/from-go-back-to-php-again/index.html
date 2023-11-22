@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Moving from Go to PHP again</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2019/from-go-back-to-php-again/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Moving from Go to PHP again</h1>
-    <p>Remember when <a href="@/blog/2017/2017-04-17-laravel-to-golang.md">I ditched Laravel for Golang</a>?</p>
+
+<p class="muted">Published <time datetime="2019-02-04">2019-02-04</time> on <a href="https://www.dannyvankooten.com/blog/2019/from-go-back-to-php-again/">Permalink</a></p>
+
+
+<p>Remember when <a href="@/blog/2017/2017-04-17-laravel-to-golang.md">I ditched Laravel for Golang</a>?</p>
 <p>Well, after 2 years on Go, our shop applications are powered by PHP again.</p>
 <p><strong>Why?! You already said it was probably a bad business decision, and then you spend even more time on it?!</strong> Well, yeah, several reasons actually.</p>
 <h3>PHP improved a lot</h3>
@@ -65,6 +72,7 @@ $manager-&gt;persist($user); // both user and its license will be saved
 <hr />
 <p><small><sup>1</sup> Just for fun, I compared apples and oranges again by benchmarking the login page (which doesn't hit any database) for both application versions using <a href="https://www.joedog.org/siege-home/">Siege</a>.</small></p>
 <p><small>The Symfony application (PHP 7.3, OPcache enabled, optimized autoloader) handles about 1470 req/s. The Go application (compiled using Go v1.11) averages about 18600 req/s.</small></p>
+
 
 </div>
 </main>

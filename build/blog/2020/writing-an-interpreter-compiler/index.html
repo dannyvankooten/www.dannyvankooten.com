@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Writing a bytecode interpreter - in C</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2020/writing-an-interpreter-compiler/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Writing a bytecode interpreter - in C</h1>
-    <p>Some time during 2016 I got my hands on the book <a href="https://interpreterbook.com/">Writing an interpreter in Go</a> by <a href="https://thorstenball.com/">Thorsten Ball</a>. I skimmed through the first few chapters, liked what I read and then... life happened and I never actually got around to building an interpreter. :(</p>
+
+<p class="muted">Published <time datetime="2020-03-06">2020-03-06</time> on <a href="https://www.dannyvankooten.com/blog/2020/writing-an-interpreter-compiler/">Permalink</a></p>
+
+
+<p>Some time during 2016 I got my hands on the book <a href="https://interpreterbook.com/">Writing an interpreter in Go</a> by <a href="https://thorstenball.com/">Thorsten Ball</a>. I skimmed through the first few chapters, liked what I read and then... life happened and I never actually got around to building an interpreter. :(</p>
 <p>Until last month, that is. I cleared out my schedule and finally started going through the book.</p>
 <p>For double the fun, I picked C as my programming language of choice instead of Go. This turned out to be a great decision as it really forced me to understand what was going on, instead of always having the easy option of just copying the author's code.</p>
 <p>I codenamed my implementation <a href="https://github.com/dannyvankooten/monkey-c-monkey-do">Monkey-C Monkey-Do</a>.</p>
@@ -51,6 +58,7 @@
 <li><a href="https://github.com/python/cpython/blob/master/Python/ceval.c#L775">This comment in the CPython source</a> explaining the use of computed GOTO's in the VM for a performance gain due to better CPU branch prediction over using a switch statement.</li>
 <li><a href="https://www.gingerbill.org/series/memory-allocation-strategies/">Memory allocation strategies</a> by Ginger Bill.</li>
 </ul>
+
 
 </div>
 </main>

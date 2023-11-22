@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>CodeIgniter Sessions in IE7</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2011/codeigniter-sessions-in-ie7/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>CodeIgniter Sessions in IE7</h1>
-    <p>Yesterday, while working on a fairly simple application that required a login functionality I came across a very strange problem with CodeIgniter and sessions in Internet Explorer 7. While testing everything seemed to work fine in all browsers, even in IE6 (I use IETester to test for the older versions of IE).</p>
+
+<p class="muted">Published <time datetime="2011-01-31">2011-01-31</time> on <a href="https://www.dannyvankooten.com/blog/2011/codeigniter-sessions-in-ie7/">Permalink</a></p>
+
+
+<p>Yesterday, while working on a fairly simple application that required a login functionality I came across a very strange problem with CodeIgniter and sessions in Internet Explorer 7. While testing everything seemed to work fine in all browsers, even in IE6 (I use IETester to test for the older versions of IE).</p>
 <h3>CodeIgniter Sessions not working in IE7</h3>
 <p>When showing the application to some friends it turned out that they were not able to log in.</p>
 <p>I thought that maybe their browser (IE7, yep..) was blocking cookies so I asked them to lower their security setting. No luck.</p>
@@ -40,6 +47,7 @@
 <h4>Native PHP sessions</h4>
 <p>The last thing you can do is to drop the CodeIgniter session library and start using PHP's default session handling using <code>session_start()</code>, <code>$_SESSION[]</code>, <code>unset</code> and <code>session_destroy</code>.</p>
 <p>Have a look at the <a href="https://codeigniter.com/wiki/Native_session/">CodeIgniter Native Session Library</a> if you really need to use a library to handle your sessions.</p>
+
 
 </div>
 </main>

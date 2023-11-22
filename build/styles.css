@@ -184,11 +184,11 @@ sup a {
     vertical-align: text-top;
 }
 
-small {
-    font-size: 80%;
-}
 small,
-small a{
+small a,
+.muted,
+.muted a {
+    font-size: 80%;
     color: #555;
 }
 

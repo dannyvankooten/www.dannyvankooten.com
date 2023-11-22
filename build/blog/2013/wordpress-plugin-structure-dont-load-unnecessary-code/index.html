@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>WordPress plugin structure, don&#39;t load unnecessary code</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2013/wordpress-plugin-structure-dont-load-unnecessary-code/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>WordPress plugin structure, don&#39;t load unnecessary code</h1>
-    <p>When developing WordPress plugins it is important to decide whether code needs to be loaded or not as early in the request lifecycle as possible. Why bother loading unnecessary code and hooking into actions and filters that will never run for the request being made? Having said that, it is also important to keep your code structured and not go overboard with this.</p>
+
+<p class="muted">Published <time datetime="2013-11-20">2013-11-20</time> on <a href="https://www.dannyvankooten.com/blog/2013/wordpress-plugin-structure-dont-load-unnecessary-code/">Permalink</a></p>
+
+
+<p>When developing WordPress plugins it is important to decide whether code needs to be loaded or not as early in the request lifecycle as possible. Why bother loading unnecessary code and hooking into actions and filters that will never run for the request being made? Having said that, it is also important to keep your code structured and not go overboard with this.</p>
 <h2>Conditional loading of code</h2>
 What worked well for me so far is to split my code up into several files and load each of these files based on simple conditionals. While this might not do that much in terms of performance this will also help you in the long run by forcing a certain structure in your code.
 <p>Let's start with a no-brainer: admin section specific code versus public or frontend section specific code.</p>
@@ -70,6 +77,7 @@ if ( !is_admin() ) {
 </code></pre>
 <p>Combining these 3 simple conditionals will keep the footprint of your plugin for each request as low as possible and forces you to follow a certain code structure, which you will benefit from in the long run.</p>
 <p>Additions or suggestions? Please leave them in the comments. :-)</p>
+
 
 </div>
 </main>

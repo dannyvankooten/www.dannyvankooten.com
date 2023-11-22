@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <title>Replacing annotations with PHP attributes - with Rector</title>
+    <link rel="canonical" href="https://www.dannyvankooten.com/blog/2023/rector-annotations-to-attributes/">
 </head>
 <body>
 <header class="site-header">
@@ -21,8 +23,13 @@
 <main>
     <div class="container">
 
+
 <h1>Replacing annotations with PHP attributes - with Rector</h1>
-    <p>Recently I was updating a Symfony application to version 6.3 and working my way through all deprecations. One of them was the move to native <a href="https://www.php.net/manual/en/language.attributes.overview.php">PHP attributes</a> (introduced in PHP8) instead of annotations supported by the Doctrine Annotations library.</p>
+
+<p class="muted">Published <time datetime="2023-07-10">2023-07-10</time> on <a href="https://www.dannyvankooten.com/blog/2023/rector-annotations-to-attributes/">Permalink</a></p>
+
+
+<p>Recently I was updating a Symfony application to version 6.3 and working my way through all deprecations. One of them was the move to native <a href="https://www.php.net/manual/en/language.attributes.overview.php">PHP attributes</a> (introduced in PHP8) instead of annotations supported by the Doctrine Annotations library.</p>
 <p>Doing this manually would cost quite a few tedious hours. Luckily, it's 2023 and static analysis tools have been getting better and better, at least in the PHP ecosystem.</p>
 <h2>Rector - automated refactoring</h2>
 <p><a href="https://getrector.com/documentation">Rector</a> is a tool for automated refactoring of PHP code. It can handle a wide variety of changes on a language level and also supports upgrades for some of the more popular frameworks.</p>
@@ -85,6 +92,7 @@ $rectorConfig-&gt;ruleWithConfiguration(AnnotationToAttributeRector::class, [
 </code></pre>
 <p>There are hundreds of available <a href="https://getrector.com/documentation/rules-overview">Rector rules</a> available. My guess is that if you're refactoring something on a language or framework level, Rector has you covered.</p>
 <p>Kudos to the Rector authors for building such a great tool!</p>
+
 
 </div>
 </main>

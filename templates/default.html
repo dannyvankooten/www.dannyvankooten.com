@@ -1,4 +1,10 @@
-{{ template "_header.html" }}
+{{ template "_header.html" .}}
+
 <h1>{{.Title}}</h1>
-    {{.Content}}
-{{ template "_footer.html" }}
+{{ if .Page.IsBlogPost }}
+<p class="muted">Published <time datetime="{{ .Page.Date.Format `2006-01-02` }}">{{ .Page.Date.Format `2006-01-02` }}</time> on <a href="{{.SiteUrl}}{{ .Page.URLPath }}">Permalink</a></p>
+{{ end }}
+
+{{.Content}}
+
+{{ template "_footer.html" .}}
