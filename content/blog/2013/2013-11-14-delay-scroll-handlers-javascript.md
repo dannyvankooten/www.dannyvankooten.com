@@ -5,7 +5,7 @@ date = 2013-11-14 16:34:02
 
 +++
 
-While working on my latest [WordPress plugin](@/wordpress-plugins.md) I had to attach a handler to the scroll event of the browser window to determine whether a user scrolled down far enough. While the logic for this is pretty simple, I had to put some thought into handling this the correct way.
+While working on my latest [WordPress plugin](/wordpress-plugins/) I had to attach a handler to the scroll event of the browser window to determine whether a user scrolled down far enough. While the logic for this is pretty simple, I had to put some thought into handling this the correct way.
 
 Directly attaching a handler to the scroll event is considered bad practice because (depending on the browser) this event can fire <strong>many times within a few milliseconds</strong>. I did some testing and just logging a message in the scroll handler caused my debugger to crash in Internet Explorer. The sames goes for other events like mousemove, keypress and resize.
 
@@ -54,12 +54,12 @@ $(window).scroll(function() {
 
 		// this variable changes between callbacks, so we can't cache it
 		var y = $(window).scrollTop() + windowHeight;
- 
+
 	    if(y > triggerHeight) {
 	        // ...
 	    }
 
-		
+
 	}, 100);
 });
 ```

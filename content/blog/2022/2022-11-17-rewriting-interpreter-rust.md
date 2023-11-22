@@ -1,21 +1,21 @@
 +++
-date = 2022-11-17 
+date = 2022-11-17
 title = "(Re)writing an interpreter in Rust"
 +++
 
-Two years ago I [wrote my first interpreter](@/blog/2020/2020-03-06-writing-an-interpreter-compiler.md) for a toy programming language called Monkey, in C.
+Two years ago I [wrote my first interpreter](/blog/2020/writing-an-interpreter-compiler/) for a toy programming language called Monkey, in C.
 
-The thing works and is pretty fast, but I remember a lot of frustration dealing with segfaults or hard-to-track down memory leaks as soon as I introduced heap allocated values. 
+The thing works and is pretty fast, but I remember a lot of frustration dealing with segfaults or hard-to-track down memory leaks as soon as I introduced heap allocated values.
 
 Much of this is undoubtedly due to me not being very experienced with C. But, and I know this for a fact now, it's also because C makes it very easy for issues like this to pop-up at all.
 
 ## Rewrite it in Rust
 
-One of my long-time friends has been working hard on a [fast multi-threaded DataFrame library in Rust](https://www.pola.rs/). I wanted to contribute something so started working on a [CLI interface](https://github.com/pola-rs/polars/pull/5175) for it. 
+One of my long-time friends has been working hard on a [fast multi-threaded DataFrame library in Rust](https://www.pola.rs/). I wanted to contribute something so started working on a [CLI interface](https://github.com/pola-rs/polars/pull/5175) for it.
 
 Working my way through the codebase made me realise that if I wanted to contribute in a more significant way, I had to first work on my Rust skills. I was already comfortable enough with Rust to solve [Advent of Code](https://github.com/dannyvankooten/advent-of-code/tree/main/2019) puzzles, but I had yet to really get in a good fight with the borrow checker. I needed a bigger project to really get rusty.
 
-What better way to practice than to build an interpreter? It's fun and you can really go crazy trying to make it fast. Shall we try to make it at least as performant as the one I wrote in C? 
+What better way to practice than to build an interpreter? It's fun and you can really go crazy trying to make it fast. Shall we try to make it at least as performant as the one I wrote in C?
 
 As our benchmark program, we'll be measuring a (very inefficient) recursive fibonacci:
 
@@ -103,7 +103,7 @@ struct Environment<'a> {
 }
 ```
 
-When resolving a variable by its name, we look up the name in the `symbols` HashMap, traversing upwards to the outermost `Environment` until we have a match. 
+When resolving a variable by its name, we look up the name in the `symbols` HashMap, traversing upwards to the outermost `Environment` until we have a match.
 
 <div id="aliases"></div>
 
@@ -172,7 +172,7 @@ Let's run another benchmark (using the `fb` alias) to see what Hyperfine thinks 
 
 <div style="overflow-x: scroll;">
 
-| Command | Mean [s] | Min [s] | Max [s] | 
+| Command | Mean [s] | Min [s] | Max [s] |
 |:---|---:|---:|---:|
 | `nederlang fib.nl` | 32.284 ± 0.337 | 31.953 | 32.627 |
 
@@ -180,13 +180,13 @@ Let's run another benchmark (using the `fb` alias) to see what Hyperfine thinks 
 
 Down to **32 seconds**, a 18% performance improvement. Not bad, but still slow... We need to rethink the way we store and resolve variables.
 
-#### Using a Vec instead of a Hashmap 
+#### Using a Vec instead of a Hashmap
 
-In Nederlang there exists a global scope and a local scope. Each function call creates a new local scope so that every variable declared inside that function is dropped once the function returns. 
+In Nederlang there exists a global scope and a local scope. Each function call creates a new local scope so that every variable declared inside that function is dropped once the function returns.
 
 We could represent that as a `Vec<HashMap<String, Object>>`, pushing a new HashMap before evaluating a function body and then popping it afterwards.
 
-But also, in a typical program there will only be a handful of variables per scope. What if we drop the `HashMap` entirely and use a `Vec<Vec<(String, Object)>>` instead? 
+But also, in a typical program there will only be a handful of variables per scope. What if we drop the `HashMap` entirely and use a `Vec<Vec<(String, Object)>>` instead?
 
 The look-up time will be **_O(n)_** instead of **_O(1)_** but since there are only a handful of variables to iterate over, I have a feeling it will be faster than going through a hash function.
 
@@ -206,7 +206,7 @@ impl Environment {
                 }
             }
         }
-      
+
         Object::Null
     }
 }
@@ -216,34 +216,34 @@ You can see the entire [commit here](https://github.com/dannyvankooten/nederlang
 
 <div style="overflow-x: scroll;">
 
-| Command | Mean [s] | Min [s] | Max [s] | 
+| Command | Mean [s] | Min [s] | Max [s] |
 |:---|---:|---:|---:|
 | `nederlang fib.nl` | 23.883 ± 0.129 | 23.743 | 23.998 |
 
 </div>
 
-**24 seconds**. a 25% performance improvement! Just 80% more to go... 
+**24 seconds**. a 25% performance improvement! Just 80% more to go...
 
 
 #### Separating names from their values
 
 ```
-100.00%    17.41%  [.] nederlang::eval::eval_expr                                                                 
-100.00%     0.00%  [.] nederlang::eval::eval_infix_expr (inlined)                                                 
-100.00%     4.24%  [.] nederlang::eval::eval_block                                                                
-100.00%     0.00%  [.] nederlang::eval::eval_if_expr (inlined)                                                    
- 47.63%     5.58%  [.] nederlang::eval::Environment::resolve     
+100.00%    17.41%  [.] nederlang::eval::eval_expr
+100.00%     0.00%  [.] nederlang::eval::eval_infix_expr (inlined)
+100.00%     4.24%  [.] nederlang::eval::eval_block
+100.00%     0.00%  [.] nederlang::eval::eval_if_expr (inlined)
+ 47.63%     5.58%  [.] nederlang::eval::Environment::resolve
 ```
 
 48% of the time is still spent inside `Environment::resolve`. What else can we do to speed this up?
 
-To resolve a variable value by its name, it is currently iterating over a bunch of separately allocated `Vec` instances holding a tuple consisting of the variable name and the value. 
+To resolve a variable value by its name, it is currently iterating over a bunch of separately allocated `Vec` instances holding a tuple consisting of the variable name and the value.
 
 Changing the language specificiation of Nederlang to enforce that function names can not be shadowed would allow us to speed-up resolving functions by their name. That way we can start by looking at the outer-most (global) scope and only then start traversing all of the inner scopes. A cool trick, but not really Rust related so let's think of what else there is.
 
-What about using a single `Vec<(String, Object)>` then? If we store the number of declared variables before evaluating the function body, we can then call [Vec::truncate()](https://doc.rust-lang.org/std/vec/struct.Vec.html#method.truncate) afterwards to get rid of all variables declared in that function. 
+What about using a single `Vec<(String, Object)>` then? If we store the number of declared variables before evaluating the function body, we can then call [Vec::truncate()](https://doc.rust-lang.org/std/vec/struct.Vec.html#method.truncate) afterwards to get rid of all variables declared in that function.
 
-While we're at it, let's use a separate `Vec` for `names` and `values`. That should speed-up resolving variables by their name since we're really only interested in the value of the variable we're looking for. 
+While we're at it, let's use a separate `Vec` for `names` and `values`. That should speed-up resolving variables by their name since we're really only interested in the value of the variable we're looking for.
 
 ```rust
 struct Environment {
@@ -263,7 +263,7 @@ impl Environment {
         if let Some(pos) = self.names.iter().rev().position(|name| *name == ident) {
             return self.values[self.values.len() - 1 - pos].clone();
         }
-        
+
         Object::Null
     }
 
@@ -293,7 +293,7 @@ env.values.truncate(var_length);
 return result;
 ```
 
-Are we faster than the C implementation yet? 
+Are we faster than the C implementation yet?
 
 <div style="overflow-x: scroll;">
 
@@ -319,7 +319,7 @@ And the profile provided by `perf`:
  40.23%    19.38%   [.] <nederlang::ast::Expr as core::clone::Clone>::clone
 ```
 
-The good news is that we're down to **21 seconds** now, so resolving variables did indeed get faster. 
+The good news is that we're down to **21 seconds** now, so resolving variables did indeed get faster.
 
 The bad news is that we can now no longer ignore the glaring obvious, all these calls to `clone()`. We're cloning a bunch of `Expr` and `Vec` types inside the hot path.
 
@@ -353,19 +353,19 @@ enum Object {
 Object::Func(expr as *const ExprFunction)
 
 // Dereferencing the raw pointer
-let func = unsafe { 
-    &*(ptr as *const ExprFunction) 
+let func = unsafe {
+    &*(ptr as *const ExprFunction)
 };
 ```
 
 Here's the [full commit](https://github.com/dannyvankooten/nederlang/commit/17f76590039c88b54de58a169a2e58b2a17faca8). Let's run another benchmark now.
 
 
-| Command | Mean [s] | Min [s] | Max [s] | 
+| Command | Mean [s] | Min [s] | Max [s] |
 |:---|---:|---:|---:|
-| `nederlang fib.nl` | 4.222 ± 0.059 | 4.177 | 4.322 | 
+| `nederlang fib.nl` | 4.222 ± 0.059 | 4.177 | 4.322 |
 
-Down to **4.2 seconds**. That's the 80% improvement we needed! Surely that is worth introducing the lifetime constraints and sleeping sound at night knowing our code is safe. 
+Down to **4.2 seconds**. That's the 80% improvement we needed! Surely that is worth introducing the lifetime constraints and sleeping sound at night knowing our code is safe.
 
 ```diff
 - fn eval_expr(expr: &Expr, env: &mut Environment) -> Result<Object, Error> {
@@ -386,7 +386,7 @@ struct Environment<'a> {
 
 <div style="overflow-x: scroll;">
 
-| Command | Mean [s] | Min [s] | Max [s] | 
+| Command | Mean [s] | Min [s] | Max [s] |
 |:---|---:|---:|---:|
 | `nederlang fib.nl` | 3.699 ± 0.015 | 3.685 | 3.720 |
 
@@ -441,7 +441,7 @@ print-type-size     variant `Null`: 0 bytes
 
 > Any enum value consumes as much memory as the largest variant for its corresponding enum type, as well as the size needed to store a discriminant.
 
-That explains. The largest variant is `Object::String`, holding a `String` type of 24 bytes. The discriminant is taking up a single byte, but because of alignment it will add another 7 bytes of padding.  
+That explains. The largest variant is `Object::String`, holding a `String` type of 24 bytes. The discriminant is taking up a single byte, but because of alignment it will add another 7 bytes of padding.
 
 Using 32 bytes while most of our variants could theoretically fit into just 8 bytes does not sound optimal. What can we do to shrink it?
 
@@ -454,7 +454,7 @@ Sure! We can do [pointer tagging](https://www.npopov.com/2012/02/02/Pointer-magi
 
 > Trigger warning: unsafe Rust ahead!
 
-Right now our Object type owns the `String` value it holds, which means a lot of cloning just passing objects (of this variant) around. 
+Right now our Object type owns the `String` value it holds, which means a lot of cloning just passing objects (of this variant) around.
 
 We should probably allocate our String objects elsewhere and have our `Object` store a reference (or pointer) instead. That also means we need some kind of garbage collection to manage that memory for us, but I will (happily) ignore that for this post as we're not really working with any heap allocated values in our recursive fibonnacci program anyway.
 
@@ -471,9 +471,9 @@ enum Object {
 
 This way the size of our `Object` will be 16 bytes. 8 bytes for the `i64` or raw pointer and another 8 bytes for the enum discriminant. But what if we store the discriminant _inside_ the pointer or value?
 
-Because of said memory alignment, [memory addresses on 64-bit architectures](https://en.wikipedia.org/wiki/Tagged_pointer#Folding_tags_into_the_pointer) will also be byte aligned. This leaves the 3 least significant bits unused, as these will always be 0. 
+Because of said memory alignment, [memory addresses on 64-bit architectures](https://en.wikipedia.org/wiki/Tagged_pointer#Folding_tags_into_the_pointer) will also be byte aligned. This leaves the 3 least significant bits unused, as these will always be 0.
 
-There are currently only 6 different types of values in Nederlang, so 3 bits will be sufficient to store our type information in. 
+There are currently only 6 different types of values in Nederlang, so 3 bits will be sufficient to store our type information in.
 
 The new `Object` type will be a thin wrapper around a raw pointer:
 
@@ -527,7 +527,7 @@ impl<'a> Object {
 }
 ```
 
-As you can see we're losing 3 bits because of the type tag, so our maximum integer value will now be 2^60 instead of 2^63. 
+As you can see we're losing 3 bits because of the type tag, so our maximum integer value will now be 2^60 instead of 2^63.
 
 To later retrieve the integer value, we simply shift 3 bits to the right right again (discarding the type tag).
 
@@ -564,7 +564,7 @@ let str = obj.get::<String>();
 
 You can [view the complete tagged pointer implementation in this commit](https://github.com/dannyvankooten/nederlang/commit/6bacf8a7107beed13a46262ba6aeb02c003dca05).
 
-OK. Now our `Object` type has shrunk to just 8 bytes, meaning it fits into a register! 
+OK. Now our `Object` type has shrunk to just 8 bytes, meaning it fits into a register!
 
 What does that yield us in terms of performance? Let's run `fb` again to find out.
 
@@ -581,7 +581,7 @@ BOOM! **2.1 seconds**, down from 3.7. A 43% performance improvement. Worth it if
 
 #### (Manually) inlining the hot path
 
-We've squeezed most performance out of the tree walker by now, but there are still some things we can do. We can compile an optimized binary using [profile guided optimization](https://doc.rust-lang.org/rustc/profile-guided-optimization.html). While that shaved off another few percent for me, it feels a bit too much like cheating. 
+We've squeezed most performance out of the tree walker by now, but there are still some things we can do. We can compile an optimized binary using [profile guided optimization](https://doc.rust-lang.org/rustc/profile-guided-optimization.html). While that shaved off another few percent for me, it feels a bit too much like cheating.
 
 One other thing is to manually instruct the compiler what functions to inline, trading binary size for runtime performance. Let's take a look at the binary size before spraying `[inline]` all over our code.
 
@@ -624,15 +624,15 @@ So... Did it yield a significant performance improvement? Let's ask hyperfine.
 
 That's about as far as I want to go with this tree walker.
 
-The most obvious remaining performance improvement will come from not evaluating the AST directly but transforming it into (CPU-cache efficient) bytecode, applying all kinds of optimizations at compile time and then executing the instructions inside a virtual machine. 
+The most obvious remaining performance improvement will come from not evaluating the AST directly but transforming it into (CPU-cache efficient) bytecode, applying all kinds of optimizations at compile time and then executing the instructions inside a virtual machine.
 
 ## My experience writing Rust versus C
 
-In the past few weeks I've grown considerably more comfortable writing Rust code, grasping lifetimes and dealing with Rust's tooling ecosystem. 
+In the past few weeks I've grown considerably more comfortable writing Rust code, grasping lifetimes and dealing with Rust's tooling ecosystem.
 
-I've now implemented and optimized a simple interpreted programming language in both C and Rust. I think it is easy to write performant C code, but it's very hard to write safe/leak-free C code. Especially for a newcomer. 
+I've now implemented and optimized a simple interpreted programming language in both C and Rust. I think it is easy to write performant C code, but it's very hard to write safe/leak-free C code. Especially for a newcomer.
 
-Rust manages to reverse that default. It is very easy to write safe/leak-free Rust code, yet a newcomer to the language might have to spend some time optimizing that code for performance. 
+Rust manages to reverse that default. It is very easy to write safe/leak-free Rust code, yet a newcomer to the language might have to spend some time optimizing that code for performance.
 
 This really only applies to newcomers (like me) though. In hindsight most of the performance optimizations in this post were pretty obvious and trivial to fix, now I know what to watch for.
 

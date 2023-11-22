@@ -9,7 +9,7 @@ The plugin experienced some crazy growth since its first release, less than 2 ye
 
 
 #### 1.000.000 downloads
-Just a little over a year ago [the plugin was still at 100.000 downloads](@/blog/2013/2013-12-06-100-000-plugin-downloads-6-months-mailchimp-wordpress.md). 
+Just a little over a year ago [the plugin was still at 100.000 downloads](/blog/2013/100-000-plugin-downloads-6-months-mailchimp-wordpress/).
 
 At _exactly midnight UTC last Friday_ the plugin was downloaded for the **millionth time**.
 
@@ -33,6 +33,6 @@ Another milestone. Not sure how long this has been the case but Mailchimp for Wo
 
 #### More numbers
 
-We did a post on the [Mailchimp for WordPress Blog listing some numbers on the plugin](https://www.mc4wp.com/blog/one-million-downloads/). 
+We did a post on the [Mailchimp for WordPress Blog listing some numbers on the plugin](https://www.mc4wp.com/blog/one-million-downloads/).
 
 I'm delighted to have reached those milestones and eager to continue improving the plugin so it can be more useful for you all. So please, continue downloading the plugin, send me your feedback, leave a plugin review, write about the plugin. Any of those things would make me really, really happy.

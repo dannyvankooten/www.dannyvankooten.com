@@ -44,7 +44,7 @@ $r->resources("users",array("only" => "index,show"));
 if($r->hasRoute()) {
     // extract controller, action and parameters.
     extract($r->getRoute());
-?>   
+?>
 <h1>Route found!</h1>
 <pre>
     Controller: 	<?php echo $controller; ?>
@@ -61,4 +61,4 @@ If you're using this class and experience any issues, please post them using Git
 
 <a href="https://github.com/dannyvankooten/PHP-Router">Watch PHP Routing Class on Github!</a>
 
-_**Update (July 2012):** If you like PHP Router you might also like [AltoRouter](@/blog/2012/2012-07-31-altorouter-php-routing-class.md)._
+_**Update (July 2012):** If you like PHP Router you might also like [AltoRouter](/blog/2012/2012-07-31-altorouter-php-routing-class.md)._

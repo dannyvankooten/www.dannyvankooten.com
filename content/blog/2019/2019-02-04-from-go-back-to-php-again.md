@@ -3,7 +3,7 @@ title = "Moving from Go to PHP again"
 date = 2019-02-04
 +++
 
-Remember when [I ditched Laravel for Golang](@/blog/2017/2017-04-17-laravel-to-golang.md)?
+Remember when [I ditched Laravel for Golang](/blog/2017/laravel-to-golang/)?
 
 Well, after 2 years on Go, our shop applications are powered by PHP again.
 
@@ -11,11 +11,11 @@ Well, after 2 years on Go, our shop applications are powered by PHP again.
 
 ### PHP improved a lot
 
-PHP improved a lot during the last 3 years. It added [scalar argument type declarations](https://secure.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration), [return type declarations](https://secure.php.net/manual/en/functions.returning-values.php#functions.returning-values.type-declaration), [multi-catch exceptions](https://wiki.php.net/rfc/multiple-catch), impressive [performance improvements](https://www.zend.com/en/resources/php7_infographic) and many more general improvements. 
+PHP improved a lot during the last 3 years. It added [scalar argument type declarations](https://secure.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration), [return type declarations](https://secure.php.net/manual/en/functions.returning-values.php#functions.returning-values.type-declaration), [multi-catch exceptions](https://wiki.php.net/rfc/multiple-catch), impressive [performance improvements](https://www.zend.com/en/resources/php7_infographic) and many more general improvements.
 
 ### Symfony4 is a game changer
 
-I've always been a big fan of [Symfony's compatibility promise](https://symfony.com/doc/current/contributing/code/bc.html) and their impressive 13-year track record proves they mean it.  
+I've always been a big fan of [Symfony's compatibility promise](https://symfony.com/doc/current/contributing/code/bc.html) and their impressive 13-year track record proves they mean it.
 
 So when [Symfony4](https://symfony.com/4) was released and I heard good things about it, I took it for a test drive by implementing a tiny part of our application in it.
 
@@ -23,7 +23,7 @@ Conclusion: it's great. Really, really great.
 
 A lot of effort went into simplifying the setup, making it a lot faster to bootstrap a Symfony application with much less work required configuring bundles. It's now rivaling Laravel's rapid development while at the same time encouraging decent development practices to ensure you don't shoot yourself in the foot. And [it performs really well](http://www.phpbenchmarks.com/en/).
 
-It was relatively easy to port our old Laravel application to Symfony, implement some new features the Go version of our application offered and undo some of the shortcuts I took earlier (most of them because of Laravel's global helpers). 
+It was relatively easy to port our old Laravel application to Symfony, implement some new features the Go version of our application offered and undo some of the shortcuts I took earlier (most of them because of Laravel's global helpers).
 
 A nice side effect is that I've managed to substantially increase our test coverage in the process. Writing the same application in terms of functionality for a ~~second~~ third time really helps in that regard.
 
@@ -60,13 +60,13 @@ In Doctrine all operations are wrapped in a SQL transaction by default. That's a
 
 Honestly, Go is great. Its simplicity is refreshing and you can't get anywhere near that kind of performance using PHP <sup class="muted">1</sup>. I would still pick it if we need a small API or something that requires high throughput.
 
-Our shops however are more monolithic with a lot of server-side rendering. While that's certainly doable in Go (as the last 2 years proved), it's more maintainable for us to do it in PHP right now. 
+Our shops however are more monolithic with a lot of server-side rendering. While that's certainly doable in Go (as the last 2 years proved), it's more maintainable for us to do it in PHP right now.
 
-> Side note: without the experience gained from our years on Go, I probably wouldn't have started [Fathom](@/blog/2018/2018-05-12-reviving-ana-as-fathom.md). So perhaps it wasn't such a bad business decision after all?
+> Side note: without the experience gained from our years on Go, I probably wouldn't have started [Fathom](/blog/2018/reviving-ana-as-fathom/). So perhaps it wasn't such a bad business decision after all?
 
 ### Making the correct business decision
 
-One reason not mentioned so far is that over the last year or so, I've been approached by several companies interested to take over one of our products. 
+One reason not mentioned so far is that over the last year or so, I've been approached by several companies interested to take over one of our products.
 
 They were a little surprised to hear our stack involved Golang and some flat out told us they'd prefer PHP, because that's what most of our products ([mc4wp.com](https://www.mc4wp.com/), [boxzillaplugin.com](https://boxzillaplugin.com) and [htmlformsplugin.com](https://www.htmlformsplugin.com/)) rely upon. And I don't blame them.
 
