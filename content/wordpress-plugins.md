@@ -1,5 +1,4 @@
 +++
-template = "page.html"
 title = "WordPress Plugins"
 +++
 

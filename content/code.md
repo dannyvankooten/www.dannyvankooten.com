@@ -1,6 +1,5 @@
 +++
 title = "Code"
-template = "page.html"
 +++
 
 This page lists the various public git repositories I have on either [sourcehut](https://git.sr.ht/~dvko/) or [GitHub](https://github.com/dannyvankooten/), sorted by recent activity.

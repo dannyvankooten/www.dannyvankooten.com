@@ -1,5 +1,4 @@
 +++
-template = "page.html"
 title = "Donate"
 +++
 
@@ -7,7 +6,7 @@ Hey!
 
 You probably got to this page via one of my [plugins for WordPress](/wordpress-plugins/). Nice!
 
-If you're happy with what I built (or wrote) and want to give something back, consider donating to a charity instead. Or treat your partner or parents on something nice, and tell them you love them too (if you do, don't lie). :) 
+If you're happy with what I built (or wrote) and want to give something back, consider donating to a charity instead. Or treat your partner or parents on something nice, and tell them you love them too (if you do, don't lie). :)
 
 Anyways, here's some of the charities I know of and think are really important.
 

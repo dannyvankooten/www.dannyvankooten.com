@@ -1,13 +1,12 @@
 +++
 title = "Projects"
-template = "page.html"
 +++
 
 These are some (but not all) of the projects I've worked on over the years.
 
-#### Nederlang 
+#### Nederlang
 
-An interpreted programming language with a bytecode compiler and virtual machine hosted in Rust. 
+An interpreted programming language with a bytecode compiler and virtual machine hosted in Rust.
 
 [Github](https://github.com/dannyvankooten/nederlang)
 
@@ -61,7 +60,7 @@ At the time of writing (2022) it has been downloaded well over 40 million times 
 
 [Website](https://www.mc4wp.com/) | [GitHub](https://github.com/ibericode/mailchimp-for-wordpress) | [Introduction post on my blog](/blog/my-newest-wordpress-plugin-mailchimp-for-wp/)
 
---- 
+---
 
 #### AltoRouter
 
