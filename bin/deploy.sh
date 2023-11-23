@@ -2,7 +2,7 @@
 set -e
 
 echo "Building site"
-gozer
+gozer -c config_prod.xml build
 
 echo "Minify stylesheet"
 minify -o build/styles.css build/styles.css
