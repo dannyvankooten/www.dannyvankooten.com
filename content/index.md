@@ -13,10 +13,9 @@ It all started out with me hospitalized due to acute appendicitis and thus havin
 
 Some [more software](/projects/) products followed while I avoided the Dutch winters by staying in Asia. Nowadays, I am back in The Netherlands together with my wife and 2 kids.
 
-See what I'm working on [now](/now/), some [projects](/projects/) I've done, my [favorite bookmarks](/bookmarks/) or a more general list of [code](/public/code/) I've been involved with.
+See what I'm working on [now](/now/), some [projects](/projects/) I've done, my [favorite bookmarks](/bookmarks/) or a more general list of [code](/code/) I've been involved with.
 
 <img src="/img/danny-rico.jpg" alt="Danny with stray dog" loading="lazy" width="300" height="300" />
-
 
 ## Hire me
 
