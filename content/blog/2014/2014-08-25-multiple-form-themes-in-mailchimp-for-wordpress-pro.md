@@ -11,9 +11,9 @@ Up until now, using the Styles Builder would generate a stylesheet which would a
 
 After updating the [Mailchimp for WordPress plugin](https://www.mc4wp.com/) to version 2.4 the Styles Builder will ask you for which form you want to design styles.
 
-![Designing form styles in the WordPress admin](https://res.cloudinary.com/dannyvankooten/image/upload/v1408995369/multiple-form-themes-styles-builder_i0xqp4.jpg)
+![Designing form styles in the WordPress admin](/media/2014/multiple-form-themes-styles-builder_i0xqp4.jpg)
 
-Selecting a form will load any previous form styles you may have created for this form. When saving your styles the plugin will generate a stylesheet only targeting the selected form. This gives us the awesome ability to have multiple forms with complete different styles. 
+Selecting a form will load any previous form styles you may have created for this form. When saving your styles the plugin will generate a stylesheet only targeting the selected form. This gives us the awesome ability to have multiple forms with complete different styles.
 
 ![Two sign-up forms with completely different styles](https://res.cloudinary.com/dannyvankooten/image/upload/v1408995369/form-styles-frontend_gcibew.jpg)
 
