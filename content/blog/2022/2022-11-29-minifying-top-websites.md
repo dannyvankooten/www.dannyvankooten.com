@@ -88,7 +88,7 @@ It shows that these popular websites are pretty much all applying best practices
 
 In 2021, [data transmission was good for about 1.4% of global electricy usage](https://www.iea.org/reports/data-centres-and-data-transmission-networks). Imagine what this number would be if we did not have gzip compression, browser caches and minification.
 
-A few years ago I wrote about [CO2 emissions on the web](/blog/2020/2020-02-04-website-carbon-emissions.md) where I went with an estimate of 0.5 kWh per GB of data transfered. Since then I've seen a lot of additional discussion about the energy cost of data transfer, with estimates still varying wildly.
+A few years ago I wrote about [CO2 emissions on the web](/blog/2020/website-carbon-emissions/) where I went with an estimate of 0.5 kWh per GB of data transfered. Since then I've seen a lot of additional discussion about the energy cost of data transfer, with estimates still varying wildly.
 
 The team behind [WebsiteCarbon.com estimate it](https://sustainablewebdesign.org/calculating-digital-emissions/) at about 0.8 kWh per GB while [other research](https://www.researchgate.net/figure/Trends-for-ICT-electric-power-overall-2030_fig5_342643762) estimates it closer to 0.1 kWh per GB for 2020.
 

@@ -6,10 +6,10 @@ date = 2014-08-23 19:17:57
 +++
 
 <blockquote>
-    <p>The below is vastly outdated. I've since moved to a static site generator called <s>Jekyll</s> <a href="https://www.getzola.org/">Zola</a>. <a href="https://git.sr.ht/~dvko/dannyvankooten.com">Source code is here on GitHub</a>. </p>
+    <p>The below is vastly outdated. I've since moved to a static site generator called <s>Jekyll</s> <s>Zola</s> <a href="https://github.com/dannyvankooten/gozer">Gozer</a>. <a href="https://git.sr.ht/~dvko/dannyvankooten.com">Source code is here on GitHub</a>. </p>
 </blockquote>
 
-It was about time I spent some time to work on my personal site. 
+It was about time I spent some time to work on my personal site.
 
 The old one was vastly outdated in terms of content and technologies used. I also didn't write a single blog post in at least 6 months, while there is more than enough going on in my day to day life to write about.
 
@@ -28,7 +28,7 @@ Anyway, here it is: my new site. Pretty much everything in the way it is served 
         <td>Nginx</td>
     </tr>
     <tr>
-    	<th>Scripting language</th>
+    	<th>Backend language</th>
         <td>PHP 5.3</td>
         <td>Node</td>
     </tr>
@@ -50,7 +50,7 @@ Anyway, here it is: my new site. Pretty much everything in the way it is served 
 </table>
 </div>
 
-So far I am pretty pleased with the results. Working with Ghost and writing in Markdown has been a bless so far. Also, the new site speed is just incredible.
+So far I am pretty pleased with the results. Working with Ghost and writing in Markdown has been great so far. Also, the new site speed is just incredible.
 
 I would love to hear your thoughts on the new site and design - love it or hate it?
 

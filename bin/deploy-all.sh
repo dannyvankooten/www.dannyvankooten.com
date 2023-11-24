@@ -9,7 +9,7 @@ echo "Updating download numbers"
 ./bin/update-wp-downloads.py
 
 echo "Building site"
-gozer
+gozer -c config_prod.toml build
 
 echo "Minify stylesheet"
 minify -o build/styles.css build/styles.css

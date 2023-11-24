@@ -58,7 +58,7 @@ A WordPress plugin that adds various sign-up methods to ones WordPress website. 
 
 At the time of writing (2022) it has been downloaded well over 40 million times and is in active use on well over 2 million websites.
 
-[Website](https://www.mc4wp.com/) | [GitHub](https://github.com/ibericode/mailchimp-for-wordpress) | [Introduction post on my blog](/blog/my-newest-wordpress-plugin-mailchimp-for-wp/)
+[Website](https://www.mc4wp.com/) | [GitHub](https://github.com/ibericode/mailchimp-for-wordpress) | [Introduction post on my blog](/blog/2013/my-newest-wordpress-plugin-mailchimp-for-wp/)
 
 ---
 
