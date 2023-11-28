@@ -10,7 +10,7 @@ minify -o build/styles.css build/styles.css
 
 echo "Optimizing images"
 echo "Before: $(du -bch build/**/**/*.{jpg,png} | tail -n1)"
-mogrify -sample '1024>' -quality 80 -strip build/**/**/*.{jpg,png}
+mogrify -sample '1024>' -quality 90 -strip build/**/**/*.{jpg,png}
 echo "After: $(du -bch build/**/**/*.{jpg,png} | tail -n1)"
 
 echo "Sending to remote"

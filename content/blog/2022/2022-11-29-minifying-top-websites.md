@@ -22,7 +22,7 @@ The good news is that most websites are doing really well, as I was only able to
 
 The bad news is that a really popular porn website out there with 45M monthly visitors is serving unminified JavaScript and thereby forcing each and every one of their visitors to download 122 kB more than strictly necessary! ;-)
 
-### Minifying the most popular websites on the intermet
+### Minifying the most popular websites on the internet
 
 Using a list of the most popular websites out there, I fired up a Python script<sup><a href="#1">1</a></sup> to download the HTML for each homepage<sup>2</sup>.
 
