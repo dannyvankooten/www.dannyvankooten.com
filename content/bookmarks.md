@@ -24,19 +24,16 @@ Made possible by the following list of mostly open-source software (not exhausti
 
 ## Web development
 
-- [PHP](https://www.php.net/) It's getting much better lately and still powers the vast majority of web backends.
-- [Symfony](https://symfony.com/), PHP web framework and components.
 - [Nginx](https://nginx.org/), web server software.
 - [PostgreSQL](https://www.postgresql.org/), [MariaDB](https://mariadb.org/), or [SQLite](https://www.sqlite.org/index.html). SQL database servers.
 - [MDN documentation](https://developer.mozilla.org/en-US/), all the HTML, CSS and JS documentation you need.
-- [Doctrine](https://www.doctrine-project.org/), ORM and Database Abstraction Layer for PHP.
 - [PHPStorm](https://www.jetbrains.com/phpstorm/), IDE (proprietary).
-- [Zola](https://www.getzola.org/), static site generator (in Rust, so compiles to a single binary).
-- [Jekyll](https://jekyllrb.com/), alternative static site generator with lots of plugins. Requires Ruby though.
 - [WordPress](https://wordpress.org/), content management system. Sadly, most themes are bloated.
 - [A11Y accessibility checklist](https://www.a11yproject.com/checklist/)
 - [Sustainable Web Manifesto](https://www.sustainablewebmanifesto.com/)
 - [sourcehut](https://git.sr.ht/), git hosting service.
+- [Symfony](https://symfony.com/) or [Django](https://www.djangoproject.com/), PHP and Python web frameworks.
+- [Gozer](https://github.com/dannyvankooten/gozer) Static site generator, turns Markdown files into HTML pages.
 
 I strive to not use any CSS frameworks and only use JavaScript sparingly. Have also been intrigued by [#NoBuild](https://world.hey.com/dhh/you-can-t-get-faster-than-no-build-7a44131c) lately.
 
@@ -50,6 +47,7 @@ I strive to not use any CSS frameworks and only use JavaScript sparingly. Have a
 - [Rez Mason's beliefs](https://www.rezmason.net/beliefs.html)
 - [Introduction to web sustainability, MDN](https://developer.mozilla.org/en-US/blog/introduction-to-web-sustainability/)
 - [The Cost Of JavaScript - Addy Osmani (2023)](https://www.youtube.com/watch?v=ZKH3DLT4BKw)
+- [Climate friendly software: don't fight the wrong battle](https://blog.ltgt.net/climate-friendly-software/)
 
 
 ## Programming
@@ -69,7 +67,8 @@ I strive to not use any CSS frameworks and only use JavaScript sparingly. Have a
 - [Dan Luu](https://danluu.com/)
 - [Drew DeVault](https://drewdevault.com/)
 - [Permacomputing](https://permacomputing.net/)
-
+- [Wim van der Bauwhede](https://wimvanderbauwhede.codeberg.page/)
+- [Alex Russell](https://infrequently.org/)
 
 ## Social
 
