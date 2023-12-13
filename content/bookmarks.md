@@ -70,13 +70,18 @@ I strive to not use any CSS frameworks and only use JavaScript sparingly. Have a
 - [Wim van der Bauwhede](https://wimvanderbauwhede.codeberg.page/)
 - [Alex Russell](https://infrequently.org/)
 
+
 ## Social
 
 - [Mastodon](https://joinmastodon.org/), decentralized and open-source microblogging network. I'm on [toot.re](https://toot.re/@dvk), which is run by [Marcel](https://marcelbootsman.nl/).
-- [phpc.social](https://phpc.social/about), PHP community on Mastodon.
 - [Nitter](https://nitter.net/), gateway to Twitter content, but usable.
 - [Lobsters](https://lobste.rs/), programming related link aggregation and discussion.
 - [Hacker News](https://news.ycombinator.com/), same, but older and very popular.
+
+
+## Misc
+
+- [Hexagons](https://www.redblobgames.com/grids/hexagons/), resource on hexagonal grids that I keep coming back to during Advent of Code.
 
 
 ## Ecology
