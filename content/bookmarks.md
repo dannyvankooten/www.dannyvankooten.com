@@ -15,11 +15,12 @@ Made possible by the following list of mostly open-source software (not exhausti
 - [Firefox](https://www.mozilla.org/en-US/firefox/), web browser.
 - [uBlock Origin](https://ublockorigin.com/), ad-blocker.
 - [Bitwarden](https://bitwarden.com/), password manager.
-- [Bash](https://www.gnu.org/software/bash/), sh compatibe shell. I like Fish too, but it's just too convenient to find Bash pre-installed pretty much anywhere.
+- [Bash](https://www.gnu.org/software/bash/), sh compatibe shell. There are other shells I like (like Fish), but the improvement over bash isn't large enough to warrant me switching.
 - [Imagemagick](https://imagemagick.org/index.php), image manipulation.
 - [Todoist](https://todoist.com), to-do app that runs my life (proprietary).
 - [GIMP](https://www.gimp.org/), image editor.
 - [Inkscape](https://inkscape.org/), SVG editor.
+- [Sublime Text](https://www.sublimetext.com/), text editor.
 
 
 ## Web development
@@ -27,7 +28,6 @@ Made possible by the following list of mostly open-source software (not exhausti
 - [Nginx](https://nginx.org/), web server software.
 - [PostgreSQL](https://www.postgresql.org/), [MariaDB](https://mariadb.org/), or [SQLite](https://www.sqlite.org/index.html). SQL database servers.
 - [MDN documentation](https://developer.mozilla.org/en-US/), all the HTML, CSS and JS documentation you need.
-- [PHPStorm](https://www.jetbrains.com/phpstorm/), IDE (proprietary).
 - [WordPress](https://wordpress.org/), content management system. Sadly, most themes are bloated.
 - [A11Y accessibility checklist](https://www.a11yproject.com/checklist/)
 - [Sustainable Web Manifesto](https://www.sustainablewebmanifesto.com/)
@@ -35,30 +35,31 @@ Made possible by the following list of mostly open-source software (not exhausti
 - [Symfony](https://symfony.com/) or [Django](https://www.djangoproject.com/), PHP and Python web frameworks.
 - [Gozer](https://github.com/dannyvankooten/gozer) Static site generator, turns Markdown files into HTML pages.
 
-I strive to not use any CSS frameworks and only use JavaScript sparingly. Have also been intrigued by [#NoBuild](https://world.hey.com/dhh/you-can-t-get-faster-than-no-build-7a44131c) lately.
+On the frontend, I strive to not use any CSS frameworks and only use JavaScript sparingly. I have also been intrigued by [#NoBuild](https://world.hey.com/dhh/you-can-t-get-faster-than-no-build-7a44131c) lately.
 
 
 ## State of the web
 
 - [motherfuckingwebsite.com](http://motherfuckingwebsite.com/), [bettermotherfuckingwebsite.com](http://bettermotherfuckingwebsite.com/) and [perfectmotherfuckingwebsite.com](https://perfectmotherfuckingwebsite.com/)
 - [HTTP Archive Web Almanac 2022: Page weight](https://almanac.httparchive.org/en/2022/page-weight)
+- [Performance Inequality Gap 2023](https://infrequently.org/2022/12/performance-baseline-2023/)
+- [The Cost Of JavaScript - Addy Osmani (2023)](https://www.youtube.com/watch?v=ZKH3DLT4BKw)
+- [Climate friendly software: don't fight the wrong battle](https://blog.ltgt.net/climate-friendly-software/)
+- [Introduction to web sustainability, MDN](https://developer.mozilla.org/en-US/blog/introduction-to-web-sustainability/)
 - [Internet obesity crisis](https://idlewords.com/talks/website_obesity.htm)
 - [Death to bullshit](https://deathtobullshit.com/)
 - [Rez Mason's beliefs](https://www.rezmason.net/beliefs.html)
-- [Introduction to web sustainability, MDN](https://developer.mozilla.org/en-US/blog/introduction-to-web-sustainability/)
-- [The Cost Of JavaScript - Addy Osmani (2023)](https://www.youtube.com/watch?v=ZKH3DLT4BKw)
-- [Climate friendly software: don't fight the wrong battle](https://blog.ltgt.net/climate-friendly-software/)
 
 
 ## Programming
 
-- [The C Programming Language](https://en.wikipedia.org/wiki/The_C_Programming_Language), helped me understand every other language better.
-- [Golang](https://go.dev/) Memory managed language with great concurrency.
-- [Rust](https://www.rust-lang.org/) C or C++, but without the footguns.
-- [Advent of Code](https://adventofcode.com/), annual event in December hosting fun programming puzzles.
-- [Project Euler](https://projecteuler.net/), math based programming puzzles.
+- [The C Programming Language](https://en.wikipedia.org/wiki/The_C_Programming_Language): Learning C helped me understand every other language better.
+- [Golang](https://go.dev/): Garbage-collected language with great concurrency support.
+- [Rust](https://www.rust-lang.org/): like C++, but without the footguns. Comes at the cost of very slow compile times though.
+- [Python](https://www.python.org/): So convenient and widespread.
+- [Advent of Code](https://adventofcode.com/): annual event in December hosting fun programming puzzles.
+- [Project Euler](https://projecteuler.net/): math based programming puzzles.
 - [GNU Make](https://www.gnu.org/software/make/)
-- [Composer](https://getcomposer.org/) The best package manager of any programming language I've tried.
 
 
 ## Blogs
