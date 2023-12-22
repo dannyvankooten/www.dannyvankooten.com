@@ -2,6 +2,9 @@
     <h1>{{$.Title}}</h1>
     {{$.Content}}
 
+    <p><img src="/rss-icon.svg" width=16 height=16 alt="RSS icon"> You can <a href="/feed.xml">find an RSS feed for this site here</a>.</p>
+
+
     {{ $year := 0 }}
     {{ range $.Posts }}
         {{- if not (eq .DatePublished.Year $year) }}
@@ -18,5 +21,6 @@
         </li>
     {{- end -}}
     </ul>
+
 
 {{ template "_footer.html" }}
