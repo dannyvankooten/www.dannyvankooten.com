@@ -64,13 +64,16 @@ On the frontend, I strive to not use any CSS frameworks and only use JavaScript 
 
 ## Blogs
 
+Some of the blogs I enjoy reading.
+
 - [Low Tech Magazine](https://solar.lowtechmagazine.com/)
+- [Fabien Sanglard](https://fabiensanglard.net/)
 - [Dan Luu](https://danluu.com/)
-- [Drew DeVault](https://drewdevault.com/)
-- [Permacomputing](https://permacomputing.net/)
 - [Wim van der Bauwhede](https://wimvanderbauwhede.codeberg.page/)
 - [Alex Russell](https://infrequently.org/)
-
+- [Drew DeVault](https://drewdevault.com/)
+- [Julia Evans](https://jvns.ca/)
+- [Permacomputing](https://permacomputing.net/)
 
 ## Social
 
