@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
+#
+# Usage: ./bin/deploy.sh (updates all)
+# Usage: ./bin/deploy.sh fast (skips remote content)
 
 set -e
 
+if [[ "$1" != "fast" ]]; then
+    echo "Update /code/"
+    ./bin/repos_to_html.py
+
+    echo "Updating download numbers"
+    ./bin/update-wp-downloads.py
+fi
+
 echo "Building site"
 gozer -c config_prod.toml build
-
-echo "Minify stylesheet"
-minify -o build/styles.css build/styles.css
 
 echo "Optimizing images"
 echo "Before: $(du -bch build/**/**/*.{jpg,png} | tail -n1)"

@@ -1,0 +1,547 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"MinI",
+				"MinInt"
+			],
+			[
+				"Sum",
+				"Sum64"
+			],
+			[
+				"N",
+				"New64"
+			],
+			[
+				"Hash",
+				"hash.Hash64"
+			],
+			[
+				"Cou",
+				"ContainsRune"
+			],
+			[
+				"perm",
+				"BetterPermute"
+			],
+			[
+				"P",
+				"PopFront"
+			],
+			[
+				"deque",
+				"deque.New"
+			],
+			[
+				"delete",
+				"slices.DeleteFunc"
+			],
+			[
+				"Ssc",
+				"Sscanf"
+			],
+			[
+				"m",
+				"macho"
+			],
+			[
+				"std",
+				"Stdout"
+			],
+			[
+				"mall",
+				"malloc_or_die"
+			],
+			[
+				"eq",
+				"isEqual"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"lsp",
+				"Preferences: LSP Settings"
+			],
+			[
+				"format",
+				"LSP: Format File"
+			],
+			[
+				"remove p",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"symbol",
+				"SymbolBalloon: Raise Balloon"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"outline",
+				"Browse Mode: FileBrowser Left, Outline Right"
+			],
+			[
+				"select theme",
+				"UI: Select Theme"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"color sche",
+				"UI: Select Color Scheme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"color ",
+				"UI: Select Color Scheme"
+			],
+			[
+				"lsp:go to",
+				"LSP: Goto Declaration"
+			],
+			[
+				"lsp:code",
+				"LSP: Run Code Lens"
+			],
+			[
+				"lsp key",
+				"Preferences: LSP Key Bindings"
+			],
+			[
+				"clangd",
+				"Preferences: LSP-clangd Settings"
+			],
+			[
+				"prefer",
+				"Preferences: Settings"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"terminus theme",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"lsp sett",
+				"Preferences: LSP Settings"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"remove pac",
+				"Package Control: Remove Package"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"terminus set",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"terminuis sett",
+				"Preferences: Terminus Settings"
+			],
+			[
+				":termin",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				":teri",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				":Toggle Ter",
+				"Terminus: Toggle Panel"
+			],
+			[
+				":ren",
+				"LSP: Rename"
+			],
+			[
+				"terminus",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"term",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"termin",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"color sch",
+				"UI: Select Color Scheme"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Packag",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 160.0,
+		"history":
+		[
+			"show panel"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/danny/Code/sites/www.dvk.co"
+	],
+	"file_history":
+	[
+		"/home/danny/Code/py/vooruitgefactureerde-omzet/verkoopfacturen.csv",
+		"/home/danny/Code/py/vooruitgefactureerde-omzet/README.txt",
+		"/home/danny/Code/py/vooruitgefactureerde-omzet/.gitignore",
+		"/home/danny/Code/py/vooruitgefactureerde-omzet/calc.py",
+		"/home/danny/Code/advent-of-code/2023/21-step-counter/main.go",
+		"/home/danny/Code/advent-of-code/2023/22-sand-slabs/main.go",
+		"/usr/local/go/src/bytes/bytes.go",
+		"/home/danny/Code/advent-of-code/2023/README.md",
+		"/home/danny/Code/advent-of-code/2023/23-a-long-walk/main.go",
+		"/home/danny/Code/advent-of-code/2023/05-if-you-give-a-seed-a-fertilizer/main.go",
+		"/home/danny/Code/advent-of-code/2023/12-hot-springs/main.go",
+		"/home/danny/Code/advent-of-code/2023/23-a-long-walk/main_test.go",
+		"/home/danny/Code/advent-of-code/2023/23-a-long-walk/test.js",
+		"/home/danny/Code/advent-of-code/2023/12-hot-springs/main_test.go",
+		"/home/danny/Code/advent-of-code/2023/05-if-you-give-a-seed-a-fertilizer/out.txt",
+		"/home/danny/Code/advent-of-code/2023/25-snowverload/input_test.txt",
+		"/home/danny/Code/advent-of-code/2023/25-snowverload/main.go",
+		"/home/danny/Code/advent-of-code/2023/23-a-long-walk/main.py",
+		"/home/danny/Code/advent-of-code/2023/25-snowverload/input_test_2.txt",
+		"/home/danny/Code/advent-of-code/2023/25-snowverload/input.txt",
+		"/home/danny/Code/advent-of-code/2023/25-snowverload/README.txt",
+		"/home/danny/Code/advent-of-code/2023/24-never-tell-me-the-odds/main.py",
+		"/home/danny/Code/advent-of-code/2023/24-never-tell-me-the-odds/README.txt",
+		"/home/danny/Code/advent-of-code/2023/24-never-tell-me-the-odds/main.go",
+		"/usr/local/go/src/builtin/builtin.go",
+		"/home/danny/Code/advent-of-code/2023/23-a-long-walk/input_test.txt",
+		"/home/danny/Code/advent-of-code/2023/23-a-long-walk/input.txt",
+		"/home/danny/Code/advent-of-code/2023/24-never-tell-me-the-odds/input_test.txt",
+		"/home/danny/Code/advent-of-code/2023/24-never-tell-me-the-odds/input.txt",
+		"/home/danny/Code/advent-of-code/2023/23-a-long-walk/README.txt",
+		"/home/danny/Code/advent-of-code/2023/21-step-counter/main.py",
+		"/home/danny/Code/advent-of-code/2016/05-how-about-a-nice-game-of-chess/main.c",
+		"/home/danny/Code/advent-of-code/2016/04-security-through-obscurity/main.c",
+		"/home/danny/Code/advent-of-code/2016/01-no-time-for-a-taxicab/main.c",
+		"/home/danny/Code/advent-of-code/2016/adventofcode.h",
+		"/home/danny/Code/advent-of-code/2016/09-explosives-in-cyberspace/input_test.txt",
+		"/home/danny/Code/advent-of-code/2016/09-explosives-in-cyberspace/input.txt",
+		"/home/danny/Code/advent-of-code/.editorconfig",
+		"/home/danny/Code/advent-of-code/2015/01-not-quite-lisp/main.c",
+		"/home/danny/Code/advent-of-code/2016/09-explosives-in-cyberspace/README.txt",
+		"/home/danny/Code/advent-of-code/.clang-format",
+		"/home/danny/Code/advent-of-code/2023/22-sand-slabs/input_test.txt",
+		"/home/danny/Code/advent-of-code/2023/22-sand-slabs/input.txt",
+		"/home/danny/Code/advent-of-code/2023/22-sand-slabs/README.txt",
+		"/home/danny/Code/advent-of-code/2023/21-step-counter/README.txt",
+		"/home/danny/Code/advent-of-code/2023/21-step-counter/input.txt",
+		"/home/danny/Code/advent-of-code/2023/21-step-counter/input_test.txt",
+		"/home/danny/Code/advent-of-code/2016/09-explosives-in-cyberspace/main.c",
+		"/home/danny/Code/advent-of-code/2016/08-two-factor-authentication/main.c",
+		"/home/danny/Code/advent-of-code/2016/07-internet-protocol-version-7/main.c",
+		"/home/danny/Code/advent-of-code/2016/06-signals-and-noise/main.c",
+		"/home/danny/Code/advent-of-code/2016/run.sh",
+		"/home/danny/Code/advent-of-code/2015/run.sh",
+		"/home/danny/Code/advent-of-code/2023/20-pulse-propagation/main.go",
+		"/home/danny/.cache/.fr-UR8OG2/outline.py",
+		"/home/danny/.cache/.fr-O8FHG2/show.py",
+		"/home/danny/Code/advent-of-code/2023/20-pulse-propagation/input_test_2.txt",
+		"/home/danny/Code/advent-of-code/2023/20-pulse-propagation/README.txt",
+		"/home/danny/Code/advent-of-code/2023/17-clumsy-crucible/main.go",
+		"/home/danny/Code/advent-of-code/2023/20-pulse-propagation/input_test.txt",
+		"/home/danny/Code/advent-of-code/2023/20-pulse-propagation/input.txt",
+		"/home/danny/Code/advent-of-code/2023/17-clumsy-crucible/README.txt",
+		"/home/danny/Code/advent-of-code/2023/18-lavaduct-lagoon/README.txt",
+		"/home/danny/Code/advent-of-code/2023/18-lavaduct-lagoon/input.txt",
+		"/home/danny/Code/advent-of-code/2023/18-lavaduct-lagoon/main.go",
+		"/home/danny/Code/advent-of-code/2021/23-amphipod/main.py",
+		"/home/danny/Code/advent-of-code/.gitignore",
+		"/home/danny/Code/advent-of-code/2015/06-probably-a-fire-hazard/main.c",
+		"/home/danny/Code/advent-of-code/2015/07-some-assembly-required/main.c",
+		"/home/danny/Code/advent-of-code/2015/10-elves-look-elves-say/main.c",
+		"/home/danny/Code/advent-of-code/2015/11-corporate-policy/main.c",
+		"/home/danny/Code/advent-of-code/2015/12-jsabacusframework-io/main.c",
+		"/home/danny/Code/advent-of-code/2015/14-reindeer-olympics/main.c",
+		"/home/danny/Code/advent-of-code/2015/17-no-such-thing-as-too-much/main.c",
+		"/home/danny/Code/advent-of-code/2015/18-like-a-gif-for-your-yard/main.c",
+		"/home/danny/Code/advent-of-code/2015/19-medicine-for-rudolph/main.c",
+		"/home/danny/Code/advent-of-code/2015/20-infinite-elves-and-infinite-houses/main.c",
+		"/usr/lib/llvm-17/lib/clang/17/include/stddef.h",
+		"/home/danny/Code/advent-of-code/2015/hashmap.h",
+		"/home/danny/Code/advent-of-code/2015/04-md5/main.c",
+		"/home/danny/Code/advent-of-code/2015/05-nice-strings/main.c",
+		"/home/danny/Code/advent-of-code/2015/04-md5/input.txt",
+		"/home/danny/Code/advent-of-code/2015/adventofcode.h",
+		"/home/danny/Code/advent-of-code/2023/18-lavaduct-lagoon/input_test.txt",
+		"/home/danny/Code/advent-of-code/2023/16-the-floor-will-be-lava/other.go",
+		"/home/danny/Code/advent-of-code/2023/18-lavaduct-lagoon/out.txt",
+		"/home/danny/Code/advent-of-code/2023/17-clumsy-crucible/pt1.go.bak",
+		"/home/danny/Code/advent-of-code/2023/17-clumsy-crucible/input_test.txt",
+		"/home/danny/Code/advent-of-code/2023/17-clumsy-crucible/input.txt",
+		"/home/danny/Code/advent-of-code/2023/17-clumsy-crucible/pt1.go",
+		"/home/danny/Code/advent-of-code/2023/16-the-floor-will-be-lava/main.go",
+		"/home/danny/Code/advent-of-code/2023/16-the-floor-will-be-lava/README.txt",
+		"/home/danny/Code/advent-of-code/2023/16-the-floor-will-be-lava/input_test.txt",
+		"/home/danny/Code/advent-of-code/2023/16-the-floor-will-be-lava/input.txt",
+		"/home/danny/Code/advent-of-code/2023/run.sh",
+		"/home/danny/Code/advent-of-code/2015/08-matchsticks/main.c",
+		"/home/danny/Code/advent-of-code/2015/16-aunt-sue/main.c",
+		"/home/danny/Code/advent-of-code/2015/15-science-for-hungry-people/main.c",
+		"/home/danny/Code/advent-of-code/2015/15-science-for-hungry-people/arrays.c",
+		"/home/danny/Code/advent-of-code/2015/14-reindeer-olympics/input.txt",
+		"/home/danny/Code/advent-of-code/2015/14-reindeer-olympics/input_test.txt",
+		"/home/danny/Code/advent-of-code/2015/10-elves-look-elves-say/input.txt",
+		"/home/danny/Code/advent-of-code/2015/11-corporate-policy/input.txt",
+		"/home/danny/Code/advent-of-code/2015/13-knights-of-the-dinner-table/main.c",
+		"/home/danny/Code/advent-of-code/2015/17-no-such-thing-as-too-much/input.txt",
+		"/usr/include/string.h",
+		"/home/danny/Code/advent-of-code/2015/19-medicine-for-rudolph/main.py",
+		"/home/danny/Code/advent-of-code/2015/23-opening-the-turing-lock/heh.php",
+		"/home/danny/Code/advent-of-code/2015/19-medicine-for-rudolph/heh.php",
+		"/home/danny/Code/advent-of-code/2015/19-medicine-for-rudolph/input_test.txt",
+		"/usr/include/stdlib.h",
+		"/home/danny/Code/advent-of-code/2015/20-infinite-elves-and-infinite-houses/input.txt",
+		"/home/danny/Code/advent-of-code/2015/23-opening-the-turing-lock/main.c",
+		"/home/danny/Code/advent-of-code/2015/09-all-in-a-single-night/main.c",
+		"/home/danny/Code/advent-of-code/2015/19-medicine-for-rudolph/input.txt",
+		"/home/danny/Code/advent-of-code/2015/19-medicine-for-rudolph/heh.py",
+		"/home/danny/Code/advent-of-code/2023/15-lens-library/input_test.txt",
+		"/home/danny/Code/advent-of-code/2023/15-lens-library/README.txt",
+		"/home/danny/Code/advent-of-code/2023/15-lens-library/input.txt",
+		"/home/danny/Code/advent-of-code/2023/15-lens-library/main.go",
+		"/home/danny/Code/advent-of-code/2021/run-all.sh",
+		"/home/danny/Code/advent-of-code/2021/01-sonar-sweep/main.py",
+		"/home/danny/Code/advent-of-code/2021/02-dive/main.py",
+		"/home/danny/Code/advent-of-code/2021/03-binary-diagnostic/main.py",
+		"/home/danny/Code/advent-of-code/2021/04-giant-squid/main.py",
+		"/home/danny/Code/advent-of-code/2021/05-hydrothermal-venture/main.py",
+		"/home/danny/Code/advent-of-code/2021/06-lanternfish/main.py",
+		"/home/danny/Code/advent-of-code/2021/07-treachery-of-whales/main.py"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 143.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 0.0
+	},
+	"output.Terminus":
+	{
+		"height": 631.0
+	},
+	"output.diagnostics":
+	{
+		"height": 156.0
+	},
+	"output.exec":
+	{
+		"height": 156.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": ".sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 335.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 260.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
