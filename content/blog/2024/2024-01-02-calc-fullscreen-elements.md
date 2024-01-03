@@ -17,20 +17,23 @@ The latter one proved to be a bit of a problem when I decided I wanted to have f
 See how this elements expands beyond the size of its container
 ```
 
-Normally, I would accomplish such a thing by breaking out of the container element (with a `max-width` rule applied to it).
+Normally, I would accomplish such a thing by breaking out of the element that has a `max-width` rule applied to it and then re-apply the max-width rule to a child of the element I want to have full-width.
 
 ```
-<div style"max-width: 820px; margin: 0 auto;">
+<div style="max-width: 820px; margin: 0 auto;">
     <p>Some centered text here.</p>
 </div>
 <pre>
-    <code style"max-width: 820px; margin: 0 auto;>
+    <code style="max-width: 820px; margin: 0 auto;">
         Centered code inside a fullscreen pre element.
     </code>
 </pre>
+<div style="max-width: 820px; margin: 0 auto;">
+    <!-- continue container element... -->
+    ...
 ```
 
-But that would violate my last constraint, as this means I would have to modify the mark-up of all of my posts containing code blocks just to attain some visual effect.
+But that would violate my last constraint, as this means I would have to modify the HTML of all of my posts containing code blocks just to attain some visual effect.
 
 ## CSS to the rescue
 
