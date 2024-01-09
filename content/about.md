@@ -2,14 +2,13 @@
 title = "About Danny"
 +++
 
-Hello! I'm Danny van Kooten, a full stack web developer from The Netherlands.
+Hello! I'm Danny van Kooten, a programmer from The Netherlands.
 
 Here are the most important things you may want to know about me.
 
 I..
 
-- .. am a full stack web developer with experience in Golang, SQL, PHP, JavaScript, HTML, CSS and more.
-- .. am [available for hire](/hire-me/) for web performance related projects.
+- .. am a programmer with experience in C, Rust, Golang, SQL, PHP, JavaScript, HTML, CSS and more.
 - .. am the father of two girls and have a small dog named Koko.
 - .. am the founder of <a href="http://ibericode.com/">ibericode</a>, a small and fully remote company building, maintaining and marketing open-source software products.
 - .. build and maintain <a href="https://www.mc4wp.com/">Mailchimp for WordPress</a>, <a href="https://www.kokoanalytics.com/">Koko Analytics</a>, <a href="https://www.htmlformsplugin.com">HTML Forms</a> and several other [WordPress plugins](/wordpress-plugins/) totaling <strong>well over 42 million</strong> downloads. Right now, my code is running on more than 2 million websites.

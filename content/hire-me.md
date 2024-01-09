@@ -4,7 +4,7 @@ title = "Hire me"
 
 Over the last 10 years I've been building projects for the web using a wide array of technologies:
 
-- Backend: Golang, PHP, JavaScript, Python, even some Rust and C.
+- Backend: Golang, PHP, JavaScript, Python, Rust and C.
 - Frontend: JavaScript (Vanilla, (P)Rreact), HTML, CSS.
 - Databases: OLTP (Postgres, MySQL, SQLite) but also OLAP databases like Clickhouse, Polars or DuckDB.
 

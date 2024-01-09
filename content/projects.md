@@ -6,7 +6,7 @@ These are some (but not all) of the projects I've worked on over the years.
 
 #### Nederlang
 
-An interpreted programming language with a bytecode compiler and virtual machine hosted in Rust.
+An interpreted programming language with a bytecode compiler and stack-based virtual machine hosted in Rust.
 
 [Github](https://github.com/dannyvankooten/nederlang)
 
@@ -30,7 +30,7 @@ Open-source and privacy friendly analytics plugin for WordPress.
 
 #### Fathom Analytics
 
-Open-source and privacy friendly analytics. The project is still going strong and has turned into a flourishing business, but I [stepped away from it](/blog/2019/stepping-down-fathom-maintainer/) in early 2019 as its success was hard to combine with 2 young children.
+Open-source and privacy friendly analytics. The project is still going strong and has turned into a flourishing business, but I [stepped away from it](/blog/2019/stepping-down-fathom-maintainer/) in 2019 as its success at the time was hard to combine with 2 young children.
 
 [Website](https://usefathom.com/) | [GitHub](https://github.com/usefathom/fathom) | [Introduction post on my blog](/blog/2018/reviving-ana-as-fathom/)
 

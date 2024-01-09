@@ -21,7 +21,7 @@
         a {
             color: #222;
             font-weight: bold;
-            text-underline-offset: 6px;
+            text-underline-offset: 5px;
 
         }
         h1, h2, h3, h4, h5 {
@@ -155,19 +155,20 @@
         tr:nth-child(even) {
             background: rgba(0, 0, 0, 0.04);
         }
-        sub,
         sup {
+            line-height: 1;
             font-size: 80%;
-            line-height: 0;
-            position: relative;
-            vertical-align: baseline;
+            unicode-bidi: isolate;
         }
-        sub { bottom: -0.25em; }
-        sup { top: -0.5em; }
         sup a {
-            font-size: 0.8em;
-            color: #24202F;
-            vertical-align: text-top;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        sup a:before{
+            content: "[";
+        }
+        sup a:after {
+            content: "]";
         }
         @media (prefers-color-scheme: dark) {
             body {
