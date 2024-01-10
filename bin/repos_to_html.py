@@ -26,7 +26,7 @@ def from_sourcehut(username: str):
     res = requests.get(f'https://git.sr.ht/api/~{username}/repos', headers={
         'Authorization': 'token ' + SOURCEHUT_TOKEN,
         'Accepts': 'application/json'
-    })
+    }, timeout=10)
     data = res.json()
 
     for repo in data['results']:
@@ -52,7 +52,7 @@ def from_github(source: str):
                            'X-GitHub-Api-Version': '2022-11-28',
                            'Authorization': 'Bearer ' + GITHUB_TOKEN,
                            'Accept': 'application/vnd.github+json'
-                           })
+                           }, timeout=10)
     for repo in res.json():
         if repo['archived'] or repo['private'] or repo['fork']:
             continue
