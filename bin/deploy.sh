@@ -22,4 +22,6 @@ mogrify -sample '1024>' -quality 90 -strip build/**/**/*.{jpg,png}
 echo "After: $(du -bch build/**/**/*.{jpg,png} | tail -n1)"
 
 echo "Sending to remote"
-rsync -ru build/. rot1.dvk.co:/var/www/dannyvankooten.com --delete
+tar -C build -cvz . > site.tar.gz
+hut pages publish -d dvko.srht.site site.tar.gz
+

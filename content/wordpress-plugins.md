@@ -18,17 +18,17 @@ Without further ado, here are some of the most important plugins for WordPress I
     <tbody>
     <tr>
     	<td><a href="https://www.mc4wp.com/">Mailchimp for WordPress</a></td>
-        <td id="mailchimp-for-wp-downloads">52.8M</td>
+        <td id="mailchimp-for-wp-downloads">52.9M</td>
         <td>July 2013</td>
     </tr>
     <tr>
         <td><a href="https://www.kokoanalytics.com">Koko Analytics</a></td>
-        <td id="koko-analytics-downloads">551K</td>
+        <td id="koko-analytics-downloads">572K</td>
         <td>November 2019</td>
     </tr>
     <tr>
         <td><a href="https://www.htmlformsplugin.com/">HTML Forms</a></td>
-        <td id="html-forms-downloads">123K</td>
+        <td id="html-forms-downloads">124K</td>
         <td>October 2017</td>
     </tr>
      <tr>
@@ -53,7 +53,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
     	<td><a href="https://wordpress.org/plugins/dvk-social-sharing/">Social Sharing by Danny</a></td>
-        <td id="dvk-social-sharing-downloads">99.7K</td>
+        <td id="dvk-social-sharing-downloads">99.8K</td>
         <td>November 2013</td>
     </tr>
     <tr>

@@ -19,15 +19,14 @@ It all started out with me hospitalized in Vietnam due to acute appendicitis and
 
 Below is a list of code I have open-sourced over the years.
 
-**Currently**
-
 - [Koko Analytics](https://www.kokoanalytics.com/): lightweight and privacy-friendly analytics for your WordPress site.
+- [Advent of Code](https://github.com/dannyvankooten/advent-of-code): my solutions for [Advent of Code](https://adventofcode.com/2023/about) 2015 - 2023. Implemented in C, C++, Rust, Python and Golang.
+- [Nederlang](https://github.com/dannyvankooten/nederlang): bytecode compiler with a stack based VM for a programming language consisting of Dutch keywords, in Rust.
+- [1BRC](https://github.com/dannyvankooten/1brc): C implementation of the [1 Billion Rows Challenge](/blog/2024/1brc/), in standard C99 with POSIX threads.
+- [Pepper Lang](https://github.com/dannyvankooten/pepper-lang): toy programming language, in C.
 - [Mailchimp for WordPress](https://mc4wp.com/): the #1 Mailchimp plugin for WordPress.
 - [ibericode/vat](https://github.com/ibericode/vat): PHP library to handle EU VAT rules.
 - [Gozer](https://github.com/dannyvankooten/gozer): static site generator.
-
-**Previously**
-
 - [Browserpass](https://github.com/browserpass/browserpass-extension): browser extension for [pass](https://www.passwordstore.org/) utilizing native messaging.
 - [Fathom Analytics](https://github.com/usefathom/fathom): the original open-source version before I [left Fathom due to family obligations](https://www.dannyvankooten.com/blog/2019/stepping-down-fathom-maintainer/) and it was abandoned.
 - [AltoRouter](https://github.com/dannyvankooten/AltoRouter/): routing class for PHP.
@@ -35,10 +34,4 @@ Below is a list of code I have open-sourced over the years.
 - [go-moneybird](https://github.com/dannyvankooten/moneybird-go): Go client library for Moneybird.
 - [populate.js](https://github.com/dannyvankooten/populate.js): populate a HTMLFormElement from a JSON object.
 
-**For fun**
-
-- [Advent of Code](https://github.com/dannyvankooten/advent-of-code): my solutions for [Advent of Code](https://adventofcode.com/2023/about) 2015 - 2023. Implemented in C, Rust, Python and Golang.
-- [Nederlang](https://github.com/dannyvankooten/nederlang): bytecode compiler with a stack based VM for a programming language consisting of Dutch keywords, in Rust.
-- [1BRC](https://github.com/dannyvankooten/1brc): C implementation of the [1 Billion Rows Challenge](/blog/2024/1brc/), in standard C99 with POSIX threads.
-- [Pepper Lang](https://github.com/dannyvankooten/pepper-lang): toy programming language, in C.
 
