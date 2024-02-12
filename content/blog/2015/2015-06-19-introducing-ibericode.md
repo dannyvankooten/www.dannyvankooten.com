@@ -13,7 +13,7 @@ As the team grew by a few hands, we figured we needed a _real_ company name. We 
 
 
 <center>
-<a href="https://ibericode.com/">
+<a href="https://www.ibericode.com/">
 <img src="https://res.cloudinary.com/dannyvankooten/image/upload/c_scale,w_400/v1434710383/logo_jbnogj.png" alt="ibericode" />
 </a>
 </center>
@@ -24,12 +24,12 @@ The name ibericode is a wordplay on **iberico** and **code**, because of the lov
 As developing & supporting software can be perceived as boring, we needed someone cute and fun on the team. That's where **Rico** comes in, our cute little helper mascot.
 
 <center>
-<a href="https://ibericode.com/">
+<a href="https://www.ibericode.com/">
 <img src="https://res.cloudinary.com/dannyvankooten/image/upload/c_scale,w_200/v1434709015/mail_1_m3tyx2.png" alt="Rico, our mascot" />
 </a>
 </center>
 
-You can read all about our new brand on the ibericode blog: [introducing ibericode](https://ibericode.com/2015/welcome-to-ibericode/).
+You can read all about our new brand on the ibericode blog: [introducing ibericode](https://www.ibericode.com/2015/welcome-to-ibericode/).
 
 I'm very much looking forward to continue our amazing growth under this new name. Hope you like it as much as I do!
 

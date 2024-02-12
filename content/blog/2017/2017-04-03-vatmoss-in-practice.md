@@ -53,4 +53,4 @@ This is the sad result of VATMOSS in practice. Hurting where it shouldn't.
 
 ---
 
-¹ _Since the [ibericode](https://ibericode.com/) business is located in The Netherlands, the actual missed out revenue would be about 2-3% lower. Blocking EU countries becomes more viable when your business itself is located in one of the larger member states._
+¹ _Since the [ibericode](https://www.ibericode.com/) business is located in The Netherlands, the actual missed out revenue would be about 2-3% lower. Blocking EU countries becomes more viable when your business itself is located in one of the larger member states._
