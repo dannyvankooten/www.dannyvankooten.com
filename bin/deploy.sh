@@ -5,7 +5,7 @@
 
 set -e
 
-if [[ "$1" != "fast" ]]; then
+if [[ "$1" != "fast" && "$1" != "--fast" ]]; then
     echo "Update /code/"
     ./bin/repos_to_html.py
 

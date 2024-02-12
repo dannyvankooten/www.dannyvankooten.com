@@ -23,6 +23,7 @@ Below is a list of code I have open-sourced over the years.
 - [Advent of Code](https://github.com/dannyvankooten/advent-of-code): my solutions for [Advent of Code](https://adventofcode.com/2023/about) 2015 - 2023. Implemented in C, C++, Rust, Python and Golang.
 - [Nederlang](https://github.com/dannyvankooten/nederlang): bytecode compiler with a stack based VM for a programming language consisting of Dutch keywords, in Rust.
 - [1BRC](https://github.com/dannyvankooten/1brc): C implementation of the [1 Billion Rows Challenge](/blog/2024/1brc/), in standard C99 with POSIX threads.
+- [Cnake](https://github.com/dannyvankooten/cnake): Snake in your terminal, no dependencies.
 - [Pepper Lang](https://github.com/dannyvankooten/pepper-lang): toy programming language, in C.
 - [Mailchimp for WordPress](https://mc4wp.com/): the #1 Mailchimp plugin for WordPress.
 - [ibericode/vat](https://github.com/ibericode/vat): PHP library to handle EU VAT rules.
