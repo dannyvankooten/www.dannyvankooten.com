@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/img/favicon.png" type="image/png">
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }}{{ if ne .Page.UrlPath "" }} - {{ .Site.Title }}{{ end }}</title>
     <link rel="canonical" href="{{ .Page.Permalink }}">
     <link rel="alternate" type="application/rss+xml" href="/feed.xml">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -22,7 +22,6 @@
             color: #222;
             font-weight: bold;
             text-underline-offset: 5px;
-
         }
         h1, h2, h3, h4, h5 {
             line-height: 1.1;

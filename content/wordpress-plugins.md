@@ -2,7 +2,7 @@
 title = "WordPress Plugins"
 +++
 
-In the last few years I developed quite a few WordPress plugins, together totalling well over **52 million downloads** now. All of these plugins combined are running on over 2 million websites right now.
+In the last few years I developed quite a few WordPress plugins, together totalling well over **54 million downloads** now. All of these plugins combined are running on over 2 million websites right now.
 
 Without further ado, here are some of the most important plugins for WordPress I developed.
 

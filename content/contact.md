@@ -8,26 +8,16 @@ Do you...
 
 ----
 
-__...want to hire me?__
+__...need support for [MC4WP: Mailchimp for WordPress](https://www.mc4wp.com/)?__
 
-You can [hire me](/hire-me/) for your web/performance related projects. Email me at [hi@dvk.co](mailto:hi@dvk.co) and we'll take it from there.
-
-----
-
-__...need support for [Mailchimp for WordPress](https://www.mc4wp.com/), [HTML Forms](https://www.htmlformsplugin.com/) or [Koko Analytics](https://www.kokoanalytics.com/)?__
-
-If you are a paying customer, please use the email address shown in the settings pages of the plugin you need support for or simply reply to the purchase receipt.
-This will guarantee a (_much_) faster response time because they end up in my team's support inbox versus just in mine.
-
-If you are using one of our free plugins without paying for priority support, read the below.
+Please use the contact method listed on [mc4wp.com/contact](https://www.mc4wp.com/contact/).
+This ensures your email lands in my team's inbox vs. in just mine.
 
 ----
 
 __...need support for one of my [free WordPress plugins](/wordpress-plugins/)?__
 
 Please use the appropriate [plugin support forum on WordPress.org](https://wordpress.org/support/).
-
-Me and my team are usually monitoring the forums on a daily basis, but only after we've handled support requests for our paying customers.
 
 ----
 
@@ -41,7 +31,7 @@ Chamber of Commerce reg. no: 65413741<br>
 VAT no: NL856102337B01<br>
 </address>
 
-<hr />
+---
 
 __Need anything else?__
 
