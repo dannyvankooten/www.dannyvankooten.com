@@ -19,16 +19,6 @@ main a:hover {
     background: rgb(0, 0, 238);
     color: white;
 }
-.container {
-    /* optimal line length is 50-75 chars */
-    max-width: 650px;
-    margin-left:auto;
-    margin-right:auto;
-    padding-left:1em;
-    padding-right:1em;
-    clear: both;
-}
-
 .site-header ul {
     list-style: none;
     padding: 0;
