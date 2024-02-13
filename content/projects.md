@@ -4,11 +4,19 @@ title = "Projects"
 
 These are some (but not all) of the projects I've worked on over the years.
 
+#### Gozer
+
+A static site generator that compiles to a single static binary.
+
+[GitHub](https://github.com/dannyvankooten/gozer)
+
+---
+
 #### Nederlang
 
 An interpreted programming language with a bytecode compiler and stack-based virtual machine hosted in Rust.
 
-[Github](https://github.com/dannyvankooten/nederlang)
+[GitHub](https://github.com/dannyvankooten/nederlang) | [Blog post about optimizing Nederlang for performance](https://www.dannyvankooten.com/blog/2022/rewriting-interpreter-rust/)
 
 ---
 
@@ -16,7 +24,7 @@ An interpreted programming language with a bytecode compiler and stack-based vir
 
 An interpreted programming language hosted in C. This was my result of going through the wonderful [interpreter book](https://interpreterbook.com/) by Thorsten Ball.
 
-[Github](https://github.com/dannyvankooten/monkey-c-monkey-do) | [Blog post](/blog/2020/writing-an-interpreter-compiler/)
+[GitHub](https://github.com/dannyvankooten/monkey-c-monkey-do) | [Blog post](/blog/2020/writing-an-interpreter-compiler/)
 
 ---
 
@@ -56,7 +64,7 @@ A PHP library for dealing with European VAT rules.
 
 A WordPress plugin that adds various sign-up methods to ones WordPress website. I built the first version of this from [a hospital bed in Vietnam](/blog/2013/100-000-plugin-downloads-6-months-mailchimp-wordpress/) and it immediately turned into a rollercoaster of events.
 
-At the time of writing (2022) it has been downloaded well over 40 million times and is in active use on well over 2 million websites.
+At the time of writing (2022) it has been downloaded well over 52 million times and is in active use on over 2 million websites.
 
 [Website](https://www.mc4wp.com/) | [GitHub](https://github.com/ibericode/mailchimp-for-wordpress) | [Introduction post on my blog](/blog/2013/my-newest-wordpress-plugin-mailchimp-for-wp/)
 

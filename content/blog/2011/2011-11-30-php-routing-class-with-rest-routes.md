@@ -7,7 +7,7 @@ date = 2011-11-30 22:04:10
 
 In the last few months I've been looking into all the different PHP frameworks and how they glue things together. One of the most important things in every framework is the way it handles routes. I've been developing Ruby on Rails applications extensively last year and I really like the way Rails handles it's routes. That's why I've decided to start programming a Routing class that mimics Rails routing functionality.
 
-I've released this PHP Routing class on Github <a href="https://github.com/dannyvankooten/PHP-Router">here</a>, so you can follow and contribute to it's development progress.
+I've released this PHP Routing class on GitHub <a href="https://github.com/dannyvankooten/PHP-Router">here</a>, so you can follow and contribute to it's development progress.
 <h4>What does this PHP Routing class do?</h4>
 In short, this class helps you route URL's to their corresponding Controller and action methods. You can use different HTTP methods to fully benefit from using REST / resourceful routes. Also, setting up dynamic URL's that pass parameters to their corresponding action are no problem.
 <ul>
@@ -59,6 +59,6 @@ if($r->hasRoute()) {
 
 If you're using this class and experience any issues, please post them using GitHub's issue tracker. Also, feel free to geek around and fork the project to improve this class.
 
-<a href="https://github.com/dannyvankooten/PHP-Router">Watch PHP Routing Class on Github!</a>
+<a href="https://github.com/dannyvankooten/PHP-Router">Watch PHP Routing Class on GitHub!</a>
 
 _**Update (July 2012):** If you like PHP Router you might also like [AltoRouter](/blog/2012/altorouter-php-routing-class/)._

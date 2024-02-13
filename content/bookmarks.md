@@ -10,17 +10,17 @@ I've been happily running Linux on my laptop since 2016.
 
 Made possible by the following list of mostly open-source software (not exhaustive).
 
-- [Debian](https://www.debian.org/), the Linux distribution I use as my daily driver.
-- [Gnome](https://www.gnome.org/), desktop environment.
-- [Firefox](https://www.mozilla.org/en-US/firefox/), web browser.
-- [uBlock Origin](https://ublockorigin.com/), ad-blocker.
-- [Bitwarden](https://bitwarden.com/), password manager.
-- [Bash](https://www.gnu.org/software/bash/), sh compatibe shell. There are other shells I like (like Fish), but the improvement over bash isn't large enough to warrant me switching.
-- [Imagemagick](https://imagemagick.org/index.php), image manipulation.
+- [Debian](https://www.debian.org/): the Linux distribution I use as my daily driver.
+- [Gnome](https://www.gnome.org/): desktop environment.
+- [Firefox](https://www.mozilla.org/en-US/firefox/): web browser. I use the ESR edition.
+- [uBlock Origin](https://ublockorigin.com/): ad-blocker.
+- [Bitwarden](https://bitwarden.com/): password manager.
+- [Bash](https://www.gnu.org/software/bash/): sh compatibe shell. I like Fish too, but having bash available out of the box pretty much everywhere is what makes me stick with it.
 - [Todoist](https://todoist.com), to-do app that runs my life (proprietary).
 - [GIMP](https://www.gimp.org/), image editor.
 - [Inkscape](https://inkscape.org/), SVG editor.
 - [Sublime Text](https://www.sublimetext.com/), text editor.
+- [Evolution](https://wiki.gnome.org/Apps/Evolution): Gnome email client that does [plain-text email](https://useplaintext.email/) correctly.
 
 
 ## Web development
@@ -35,7 +35,7 @@ Made possible by the following list of mostly open-source software (not exhausti
 - [Symfony](https://symfony.com/) or [Django](https://www.djangoproject.com/), PHP and Python web frameworks.
 - [Gozer](https://github.com/dannyvankooten/gozer) Static site generator, turns Markdown files into HTML pages.
 
-On the frontend, I strive to not use any CSS frameworks and only use JavaScript sparingly. I have also been intrigued by [#NoBuild](https://world.hey.com/dhh/you-can-t-get-faster-than-no-build-7a44131c) lately.
+On the frontend, I strive to not use any CSS frameworks and only use JavaScript sparingly. I have also been intrigued by [#NoBuild](https://world.hey.com/dhh/you-can-t-get-faster-than-no-build-7a44131c) lately, although a build step for [concatenating and compressing files](https://csswizardry.com/2023/10/the-three-c-concatenate-compress-cache/) with a similar lifespan is probably worth it for performance reasons.
 
 
 ## State of the web

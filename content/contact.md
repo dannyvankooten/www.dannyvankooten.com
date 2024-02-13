@@ -11,7 +11,7 @@ Do you...
 __...need support for [MC4WP: Mailchimp for WordPress](https://www.mc4wp.com/)?__
 
 Please use the contact method listed on [mc4wp.com/contact](https://www.mc4wp.com/contact/).
-This ensures your email lands in my team's inbox vs. in just mine.
+This ensures your email lands in my team's inbox (instead of only in mine).
 
 ----
 
