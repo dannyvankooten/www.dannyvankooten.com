@@ -14,14 +14,18 @@
             background: #F6F6F6;
             color: #222;
             padding: 1em;
-            max-width: 768px;
+            max-width: 72ch;
             margin-left: auto;
             margin-right: auto;
         }
         a {
             color: #222;
-            font-weight: bold;
             text-underline-offset: 5px;
+            font-weight: bold;
+        }
+        a:visited {
+            color: #444;
+            text-decoration-color: #AAA;
         }
         h1, h2, h3, h4, h5 {
             line-height: 1.1;
@@ -31,21 +35,26 @@
             margin-top: 2em;
             padding-bottom: 4px;
         }
-        h1:before {
-            content: "# ";
-            color: #888;
+        h1:after,
+        h2:after {
+            display: block;
+            width: 100%;
+            color: #444;
+            overflow: hidden;
         }
-        h2:before {
-            content: "## ";
-            color: #888;
+        h1:after {
+            content: "====================================================================";
+        }
+        h2:after {
+            content: "---------------------------------------------------------------------";
         }
         h3:before {
             content: "### ";
-            color: #888;
+            color: #444;
         }
         h4:before {
             content: "#### ";
-            color: #888;
+            color: #444;
         }
         hr {
             height: 1px;
@@ -68,7 +77,7 @@
             list-style-type: '- ';
         }
         main li {
-            margin: 0 0 0.5em 0;
+            margin: 0 0 0.6em 0;
         }
         header {
             margin-bottom: 4em;
@@ -116,10 +125,7 @@
             display: block;
             overflow-x: auto;
             padding: 1em;
-            margin-left: min(-1em, (100vw - 820px) / -2);
-            margin-right: min(-1em, (100vw - 820px) / -2);
-            padding-left: max(1em, (100vw - 820px) / 2);
-            padding-right: max(1em, (100vw - 820px) / 2);
+
         }
         pre code {
             font-size: inherit;
@@ -169,19 +175,7 @@
         sup a:after {
             content: "]";
         }
-        @media (prefers-color-scheme: dark) {
-            body {
-                background: #1b1b1b;
-                color: #fff;
-            }
-            code { background: #2C2C2C; }
-            pre code { color: #fff; }
-            a { color: #fff; }
-        }
         @media(min-width: 820px) {
-            header, footer {
-                text-align: center;
-            }
             header li, footer li {
                 display: inline-block;
                 margin: 0 1em 0 0;
