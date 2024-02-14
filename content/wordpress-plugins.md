@@ -28,7 +28,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
         <td><a href="https://www.htmlformsplugin.com/">HTML Forms</a></td>
-        <td id="html-forms-downloads">127K</td>
+        <td id="html-forms-downloads">128K</td>
         <td>October 2017</td>
     </tr>
      <tr>
@@ -48,7 +48,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
     	<td><a href="https://wordpress.org/plugins/wysiwyg-widgets/">Widget Blocks</a></td>
-        <td id="wysiwyg-widgets-downloads">317K</td>
+        <td id="wysiwyg-widgets-downloads">318K</td>
         <td>Juny 2011</td>
     </tr>
     <tr>
