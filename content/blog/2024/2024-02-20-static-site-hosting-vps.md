@@ -3,7 +3,7 @@ title = "Setting up a VPS for static site hosting"
 +++
 
 Remember me moving this site over to [sourcehut pages](https://srht.site/) last
-week? It didn't last long. It doesn't have much to do with the service though.
+week? It didn't last long. It doesn't have much to do with the service though[^1].
 
 It's just that I used the last few weeks to move some friends and family back on
 shared hosting, which turned out to be amazing value for money. You get Apache +
@@ -27,8 +27,8 @@ boat too.
 
 ### Server details
 
-For the server we don't need much; a single core vCPU with 2 GB of RAM, IPv4 and
-IPv6 networking enabled, about 20GB of storage and Debian installed is plenty.
+For the server we don't need much; a single core vCPU with 500 MB of RAM, IPv4 and
+IPv6 networking enabled, a bit of storage and Debian[^2] installed is plenty.
 
 If your cloud provider has an option to configure a firewall from their UI,
 configure it to only allow inbound traffic on port 22 (SSH), 80 (HTTP) and 443 (HTTPS).
@@ -76,7 +76,8 @@ server_tokens off;
 ```
 
 Next up is enabling [gzip
-compression](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) with some reasonable defaults.
+compression](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) and
+configuring it properly.
 
 ```
 gzip on;
@@ -95,7 +96,8 @@ strikes a nice balance between compute cost and compression ratio.
 Responses with a `Content-Length` header of less than 1024 bytes are not
 compressed, since they would barely benefit from it.
 
-To determine a good setting for `gzip_buffers`, run the following to get the
+To determine a good setting for `gzip_buffers`, use
+[getconf](https://man.openbsd.org/getconf.1) to get the
 size of a memory page on your system.
 
 ```sh
@@ -142,7 +144,7 @@ Test your configuration with `nginx -t`. If that succeeds, reload nginx with
 
 ### Uploading your site
 
-This site uses [gozer](https://github.com/dannyvankooten/gozer) to turn Markdown into HTML files and generate a RSS
+This site uses [gozer](https://github.com/dannyvankooten/gozer) to turn Markdown into HTML files and generate an RSS
 feed. Uploading the site to our server is a simple case of rsync:
 
 ```
@@ -226,4 +228,13 @@ end of the file:
 soft nofile 1536
 ```
 
+[^1]: If I had to nitpick two things it is that they do seem to be somewhat less
+    reliable in terms of uptime since [they suffered a huge
+    DDOS](https://sourcehut.org/blog/2024-01-19-outage-post-mortem/) a while ago.
+    Also, I am [unsure whether their (new) servers are powered by renewable
+    energy](https://www.thegreenwebfoundation.org/green-web-check/?url=pages.sr.ht).
+
+[^2]: You can of course pick other distributions. A lot of tutorials online are
+    using Ubuntu, but I really enjoy Debian (which Ubuntu is based on) and its
+    stability.
 
