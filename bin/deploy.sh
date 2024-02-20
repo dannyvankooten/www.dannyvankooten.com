@@ -22,7 +22,9 @@ mogrify -sample '1024>' -quality 90 -strip build/**/**/*.{jpg,png}
 echo "After: $(du -bch build/**/**/*.{jpg,png} | tail -n1)"
 
 echo "Sending to remote"
-tar -C build -cvz . > site.tar.gz
-hut pages publish -d www.dannyvankooten.com site.tar.gz
+rsync -rav build/. dannyvankooten@1.dannyvankooten.com:/var/www/www.dannyvankooten.com/
+
+#tar -C build -cvz . > site.tar.gz
+#hut pages publish -d www.dannyvankooten.com site.tar.gz
 #hut pages publish -d dvko.srht.site site.tar.gz
 
