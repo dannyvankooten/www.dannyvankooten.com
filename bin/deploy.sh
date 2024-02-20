@@ -14,7 +14,7 @@ if [[ "$1" != "fast" && "$1" != "--fast" ]]; then
 fi
 
 echo "Building site"
-gozer -c config_prod.toml build
+gozer --config=config_prod.toml build
 
 echo "Optimizing images"
 echo "Before: $(du -bch build/**/**/*.{jpg,png} | tail -n1)"

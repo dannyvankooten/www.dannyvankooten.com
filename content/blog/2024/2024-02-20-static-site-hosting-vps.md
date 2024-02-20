@@ -113,28 +113,27 @@ site.
 File: `/var/www/nginx/www.dannyvankooten.com`
 ```sh
 server {
-	index index.html;
-	server_name www.dannyvankooten.com dannyvankooten.com;
-	root /var/www/www.dannyvankooten.com;
+    listen 80;
+    listen [::]:80;
+    index index.html;
+    server_name www.dannyvankooten.com dannyvankooten.com;
+    root /var/www/www.dannyvankooten.com;
 
-	# Cache static assets for 1 year
-	location ~* .(?:css|js|ico|txt|svg|jpg|jpeg|webp|png|csv)$ {
-		expires 1y;
-		add_header "Cache-Control" "public";
-	}
+    # Cache static assets for 1 year
+    location ~* .(?:css|js|ico|txt|svg|jpg|jpeg|webp|png|csv)$ {
+        expires 1y;
+        add_header "Cache-Control" "public";
+    }
 
-	# Cache HTML & XML files for 1 hour
-	location ~* .(?:html|xml)$ {
-		expires 1h;
-		add_header "Cache-Control" "public";
-	}
+    # Cache HTML & XML files for 1 hour
+    location ~* .(?:html|xml)$ {
+        expires 1h;
+        add_header "Cache-Control" "public";
+    }
 
-	location / {
-			try_files $uri $uri/ =404;
-	}
-
-	listen 80;
-	listen [::]:80;
+    location / {
+        try_files $uri $uri/ =404;
+    }
 }
 ```
 
@@ -156,7 +155,7 @@ minimal because files are sent in isolation.
 
 ### Update your DNS records
 
-Our site is ready to go live. You can preview it by adding an entry in your
+Our site is ready to go live. You can preview it by adding a temporary entry in your
 `/etc/hosts` file.
 
 ```sh
@@ -189,7 +188,7 @@ sites like this without your server really having to work.
 
 ### Tweaks
 
-What follows are some recommended tweaks, which are not strictly necessary but
+What follows are some final tweaks, Not strictly necessary but
 nice nonetheless:
 
 #### Creating a non-root user
