@@ -27,7 +27,7 @@ boat too.
 
 ### Server details
 
-For the server we don't need much; a single core vCPU with 500 MB of RAM, IPv4 and
+For the server we don't need much; a single core vCPU with 1 GB of RAM, IPv4 and
 IPv6 networking enabled, a bit of storage and Debian[^2] installed is plenty.
 
 If your cloud provider has an option to configure a firewall from their UI,
@@ -47,9 +47,9 @@ We could get somewhat newer versions by adding the nginx APT repository and
 using snap to install certbot, but
 I am going to be sticking to Debian packaged versions here.
 
-### Configuring
+### Configuring nginx
 
-We'll be storing our websites and configuration in subdirectories of `/var/www/`.
+We'll be storing our websites and configuration files in `/var/www/`.
 
 Open up `/etc/nginx/nginx.conf` and add the following line inside the `http { }`
 block:
@@ -58,7 +58,7 @@ block:
 include /var/www/nginx/*
 ```
 
-This instructs nginx to include all files in the `/var/www/nginx` directory, which allows us to leave the rest of this file alone.
+This instructs nginx to include all files in the `/var/www/nginx` directory, allowing us to leave the rest of this file alone.
 
 Create said directory and in it, create a file called `nginx.conf` that will
 contain our global configuration (across all sites).
@@ -85,13 +85,12 @@ gzip_vary on;
 gzip_proxied any;
 gzip_comp_level 6;
 gzip_buffers 32 4k;
-gzip_http_version 1.1;
 gzip_min_length 1024;
 gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript image/svg+xml;
 ```
 
-This enables gzip compression for HTML, CSS, SVG and JS responses at level 6, which
-strikes a nice balance between compute cost and compression ratio.
+This enables gzip compression for HTML, CSS, SVG and JS responses at a level
+that strikes a nice balance between compute cost and compression ratio.
 
 Responses with a `Content-Length` header of less than 1024 bytes are not
 compressed, since they would barely benefit from it.
@@ -107,7 +106,7 @@ getconf PAGESIZE
 If this returns a value other than 4096, modify the `gzip_buffers` setting
 accordingly.
 
-### nginx configuration for your site
+### Serving your site
 
 Next up, create another file containing the server configuration for your static
 site.
@@ -124,12 +123,6 @@ server {
     # Cache static assets for 1 year
     location ~* .(?:css|js|ico|txt|svg|jpg|jpeg|webp|png|csv)$ {
         expires 1y;
-        add_header "Cache-Control" "public";
-    }
-
-    # Cache HTML & XML files for 1 hour
-    location ~* .(?:html|xml)$ {
-        expires 1h;
         add_header "Cache-Control" "public";
     }
 
@@ -227,6 +220,24 @@ end of the file:
 ```
 soft nofile 1536
 ```
+
+#### Disabling or buffering access logging
+
+Logging every request consumes both CPU and I/O cycles. You can disable it
+entirely by including the following directive in your configuration file.
+
+```
+access_log off;
+```
+
+Another way to reduce the impact is to enable access log buffering.
+
+```
+access_log /var/log/nginx/access.log combined buffer=4096 flush=1m;
+```
+
+This will only write to the log once the 4 kB buffer is full or if a minute has
+passed since the last write.
 
 [^1]: If I had to nitpick two things it is that they do seem to be somewhat less
     reliable in terms of uptime since [they suffered a huge
