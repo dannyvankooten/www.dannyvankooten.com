@@ -10,46 +10,33 @@
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <style>
 body {
-    font: 16px/1.5 monospace;
-    background: #eee;
-    color: #222;
+    font: 16px/1.5 verdana, helvetica, arial, sans-serif;
+    color: #333;
     padding: 1em;
     max-width: 72ch;
     margin-left: auto;
     margin-right: auto;
+    background: #fff;
 }
 a {
-    color: #222;
-    font-weight: bold;
+    color: #333;
     text-decoration-skip-ink: true;
     text-underline-offset: 2px;
+    text-decoration-style: dotted;
+}
+a:hover {
+    color: #111;
+    text-decoration-style: solid;
 }
 a:visited {
-    color: #333;
+    color: #555;
 }
 h1, h2, h3, h4, h5 {
     line-height: 1.1;
-    text-transform: uppercase;
 }
 h1, h2, h3, h4, h5 {
     margin-top: 2em;
     padding-bottom: 4px;
-}
-h1:before {
-    content: "# ";
-    color: #888;
-}
-h2:before {
-    content: "## ";
-    color: #888;
-}
-h3:before {
-    content: "### ";
-    color: #888;
-}
-h4:before {
-    content: "#### ";
-    color: #888;
 }
 hr {
     height: 1px;
@@ -67,8 +54,11 @@ footer p {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
 }
-main ul {
+main ul,
+main ol {
     padding: 0 0 0 1em;
+}
+main ul {
     list-style-type: '- ';
 }
 main li {
@@ -90,7 +80,6 @@ small {
 header ul, footer ul {
     list-style: none;
     padding: 0;
-    text-transform: uppercase;
 }
 header li, footer li {
     display: block;
@@ -167,20 +156,14 @@ sup a:before{
 sup a:after {
     content: "]";
 }
-@media (prefers-color-scheme: dark) {
-    body {
-        background: #222;
-        color: #eee;
-    }
-    code { background: #343434; }
-    pre code { color: #eee; }
-    a { color: #eee; }
-    a:visited { color: #ddd;  }
+
+header a,
+footer a {
+    font-weight: bold;
 }
+
 @media(min-width: 820px) {
-    header, footer {
-        text-align: center;
-    }
+
     header li, footer li {
         display: inline-block;
         margin: 0 1em 0 0;
