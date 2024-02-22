@@ -3,8 +3,6 @@ title = "Danny van Kooten"
 template = "home.html"
 +++
 
-Hello,
-
 My name is Danny and I'm a programmer from Nijmegen, a relatively small city in The Netherlands that's hugging the border with Germany.
 
 I've been building, maintaining and delivering support for open-source software products as my main source of income for well over a decade now.
@@ -15,24 +13,13 @@ It all started out with me hospitalized in Vietnam due to acute appendicitis and
 
 <img src="/img/danny-rico.jpg" alt="Danny with stray dog" loading="lazy" width="300" height="300" />
 
-## Code
+## Latest projects
 
-Below is a list of code I have open-sourced over the years.
-
+- [Gozer](https://github.com/dannyvankooten/gozer): simple, fast and opinionated static site generator.
+- [1BRC](https://github.com/dannyvankooten/1brc): C implementation of the [1 Billion Rows Challenge](/blog/2024/1brc/), in standard C99 with POSIX threads.
+- [Nederlang](https://github.com/dannyvankooten/nederlang): bytecode compiler with a stack based VM for a programming language consisting of Dutch keywords, in Rust.
 - [Koko Analytics](https://www.kokoanalytics.com/): lightweight and privacy-friendly analytics for your WordPress site.
 - [Advent of Code](https://github.com/dannyvankooten/advent-of-code): my solutions for [Advent of Code](https://adventofcode.com/2023/about) 2015 - 2023. Implemented in C, C++, Rust, Python and Golang.
-- [Nederlang](https://github.com/dannyvankooten/nederlang): bytecode compiler with a stack based VM for a programming language consisting of Dutch keywords, in Rust.
-- [1BRC](https://github.com/dannyvankooten/1brc): C implementation of the [1 Billion Rows Challenge](/blog/2024/1brc/), in standard C99 with POSIX threads.
-- [Cnake](https://github.com/dannyvankooten/cnake): Snake in your terminal, no dependencies.
-- [Pepper Lang](https://github.com/dannyvankooten/pepper-lang): toy programming language, in C.
-- [Mailchimp for WordPress](https://mc4wp.com/): the #1 Mailchimp plugin for WordPress.
-- [ibericode/vat](https://github.com/ibericode/vat): PHP library to handle EU VAT rules.
-- [Gozer](https://github.com/dannyvankooten/gozer): static site generator.
-- [Browserpass](https://github.com/browserpass/browserpass-extension): browser extension for [pass](https://www.passwordstore.org/) utilizing native messaging.
-- [Fathom Analytics](https://github.com/usefathom/fathom): the original open-source version before I [left Fathom due to family obligations](https://www.dannyvankooten.com/blog/2019/stepping-down-fathom-maintainer/) and it was abandoned.
-- [AltoRouter](https://github.com/dannyvankooten/AltoRouter/): routing class for PHP.
-- [Grender](https://github.com/dannyvankooten/grender): Go package for writing JSON/XML data and HTML templates to HTTP response streams.
-- [go-moneybird](https://github.com/dannyvankooten/moneybird-go): Go client library for Moneybird.
-- [populate.js](https://github.com/dannyvankooten/populate.js): populate a HTMLFormElement from a JSON object.
 
+You can find [more of my projects here](/projects/).
 

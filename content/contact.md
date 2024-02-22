@@ -2,7 +2,7 @@
 title = "Contact"
 +++
 
-Need to contact me? If so, please go through the questions below to help save us both some time.
+Would you like get in contact? If so, please go through the questions below to help save us both some time.
 
 Do you...
 
@@ -24,17 +24,16 @@ Please use the appropriate [plugin support forum on WordPress.org](https://wordp
 __...need my business details?__
 
 <address>
-ibericode BV <br>
+ibericode BV<br>
 6533BP Nijmegen<br>
 The Netherlands <br>
-Chamber of Commerce reg. no: 65413741<br>
 VAT no: NL856102337B01<br>
 </address>
 
 ---
 
-__Need anything else?__
+__Anything else?__
 
-Send me an email at [&#104;&#105;&#64;&#100;&#97;&#110;&#110;&#121;&#118;&#97;&#110;&#107;&#111;&#111;&#116;&#101;&#110;&#46;&#99;&#111;&#109;](mailto:&#104;&#105;&#64;&#100;&#97;&#110;&#110;&#121;&#118;&#97;&#110;&#107;&#111;&#111;&#116;&#101;&#110;&#46;&#99;&#111;&#109;).
+Please send your email to [hi @ this domain](mailto:).
 
 Should it be private? Here's my [PGP public key](/public-key.txt).

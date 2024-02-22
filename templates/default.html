@@ -3,9 +3,15 @@
 <h1>{{ .Title }}</h1>
 
 {{ if not .Page.DatePublished.IsZero }}
-<p class="muted">Published <time datetime="{{ .Page.DatePublished.Format `2006-01-02` }}">{{ .Page.DatePublished.Format `Jan 2, 2006` }}</time> on <a href="{{ .Page.Permalink }}">Permalink</a></p>
+<p><small>Published <time datetime="{{ .Page.DatePublished.Format `2006-01-02` }}">{{ .Page.DatePublished.Format `Jan 2, 2006` }}</time> on <a href="{{ .Page.Permalink }}">Permalink</a>.</small></p>
 {{ end }}
 
 {{ .Content }}
+
+{{ if not .Page.DatePublished.IsZero }}
+<hr>
+<p><small>Comments are welcome. You can email me at <a href="mailto:?subject=RE:{{.Page.Title}}">hi @ this domain</a>.</small></p>
+{{ end }}
+
 
 {{ template "_footer.html" .}}
