@@ -11,8 +11,11 @@ I've been happily running Linux on my laptop since 2016.
 Made possible by the following list of mostly open-source software (not exhaustive).
 
 - [Debian](https://www.debian.org/): the Linux distribution I use as my daily driver.
-- [Gnome](https://www.gnome.org/): desktop environment.
+- [Sway](https://swaywm.org/): tiling window manager.
+- [Foot](https://swaywm.org/): terminal.
 - [Firefox](https://www.mozilla.org/en-US/firefox/): web browser. I use the ESR edition.
+- [Neovim](https://neovim.io/): text editor. [Helix](https://helix-editor.com/)
+  is shaping up nicely as well.
 - [uBlock Origin](https://ublockorigin.com/): ad-blocker.
 - [Bitwarden](https://bitwarden.com/): password manager.
 - [Bash](https://www.gnu.org/software/bash/): sh compatibe shell. I like Fish too, but having bash available out of the box pretty much everywhere is what makes me stick with it.
@@ -40,9 +43,9 @@ On the frontend, I strive to not use any CSS frameworks and only use JavaScript 
 
 ## State of the web
 
-- [motherfuckingwebsite.com](http://motherfuckingwebsite.com/), [bettermotherfuckingwebsite.com](http://bettermotherfuckingwebsite.com/) and [perfectmotherfuckingwebsite.com](https://perfectmotherfuckingwebsite.com/)
+- [Performance Inequality Gap 2024](https://infrequently.org/2024/01/performance-inequality-gap-2024/) [2023](https://infrequently.org/2022/12/performance-baseline-2023/)
 - [HTTP Archive Web Almanac 2022: Page weight](https://almanac.httparchive.org/en/2022/page-weight)
-- [Performance Inequality Gap 2023](https://infrequently.org/2022/12/performance-baseline-2023/)
+- [motherfuckingwebsite.com](http://motherfuckingwebsite.com/), [bettermotherfuckingwebsite.com](http://bettermotherfuckingwebsite.com/) and [perfectmotherfuckingwebsite.com](https://perfectmotherfuckingwebsite.com/)
 - [The Cost Of JavaScript - Addy Osmani (2023)](https://www.youtube.com/watch?v=ZKH3DLT4BKw)
 - [Climate friendly software: don't fight the wrong battle](https://blog.ltgt.net/climate-friendly-software/)
 - [Introduction to web sustainability, MDN](https://developer.mozilla.org/en-US/blog/introduction-to-web-sustainability/)
