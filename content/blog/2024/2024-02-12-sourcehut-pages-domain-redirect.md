@@ -18,6 +18,9 @@ Ideally this would be a HTTP redirect, but this does not seem possible right now
 
 Create a filed called `index.html` with the following file contents:
 
+```filename
+index.html
+```
 ```html
 <meta http-equiv="refresh" content="0; url=https://www.dannyvankooten.com/">
 ```
@@ -26,12 +29,18 @@ Create a filed called `index.html` with the following file contents:
 
 Create a file called `404.html` with the following file contents:
 
+```filename
+404.html
+```
 ```html
 <script>window.location.href = 'https://www.dannyvankooten.com' + window.location.pathname;</script>
 ```
 
 Create another file called `config.json` with the following file contents:
 
+```filename
+config.json
+```
 ```json
 {
 	"notFound": "/404.html"

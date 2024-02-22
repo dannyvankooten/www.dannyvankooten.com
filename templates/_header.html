@@ -53,7 +53,7 @@ hr {
 }
 main ul,
 main p,
-main pre,
+main pre code,
 main > div,
 main blockquote,
 footer ul,
@@ -107,18 +107,23 @@ code {
     padding: 0 4px;
     display: inline-block;
 }
-pre {
+pre code {
     font-size: 14px;
-    background: hsl(210, 15%, 22%);
-    color: white;
+    background: #303841;
+    color: #fff;
     display: block;
     overflow-x: auto;
     padding: 16px;
 }
-pre code {
-    font-size: inherit;
-    background: inherit;
-    padding: 0;
+pre code.language-filename {
+    margin-bottom: -16px;
+    font-size: 12px;
+    border-bottom: 1px solid #888;
+    width: auto;
+    color: #eee;
+}
+pre code.language-filename:before {
+    content: "File: ";
 }
 table{
     width: 100%;

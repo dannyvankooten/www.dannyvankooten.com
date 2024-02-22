@@ -71,6 +71,9 @@ touch /var/www/nginx/nginx.conf
 The first thing we want to do is to disable the `server_tokens` directive, to
 stop including the nginx version in HTTP headers.
 
+```filename
+/var/www/nginx/nginx.conf
+```
 ```
 server_tokens off;
 ```
@@ -79,6 +82,9 @@ Next up is enabling [gzip
 compression](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) and
 configuring it properly.
 
+```filename
+/var/www/nginx/nginx.conf
+```
 ```
 gzip on;
 gzip_vary on;
@@ -111,7 +117,9 @@ accordingly.
 Next up, create another file containing the server configuration for your static
 site.
 
-File: `/var/www/nginx/www.dannyvankooten.com`
+```filename
+/var/www/nginx/www.dannyvankooten.com
+```
 ```sh
 server {
     listen 80;
@@ -204,6 +212,9 @@ First, make sure to add your public key to `$HOME/<user>/.ssh/authorized_keys`.
 
 Then open up `/etc/ssh/sshd_config` and disable password authentication.
 
+```filename
+/etc/ssh/sshd_config
+```
 ```
 PasswordAuthentication no
 ```
@@ -217,6 +228,9 @@ descriptors](https://www.nginx.com/blog/avoiding-top-10-nginx-configuration-mist
 Open up `/etc/security/limits.conf` and add the following line just before the
 end of the file:
 
+```filename
+/etc/security/limits.conf
+```
 ```
 soft nofile 1536
 ```
@@ -226,12 +240,18 @@ soft nofile 1536
 Logging every request consumes both CPU and I/O cycles. You can disable it
 entirely by including the following directive in your configuration file.
 
+```filename
+/var/www/nginx/nginx.conf
+```
 ```
 access_log off;
 ```
 
 Another way to reduce the impact is to enable access log buffering.
 
+```filename
+/var/www/nginx/nginx.conf
+```
 ```
 access_log /var/log/nginx/access.log combined buffer=4096 flush=1m;
 ```
