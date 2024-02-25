@@ -16,17 +16,16 @@ fi
 echo "Building site"
 gozer --config=config_prod.toml build
 
+# See https://developers.google.com/speed/docs/insights/OptimizeImages
+IMAGES=$(find build/ -type f \( -iname '*.jpg' -o -iname '*.png' -o -iname '*.gif' -o -iname '*.jpeg' -o -iname '*.webp' \))
 echo "Optimizing images"
-echo "Before: $(du -bch build/**/**/*.{jpg,png} | tail -n1)"
-mogrify -strip -sampling-factor 4:2:0 -resize 1024x\> -quality 85 -interlace JPEG -colorspace sRGB build/**/**/*.jpg
-mogrify -strip -sampling-factor 4:2:0 -resize 1024x\> -quality 85 -interlace JPEG -colorspace sRGB build/**/*.jpg
-mogrify -strip -resize 1024x\> -alpha Remove build/**/**/*.png
-mogrify -strip -resize 1024x\> -alpha Remove build/**/*.png
-mogrify -strip -resize 1024x\> build/**/*.gif
-echo "After: $(du -bch build/**/**/*.{jpg,png} | tail -n1)"
+echo "Before: $(du -bch $IMAGES | tail -n1)"
+find build/ -type f \( -iname '*.jpg' -o -iname '*.jpeg' \) -exec mogrify -strip -sampling-factor 4:2:0 -resize 1024x\> -quality 85 -interlace JPEG -colorspace sRGB {} \;
+find build/ -type f \( -iname '*.png' -o -iname '*.gif' \) -exec mogrify -strip -resize 1024x\> -alpha Remove {} \;
+echo "After: $(du -bch $IMAGES | tail -n1)"
 
 echo "Sending to remote"
-rsync -rav build/. dannyvankooten@1.dannyvankooten.com:/var/www/www.dannyvankooten.com/
+rsync -rzav build/. dannyvankooten@1.dannyvankooten.com:/var/www/www.dannyvankooten.com/
 
 #tar -C build -cvz . > site.tar.gz
 #hut pages publish -d www.dannyvankooten.com site.tar.gz
