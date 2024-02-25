@@ -9,7 +9,7 @@ ontact Form 7 is one of the most popular free contact form plugins for WordPress
 
 This post will show you how to add a Mailchimp sign-up checkbox to your Contact Form 7 form without writing a single line of code.
 
-<img class="alignright size-full wp-image-2191" alt="contact-form-7-example" src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704561/contact-form-7-example_rtkgiq.png" width="352" height="374" />
+<img class="alignright size-full wp-image-2191" alt="contact-form-7-example" src="/media/2013/mailchim-sign-up-checkbox-in-contact-form-7.jpg" width="352" height="374" />
 
 People who send you a message will be able to subscribe to your Mailchimp list(s) with ease. You can choose to have the checkbox pre-checked so it doesn't even require them to click.
 
@@ -42,6 +42,6 @@ The part after the dash should match the "merge tag" of the list field.
 
 Let's do another example but this time for a list field called `WEBSITE`. This time, we'll be using the Contact Form 7 "Generate Tag" tool.
 
-<img class="aligncenter size-full wp-image-2189" alt="Generating a Mailchimp website field using the CF7 tag wizard" src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704562/contact-form-7-generate-tag_ugaglb.png" width="615" height="390" />
+<img class="aligncenter size-full wp-image-2189" alt="Generating a Mailchimp website field using the CF7 tag wizard" src="/media/2013/contact-form-7-generate-tag.png" width="615" height="390" />
 
 Easy, right? It's a sure way to get more subscribers to your email lists as well. Want to see a live example? I am using it for my own <a href="https://www.mc4wp.com/contact/">contact form on the plugin site</a>.

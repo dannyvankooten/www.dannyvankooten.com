@@ -14,7 +14,7 @@ As the team grew by a few hands, we figured we needed a _real_ company name. We 
 
 <center>
 <a href="https://www.ibericode.com/">
-<img src="https://res.cloudinary.com/dannyvankooten/image/upload/c_scale,w_400/v1434710383/logo_jbnogj.png" alt="ibericode" />
+<img src="/media/2015/ibericode-logo.png" alt="ibericode" />
 </a>
 </center>
 
@@ -25,7 +25,7 @@ As developing & supporting software can be perceived as boring, we needed someon
 
 <center>
 <a href="https://www.ibericode.com/">
-<img src="https://res.cloudinary.com/dannyvankooten/image/upload/c_scale,w_200/v1434709015/mail_1_m3tyx2.png" alt="Rico, our mascot" />
+<img src="/media/2015/rico-ibericode-mascotte.png" alt="Rico, our mascot" />
 </a>
 </center>
 

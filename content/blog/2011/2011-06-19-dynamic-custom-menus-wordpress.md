@@ -18,7 +18,7 @@ Like always, there are multiple ways to do this. We can look for `$_SERVER['REQU
 
 <em>(<strong>Note:</strong> As of WordPress version 3.1, some screen options on the Post &amp; Page edit Administration Panels are hidden by default. Custom Fields are hidden by default if they have not been used before.)</em>
 
-<img class="aligncenter size-full wp-image-518" title="Custom field containting 'menu' meta value." alt="" src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704662/custom-field-menu_vo6w2e.jpg" width="518" height="151" />
+<img class="aligncenter size-full wp-image-518" title="Custom field containting 'menu' meta value." alt="" src="/media/2011/dynamic-custom-menu-1.jpg" width="518" height="151" />
 
 By specifying the menu slug as a custom field meta value we can call this from our template files from inside the loop by using <a href="https://codex.wordpress.org/Function_Reference/get_post_meta">`get_post_meta()`</a>. Then we check if a custom menu with that slug exists, just to be sure. If it exists, output the menu using `wp_nav_menu()`. I'm not specifying a lot of parameters here, but of course you can just specify what's needed inside the parameter array.
 
@@ -26,16 +26,16 @@ By specifying the menu slug as a custom field meta value we can call this from o
 $menu_slug = get_post_meta( get_the_ID(), 'menu', true );
 
 if( $menu_slug && is_nav_menu( $menu_slug ) ) {
-	wp_nav_menu( 
+	wp_nav_menu(
     	array(
 			'menu' => $menu_slug
 		)
     );
-} 
+}
 // optionally, use an else-statement output something when no menu exists with the given meta value.
 ```
 
-So there we have it, we hooked a menu to a post. 
+So there we have it, we hooked a menu to a post.
 
 Now, if we wanted to make things easier we would get all nav menus with <a href="https://core.trac.wordpress.org/browser/tags/3.1.3/wp-includes/nav-menu.php#l409">`wp_get_nav_menus()`</a> and add a select box to the edit post screen where users can choose their which menu to show.
 

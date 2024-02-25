@@ -8,12 +8,12 @@ Almost a year after its initial release (June 2013) and close to 300.000 downloa
 The biggest new feature is the ability to include (mathematical) Captcha fields in your sign-up forms. The option to include a Captcha field will only be visible if you're running the <a href="https://wordpress.org/plugins/captcha/">Captcha plugin by BestWebSoft</a>.
 
 If you're running the Captcha plugin, using the <code>[captcha]</code> shortcode in your form mark-up is the only thing that's needed to render the Captcha field. The plugin will take care of validation and showing any possible error messages.
-<h3><img class="size-full wp-image-4075 aligncenter" src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704525/captcha-demo_dzr074.jpg" alt="captcha-demo" width="452" height="249" /></h3>
-<h3></h3>
+<h3><img class="size-full wp-image-4075 aligncenter" src="/media/2014/mc4wp-captcha.jpg" alt="captcha-demo" width="452" height="249" /></h3>
+
 <h3>Translated settings pages</h3>
 Previously the only translatable part were the actual sign-up forms and checkboxes. In version 2.0, all text on the Mailchimp for WordPress settings pages makes use of WordPress' translation functions which allows translation to the language of your WP installation.
 
-<img class="aligncenter size-full wp-image-4076" src="/media/2014/License-API-Settings-Mailchimp-for-WP-Pro-_-WP-Latest-_-WordPress-2014-04-30-13-14-09-2014-04-30-13-14-57_gpuonn.jpg" alt="Dutch settings page" width="613" height="279" />
+<img class="aligncenter size-full wp-image-4076" src="/media/2014/mc4wp-translated-settings-pages.jpg" alt="Dutch settings page" width="613" height="279" />
 
 As of now, the plugin only comes with English (default) and Dutch language files. If you're good at <a href="https://codex.wordpress.org/Translating_WordPress">translating</a>, feel free to send in your translation files so I can include them in the plugin. <a href="https://plugins.svn.wordpress.org/mailchimp-for-wp/trunk/languages/">You can download the latest .po files here.</a>
 <h3>Other changes</h3>

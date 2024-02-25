@@ -15,7 +15,7 @@ After updating the [Mailchimp for WordPress plugin](https://www.mc4wp.com/) to v
 
 Selecting a form will load any previous form styles you may have created for this form. When saving your styles the plugin will generate a stylesheet only targeting the selected form. This gives us the awesome ability to have multiple forms with complete different styles.
 
-![Two sign-up forms with completely different styles](https://res.cloudinary.com/dannyvankooten/image/upload/v1408995369/form-styles-frontend_gcibew.jpg)
+![Two sign-up forms with completely different styles](/media/2014/mc4wp-form-style-1.jpg)
 
 The best part: __all this without writing a single line of CSS__.
 

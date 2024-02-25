@@ -18,7 +18,11 @@ gozer --config=config_prod.toml build
 
 echo "Optimizing images"
 echo "Before: $(du -bch build/**/**/*.{jpg,png} | tail -n1)"
-mogrify -sample '1024>' -quality 90 -strip build/**/**/*.{jpg,png}
+mogrify -strip -sampling-factor 4:2:0 -resize 1024x\> -quality 85 -interlace JPEG -colorspace sRGB build/**/**/*.jpg
+mogrify -strip -sampling-factor 4:2:0 -resize 1024x\> -quality 85 -interlace JPEG -colorspace sRGB build/**/*.jpg
+mogrify -strip -resize 1024x\> -alpha Remove build/**/**/*.png
+mogrify -strip -resize 1024x\> -alpha Remove build/**/*.png
+mogrify -strip -resize 1024x\> build/**/*.gif
 echo "After: $(du -bch build/**/**/*.{jpg,png} | tail -n1)"
 
 echo "Sending to remote"

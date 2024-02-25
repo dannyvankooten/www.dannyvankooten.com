@@ -7,7 +7,7 @@ date = 2013-09-12 10:49:15
 
 If you're running an e-commerce website on WordPress, you're in luck. You probably know how important it is to build your newsletter list throughout the years. One great way to get more people to subscribe to your newsletter is to show a sign-up checkbox in your checkout form.
 
-<img class="aligncenter size-full wp-image-1662" alt="An example of a sign-up checkbox. " src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704572/sign-up-checbox-example_qek4ze.jpg" width="510" height="55" />
+<img class="aligncenter size-full wp-image-1662" alt="An example of a sign-up checkbox. " src="/media/2013/sign-up-checbox-example.jpg" width="510" height="55" />
 
 <h3>Why ask to sign-up to a newsletter during checkout?</h3>
 The people who are purchasing your products are most likely interested in your newsletter as well. Most people will want to hear any news regarding the product(s) they bought from you.
@@ -19,13 +19,13 @@ That's why it is important to make it as easy as possible for them to sign-up fo
 <h3>WooCommerce and Easy Digital Downloads</h3>
 <span style="line-height: 1.5;">Recently, I added automatic integration with two popular </span><span style="line-height: 1.5;">eCommerce</span><span style="line-height: 1.5;"> plugins for WordPress to my premium plugin, <a title="Mailchimp for WordPress Pro" href="https://www.mc4wp.com/">Mailchimp for WordPress</a>, that does just this. When activated, the plugin checks if you're running any plugins it can integrate with and then presents you with an option to show a newsletter sign-up checkbox at some of the available hooks.</span>
 
-<img class="aligncenter size-full wp-image-1403" alt="Show a checkbox at your Easy Digital Downloads checkout form." src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704606/edd-checkout-chekcbox_oxbct3.jpg" width="937" height="304" />
+<img class="aligncenter size-full wp-image-1403" alt="Show a checkbox at your Easy Digital Downloads checkout form." src="/media/2013/mc4wp-pro-checkbox-settings.jpg" width="937" height="304" />
 
 &nbsp;
 
 There is a live demo available on this website on the checkout page but here is a screenshot of what it looks like with my theme.
 
-<img class="aligncenter size-full wp-image-1660" alt="A pre-checked checkbox in your checkout forms is a sure way to build your email list(s)." src="https://res.cloudinary.com/dannyvankooten/image/upload/v1408704573/checkbox-in-checkout-form_lgfli6.jpg" width="959" height="598" />
+<img class="aligncenter size-full wp-image-1660" alt="A pre-checked checkbox in your checkout forms is a sure way to build your email list(s)." src="/media/2013/checkbox-in-checkout-form.jpg" width="959" height="598" />
 
 The plugin currently automatically integrates with the following eCommerce plugins.
 <ul>
