@@ -232,7 +232,7 @@ end of the file:
 /etc/security/limits.conf
 ```
 ```
-soft nofile 1536
+www-data soft nofile 1536
 ```
 
 #### Disabling or buffering access logging
@@ -258,6 +258,19 @@ access_log /var/log/nginx/access.log combined buffer=4096 flush=1m;
 
 This will only write to the log once the 4 kB buffer is full or if a minute has
 passed since the last write.
+
+#### Limit size of request body
+
+Since we're hosting a static website that does not accept any request data, we
+can change the default value for `client_max_body_size` to something much closer
+to zero.
+
+```filename
+/var/www/nginx/nginx.conf
+```
+```
+client_max_body_size 4k;
+```
 
 [^1]: If I had to nitpick two things it is that they do seem to be somewhat less
     reliable in terms of uptime since [they suffered a huge

@@ -13,10 +13,10 @@ The constraints I set for myself were as follows:
 
 The latter one proved to be a bit of a problem when I decided I wanted to have fullscreen code blocks, like so:
 
-<pre style="margin-left: min(-1em, (100vw - 72ch) / -2);
-    margin-right: min(-1em, (100vw - 72ch) / -2);
-    padding-left: max(1em, (100vw - 72ch) / 2);
-    padding-right: max(1em, (100vw - 72ch) / 2);"><code>See how this elements expands beyond the size of its container</code></pre>
+<pre><code style="margin-left: min(-16px, (100vw - 72ch) / -2);
+    margin-right: min(-16px, (100vw - 72ch) / -2);
+    padding-left: max(16px, (100vw - 72ch) / 2);
+    padding-right: max(16px, (100vw - 72ch) / 2);">See how this elements expands beyond the size of its container</code></pre>
 
 Normally, I would accomplish such a thing by breaking out of the element that has a `max-width` rule applied to it and then re-apply the max-width rule to a child of the element I want to have full-width.
 
