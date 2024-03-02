@@ -2,7 +2,7 @@
 title = "Projects"
 +++
 
-These are some (but not all) of the projects I've worked on over the years.
+A non-exhaustive list of some projects that I worked on over the years.
 
 #### Gozer
 

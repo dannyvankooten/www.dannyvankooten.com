@@ -1,22 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/img/favicon.png" type="image/png">
-    <title>{{ .Title }}{{ if ne .Page.UrlPath "" }} - {{ .Site.Title }}{{ end }}</title>
-    <link rel="canonical" href="{{ .Page.Permalink }}">
-    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    {{ if not .Page.DatePublished.IsZero -}}
-    <meta property="og:title" content="{{ .Page.Title }}">
-    <meta property="og:url" content="{{ .Page.Permalink }}">
-    <meta property="og:image" content="{{ .Site.Url }}img/avatar.jpeg">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
-    {{- end }}
-    <style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 body {
-    font: 16px/1.5 verdana, helvetica, arial, sans-serif;
+    font: 16px/1.5 sans-serif;
     color: #333;
     padding: 16px;
     max-width: 72ch;
@@ -25,23 +14,19 @@ body {
     background: #fff;
 }
 a {
-    color: #222;
+    color: blue;
     text-decoration-skip-ink: true;
-    text-underline-offset: 2px;
-    text-decoration-style: dotted;
-}
-a:hover,
-a:focus {
-    color: #000;
-    text-decoration-style: solid;
 }
 a:visited {
-    color: #444;
+    color: darkblue;
+}
+a:active,
+a:focus,
+a:hover {
+    color: red;
 }
 h1, h2, h3, h4, h5 {
     line-height: 1.1;
-}
-h1, h2, h3, h4, h5 {
     margin-top: 32px;
     margin-bottom: 16px;
 }
@@ -71,26 +56,19 @@ main ul {
 main li {
     margin: 0 0 8px 0;
 }
-header {
-    margin-bottom: 64px;
-}
-footer{
-    margin-top: 64px;
-}
-footer > p,
-footer > ul {
-    margin: 32px 0;
+footer {
+    text-align: center;
 }
 small {
     font-size: 14px;
 }
-header ul, footer ul {
+footer ul {
     list-style: none;
     padding: 0;
 }
-header li, footer li {
-    display: block;
-    margin-bottom: 16px;
+footer li {
+    display: inline-block;
+    margin: 0 16px 16px 0;
 }
 blockquote {
     border-left: 8px solid #888;
@@ -169,29 +147,18 @@ sup a:after {
     content: "]";
 }
 
-header a,
-footer a {
-    font-weight: bold;
-}
-
-@media(min-width: 820px) {
-    header li, footer li {
-        display: inline-block;
-        margin: 0 16px 0 0;
-    }
-}
 </style>
+<link rel="icon" href="/img/favicon.png" type="image/png">
+<title>{{ .Title }}{{ if ne .Page.UrlPath "" }} - {{ .Site.Title }}{{ end }}</title>
+<link rel="canonical" href="{{ .Page.Permalink }}">
+<link rel="alternate" type="application/rss+xml" href="/feed.xml">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+{{ if not .Page.DatePublished.IsZero -}}
+<meta property="og:title" content="{{ .Page.Title }}">
+<meta property="og:url" content="{{ .Page.Permalink }}">
+<meta property="og:image" content="{{ .Site.Url }}img/avatar.jpeg">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{- end -}}
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="/" rel="home">Danny van Kooten</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/contact/">Contact</a></li>
-            <li><a href="/feed.xml">RSS</a></li>
-        </ul>
-    </nav>
-</header>
 <main>
