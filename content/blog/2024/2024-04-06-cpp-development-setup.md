@@ -17,11 +17,11 @@ The two most popular options right now are probably VSCode and CLion, yet I foun
 Why Sublime, you ask?
 
 - It's an order of magnitude faster than both Clion and VSCode.
-- It doesn't crash, ever.
+- It doesn't suffer from random crashes on large projects.
 - It's easy to configure by modifying some JSON config files.
 - It's not trying to shove AI down my throat.
 - It works without having to spend hours configuring it. Just install **LSP** and **LSP-Clangd** through Package Control and you have a powerful editor ready to go.
-- It's very resource efficient. I can have a large C++ project open while it consumes less than 600 MB of RAM and CPU is idling.
+- It's much more resource efficient than the alternatives. I can have a large C++ project open while it consumes less than 600 MB of RAM and CPU is idling.
 
 The slight bummer is that it's not open source. Still, I really like how a small team from Australia can sit down and build a small but profitable business around a code editor.
 
@@ -63,7 +63,7 @@ To let Clangd know how to build your project, there exist several methods:
 
 As my workstation is running [Debian](https://www.debian.org/), I tend to compile the C and C++ projects that I work on using whatever version of [GCC](https://gcc.gnu.org/) and [Clang](https://clang.llvm.org/) is in the official package repositories.
 
-Currently, this means gcc 13 and clang 14, both of which have near complete support for `-std=c++20` [^1] [^2].
+Currently, this means gcc 12 and clang 14, both of which have near complete support for `-std=c++20` [^1] [^2].
 
 When a newer compiler is needed, there's always [building GCC from source](https://gcc.gnu.org/wiki/InstallingGCC) or [LLVM's APT repositories](https://apt.llvm.org/).
 
@@ -73,7 +73,7 @@ In terms of compilation profiles, I tend to use just three:
 
 ### Development
 
-This mode cares mostly about fast compilation times. The `LDFLAGS` environment value is set to instruct our compiler to use [mold](https://github.com/rui314/mold) for the linking stage.
+Development mode cares mostly about fast compilation times. The `LDFLAGS` environment value is set to instruct our compiler to use [mold](https://github.com/rui314/mold) for the linking stage, which is usually an order of magnitude faster than ld.
 
 ```sh
 CFLAGS="-std=c11 -Wall -Wextra -Wvla -Wformat -Wformat=2 -Wconversion"
@@ -83,7 +83,7 @@ LDFLAGS="-fuse-ld=mold"
 
 ### Debug
 
-In this mode we want debug symbols, stack traces and runtime checks from both Address Sanitizer and Undefined Behavior Sanitizer.
+In debug mode we want debug symbols, stack traces and runtime checks from both Address Sanitizer and Undefined Behavior Sanitizer.
 
 ```sh
 CFLAGS="-g -fsanitize=address,undefined -fno-omit-frame-pointer"
@@ -100,7 +100,7 @@ UBSAN_OPTIONS="print_stacktrace=1"
 
 ### Release
 
-In this mode we want the compiler to produce the fastest code possible at the cost of longer compilation times.
+In release mode we want the compiler to produce the fastest code possible at the cost of longer compilation times.
 
 ```sh
 CFLAGS="-O3"
