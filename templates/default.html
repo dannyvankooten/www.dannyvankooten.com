@@ -1,9 +1,12 @@
 {{ template "_header.html" .}}
 
-<h1>{{ .Title }}</h1>
+<div class="content container">
+    <div class="posts">
+        <div class="post">
+        <h1>{{ .Title }}</h1>
 
 {{ if not .Page.DatePublished.IsZero }}
-<p><small>By <a href="{{ .Site.Url }}">Danny van Kooten</a> on <time datetime="{{ .Page.DatePublished.Format `2006-01-02` }}">{{ .Page.DatePublished.Format `Jan 2, 2006` }}</time> on <a href="{{ .Page.Permalink }}">Permalink</a>.</small></p>
+<p class="post-date"><small>By <a href="{{ .Site.Url }}">Danny van Kooten</a> on <time datetime="{{ .Page.DatePublished.Format `2006-01-02` }}">{{ .Page.DatePublished.Format `Jan 2, 2006` }}</time> on <a href="{{ .Page.Permalink }}">Permalink</a>.</small></p>
 {{ end }}
 
 {{ .Content }}
@@ -12,5 +15,11 @@
 <hr>
 <p><small>Comments are welcome. You can email me at <a href="mailto:?subject=RE:{{.Page.Title}}">hi @ this domain</a>.</small></p>
 {{ end }}
+        </div>
+    </div>
+</div>
+
+
+
 
 {{ template "_footer.html" .}}

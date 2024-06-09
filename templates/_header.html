@@ -3,155 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-    font: 16px/1.5 sans-serif;
-    color: #333;
-    padding: 16px;
-    max-width: 72ch;
-    margin-left: auto;
-    margin-right: auto;
-    background: #fff;
-}
-a {
-    color: blue;
-    text-decoration-skip-ink: true;
-}
-a:visited {
-    color: darkblue;
-}
-a:active,
-a:focus,
-a:hover {
-    color: red;
-}
-h1, h2, h3, h4, h5 {
-    line-height: 1.1;
-    margin-top: 32px;
-    margin-bottom: 16px;
-}
-hr {
-    height: 1px;
-    border: 0;
-    background: #DDD;
-    margin: 32px 0;
-}
-main ul,
-main p,
-main pre code,
-main > div,
-main blockquote,
-footer ul,
-footer p {
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
-main ul,
-main ol {
-    padding: 0 0 0 16px;
-}
-main ul {
-    list-style-type: '- ';
-}
-main li {
-    margin: 0 0 8px 0;
-}
-footer {
-    text-align: center;
-}
-small {
-    font-size: 14px;
-}
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-footer li {
-    display: inline-block;
-    margin: 0 16px 16px 0;
-}
-blockquote {
-    border-left: 8px solid #888;
-    padding: 0 16px;
-    font-style: italic;
-    margin-left: 0;
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-code {
-    background: #ddd;
-    padding: 0 4px;
-    display: inline-block;
-}
-pre code {
-    font-size: 14px;
-    background: #303841;
-    color: #fff;
-    display: block;
-    overflow-x: auto;
-    padding: 16px;
-}
-pre code.language-filename {
-    margin-bottom: -16px;
-    font-size: 12px;
-    border-bottom: 1px solid #888;
-    width: auto;
-    color: #eee;
-}
-pre code.language-filename:before {
-    content: "File: ";
-}
-table{
-    width: 100%;
-    table-layout: auto;
-    border-collapse: collapse;
-    border: 1px solid #24292f;
-    line-break: strict;
-}
-thead th,
-thead td {
-    font-weight: bold;
-}
-tbody th,
-tbody tr {
-    font-weight: normal;
-}
-th,
-td{
-    border: 0;
-    text-align:left;
-    padding: 8px;
-}
-thead {
-    background: #24292f;
-    color: white;
-}
-tr:nth-child(even) {
-    background: rgba(0, 0, 0, 0.04);
-}
-sup {
-    line-height: 1;
-    font-size: 80%;
-    unicode-bidi: isolate;
-}
-sup a {
-    font-weight: normal;
-    text-decoration: none;
-}
-sup a:before{
-    content: "[";
-}
-sup a:after {
-    content: "]";
-}
-
-</style>
 <link rel="icon" href="/img/favicon.png" type="image/png">
 <title>{{ .Title }}{{ if ne .Page.UrlPath "" }} - {{ .Site.Title }}{{ end }}</title>
 <link rel="canonical" href="{{ .Page.Permalink }}">
 <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+<link rel="stylesheet" href="/style.css">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 {{ if not .Page.DatePublished.IsZero -}}
 <meta property="og:title" content="{{ .Page.Title }}">
@@ -161,4 +17,24 @@ sup a:after {
 {{- end -}}
 </head>
 <body>
-<main>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h2>
+        <a href="/">
+          Danny van Kooten
+        </a>
+      </h2>
+      <p class="lead">On software, bootstrapping, web, sustainability, pizza and open-source.</p>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a class="sidebar-nav-item" href="/about/">About</a>
+        <a class="sidebar-nav-item" href="/projects/">Projects</a>
+        <a class="sidebar-nav-item" href="/blog/">Blog</a>
+        <a class="sidebar-nav-item" href="/bookmarks/">Bookmarks</a>
+    </nav>
+
+    <p>&copy; All rights reserved.</p>
+  </div>
+</div>

@@ -3,7 +3,10 @@ title = "Stepping down from Fathom"
 date = 2019-03-18
 +++
 
-> Update (Mar 2021): After my departure, the open-source version of Fathom was discontinued. I've since started [Koko Analytics](https://www.kokoanalytics.com/) as an open-source alternative.
+<div class="message">
+	<strong>Update (Mar 2021):</strong> After my departure, the open-source version of Fathom was discontinued. I've since started <a href="https://www.kokoanalytics.com/">Koko Analytics</a> as an open-source alternative.
+</div>
+
 
 I have an announcement to make. Less than a year ago, Paul Jarvis and I [started working on Fathom](/blog/2018/reviving-ana-as-fathom/) (simple and transparent website analytics).
 

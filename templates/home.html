@@ -1,14 +1,22 @@
 {{ template "_header.html" .}}
-    {{$.Content}}
 
-    <h2>Latest blog posts</h2>
-    <ul>
-    {{ range (slice $.Posts 0 5) }}
-        <li>
-            <a href="{{ .Permalink }}">{{ .Title }}</a><br />
-            <small>{{ .DatePublished.Format "Jan 2, 2006" }}</small>
-        </li>
-        {{ end }}
-    </ul>
-    <p>View <a href="/blog/">all posts on my blog</a>.</p>
+<div class="content container">
+    <div class="posts">
+        <div class="post">
+        {{$.Content}}
+
+        <h2>Latest blog posts</h2>
+        <ul>
+            {{ range (slice $.Posts 0 5) }}
+            <li>
+                <a href="{{ .Permalink }}">{{ .Title }}</a><br />
+                <small>{{ .DatePublished.Format "Jan 2, 2006" }}</small>
+            </li>
+            {{ end }}
+        </ul>
+        <p>View <a href="/blog/">all posts on my blog</a>.</p>
+        </div>
+    </div>
+</div>
+
 {{ template "_footer.html" }}
