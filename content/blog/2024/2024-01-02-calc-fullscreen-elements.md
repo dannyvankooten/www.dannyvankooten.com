@@ -2,6 +2,8 @@
 title = "Using CSS calc to make elements fullscreen"
 +++
 
+> **Heads up.** The styling of my website changed since writing this post, so the element may look different than intended.
+
 This blog always had a pretty minimal amount of CSS, but somehow I still kicked off 2024 by throwing away all styles and starting over.
 
 The constraints I set for myself were as follows:

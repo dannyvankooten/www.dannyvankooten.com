@@ -29,10 +29,11 @@
     </div>
 
     <nav class="sidebar-nav">
-        <a class="sidebar-nav-item" href="/about/">About</a>
-        <a class="sidebar-nav-item" href="/projects/">Projects</a>
-        <a class="sidebar-nav-item" href="/blog/">Blog</a>
-        <a class="sidebar-nav-item" href="/bookmarks/">Bookmarks</a>
+        <a href="/" {{ if eq .Page.UrlPath "" }}class="active"{{ end }}>Home</a>
+        <a href="/about/" {{ if eq .Page.UrlPath "about/" }}class="active"{{ end }}>About</a>
+        <a href="/projects/" {{ if eq .Page.UrlPath "projects/" }}class="active"{{ end }}>Projects</a>
+        <a href="/blog/" {{ if eq .Page.UrlPath "blog/" }}class="active"{{ end }}>Blog</a>
+        <a href="/bookmarks/" {{ if eq .Page.UrlPath "bookmarks/" }}class="active"{{ end }}>Bookmarks</a>
     </nav>
 
     <p>&copy; All rights reserved.</p>
