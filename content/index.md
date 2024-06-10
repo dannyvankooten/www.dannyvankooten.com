@@ -7,9 +7,11 @@ template = "home.html"
 
 Hi stranger, welcome!
 
-My name is Danny and I'm a self-employed developer and tiny entrepeneur from The Netherlands. I've been making a living selling open-source software products for well over a decade now.
+My name is Danny and I run [ibericode](https://www.ibericode.com/), a tiny company from The Netherlands.
 
-On this site you can find a small selection of my work. You can also find me on <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a>, <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a> or <a href="https://git.sr.ht/~dvko/" rel="me nofollow">sourcehut</a>.
+I've been making a living selling open-source software products for well over a decade now. On this site you can find a small selection of my work.
+
+You can also find me on <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a>, <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a> or <a href="https://git.sr.ht/~dvko/" rel="me nofollow">sourcehut</a>.
 
 ## Latest projects
 

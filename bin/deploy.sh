@@ -4,6 +4,7 @@
 # Usage: ./bin/deploy.sh fast (skips remote content)
 
 set -e
+set -o pipefail
 
 if [[ "$1" != "fast" && "$1" != "--fast" ]]; then
     echo "Update /code/"

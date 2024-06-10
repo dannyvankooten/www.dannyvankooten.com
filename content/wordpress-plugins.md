@@ -23,7 +23,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
         <td><a href="https://www.kokoanalytics.com">Koko Analytics</a></td>
-        <td id="koko-analytics-downloads">677K</td>
+        <td id="koko-analytics-downloads">680K</td>
         <td>November 2019</td>
     </tr>
     <tr>
