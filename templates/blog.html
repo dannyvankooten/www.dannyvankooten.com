@@ -1,34 +1,31 @@
 
 {{ template "_header.html" .}}
 
-<div class="content container">
-    <div class="posts">
-        <div class="post">
-        <h1>{{$.Title}}</h1>
-        {{$.Content}}
+<main class="content container">
+    <h1>{{$.Title}}</h1>
 
-        <p><img src="/rss-icon.svg" width=16 height=16 alt="RSS icon" style="width: 16px; height: 16px; display: inline-block; margin: 0 4px 0 0; "> You can <a href="/feed.xml">find an RSS feed for this site here</a>.</p>
+    {{$.Content}}
+
+    <p><img src="/rss-icon.svg" width=16 height=16 alt="RSS icon" style="width: 16px; height: 16px; display: inline-block; margin: 0 4px 0 0; "> You can <a href="/feed.xml">find an RSS feed for this site here</a>.</p>
 
 
-        {{ $year := 0 }}
-        {{ range $.Posts }}
-            {{- if not (eq .DatePublished.Year $year) }}
-                {{- if gt $year 0 }}
-                    </ul>
-                {{- end }}
-                <h2>{{ .DatePublished.Year }}</h2>
-                <ul>
-                {{- $year = .DatePublished.Year -}}
-            {{ end }}
-            <li>
-                <a href="{{ .Permalink }}">{{ .Title }}</a><br />
-                <small>{{ .DatePublished.Format "Jan 2, 2006" }}</small>
-            </li>
-        {{- end -}}
-        </ul>
-        </div>
-    </div>
-</div>
+    {{ $year := 0 }}
+    {{ range $.Posts }}
+        {{- if not (eq .DatePublished.Year $year) }}
+            {{- if gt $year 0 }}
+                </ul>
+            {{- end }}
+            <h2>{{ .DatePublished.Year }}</h2>
+            <ul>
+            {{- $year = .DatePublished.Year -}}
+        {{ end }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a><br />
+            <small>{{ .DatePublished.Format "Jan 2, 2006" }}</small>
+        </li>
+    {{- end -}}
+    </ul>
+</main>
 
 
 

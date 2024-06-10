@@ -15,12 +15,8 @@ body {
   background-color: #fff;
 }
 
-/* No `:visited` state is required by default (browsers will use `a`) */
 a {
   color: blue;
-}
-a strong {
-  color: inherit;
 }
 
 a:visited {
@@ -65,6 +61,10 @@ strong {
 ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }
 
 dt {
@@ -139,12 +139,6 @@ blockquote {
 blockquote p:last-child {
   margin-bottom: 0;
 }
-@media (min-width: 30em) {
-  blockquote {
-    padding-right: 5rem;
-    padding-left: 1.25rem;
-  }
-}
 
 img {
   height: auto;
@@ -170,15 +164,8 @@ tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
-li {
-  margin-bottom: 0.5rem;
-}
-
 /*
  * Messages
- *
- * Show alert messages to users. You may add it to single elements like a `<p>`,
- * or to a parent if there are multiple elements to show.
  */
 
 .message {
@@ -188,13 +175,6 @@ li {
   background-color: #f9f9f9;
 }
 
-
-/*
- * Container
- *
- * Center the page content.
- */
-
 .container {
   max-width: 38rem;
   padding-left:  1rem;
@@ -203,54 +183,12 @@ li {
   margin-right: auto;
 }
 
-
-/*
- * Masthead
- *
- * Super small header above the content for site name and short description.
- */
-
-.masthead {
-  padding-top:    1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 3rem;
-}
-.masthead-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #505050;
-}
-.masthead-title a {
-  color: #505050;
-}
-.masthead-title small {
-  font-size: 75%;
-  font-weight: 400;
-  color: #c0c0c0;
-  letter-spacing: 0;
-}
-
-
-/*
- * Posts and pages
- *
- * Each post is wrapped in `.post` and is used on default and post layouts. Each
- * page is wrapped in `.page` and is only used on the page layout.
- */
-
-.page,
-.post {
+.content {
   margin-bottom: 4em;
 }
-
-/* Blog post or page title */
-.page h1,
-.post h1,
-.post h1 a {
+.content h1,
+.content h1 a {
   color: #303030;
-}
-.page-title,
-.post-title {
   margin-top: 0;
 }
 
@@ -262,8 +200,6 @@ li {
   color: #777;
 }
 
-
-
 /*
  * Sidebar
  *
@@ -272,7 +208,6 @@ li {
  */
 
 .sidebar {
-  text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
@@ -280,12 +215,12 @@ li {
 }
 @media (min-width: 48em) {
   .sidebar {
+    padding: 4rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     width: 18rem;
-    text-align: left;
   }
 }
 
@@ -296,7 +231,6 @@ li {
 }
 
 /* About section */
-.sidebar-about h1,
 .sidebar-about h2 {
   color: #fff;
   margin-top: 0;
@@ -318,22 +252,6 @@ li {
 .sidebar-nav a.active {
   font-weight: bold;
 }
-
-/* Sticky sidebar
- *
- * Add the `sidebar-sticky` class to the sidebar's container to affix it the
- * contents to the bottom of the sidebar in tablets and up.
- */
-
-@media (min-width: 48em) {
-  .sidebar-sticky {
-    position: absolute;
-    right:  1rem;
-    bottom: 1rem;
-    left:   1rem;
-  }
-}
-
 
 /* Container
  *
@@ -361,3 +279,9 @@ li {
   }
 }
 
+
+
+/** Utility */
+.muted {
+  font-size: 80%;
+}

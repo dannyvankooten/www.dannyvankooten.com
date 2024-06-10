@@ -49,7 +49,7 @@ Open-source and privacy friendly analytics. I [stepped away from Fathom](/blog/2
 
 #### Gozer
 
-A static site generator in Go with a focus on performance and simplicity. This website is generated with Gozer.
+A static site generator in Go with a focus on performance and simplicity. This website itself is generated with Gozer.
 
 [GitHub](https://github.com/dannyvankooten/gozer)
 

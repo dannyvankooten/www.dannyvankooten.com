@@ -1,25 +1,20 @@
 {{ template "_header.html" .}}
 
-<div class="content container">
-    <div class="posts">
-        <div class="post">
-        <h1>{{ .Title }}</h1>
+<article class="content container h-entry">
+    <h1 class="p-name">{{ .Title }}</h1>
 
-{{ if not .Page.DatePublished.IsZero }}
-<p class="post-date"><small>By <a href="{{ .Site.Url }}">Danny van Kooten</a> on <time datetime="{{ .Page.DatePublished.Format `2006-01-02` }}">{{ .Page.DatePublished.Format `Jan 2, 2006` }}</time> on <a href="{{ .Page.Permalink }}">Permalink</a>.</small></p>
-{{ end }}
+    {{ if not .Page.DatePublished.IsZero }}
+    <p class="post-date"><small>By <a class="p-author h-card" href="{{ .Site.Url }}">Danny van Kooten</a> on <time class="dt-published" datetime="{{ .Page.DatePublished.Format `2006-01-02T15:04:05Z07:00` }}">{{ .Page.DatePublished.Format `Jan 2, 2006` }}</time> on <a class="u-url" href="{{ .Page.Permalink }}">Permalink</a>.</small></p>
+    {{ end }}
 
-{{ .Content }}
-
-{{ if not .Page.DatePublished.IsZero }}
-<hr>
-<p><small>Comments are welcome. You can email me at <a href="mailto:?subject=RE:{{.Page.Title}}">hi @ this domain</a>.</small></p>
-{{ end }}
-        </div>
+    <div class="e-content">
+    {{ .Content }}
     </div>
-</div>
 
-
-
+    {{ if not .Page.DatePublished.IsZero }}
+    <hr>
+    <p><small>Comments are welcome. You can email me at <a href="mailto:?subject=RE:{{.Page.Title}}">hi @ this domain</a>.</small></p>
+    {{ end }}
+</article>
 
 {{ template "_footer.html" .}}

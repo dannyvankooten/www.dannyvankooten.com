@@ -17,8 +17,8 @@
 {{- end -}}
 </head>
 <body>
-<div class="sidebar">
-  <div class="container sidebar-sticky">
+<header class="sidebar">
+  <div class="container">
     <div class="sidebar-about">
       <h2>
         <a href="/">
@@ -27,7 +27,6 @@
       </h2>
       <p class="lead">On software, sustainability, open-source and web stuff.</p>
     </div>
-
     <nav class="sidebar-nav">
         <a href="/" {{ if eq .Page.UrlPath "" }}class="active"{{ end }}>Home</a>
         <a href="/about/" {{ if eq .Page.UrlPath "about/" }}class="active"{{ end }}>About</a>
@@ -35,7 +34,6 @@
         <a href="/blog/" {{ if eq .Page.UrlPath "blog/" }}class="active"{{ end }}>Blog</a>
         <a href="/bookmarks/" {{ if eq .Page.UrlPath "bookmarks/" }}class="active"{{ end }}>Bookmarks</a>
     </nav>
-
-    <p>&copy; All rights reserved.</p>
+    <p class="muted">&copy; All rights reserved.</p>
   </div>
-</div>
+</header>
