@@ -43,7 +43,7 @@ bin/console doctrine:database:create
 
 ### Creating database tables and indices
 
-Now, instead of converting our SQLite database structure to MySQL we can simply have Doctrine inspect our current PHP models and create the schema from that.
+Now, instead of converting our SQLite database structure to MySQL we can simply have Doctrine inspect our current PHP models ("entities") and create the schema from that.
 
 ```sh
 echo "-- Creating table structure"
@@ -56,6 +56,9 @@ We should now have our database in MySQL with a bunch of empty tables in it. Let
 echo "-- Validating schema"
 bin/console doctrine:schema:validate
 ```
+
+A nice side effect of creating the database structure from the current PHP models is that we can remove any previously used Doctrine migrations after we're done migrating from SQLite to MySQL, effectively starting from a clean slate.
+
 
 ### Migrating the data
 
