@@ -1,37 +1,15 @@
-User-agent: CCBot
-Disallow: /
-
-User-Agent: ChatGPT
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: GPTBot
-Disallow: /
-
-User-Agent: GPTBot-User
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: Omgilibot
-Disallow: /
-
-User-agent: FacebookBot
-Disallow: /
-
-User-agent: PerplexityBot
-Disallow: /
-
 User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Claude-Web
-Disallow: /
-
+User-agent: CCBot
+User-Agent: ChatGPT
+User-agent: ChatGPT-User
 User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: FacebookBot
+User-agent: GPTBot
+User-Agent: GPTBot-User
+User-agent: Google-Extended
+User-agent: Omgilibot
+User-agent: PerplexityBot
 Disallow: /
 
 User-agent: *
