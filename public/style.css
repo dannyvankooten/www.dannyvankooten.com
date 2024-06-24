@@ -124,7 +124,13 @@ pre code {
   padding: 1rem;
   border-radius: 3px;
 }
-
+pre code.language-filename {
+    margin-bottom: -1rem;
+    border-bottom: 1px solid #AAA;
+}
+pre code.language-filename:before {
+    content: "File: ";
+}
 
 /* Quotes */
 blockquote {

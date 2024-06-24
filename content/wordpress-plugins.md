@@ -23,7 +23,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
         <td><a href="https://www.kokoanalytics.com">Koko Analytics</a></td>
-        <td id="koko-analytics-downloads">699K</td>
+        <td id="koko-analytics-downloads">702K</td>
         <td>November 2019</td>
     </tr>
     <tr>
@@ -53,7 +53,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
     	<td><a href="https://wordpress.org/plugins/dvk-social-sharing/">Social Sharing by Danny</a></td>
-        <td id="dvk-social-sharing-downloads">101K</td>
+        <td id="dvk-social-sharing-downloads">102K</td>
         <td>November 2013</td>
     </tr>
     <tr>
