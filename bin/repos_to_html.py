@@ -27,6 +27,11 @@ def from_sourcehut(username: str):
         'Authorization': 'token ' + SOURCEHUT_TOKEN,
         'Accepts': 'application/json'
     }, timeout=10)
+
+    if not res.ok:
+        print("Sourcehut API request failed: " + res.text)
+        exit()
+
     data = res.json()
 
     for repo in data['results']:
@@ -53,6 +58,10 @@ def from_github(source: str):
                            'Authorization': 'Bearer ' + GITHUB_TOKEN,
                            'Accept': 'application/vnd.github+json'
                            }, timeout=10)
+    if not res.ok:
+        print("GitHub API request failed: " + res.text)
+        exit()
+
     for repo in res.json():
         if repo['archived'] or repo['private'] or repo['fork']:
             continue

@@ -4,7 +4,7 @@ body {
   padding: 0;
 }
 html {
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -12,7 +12,6 @@ body {
   color: #515151;
   background-color: #fff;
 }
-
 a {
   color: blue;
 }
@@ -94,25 +93,17 @@ abbr[title] {
 /* Code */
 code,
 pre {
-  font-family: monospace;
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  font-size: 14px;
 }
 code {
-  padding: .25em .5em;
-  font-size: 85%;
   color: #bf616a;
-  background-color: #f9f9f9;
-  border-radius: 3px;
 }
 pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: .8rem;
   line-height: 1.4;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
 }
 pre code {
   display: block;
@@ -120,9 +111,10 @@ pre code {
   font-size: 100%;
   color: inherit;
   background-color: hsl(210, 15%, 22%);
-  color: white;
+  color: hsl(219, 28%, 88%);
   padding: 1rem;
   border-radius: 3px;
+  overflow-x: auto;
 }
 pre code.language-filename {
     margin-bottom: -1rem;
@@ -147,6 +139,7 @@ img {
   height: auto;
   max-width: 100%;
   margin: 0 0 1rem;
+  border: 0;
   border-radius: 5px;
 }
 
@@ -179,8 +172,7 @@ tbody tr:nth-child(odd) th {
 
 .container {
   max-width: 38rem;
-  padding-left:  1rem;
-  padding-right: 1rem;
+  padding: 0 24px;
   margin-left:  auto;
   margin-right: auto;
 }
@@ -210,14 +202,14 @@ tbody tr:nth-child(odd) th {
  */
 
 .sidebar {
-  padding: 2rem 1rem;
+  padding: 24px 0;
   color: rgba(255,255,255,.5);
   background-color: #202020;
   box-sizing: border-box;
 }
 @media (min-width: 48em) {
   .sidebar {
-    padding: 4rem 1rem;
+    padding: 48px 24px;
     position: fixed;
     top: 0;
     left: 0;
