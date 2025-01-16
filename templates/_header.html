@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/img/favicon.png" type="image/png">
-<link rel="stylesheet" href="/style.css?20250112">
+<link rel="stylesheet" href="/style.css?v={{ .Now.Unix }}">
 <title>{{ .Title }}{{ if ne .Page.UrlPath "" }} - {{ .Site.Title }}{{ end }}</title>
 <link rel="canonical" href="{{ .Page.Permalink }}">
 <link rel="alternate" type="application/rss+xml" href="/feed.xml">
@@ -17,23 +17,14 @@
 {{- end -}}
 </head>
 <body>
-<header class="sidebar">
-  <div class="container">
-    <div class="sidebar-about">
-      <h2>
-        <a href="/">
-          Danny van Kooten
-        </a>
-      </h2>
-      <p class="lead">On software, sustainability, open-source and web stuff.</p>
-    </div>
-    <nav class="sidebar-nav">
-        <a href="/" {{ if eq .Page.UrlPath "" }}class="active"{{ end }}>Home</a>
-        <a href="/about/" {{ if eq .Page.UrlPath "about/" }}class="active"{{ end }}>About</a>
-        <a href="/projects/" {{ if eq .Page.UrlPath "projects/" }}class="active"{{ end }}>Projects</a>
-        <a href="/blog/" {{ if eq .Page.UrlPath "blog/" }}class="active"{{ end }}>Blog</a>
-        <a href="/bookmarks/" {{ if eq .Page.UrlPath "bookmarks/" }}class="active"{{ end }}>Bookmarks</a>
+<header class="site-header">
+    <nav>
+      <ul>
+        <li><a href="/" {{ if eq .Page.UrlPath "" }}class="active"{{ end }}>Home</a></li>
+        <li><a href="/about/" {{ if eq .Page.UrlPath "about/" }}class="active"{{ end }}>About</a></li>
+        <li><a href="/projects/" {{ if eq .Page.UrlPath "projects/" }}class="active"{{ end }}>Projects</a></li>
+        <li><a href="/blog/" {{ if eq .Page.UrlPath "blog/" }}class="active"{{ end }}>Blog</a></li>
+        <li><a href="/bookmarks/" {{ if eq .Page.UrlPath "bookmarks/" }}class="active"{{ end }}>Bookmarks</a></li>
+      </ul>
     </nav>
-    <p class="muted">&copy; All rights reserved.</p>
-  </div>
 </header>
