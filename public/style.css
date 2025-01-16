@@ -26,8 +26,13 @@ a {
   color: #6699CC;
   text-decoration: underline;
 }
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   line-height: 1.15;
 }
 h1 {
@@ -81,17 +86,12 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
-
 sub {
   bottom: -0.25em;
 }
-
 sup {
   top: -0.5em;
 }
-
-
-/* Misc */
 hr {
   box-sizing: content-box;
   overflow: visible;
@@ -101,7 +101,6 @@ hr {
   background: #e1e1e1;
   background: repeating-linear-gradient(90deg,#e1e1e1,#e1e1e1 5px,transparent 5px,transparent 10px);
 }
-
 abbr {
   font-size: 85%;
   font-weight: bold;
@@ -119,7 +118,9 @@ pre {
   font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 code {
-  color: #c1c1c1;
+  font-size: 14px;
+  background-color: hsl(210, 15%, 22%);
+  color: hsl(219, 28%, 88%);
 }
 pre {
   display: block;
@@ -130,6 +131,7 @@ pre code {
   background-color: hsl(210, 15%, 22%);
   color: hsl(219, 28%, 88%);
   padding: 12px;
+  font-size: 14px;
   border-radius: 3px;
   overflow-x: auto;
 }
@@ -144,11 +146,21 @@ pre code.language-filename:before {
 }
 
 /* Quotes */
-blockquote {
+blockquote,
+.message {
   padding: 0;
-  border-left: 4px solid #FC0;
+  border-left: 4px solid #cce5ff;
   padding: 12px 0 12px 24px;
-
+  color: #004085;
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  border-radius: 3px;
+  margin: 24px 0;
+  padding: 12px;
+}
+blockquote a {
+  color: #004085;
+  font-weight: bold;
 }
 blockquote *:first-child {
   margin-top: 0;
@@ -156,27 +168,25 @@ blockquote *:first-child {
 blockquote p:last-child {
   margin-bottom: 0;
 }
-
 img {
   height: auto;
   max-width: 100%;
   border: 0;
 }
-
 /* Tables */
 table {
   width: 100%;
-  border: 1px solid #e5e5e5;
   border-collapse: collapse;
 }
 td,
 th {
-  padding: .25rem .5rem;
-  border: 1px solid #e5e5e5;
+  padding: 3px 6px;
+  border: 1px solid #222;
+  text-align: left;
 }
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
+  background-color: #222;
 }
 
 .site-header ul {
@@ -192,24 +202,15 @@ tbody tr:nth-child(odd) th {
   font-weight: bold;
   padding-right: 12px;
 }
-.site-header a:hover {
+.site-header a:hover,
+.site-header a:focus {
   color: white;
 }
-/*
- * Messages
- */
-.message {
-color: #004085;
-  background-color: #cce5ff;
-  border: 1px solid #b8daff;
-  border-radius: 4px;
-  margin: 24px 0;
-  padding: 12px;
+.site-header a.active {
+  color: white;
+  text-decoration: none;
 }
 
-.content {
-  margin-bottom: 4em;
-}
 /** Utility */
 .muted {
   font-size: 80%;
