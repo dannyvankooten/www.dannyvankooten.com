@@ -11,6 +11,7 @@ body {
   line-height: 1.45;
   font-size: 16px;
   overflow-y: scroll;
+  overflow-wrap: break-word;
 }
 header {
   padding-bottom: 48px;
