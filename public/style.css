@@ -196,11 +196,7 @@ tbody tr:nth-child(odd) th {
 
 /*
  * Sidebar
- *
- * Flexible banner for housing site name, intro, and "footer" content. Starts
- * out above content in mobile and later moves to the side with wider viewports.
  */
-
 .sidebar {
   padding: 24px 0;
   color: rgba(255,255,255,.5);
