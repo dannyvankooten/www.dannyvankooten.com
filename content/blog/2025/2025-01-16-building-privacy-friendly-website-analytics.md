@@ -2,7 +2,7 @@
 title = "Building self-hosted and privacy-friendly website analytics. Again."
 +++
 
-> TLDR: I am building a standalone version of Koko Analytics: https://github.com/koko-analytics/koko-analytics
+<div class="alert" role="alert">TLDR: I am building a standalone version of Koko Analytics so that you can use it for non-WordPress sites. You can follow the project on GitHub here: <a href="https://github.com/koko-analytics/koko-analytics">github.com/koko-analytics/koko-analytics</a>.</div>
 
 The year is 2025 and I once again find myself building an open-source, self-hostable, privacy-friendly website analytics product.
 
@@ -24,16 +24,25 @@ You can follow the project on GitHub here: [github.com/koko-analytics/koko-analy
 
 Goals for the project are to have a PHP based solution that uses a minimal amount of resources and can run on a wide range of hosting options.
 
-You can use either MySQL, PostgreSQL or SQLite as the database backend. Yes, it would be faster to use an OLAP database engine like Clickhouse or DuckDB, but because Koko Analytics does a bunch of aggregation before data is persisted, we can use a more traditional database engine instead.
+You can use either MySQL, PostgreSQL or SQLite as the database backend. You may wonder how this will possibly scale or why we're not choosing Clickhouse or DuckDB for the database. The answer is that Koko Analytics doesn't want to force you on certain hardware or spinning up a whole new database just for some metrics. By making some choices, we can make a traditional OLTP database perform really well:
+
+- Daily granularity.
+- Writing data to an temporary buffer file, then periodically aggregating this and only then persisting to the database (in bulk).
+- Limiting the amount of metrics that Koko Analytics tracks: we think visitors, pageviews, referral traffic and custom events are most important for our target audience.
+
 
 ### Open-source licensing
 
-The application itself is licensed under the AGPL license. Only the tracking snippet (which allows the project to work with pages served from cache) is MIT licensed.
+The application itself is licensed under the [AGPL license](https://www.gnu.org/licenses/agpl-3.0.en.html).
 
-This mirrors licensing used by alternatives like [Matomo](https://matomo.org/licences/) and [Plausible](https://plausible.io/blog/open-source-licenses).
+To avoid issues with AGPL virality, the tracking snippet (which you include on the sites you would like to track and allows the project to track pages served from cache) is MIT licensed.
+
+This mirrors the licensing used by established alternatives like [Matomo](https://matomo.org/licences/) and [Plausible](https://plausible.io/blog/open-source-licenses).
 
 ### Where we at?
 
-Koko Analytics Standalone is functional right now, but I still expect some things to change over the next few months. We are about to start dogfooding it and I hope to release an official first stable version some time during the second or third quarter of 2025.
+Koko Analytics Standalone is functional already, but I still expect some things to change over the next few months.
+
+We are about to start dogfooding it and hope to release a stable version some time during the second or third quarter of 2025.
 
 If you think all this sounds interesting and would like to follow along, [come on over to GitHub and drop a star](https://github.com/koko-analytics/koko-analytics).

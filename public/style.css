@@ -55,7 +55,7 @@ h2, h3, h4, h5, h6 {
   margin: 48px 0 24px;
 }
 /* whitespace on all block elements */
-p, ul, ol, table, blockquote, pre, img, figure {
+p, ul, ol, table, blockquote, pre, img, figure, .alert {
   margin: 24px 0;
 }
 ul, ol {
@@ -112,7 +112,6 @@ abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #e5e5e5;
 }
-
 /* Code */
 code,
 pre {
@@ -145,29 +144,9 @@ pre code.language-filename {
 pre code.language-filename:before {
     content: "File: ";
 }
-
-/* Quotes */
-blockquote,
-.message {
-  padding: 0;
-  border-left: 4px solid #cce5ff;
-  padding: 12px 0 12px 24px;
-  color: #004085;
-  background-color: #cce5ff;
-  border: 1px solid #b8daff;
-  border-radius: 3px;
-  margin: 24px 0;
-  padding: 12px;
-}
-blockquote a {
-  color: #004085;
-  font-weight: bold;
-}
-blockquote *:first-child {
-  margin-top: 0;
-}
-blockquote p:last-child {
-  margin-bottom: 0;
+blockquote {
+  border-left: 5px solid #cce5ff;
+  padding: 12px 12px 12px 24px;
 }
 img {
   height: auto;
@@ -189,7 +168,6 @@ tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: #222;
 }
-
 .site-header ul {
   list-style: none;
   margin: 0;
@@ -212,7 +190,24 @@ tbody tr:nth-child(odd) th {
   text-decoration: none;
 }
 
-/** Utility */
-.muted {
-  font-size: 80%;
+/* alerts */
+.alert {
+  padding: 12px 12px 12px 24px;
+  color: #004085;
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  border-radius: 4px;
+}
+.alert a {
+  color: #004085;
+  font-weight: bold;
+}
+blockquote *:first-child,
+.alert p:first-child {
+  margin-top: 0;
+}
+
+blockquote *:last-child,
+.alert p:last-child {
+  margin-bottom: 0;
 }

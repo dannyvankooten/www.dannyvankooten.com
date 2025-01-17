@@ -3,7 +3,7 @@ title = "Stepping down from Fathom"
 date = 2019-03-18
 +++
 
-<div class="message">
+<div class="alert" role="alert">
 	<strong>Update (Mar 2021):</strong> After my departure, the open-source version of Fathom was discontinued. I've since started <a href="https://www.kokoanalytics.com/">Koko Analytics</a> as an open-source alternative.
 </div>
 

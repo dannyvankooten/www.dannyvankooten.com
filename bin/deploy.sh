@@ -12,6 +12,8 @@ if [[ "$1" != "fast" && "$1" != "--fast" ]]; then
 
     echo "Updating download numbers"
     ./bin/update-wp-downloads.py
+else
+    echo "Skipping updating dynamic pages because of --fast"
 fi
 
 echo "Building site"
