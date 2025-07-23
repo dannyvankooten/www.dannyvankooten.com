@@ -18,27 +18,27 @@ Without further ado, here are some of the most important plugins for WordPress I
     <tbody>
     <tr>
     	<td><a href="https://www.mc4wp.com/">Mailchimp for WordPress</a></td>
-        <td id="mailchimp-for-wp-downloads">62.2M</td>
+        <td id="mailchimp-for-wp-downloads">67.4M</td>
         <td>July 2013</td>
     </tr>
     <tr>
         <td><a href="https://www.kokoanalytics.com">Koko Analytics</a></td>
-        <td id="koko-analytics-downloads">1.07M</td>
+        <td id="koko-analytics-downloads">1.47M</td>
         <td>November 2019</td>
     </tr>
     <tr>
         <td><s><a href="https://www.htmlformsplugin.com/">HTML Forms</a></s> (sold to <a href="https://linksoftwarellc.com/">Link Software LLC</a>)</td>
-        <td id="html-forms-downloads">177K</td>
+        <td id="html-forms-downloads">205K</td>
         <td>October 2017</td>
     </tr>
      <tr>
     	<td><a href="https://wordpress.org/plugins/mailchimp-top-bar/">Mailchimp Top Bar</a></td>
-        <td id="mailchimp-top-bar-downloads">322K</td>
+        <td id="mailchimp-top-bar-downloads">341K</td>
         <td>February 2015</td>
     </tr>
     <tr>
         <td><a href="https://boxzillaplugin.com/">Boxzilla</a></td>
-            <td id="boxzilla-downloads">674K</td>
+            <td id="boxzilla-downloads">738K</td>
             <td>November 2013</td>
      </tr>
     <tr>
@@ -48,12 +48,12 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
     	<td><a href="https://wordpress.org/plugins/wysiwyg-widgets/">Widget Blocks</a></td>
-        <td id="wysiwyg-widgets-downloads">326K</td>
+        <td id="wysiwyg-widgets-downloads">328K</td>
         <td>Juny 2011</td>
     </tr>
     <tr>
     	<td><a href="https://wordpress.org/plugins/dvk-social-sharing/">Social Sharing by Danny</a></td>
-        <td id="dvk-social-sharing-downloads">110K</td>
+        <td id="dvk-social-sharing-downloads">114K</td>
         <td>November 2013</td>
     </tr>
     <tr>
