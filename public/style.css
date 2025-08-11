@@ -11,15 +11,15 @@ body {
   margin: 0;
 }
 .container {
-  padding: 24px;
+  padding: 1rem;
   max-width: 760px;
   margin: 0 auto;
 }
 header {
-  padding-bottom: 48px;
+  padding-bottom: 3rem;
 }
 footer {
-  padding-top: 48px;
+  padding-top: 3rem;
   font-size: 0.9rem;
 }
 main {
@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5 {
 }
 h1 {
   font-size: 2.5rem;
+  margin-top: 0;
 }
 h2 {
   font-size: 2rem;
@@ -57,14 +58,14 @@ h6 {
   font-size: 1rem;
 }
 h2, h3, h4, h5, h6 {
-  margin: 48px 0 24px;
+  margin: 3rem 0 1.5rem;
 }
 /* whitespace on all block elements */
 p, ul, ol, table, blockquote, pre, img, figure, .alert {
-  margin: 24px 0;
+  margin: 1.5rem 0;
 }
 ul, ol {
-  padding: 0 0 0 24px;
+  padding: 0 0 0 1.5rem;
 }
 b,
 strong {
@@ -74,7 +75,7 @@ ul {
   list-style-type: '- ';
 }
 li {
-  margin: 12px 0;
+  margin: 0.75rem 0;
 }
 small {
   font-size: 0.9em;
@@ -83,7 +84,7 @@ dt {
   font-weight: bold;
 }
 dd {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 sub,
 sup {
@@ -101,7 +102,7 @@ sup {
 hr {
   box-sizing: content-box;
   overflow: visible;
-  margin: 48px 0;
+  margin: 3rem 0;
   border: 0;
   height: 1px;
   background: #e1e1e1;
@@ -135,13 +136,13 @@ pre code {
   color: inherit;
   background-color: hsl(210, 15%, 22%);
   color: hsl(219, 28%, 88%);
-  padding: 12px;
+  padding: 0.75rem;
   font-size: 0.9rem;
   border-radius: 3px;
   overflow-x: auto;
 }
 pre code.language-filename {
-    margin-bottom: -24px;
+    margin-bottom: -1.5rem;
     border-bottom: 1px solid #666;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -151,7 +152,7 @@ pre code.language-filename:before {
 }
 blockquote {
   border-left: 5px solid #cce5ff;
-  padding: 12px 12px 12px 24px;
+  padding: 0.75rem 0.75rem 0.75rem 1.5rem;
 }
 img {
   height: auto;
@@ -169,8 +170,8 @@ th {
   border: 1px solid #222;
   text-align: left;
 }
-tbody tr:nth-child(odd) td,
-tbody tr:nth-child(odd) th {
+tr:nth-child(odd) td,
+tr:nth-child(odd) th {
   background-color: #222;
 }
 .site-header ul {
@@ -179,12 +180,14 @@ tbody tr:nth-child(odd) th {
   padding: 0;
 }
 .site-header li {
-  display: inline-block;
+  display: block;
+  margin: 0;
 }
 .site-header a {
+  display: inline-block;
   color: #e1e1e1;
   font-weight: bold;
-  padding-right: 12px;
+  padding: 0 0 0.25rem 0;
 }
 .site-header a:hover,
 .site-header a:focus {
@@ -197,11 +200,11 @@ tbody tr:nth-child(odd) th {
 
 /* alerts */
 .alert {
-  padding: 12px 12px 12px 24px;
+  padding: 0.75rem 0.75rem 0.75rem 1.5rem;
   color: #004085;
   background-color: #cce5ff;
   border: 1px solid #b8daff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 .alert a {
   color: #004085;
@@ -215,4 +218,18 @@ blockquote *:first-child,
 blockquote *:last-child,
 .alert p:last-child {
   margin-bottom: 0;
+}
+@media (min-width: 576px) {
+  .site-header li {
+    display: inline-block;
+  }
+  .site-header a {
+    padding: 0 0.25rem 0 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
 }
