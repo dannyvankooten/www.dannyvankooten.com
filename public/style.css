@@ -2,11 +2,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  color: #e1e1e1;
-  background-color: #111111;
-  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-  line-height: 1.45;
-  font-size: 16px;
+  color: #dee2e6;
+  background-color: #212529;
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  line-height: 1.5;
   overflow-y: scroll;
   overflow-wrap: break-word;
   margin: 0;
@@ -21,7 +20,7 @@ header {
 }
 footer {
   padding-top: 48px;
-  font-size: 90%;
+  font-size: 0.9rem;
 }
 main {
   display: block;
@@ -40,19 +39,22 @@ h1, h2, h3, h4, h5 {
   line-height: 1.15;
 }
 h1 {
-  font-size: 32px;
+  font-size: 2.5rem;
 }
 h2 {
-  font-size: 28px;
+  font-size: 2rem;
 }
 h3 {
-  font-size: 24px;
+  font-size: 1.75rem;
 }
 h4 {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 h5 {
-  font-size: 16px;
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
 }
 h2, h3, h4, h5, h6 {
   margin: 48px 0 24px;
@@ -75,7 +77,7 @@ li {
   margin: 12px 0;
 }
 small {
-  font-size: 90%;
+  font-size: 0.9em;
 }
 dt {
   font-weight: bold;
@@ -85,7 +87,7 @@ dd {
 }
 sub,
 sup {
-  font-size: 75%;
+  font-size: 0.8em;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -106,7 +108,7 @@ hr {
   background: repeating-linear-gradient(90deg,#e1e1e1,#e1e1e1 5px,transparent 5px,transparent 10px);
 }
 abbr {
-  font-size: 85%;
+  font-size: 0.9em;
   font-weight: bold;
   color: #555;
   text-transform: uppercase;
@@ -121,7 +123,7 @@ pre {
   font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 code {
-  font-size: 14px;
+  font-size: 0.9rem;
   background-color: hsl(210, 15%, 22%);
   color: hsl(219, 28%, 88%);
 }
@@ -134,7 +136,7 @@ pre code {
   background-color: hsl(210, 15%, 22%);
   color: hsl(219, 28%, 88%);
   padding: 12px;
-  font-size: 14px;
+  font-size: 0.9rem;
   border-radius: 3px;
   overflow-x: auto;
 }

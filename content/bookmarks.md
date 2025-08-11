@@ -86,15 +86,6 @@ Some of the blogs I enjoy reading.
 - [Red Blob Games, Hexagonal Grids (2013)](https://www.redblobgames.com/grids/hexagons/), resource on hexagonal grids that I keep coming back to during Advent of Code.
 
 
-## Ecology
-
-- [Land van Ons](https://landvanons.nl/)
-- [Permaculture](https://en.wikipedia.org/wiki/Permaculture)
-- [Food Forest Ketelbroek](https://www.youtube.com/watch?v=M5B3f5gxHkA): an agriculture experiment using mostly perennial plants.
-- [Mobilisation for the Environment](https://mobilisation.nl/nl/)
-- [Herenboeren](https://www.herenboeren.nl/): a Dutch community supported agriculture (CSA) initiative.
-- [Partij voor de Dieren](https://www.partijvoordedieren.nl/): Dutch political party.
-
 
 
 [^1]: I wrote a few lines about this in my [2016 year in review](/blog/2017/2016-year-in-review/) post.
