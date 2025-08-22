@@ -21,6 +21,7 @@ header {
 footer {
   padding-top: 3rem;
   font-size: 0.9rem;
+  color: rgba(222, 226, 230, 0.75);
 }
 main {
   display: block;
@@ -31,7 +32,11 @@ a {
 }
 a:hover,
 a:focus {
+  color: #6699CC;
   text-decoration: none;
+}
+footer a {
+  color: rgba(222, 226, 230, 0.75);
 }
 
 /* Headings */
@@ -228,8 +233,17 @@ blockquote *:last-child,
   }
 }
 
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+.me-1 { margin-right: 0.25rem; }
+
 @media (min-width: 768px) {
   .container {
     padding: 1.5rem;
+  }
+
+  footer {
+     display: flex;
+     justify-content: space-between;
   }
 }

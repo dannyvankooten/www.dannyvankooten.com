@@ -8,7 +8,7 @@
         {{ range (slice $.Posts 0 5) }}
         <li>
             <a href="/{{ .UrlPath }}">{{ .Title }}</a><br />
-            <small>{{ .DatePublished.Format "Jan 2, 2006" }}</small>
+            <time>{{ .DatePublished.Format "Jan 2, 2006" }}</time>
         </li>
         {{ end }}
     </ul>

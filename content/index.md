@@ -11,7 +11,7 @@ My name is Danny and I run [ibericode](https://www.ibericode.com/), a tiny compa
 
 I've been making a living selling open-source software products for well over a decade now. On this site you can [read some more about me](/about/) and find links to [a small selection of my work](/projects/).
 
-You can also find me on <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a>, <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a> or <a href="https://git.sr.ht/~dvko/" rel="me nofollow">sourcehut</a>.
+You can also find me on <a href="https://bsky.app/profile/dvko.bsky.social" rel="me nofollow">Bluesky</a>, <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a>, <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a> or <a href="https://git.sr.ht/~dvko/" rel="me nofollow">sourcehut</a>.
 
 ## Latest projects
 
