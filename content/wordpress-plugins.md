@@ -23,7 +23,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
         <td><a href="https://www.kokoanalytics.com">Koko Analytics</a></td>
-        <td id="koko-analytics-downloads">1.53M</td>
+        <td id="koko-analytics-downloads">1.54M</td>
         <td>November 2019</td>
     </tr>
     <tr>
@@ -38,7 +38,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
         <td><a href="https://boxzillaplugin.com/">Boxzilla</a></td>
-            <td id="boxzilla-downloads">754K</td>
+            <td id="boxzilla-downloads">755K</td>
             <td>November 2013</td>
      </tr>
     <tr>

@@ -15,12 +15,33 @@ You can also find me on <a href="https://bsky.app/profile/dvko.bsky.social" rel=
 
 ## Latest projects
 
-- [Gozer](https://github.com/dannyvankooten/gozer): simple, fast and opinionated static site generator.
-- [1BRC](https://github.com/dannyvankooten/1brc): C implementation of the [1 Billion Rows Challenge](/blog/2024/1brc/), in standard C99 with POSIX threads.
-- [Nederlang](https://github.com/dannyvankooten/nederlang): bytecode compiler
-  and stack based virtual machine for a toy programming language consisting of Dutch keywords.
-- [Koko Analytics](https://www.kokoanalytics.com/): privacy-friendly and efficient analytics for your WordPress site.
-- [Advent of Code](https://github.com/dannyvankooten/advent-of-code): my solutions for Advent of Code 2015 - 2023.
+<ul class="list-unstyled m-0 p-0">
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://www.kokoanalytics.com/">Koko Analytics</a></h3>
+    <p class="m-0">Privacy-friendly and efficient analytics for your WordPress site.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/ibericode/koko-analytics-standalone">Koko Analytics Standalone</a></h3>
+    <p class="m-0">Standalone version of the above: open-source, privacy-friendly and self-hosted.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/gozer">Gozer</a></h3>
+    <p class="m-0">Simple, fast and opinionated static site generator.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/1brc">1 Billion Rows Challenge</a></h3>
+    <p class="m-0">C implementation of the [1 Billion Rows Challenge](/blog/2024/1brc/), in standard C99 with POSIX threads.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/nederlang">Nederlang</a></h3>
+    <p class="m-0">Bytecode compiler and stack based virtual machine for a toy programming language consisting of Dutch keywords.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/advent-of-code">Advent of Code</a></h3>
+    <p class="m-0">My solutions for Advent of Code 2015 - 2024.</p>
+  </li>
+</ul>
+
 
 You can find [more of my projects here](/projects/).
 

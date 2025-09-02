@@ -1,10 +1,13 @@
 html {
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body {
   color: #dee2e6;
   background-color: #212529;
-  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
   line-height: 1.5;
   overflow-y: scroll;
   overflow-wrap: break-word;
@@ -82,6 +85,7 @@ ul {
 li {
   margin: 0.75rem 0;
 }
+.text-small,
 small {
   font-size: 0.9em;
 }
@@ -193,6 +197,7 @@ tr:nth-child(odd) th {
   color: #e1e1e1;
   font-weight: bold;
   padding: 0 0 0.25rem 0;
+  margin-right: 0.5rem;
 }
 .site-header a:hover,
 .site-header a:focus {
@@ -215,6 +220,21 @@ tr:nth-child(odd) th {
   color: #004085;
   font-weight: bold;
 }
+
+.h5 { font-size: 1.25rem; }
+.h6 { font-size: 1rem; }
+.list-unstyled { list-style: none !important; }
+.m-0 { margin: 0 !important; }
+.p-0 { padding: 0 !important; }
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: 0.25rem !important; }
+.mb-2 { margin-bottom: 0.5rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.mb-5 { margin-bottom: 3 rem !important; }
+.text-muted { color: rgba(224, 224, 224, 0.8); }
+
 blockquote *:first-child,
 .alert p:first-child {
   margin-top: 0;
@@ -224,6 +244,8 @@ blockquote *:last-child,
 .alert p:last-child {
   margin-bottom: 0;
 }
+
+
 @media (min-width: 576px) {
   .site-header li {
     display: inline-block;
