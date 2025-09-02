@@ -4,6 +4,8 @@ title = "Benchmarking listing files in a local directory in PHP"
 
 Yesterday, I ran the benchmark no one was waiting for: all the different ways to list files in a local directory in PHP.
 
+The various methods I benchmarked were `scandir`, `readdir`, `glob` and `DirectoryIterator` with and without sorting.
+
 Unsurprisingly, the runtime grows linearly with the number of directory entries.
 
 A lot of time is spent on sorting, `scandir("", SCANDIR_SORT_NONE)` and `glob("*", GLOB_NOSORT")` are both at least 10-30% faster than their sorted versions (which is the default).
