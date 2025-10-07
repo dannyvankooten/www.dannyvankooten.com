@@ -6,10 +6,12 @@
     <h2>Latest blog posts</h2>
     <ul class="list-unstyled p-0 m-0">
         {{ range (slice $.Posts 0 5) }}
+        {{ if not .Draft }}
         <li class="mb-4 mt-0">
             <h3 class="h6 mt-0 mb-2"><a href="/{{ .UrlPath }}">{{ .Title }}</a></h3>
             <p class="text-muted text-small m-0"><time>{{ .DatePublished.Format "Jan 2, 2006" }}</time></p>
         </li>
+        {{ end }}
         {{ end }}
     </ul>
     <p>View <a href="/blog/">all posts on my blog</a>.</p>

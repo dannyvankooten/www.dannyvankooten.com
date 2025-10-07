@@ -11,6 +11,7 @@
 
     {{ $year := 0 }}
     {{ range $.Posts }}
+        {{ if not .Draft }}
         {{- if not (eq .DatePublished.Year $year) }}
             {{- if gt $year 0 }}
                 </ul>
@@ -23,6 +24,7 @@
             <a href="/{{ .UrlPath }}">{{ .Title }}</a><br />
             <small>{{ .DatePublished.Format "Jan 2, 2006" }}</small>
         </li>
+        {{ end }}
     {{- end -}}
     </ul>
 </main>

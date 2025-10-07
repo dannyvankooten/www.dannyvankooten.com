@@ -2,20 +2,46 @@
 title = "Hire me"
 +++
 
-Over the last 10 years I've been building projects for the web using a wide array of technologies:
+<style>
+	.jumbotron {
+		background: #444;
+		padding: 3rem;
+		border-radius: 4px;
+	}
+	.btn {
+		background: #6699CC;
+		color: white;
+		padding: 1rem 2rem;
+		border-radius: 4px;
+		text-decoration: none;
+		display: inline-block;
+		font-weight: bold;
+	}
+	.btn:hover {
+		color: white;
+		background: #5588BB;
+	}
+	.h5 {font-size: 1.25rem; }
+	.lead { font-size: 1.5rem; }
+	.mb-0 { margin-bottom: 0; }
+</style>
 
-- Backend: Golang, PHP, JavaScript, Python, Rust and C.
-- Frontend: JavaScript (Vanilla, (P)Rreact), HTML, CSS.
-- Databases: OLTP (Postgres, MySQL, SQLite) but also OLAP databases like Clickhouse, Polars or DuckDB.
+<div class="jumbotron">
+	<h1 class="h5">Let's work together</h1>
+	<p class="lead">I’ve spent the last 10+ years building fast, reliable web projects across the stack.</p>
+	<p class="mb-0"><a class="btn btn-primary" href="mailto:hi@dvk.co">Contact me</a></p>
+</div>
 
-Because of this I have a solid overview of what is out there and how certain things work under the hood.
-A lot of things come down to simply using the right tool for the job.
+## What I work with
 
-If you have something in your web project that you would like to run faster, you can hire me to make that happen.
+- **Backend:** PHP, Python, Golang, Node.js
+- **Frontend:** JavaScript (Vanilla, React/Preact), HTML, CSS
+- **Databases:** OLTP (Postgres, MySQL/MariaDB, SQLite) and OLAP (Clickhouse, Polars, DuckDB)
 
-Email to [hi@dvk.co](mailto:hi@dvk.co) with a short description of your project, we will take it from there.
+Because I’ve worked with so many different tools, I know how things really work under the hood—and how to pick the right one for the job.
+
+If your web project feels slow, clunky, or inefficient, I can help you make it fast.
 
 
 
-
-
+👉 Send me a short description of your project at hi@dvk.co and we’ll take it from there.
