@@ -1,5 +1,5 @@
 +++
-title = "Pensioenbeleggen: hoeveel jaaruimte moet ik benutten?"
+title = "Pensioenbeleggen: optimaal jaarruimte benutten?"
 +++
 
 <style>
@@ -192,9 +192,9 @@ Zo zie je snel of je op schema zit, nog een tandje moet bijzetten of misschien z
 	<div class="row">
 		<div class="col col-1"><label for="aow-income">Verwacht inkomen uit AOW</label></div>
 		<div class="col">
-			<input name="aow-income" id="aow-income" type="number" value="13200" step="100" min="0"> €
+			<input name="aow-income" id="aow-income" type="number" value="14100" step="100" min="0"> €
 			<div class="help">
-				Hoeveel inkomen verwacht je uit AOW en andere pensioenvoorzieningen? Zie ook <a href="https://svb.nl/nl/aow/bedragen-aow/aow-bedragen">AOW bedragen (svb.nl)</a>
+				Hoeveel inkomen verwacht je jaarlijks vanuit AOW en andere pensioenvoorzieningen? Zie <a href="https://www.mijnpensioenoverzicht.nl/nl">mijnpensioenoverzicht.nl</a>
 			</div>
 		</div>
 	</div>
