@@ -5,11 +5,9 @@ template = "home.html"
 
 # Danny van Kooten
 
-Hi stranger, welcome!
+My name is Danny and I run [ibericode](https://www.ibericode.com/), a small bootstrapped software company from The Netherlands.
 
-My name is Danny and I run [ibericode](https://www.ibericode.com/), a small software development company from The Netherlands.
-
-I've been making a living selling open-source software products for well over a decade now. On this site you can [read some more about me](/about/) and find links to [a small selection of my work](/projects/).
+I've been making a living selling and supporting various (open-source!) software products for close to 15 years now. On this site you can [read some more about me](/about/) and find links to [a small selection of my work](/projects/).
 
 You can also find me on <a href="https://bsky.app/profile/dvko.bsky.social" rel="me nofollow">Bluesky</a>, <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a>, <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a> or <a href="https://git.sr.ht/~dvko/" rel="me nofollow">sourcehut</a>.
 
@@ -42,7 +40,7 @@ You can also find me on <a href="https://bsky.app/profile/dvko.bsky.social" rel=
   </li>
   <li class="mt-0 mb-4">
     <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/advent-of-code">Advent of Code</a></h3>
-    <p class="m-0">My solutions for Advent of Code 2015 - 2024.</p>
+    <p class="m-0">My solutions for Advent of Code 2015 - 2025.</p>
   </li>
 </ul>
 

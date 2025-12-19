@@ -9,15 +9,15 @@ I've been building, maintaining and delivering support for open-source software 
 It started out in the summer of 2013 with me hospitalized in Vietnam due to acute appendicitis and having some time to kill while practicing bed rest.
 That time was used to build [Mailchimp for WordPress (MC4WP)](https://www.mc4wp.com/), a WordPress plugin now in active use on well over 2 million websites.
 
-[More software](/projects/) followed while I spent several Dutch winters in Asia. In 2016, I settled down again in the Netherlands together with my wife and 2 kids.
+[More software](/projects/) followed while I spent several Dutch winters in Asia. In 2016, I settled down in the Netherlands to start a family.
 
 ## Some things about me
 
 Here are the most important things you may want to know about me. I..
 
 - .. am the founder of [ibericode](https://www.ibericode.com/), a small and fully remote company developing, maintaining and marketing open-source software products.
-- .. build and maintain [Mailchimp for WordPress](https://www.mc4wp.com/), [Koko Analytics](https://www.kokoanalytics.com/), [HTML Forms](https://www.htmlformsplugin.com) and several other [WordPress plugins](/wordpress-plugins/) totaling **well over 70 million** downloads. Right now, my code is running on more than 2 million websites.
-- .. strongly believe in open-source software. Most of [what I build](/code/) is MIT or GPL licensed and available on either [sourcehut](https://git.sr.ht/~dvko/) or [GitHub](https://github.com/dannyvankooten/).
+- .. build and maintain [Mailchimp for WordPress](https://www.mc4wp.com/), [Koko Analytics](https://www.kokoanalytics.com/) and several other [WordPress plugins](/wordpress-plugins/) which are currently in active use on well over **2 million sites**.
+- .. like to publish or contribute to open-source software. Most of [what I build](/code/) is MIT or GPL licensed and the source code is available on either [sourcehut](https://git.sr.ht/~dvko/) or [GitHub](https://github.com/dannyvankooten/).
 - .. [am doing this right now](/now/)
 - .. [am using or liking this these days](/bookmarks/)
 
