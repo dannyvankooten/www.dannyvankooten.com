@@ -19,12 +19,12 @@ You can also find me on <a href="https://bsky.app/profile/dvko.bsky.social" rel=
     <p class="m-0">Privacy-friendly and efficient analytics for your WordPress site.</p>
   </li>
   <li class="mt-0 mb-4">
-    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/ibericode/koko-analytics-standalone">Koko Analytics Standalone</a></h3>
-    <p class="m-0">Standalone version of the above: open-source, privacy-friendly and self-hosted.</p>
-  </li>
-  <li class="mt-0 mb-4">
     <h3 class="mt-0 mb-2 h6"><a href="https://www.mc4wp.com/">MC4WP: Mailchimp for WordPress</a></h3>
     <p class="m-0">A WordPress plugin for integrating Mailchimp with your site.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://www.mc4wp.com/">Boxzilla: Pop-ups for WordPress</a></h3>
+    <p class="m-0">A WordPress plugin for adding pop-ups with various trigger methods to your site.</p>
   </li>
   <li class="mt-0 mb-4">
     <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/gozer">Gozer</a></h3>

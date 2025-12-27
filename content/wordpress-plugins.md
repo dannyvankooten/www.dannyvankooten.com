@@ -18,17 +18,17 @@ Without further ado, here are some of the most important plugins for WordPress I
     <tbody>
     <tr>
     	<td><a href="https://www.mc4wp.com/">Mailchimp for WordPress</a></td>
-        <td id="mailchimp-for-wp-downloads">70.9M</td>
+        <td id="mailchimp-for-wp-downloads">71M</td>
         <td>July 2013</td>
     </tr>
     <tr>
         <td><a href="https://www.kokoanalytics.com">Koko Analytics</a></td>
-        <td id="koko-analytics-downloads">1.85M</td>
+        <td id="koko-analytics-downloads">1.87M</td>
         <td>November 2019</td>
     </tr>
     <tr>
         <td><s><a href="https://www.htmlformsplugin.com/">HTML Forms</a></s> (sold to <a href="https://linksoftwarellc.com/">Link Software LLC</a>)</td>
-        <td id="html-forms-downloads">234K</td>
+        <td id="html-forms-downloads">235K</td>
         <td>October 2017</td>
     </tr>
      <tr>
@@ -38,7 +38,7 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
         <td><a href="https://boxzillaplugin.com/">Boxzilla</a></td>
-            <td id="boxzilla-downloads">783K</td>
+            <td id="boxzilla-downloads">784K</td>
             <td>November 2013</td>
      </tr>
     <tr>
