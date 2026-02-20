@@ -1,41 +1,45 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="/style.css?v={{ .Now.Unix }}">
-<link rel="icon" href="/img/favicon.png" type="image/png">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ .Title }}{{ if ne .Page.UrlPath "" }} - {{ .Site.Title }}{{ end }}</title>
-<link rel="canonical" href="{{ .Page.Permalink }}">
-<link rel="alternate" type="application/rss+xml" href="/feed.xml">
-<link rel="sitemap" type="application/xml" href="/sitemap.xml">
-{{ if not .Page.DatePublished.IsZero -}}
-<meta property="og:title" content="{{ .Page.Title }}">
-<meta property="og:url" content="{{ .Page.Permalink }}">
-<meta property="og:image" content="{{ .Site.Url }}img/avatar.jpeg">
-<meta property="og:site_name" content="{{ .Site.Title }}">
-{{- end -}}
-<meta name="fediverse:creator" content="@dvk@toot.re">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/style.css?v={{ .Now.Unix }}">
+  <link rel="icon" href="/img/favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }}{{ if ne .Page.UrlPath "" }} - {{ .Site.Title }}{{ end }}</title>
+  <link rel="canonical" href="{{ .Page.Permalink }}">
+  <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  {{ if not .Page.DatePublished.IsZero -}}
+  <meta property="og:title" content="{{ .Page.Title }}">
+  <meta property="og:url" content="{{ .Page.Permalink }}">
+  <meta property="og:image" content="{{ .Site.Url }}img/avatar.jpeg">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  {{- end -}}
+  <meta name="fediverse:creator" content="@dvk@toot.re">
 </head>
 <body>
-<div style="background: rgb(255, 253, 214);
+  <div style="background: rgb(255, 253, 214);
       color: rgb(30, 30, 30);
       padding: 1rem 0.5rem;
       text-align: center;
       font-size: 0.9rem;
       font-family: system-ui, sans-serif;">
-  Get plug and play, privacy-friendly and GDPR/CCPA compliant statistics for WordPress with <a href="https://www.kokoanalytics.com/" style="color:rgb(56, 88, 233);">Koko Analytics</a>.
-</div>
-<div class="container">
-<header class="site-header">
-    <nav>
-      <ul>
-        <li><a href="/" {{ if eq .Page.UrlPath "" }}class="active" aria-current="page"{{ end }}>Home</a></li>
-        <li><a href="/about/" {{ if eq .Page.UrlPath "about/" }}class="active" aria-current="page"{{ end }}>About</a></li>
-        <li><a href="/projects/" {{ if eq .Page.UrlPath "projects/" }}class="active" aria-current="page"{{ end }}>Projects</a></li>
-        <li><a href="/blog/" {{ if eq .Page.UrlPath "blog/" }}class="active" aria-current="page"{{ end }}>Blog</a></li>
-        <li><a href="/bookmarks/" {{ if eq .Page.UrlPath "bookmarks/" }}class="active" aria-current="page"{{ end }}>Bookmarks</a></li>
-      </ul>
-    </nav>
-</header>
-</div>
+    Get plug and play, privacy-friendly and GDPR/CCPA compliant statistics for WordPress with <a
+      href="https://www.kokoanalytics.com/" style="color:rgb(56, 88, 233);">Koko Analytics</a>.
+  </div>
+  <div class="container">
+    <header class="site-header">
+      <nav>
+        <ul>
+          <li><a href="/" {{ if eq .Page.UrlPath "" }}class="active" aria-current="page" {{ end }}>Home</a></li>
+          <li><a href="/about/" {{ if eq .Page.UrlPath "about/" }}class="active" aria-current="page" {{ end }}>About</a>
+          </li>
+          <li><a href="/projects/" {{ if eq .Page.UrlPath "projects/" }}class="active" aria-current="page" {{ end
+              }}>Projects</a></li>
+          <li><a href="/blog/" {{ if eq .Page.UrlPath "blog/" }}class="active" aria-current="page" {{ end }}>Blog</a>
+          </li>
+          <li><a href="/bookmarks/" {{ if eq .Page.UrlPath "bookmarks/" }}class="active" aria-current="page" {{ end
+              }}>Bookmarks</a></li>
+        </ul>
+      </nav>
+    </header>
