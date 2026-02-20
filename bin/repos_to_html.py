@@ -15,35 +15,6 @@ class Repo:
     created: datetime
     updated: datetime
 
-def from_sourcehut(username: str):
-    """ Fetch git repositories from Sourcehut """
-    SOURCEHUT_TOKEN = os.getenv('SOURCEHUT_ACCESS_TOKEN', '')
-    if SOURCEHUT_TOKEN == '':
-        print("Please set the SOURCEHUT_ACCESS_TOKEN env variable")
-        exit()
-
-    repos = []
-    res = requests.get(f'https://git.sr.ht/api/~{username}/repos', headers={
-        'Authorization': 'token ' + SOURCEHUT_TOKEN,
-        'Accepts': 'application/json'
-    }, timeout=10)
-
-    if not res.ok:
-        print("Sourcehut API request failed: " + res.text)
-        exit()
-
-    data = res.json()
-
-    for repo in data['results']:
-        if repo['visibility'] != 'public':
-            continue
-
-        repos.append(Repo(repo['name'], repo['description'],
-            'https://git.sr.ht/~'+username +'/' + repo['name'], '',
-                          parser.parse(repo['created']),
-                          parser.parse(repo['updated'])))
-    return repos
-
 def from_github(source: str):
     """Fetch git repositories from GitHub"""
     GITHUB_TOKEN = os.getenv('GITHUB_ACCESS_TOKEN', '')
@@ -76,7 +47,6 @@ def from_github(source: str):
     return repos
 
 repos = []
-repos += from_sourcehut('dvko')
 repos += from_github('users/dannyvankooten')
 repos += from_github('orgs/ibericode')
 
