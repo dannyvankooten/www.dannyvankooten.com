@@ -9,10 +9,9 @@ title = "Pensioenbeleggen: optimaal jaarruimte benutten?"
 
 > This post is in Dutch because it is specific to the Dutch retirement system.
 
-
 <div style="background: #2a2f34; padding: 1rem;">
 	<h3 style="margin-top: 0;">Inhoudsopgave</h3>
-	<a href="#wat-is-jaarruimte">Wat is jaarruimte ook alweer?</a><br>
+	<a href="#wat-is-jaarruimte">Wat is jaarruimte?</a><br>
 	<a href="#hoe-benut-je-jaarruimte-optimaal">Hoe benut je je jaarruimte optimaal?</a><br>
 	<a href="#math">Hoeveel moet je dan inleggen?</a><br>
 	<a href="#calculator">Calculator: bepalen periodieke inleg</a>

@@ -28,17 +28,17 @@ Without further ado, here are some of the most important plugins for WordPress I
     </tr>
     <tr>
         <td><s><a href="https://www.htmlformsplugin.com/">HTML Forms</a></s> (sold to <a href="https://linksoftwarellc.com/">Link Software LLC</a>)</td>
-        <td id="html-forms-downloads">246K</td>
+        <td id="html-forms-downloads">247K</td>
         <td>October 2017</td>
     </tr>
      <tr>
     	<td><a href="https://wordpress.org/plugins/mailchimp-top-bar/">Mailchimp Top Bar</a></td>
-        <td id="mailchimp-top-bar-downloads">359K</td>
+        <td id="mailchimp-top-bar-downloads">363K</td>
         <td>February 2015</td>
     </tr>
     <tr>
         <td><a href="https://boxzillaplugin.com/">Boxzilla</a></td>
-            <td id="boxzilla-downloads">800K</td>
+            <td id="boxzilla-downloads">802K</td>
             <td>November 2013</td>
      </tr>
     <tr>
