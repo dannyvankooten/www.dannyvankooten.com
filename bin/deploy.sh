@@ -28,6 +28,6 @@ find build/ -type f \( -iname '*.png' -o -iname '*.gif' \) -exec mogrify -strip 
 echo "After: $(du -bch $IMAGES | tail -n1)"
 
 echo "Sending to remote"
-rsync -rzav --no-owner --no-perms --no-group build/. danny@eu1.ibericode.com:/var/www/www.dannyvankooten.com/
+rsync --recursive --times --verbose build/. danny@eu1.ibericode.com:/var/www/www.dannyvankooten.com/
 
 

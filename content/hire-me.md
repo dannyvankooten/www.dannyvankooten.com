@@ -1,5 +1,5 @@
 +++
-title = "Hire me"
+title = "Freelance PHP developer"
 +++
 
 <style>
@@ -27,21 +27,32 @@ title = "Hire me"
 </style>
 
 <div class="jumbotron">
-	<h1 class="h5">Let's work together</h1>
-	<p class="lead">I’ve spent the last 10+ years building fast, reliable web projects across the stack.</p>
-	<p class="mb-0"><a class="btn btn-primary" href="mailto:hi@dvk.co">Contact me</a></p>
+	<h1 class="h5">Freelance PHP developer</h1>
+	<p class="lead">I build and optimize PHP applications that handle millions of users. Available for freelance projects.</p>
+	<p class="mb-0"><a class="btn btn-primary" href="mailto:hi@dvk.co">Get in touch</a></p>
 </div>
 
-## What I work with
+## Track record
 
-- **Backend:** PHP, Python, Golang, Node.js
-- **Frontend:** JavaScript (Vanilla, React/Preact), HTML, CSS
-- **Databases:** OLTP (Postgres, MySQL/MariaDB, SQLite) and OLAP (Clickhouse, Polars, DuckDB)
+My PHP code runs on over **2 million websites** right now. My WordPress plugins have been downloaded over **72 million times**, including [Mailchimp for WordPress](https://www.mc4wp.com/) and [Koko Analytics](https://www.kokoanalytics.com/).
 
-Because I’ve worked with so many different tools, I know how things really work under the hood—and how to pick the right one for the job.
+I've been writing PHP professionally for over 14 years and have deep experience with WordPress, Symfony/Laravel and vanilla PHP. From small utilities to products used at massive scale.
 
-If your web project feels slow, clunky, or inefficient, I can help you make it fast.
+## What I can help with
 
+- **WordPress plugin & theme development**:  custom plugins, WooCommerce integrations, performance audits
+- **PHP application development**:  APIs, web apps, background workers, CLI tools
+- **Performance optimization**:  profiling slow code, reducing server load, optimizing database queries
+- **Legacy codebase modernization**: upgrading from old PHP versions, improving architecture, adding tests
+- **Data migration**: migrating to a new database scheme or different platform
+- **Code review & consulting**:  a fresh pair of experienced eyes on your codebase
 
+## Also comfortable with
 
-👉 Send me a short description of your project at hi@dvk.co and we’ll take it from there.
+While PHP is my bread and butter, I regularly work with JavaScript, Golang, Python, MySQL/MariaDB, PostgreSQL, and SQLite so I can handle the full picture, not just the backend.
+
+## How it works
+
+Send a short description of your project to **hi@dvk.co**. I'll reply within 2 business days to let you know if I can help and what the next steps would be.
+
+<a class="btn btn-primary" href="mailto:hi@dvk.co">Contact me over email</a>

@@ -257,6 +257,8 @@ blockquote *:last-child,
 .mb-4 { margin-bottom: 1.5rem; }
 .mb-5 { margin-bottom: 3rem; }
 .me-1 { margin-right: 0.25rem; }
+.m-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.me-2 { margin-right: 0.5rem; }
 
 @media (min-width: 768px) {
   .container {

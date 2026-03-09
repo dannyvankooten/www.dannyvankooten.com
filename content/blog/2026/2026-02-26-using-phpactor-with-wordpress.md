@@ -21,7 +21,7 @@ This is easily solved by setting the [indexer.include_patterns](https://phpactor
 }
 ```
 
-Personally I expand on this by also explicitly excluding WordPress core and third-party plugins from phpactor's diagnostics through the [language_server.diagnostic_exclude_paths](https://phpactor.readthedocs.io/en/master/reference/configuration.html#language-server-diagnostic-exclude-paths).
+Personally I expand on this by also explicitly excluding WordPress core and third-party plugins from phpactor's diagnostics through the [language_server.diagnostic_exclude_paths](https://phpactor.readthedocs.io/en/master/reference/configuration.html#language-server-diagnostic-exclude-paths) configuration setting.
 
 ```json
 {
