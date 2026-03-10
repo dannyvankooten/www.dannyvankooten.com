@@ -25,7 +25,7 @@ As of 2026, I am available as a [freelance PHP developer](/hire-me/).
     <p class="m-0">A WordPress plugin for integrating Mailchimp with your site.</p>
   </li>
   <li class="mt-0 mb-4">
-    <h3 class="mt-0 mb-2 h6"><a href="https://www.mc4wp.com/">Boxzilla: Pop-ups for WordPress</a></h3>
+    <h3 class="mt-0 mb-2 h6"><a href="https://www.boxzillaplugin.com/">Boxzilla: Pop-ups for WordPress</a></h3>
     <p class="m-0">A WordPress plugin for adding pop-ups with various trigger methods to your site.</p>
   </li>
   <li class="mt-0 mb-4">

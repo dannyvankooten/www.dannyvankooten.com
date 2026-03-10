@@ -70,7 +70,7 @@ title = "Freelance PHP developer"
 
 My PHP code runs on over **2 million websites** right now. My WordPress plugins have been downloaded over **72 million times**, including [Mailchimp for WordPress](https://www.mc4wp.com/) and [Koko Analytics](https://www.kokoanalytics.com/).
 
-I've been writing PHP professionally for over 14 years and have deep experience with WordPress, Symfony/Laravel and vanilla PHP. From small utilities to products used at massive scale.
+I've been writing PHP professionally for over 15 years and have deep experience with WordPress, Symfony/Laravel and vanilla PHP. From small utilities to products used at massive scale.
 
 ## What I can help with
 
@@ -89,4 +89,4 @@ While PHP is my bread and butter, I regularly work with JavaScript, Golang, Pyth
 
 Send a short description of your project to **hi@dvk.co**. I'll reply within 2 business days to let you know if I can help and what the next steps would be.
 
-<a class="btn btn-primary" href="mailto:hi@dvk.co">Contact me over email</a>
+<a class="btn" href="mailto:hi@dvk.co">Contact me over email</a>
