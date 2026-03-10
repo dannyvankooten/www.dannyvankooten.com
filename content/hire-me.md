@@ -63,7 +63,7 @@ title = "Freelance PHP developer"
 		<p class="lead">I build and optimize PHP applications that handle millions of users. Available for freelance projects.</p>
 		<p class="mb-0"><a class="btn" href="mailto:hi@dvk.co">Get in touch</a></p>
 	</div>
-	<img class="jumbotron-photo" src="/img/headshot.jpeg" alt="Danny" width="160" height="160">
+	<img class="jumbotron-photo" src="/img/headshot.webp" alt="Danny during a winter getaway in Javea, Spain" width="160" height="160">
 </div>
 
 ## Track record
