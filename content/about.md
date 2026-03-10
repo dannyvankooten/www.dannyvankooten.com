@@ -15,6 +15,7 @@ That time was used to build [Mailchimp for WordPress (MC4WP)](https://www.mc4wp.
 
 Here are the most important things you may want to know about me. I..
 
+- .. am available [for hire as a freelance PHP developer](/hire-me/).
 - .. am the founder of [ibericode](https://www.ibericode.com/), a small and fully remote company developing, maintaining and marketing open-source software products.
 - .. build and maintain [Mailchimp for WordPress](https://www.mc4wp.com/), [Koko Analytics](https://www.kokoanalytics.com/) and several other [WordPress plugins](/wordpress-plugins/) which are currently in active use on well over **2 million sites**.
 - .. like to publish or contribute to open-source software. Most of [what I build](/code/) is MIT or GPL licensed and the source code is available on [my GitHub](https://github.com/dannyvankooten/).

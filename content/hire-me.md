@@ -3,33 +3,67 @@ title = "Freelance PHP developer"
 +++
 
 <style>
+	.p-name { display: none; }
 	.jumbotron {
-		background: #444;
-		padding: 3rem;
-		border-radius: 4px;
+		background: #252629;
+		padding: 2.5rem;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		gap: 2.5rem;
+		border: 1px solid #333;
+	}
+	.jumbotron-body { flex: 1; }
+	.jumbotron-photo {
+		flex-shrink: 0;
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+	.jumbotron h1,
+	.jumbotron h2 {
+		font-size: 1.5rem !important;
+		margin: 0 0 0.25rem;
+	}
+	.jumbotron h2 { font-weight: normal; color: #aaa; }
+	.jumbotron .lead {
+		font-size: 1.15rem;
+		margin: 1rem 0;
+		color: #ccc;
 	}
 	.btn {
 		background: #6699CC;
 		color: white;
-		padding: 1rem 2rem;
-		border-radius: 4px;
+		padding: 0.75rem 1.75rem;
+		border-radius: 6px;
 		text-decoration: none;
 		display: inline-block;
 		font-weight: bold;
 	}
+	.btn:focus,
 	.btn:hover {
 		color: white;
 		background: #5588BB;
 	}
-	.h5 {font-size: 1.25rem; }
-	.lead { font-size: 1.5rem; }
-	.mb-0 { margin-bottom: 0; }
+	@media (max-width: 600px) {
+		.jumbotron {
+			flex-direction: column-reverse;
+			text-align: center;
+			padding: 2rem;
+			gap: 1.5rem;
+		}
+	}
 </style>
 
 <div class="jumbotron">
-	<h1 class="h5">Freelance PHP developer</h1>
-	<p class="lead">I build and optimize PHP applications that handle millions of users. Available for freelance projects.</p>
-	<p class="mb-0"><a class="btn btn-primary" href="mailto:hi@dvk.co">Get in touch</a></p>
+	<div class="jumbotron-body">
+		<h1>Danny van Kooten</h1>
+		<h2>Freelance PHP developer</h2>
+		<p class="lead">I build and optimize PHP applications that handle millions of users. Available for freelance projects.</p>
+		<p class="mb-0"><a class="btn" href="mailto:hi@dvk.co">Get in touch</a></p>
+	</div>
+	<img class="jumbotron-photo" src="/img/headshot.jpeg" alt="Danny" width="160" height="160">
 </div>
 
 ## Track record
