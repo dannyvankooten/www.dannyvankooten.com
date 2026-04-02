@@ -9,7 +9,7 @@ My name is Danny and I run [ibericode](https://www.ibericode.com/), a small boot
 
 I've been making a living from my products for well over 10 years now. On this site you can [read some more about me](/about/) and find links to [a small selection of my work](/projects/).
 
-Alternatively, you can find me on <a href="https://bsky.app/profile/dvko.bsky.social" rel="me nofollow">Bluesky</a>, <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a> or <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a>.
+Alternatively, you can find me on <a href="https://x.com/dannyvankooten" rel="me nofollow">X (Twitter)</a>, <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a> or <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a>.
 
 As of 2026, I am available as a [freelance PHP developer](/hire-me/).
 

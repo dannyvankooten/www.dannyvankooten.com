@@ -1,7 +1,7 @@
 +++
 title = "Freelance PHP developer"
 +++
-
+	
 <style>
 	.p-name { display: none; }
 	.jumbotron {
