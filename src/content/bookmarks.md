@@ -11,16 +11,10 @@ I've been happily running Linux on my laptop (which is my workstation) since 201
 Made possible by the following list of mostly open-source software (not exhaustive).
 
 - [Debian](https://www.debian.org/): the Linux distribution I use as my daily driver.
-- [Sway](https://swaywm.org/): tiling window manager.
-- [Foot](https://codeberg.org/dnkl/foot): Wayland terminal emulator.
-- [Firefox](https://www.mozilla.org/en-US/firefox/): web browser.
 - [Sublime Text](https://www.sublimetext.com/), text editor.
 - [uBlock Origin](https://ublockorigin.com/): ad-blocker.
 - [Bitwarden](https://bitwarden.com/): password manager.
-- [Bash](https://www.gnu.org/software/bash/): sh compatibe shell.
 - [Todoist](https://todoist.com): proprietary to-do list that basically runs my life.
-- [GIMP](https://www.gimp.org/): image editor.
-- [Evolution](https://wiki.gnome.org/Apps/Evolution): Gnome email client that does [plain-text email](https://useplaintext.email/) correctly.
 
 
 ## Web development
@@ -68,11 +62,8 @@ Some of the blogs I enjoy reading.
 - [Low Tech Magazine](https://solar.lowtechmagazine.com/)
 - [Fabien Sanglard](https://fabiensanglard.net/)
 - [Dan Luu](https://danluu.com/)
-- [Wim van der Bauwhede](https://wimvanderbauwhede.codeberg.page/)
 - [Alex Russell](https://infrequently.org/)
-- [Drew DeVault](https://drewdevault.com/)
 - [Julia Evans](https://jvns.ca/)
-- [Permacomputing](https://permacomputing.net/)
 
 ## Social
 
@@ -84,8 +75,6 @@ Some of the blogs I enjoy reading.
 ## Misc
 
 - [Red Blob Games, Hexagonal Grids (2013)](https://www.redblobgames.com/grids/hexagons/), resource on hexagonal grids that I keep coming back to during Advent of Code.
-
-
 
 
 [^1]: I wrote a few lines about this in my [2016 year in review](/blog/2017/2016-year-in-review/) post.

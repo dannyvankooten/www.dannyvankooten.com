@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Projects">
+  <main class="content">
+    <h1>Projects</h1>
+    <p>I've been building and shipping open-source software for well over a decade. Here are some of the projects I'm most proud of.</p>
+
+    <h2>Featured</h2>
+    <p>These two WordPress plugins are my main products, actively maintained and used on millions of websites worldwide.</p>
+    <div class="featured-projects">
+      <a href="https://www.mc4wp.com/" class="featured-project">
+        <img src="/img/mc4wp.svg" alt="" width="48" height="48" />
+        <div>
+          <strong>Mailchimp for WordPress</strong>
+          <span>The #1 Mailchimp plugin for WordPress. 73M+ downloads, 2M+ active installs.</span>
+        </div>
+      </a>
+      <a href="https://www.kokoanalytics.com/" class="featured-project">
+        <img src="/img/koko-analytics.svg" alt="" width="48" height="48" />
+        <div>
+          <strong>Koko Analytics</strong>
+          <span>Privacy-friendly analytics for WordPress. Open-source, GDPR compliant, fast.</span>
+        </div>
+      </a>
+    </div>
+
+    <h2>All projects</h2>
+    <p>A more extensive list of projects I worked on over the years, ranging from WordPress plugins and web analytics to toy programming languages and browser extensions.</p>
+
+    <div class="project-list">
+      <div class="project-card">
+        <h4>Mailchimp for WordPress</h4>
+        <p>A WordPress plugin that allows you to tightly integrate your site with your Mailchimp account.</p>
+        <p>The plugin grew to well over 100.000 active users in its first year, after which I built a paid version from <a href="/blog/2013/100-000-plugin-downloads-6-months-mailchimp-wordpress/">a hospital bed in Vietnam</a> which turned into a huge success. It has been downloaded well over 52 million times and is in active use on over 2 million websites.</p>
+        <p class="project-links"><a href="https://www.mc4wp.com/">Website</a> <a href="https://github.com/ibericode/mailchimp-for-wordpress">GitHub</a> <a href="/blog/2013/my-newest-wordpress-plugin-mailchimp-for-wp/">Blog post</a></p>
+      </div>
+
+      <div class="project-card">
+        <h4>Koko Analytics</h4>
+        <p>Open-source and privacy friendly analytics plugin for WordPress that only tracks aggregated counts and keeps all data locally on the website's server. Currently in active use on about 50.000 websites.</p>
+        <p class="project-links"><a href="https://www.kokoanalytics.com/">Website</a> <a href="https://github.com/ibericode/koko-analytics">GitHub</a> <a href="/blog/2019/introducing-koko-analytics/">Blog post</a></p>
+      </div>
+
+      <div class="project-card">
+        <h4>HTML Forms</h4>
+        <p>A WordPress plugin to create multipurpose forms and handle form submissions in a safe and extendible way. I grew this plugin to a healthy ~9.000 active users before selling it in early 2024.</p>
+        <p class="project-links"><a href="https://htmlformsplugin.com">Website</a></p>
+      </div>
+
+      <div class="project-card">
+        <h4>Fathom Analytics</h4>
+        <p>Open-source and privacy friendly analytics. I <a href="/blog/2019/stepping-down-fathom-maintainer/">stepped away from Fathom</a> in 2019 as its success at the time was hard to combine with 2 young children, but the project is still going strong (although no longer open-source) and has turned into a flourishing business.</p>
+        <p class="project-links"><a href="https://usefathom.com/">Website</a> <a href="https://github.com/usefathom/fathom">GitHub</a> <a href="/blog/2018/reviving-ana-as-fathom/">Blog post</a></p>
+      </div>
+
+      <div class="project-card">
+        <h4>Gozer</h4>
+        <p>A static site generator in Go with a focus on performance and simplicity.</p>
+        <p class="project-links"><a href="https://github.com/dannyvankooten/gozer">GitHub</a></p>
+      </div>
+
+      <div class="project-card">
+        <h4>Nederlang</h4>
+        <p>An interpreted programming language with a bytecode compiler and stack-based virtual machine hosted in Rust.</p>
+        <p class="project-links"><a href="https://github.com/dannyvankooten/nederlang">GitHub</a> <a href="https://www.dannyvankooten.com/blog/2022/rewriting-interpreter-rust/">Blog post</a></p>
+      </div>
+
+      <div class="project-card">
+        <h4>Monkey-C</h4>
+        <p>An interpreted programming language hosted in C. This was my result of going through the wonderful <a href="https://interpreterbook.com/">interpreter book</a> by Thorsten Ball.</p>
+        <p class="project-links"><a href="https://github.com/dannyvankooten/monkey-c-monkey-do">GitHub</a> <a href="/blog/2020/writing-an-interpreter-compiler/">Blog post</a></p>
+      </div>
+
+      <div class="project-card">
+        <h4>Browserpass</h4>
+        <p>A browser extension for <a href="https://www.passwordstore.org/">Pass</a>, the unix password manager. I started hacking on this as I wanted to give <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">native messaging</a> a try, which was pretty new at the time.</p>
+        <p class="project-links"><a href="https://github.com/browserpass/browserpass-legacy">GitHub</a> <a href="/blog/2016/chrome-extension-for-pass/">Blog post</a></p>
+      </div>
+
+      <div class="project-card">
+        <h4>ibericode/vat</h4>
+        <p>A PHP library for dealing with European VAT rules.</p>
+        <p class="project-links"><a href="https://github.com/ibericode/vat">GitHub</a></p>
+      </div>
+
+      <div class="project-card">
+        <h4>AltoRouter</h4>
+        <p>A flexible routing class for PHP projects. My very first open-source project.</p>
+        <p class="project-links"><a href="https://altorouter.com/">Website</a> <a href="https://github.com/dannyvankooten/AltoRouter">GitHub</a> <a href="/blog/2012/altorouter-php-routing-class/">Blog post</a></p>
+      </div>
+    </div>
+  </main>
+</Layout>
+<style>
+  .project-list {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .project-card {
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background: #222;
+  }
+  .project-card h4 {
+    margin: 0 0 0.5rem;
+  }
+  .project-card p {
+    margin: 0.5rem 0;
+  }
+  .project-card p:last-child {
+    margin-bottom: 0;
+  }
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+</style>

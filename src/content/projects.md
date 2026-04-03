@@ -2,11 +2,6 @@
 title:  "Projects"
 ---
 
-A non-exhaustive list of some projects that I worked on over the years.
-
-
----
-
 #### Mailchimp for WordPress
 
 A WordPress plugin that allows you to tightly integrate your site with your Mailchimp account.

@@ -61,12 +61,9 @@ const { title, description = '' } = Astro.props;
       <nav>
         <ul>
           <li><a href="/" class={Astro.url.pathname === '/' ? 'active' : ''}>Home</a></li>
-          <li><a href="/about/" class={Astro.url.pathname === '/about/' ? 'active' : ''}>About</a>
-          </li>
+          <li><a href="/about/" class={Astro.url.pathname === '/about/' ? 'active' : ''}>About</a></li>
           <li><a href="/projects/" class={Astro.url.pathname === '/projects/' ? 'active' : ''}>Projects</a></li>
-          <li><a href="/blog/" class={Astro.url.pathname === '/blog/' ? 'active' : ''}>Blog</a>
-          </li>
-          <li><a href="/bookmarks/"  class={Astro.url.pathname === '/bookmarks/' ? 'active' : ''}>Bookmarks</a></li>
+          <li><a href="/blog/" class={Astro.url.pathname.startsWith('/blog/') ? 'active' : ''}>Blog</a></li>
           <li><a href="/hire-me/"  class={Astro.url.pathname === '/hire-me/' ? 'active' : ''}>Hire Me</a>
           </li>
         </ul>
