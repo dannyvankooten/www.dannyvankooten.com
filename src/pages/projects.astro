@@ -1,5 +1,45 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+interface Project {
+  name: string;
+  description: string;
+  repo?: string;
+  website?: string;
+  blog?: string;
+}
+
+const projects: Project[] = [
+  { name: "Mailchimp for WordPress", description: "A WordPress plugin that allows you to tightly integrate your site with your Mailchimp account. The plugin grew to well over 100.000 active users in its first year, after which I built a paid version from <a href=\"/blog/2013/100-000-plugin-downloads-6-months-mailchimp-wordpress/\">a hospital bed in Vietnam</a> which turned into a huge success. It has been downloaded well over 52 million times and is in active use on over 2 million websites.", repo: "ibericode/mailchimp-for-wordpress", website: "https://www.mc4wp.com/", blog: "/blog/2013/my-newest-wordpress-plugin-mailchimp-for-wp/" },
+  { name: "Koko Analytics", description: "Open-source and privacy friendly analytics plugin for WordPress that only tracks aggregated counts and keeps all data locally on the website's server. Currently in active use on about 50.000 websites.", repo: "ibericode/koko-analytics", website: "https://www.kokoanalytics.com/", blog: "/blog/2019/introducing-koko-analytics/" },
+  { name: "HTML Forms", description: "A WordPress plugin to create multipurpose forms and handle form submissions in a safe and extendible way. I grew this plugin to a healthy ~9.000 active users before selling it in early 2024.", website: "https://htmlformsplugin.com" },
+  { name: "Fathom Analytics", description: "Open-source and privacy friendly analytics. I <a href=\"/blog/2019/stepping-down-fathom-maintainer/\">stepped away from Fathom</a> in 2019 as its success at the time was hard to combine with 2 young children, but the project is still going strong (although no longer open-source) and has turned into a flourishing business.", repo: "usefathom/fathom", website: "https://usefathom.com/", blog: "/blog/2018/reviving-ana-as-fathom/" },
+  { name: "Gozer", description: "A static site generator in Go with a focus on performance and simplicity.", repo: "dannyvankooten/gozer" },
+  { name: "Nederlang", description: "An interpreted programming language with a bytecode compiler and stack-based virtual machine hosted in Rust.", repo: "dannyvankooten/nederlang", blog: "https://www.dannyvankooten.com/blog/2022/rewriting-interpreter-rust/" },
+  { name: "Monkey-C", description: "An interpreted programming language hosted in C. This was my result of going through the wonderful <a href=\"https://interpreterbook.com/\">interpreter book</a> by Thorsten Ball.", repo: "dannyvankooten/monkey-c-monkey-do", blog: "/blog/2020/writing-an-interpreter-compiler/" },
+  { name: "Browserpass", description: "A browser extension for <a href=\"https://www.passwordstore.org/\">Pass</a>, the unix password manager. I started hacking on this as I wanted to give <a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging\">native messaging</a> a try, which was pretty new at the time.", repo: "browserpass/browserpass-legacy", blog: "/blog/2016/chrome-extension-for-pass/" },
+  { name: "ibericode/vat", description: "A PHP library for dealing with European VAT rules.", repo: "ibericode/vat" },
+  { name: "AltoRouter", description: "A flexible routing class for PHP projects. My very first open-source project.", repo: "dannyvankooten/AltoRouter", website: "https://altorouter.com/", blog: "/blog/2012/altorouter-php-routing-class/" },
+];
+
+// Fetch GitHub stars for all projects with a repo
+const token = import.meta.env.GITHUB_ACCESS_TOKEN;
+const stars = new Map<string, number>();
+if (token) {
+  await Promise.all(projects.filter(p => p.repo).map(async (p) => {
+    const res = await fetch(`https://api.github.com/repos/${p.repo}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+      },
+    });
+    if (res.ok) {
+      const data = await res.json();
+      stars.set(p.repo!, data.stargazers_count);
+    }
+  }));
+}
 ---
 <Layout title="Projects">
   <main class="content">
@@ -29,66 +69,25 @@ import Layout from '../layouts/Layout.astro';
     <p>A more extensive list of projects I worked on over the years, ranging from WordPress plugins and web analytics to toy programming languages and browser extensions.</p>
 
     <div class="project-list">
-      <div class="project-card">
-        <h4>Mailchimp for WordPress</h4>
-        <p>A WordPress plugin that allows you to tightly integrate your site with your Mailchimp account.</p>
-        <p>The plugin grew to well over 100.000 active users in its first year, after which I built a paid version from <a href="/blog/2013/100-000-plugin-downloads-6-months-mailchimp-wordpress/">a hospital bed in Vietnam</a> which turned into a huge success. It has been downloaded well over 52 million times and is in active use on over 2 million websites.</p>
-        <p class="project-links"><a href="https://www.mc4wp.com/">Website</a> <a href="https://github.com/ibericode/mailchimp-for-wordpress">GitHub</a> <a href="/blog/2013/my-newest-wordpress-plugin-mailchimp-for-wp/">Blog post</a></p>
-      </div>
-
-      <div class="project-card">
-        <h4>Koko Analytics</h4>
-        <p>Open-source and privacy friendly analytics plugin for WordPress that only tracks aggregated counts and keeps all data locally on the website's server. Currently in active use on about 50.000 websites.</p>
-        <p class="project-links"><a href="https://www.kokoanalytics.com/">Website</a> <a href="https://github.com/ibericode/koko-analytics">GitHub</a> <a href="/blog/2019/introducing-koko-analytics/">Blog post</a></p>
-      </div>
-
-      <div class="project-card">
-        <h4>HTML Forms</h4>
-        <p>A WordPress plugin to create multipurpose forms and handle form submissions in a safe and extendible way. I grew this plugin to a healthy ~9.000 active users before selling it in early 2024.</p>
-        <p class="project-links"><a href="https://htmlformsplugin.com">Website</a></p>
-      </div>
-
-      <div class="project-card">
-        <h4>Fathom Analytics</h4>
-        <p>Open-source and privacy friendly analytics. I <a href="/blog/2019/stepping-down-fathom-maintainer/">stepped away from Fathom</a> in 2019 as its success at the time was hard to combine with 2 young children, but the project is still going strong (although no longer open-source) and has turned into a flourishing business.</p>
-        <p class="project-links"><a href="https://usefathom.com/">Website</a> <a href="https://github.com/usefathom/fathom">GitHub</a> <a href="/blog/2018/reviving-ana-as-fathom/">Blog post</a></p>
-      </div>
-
-      <div class="project-card">
-        <h4>Gozer</h4>
-        <p>A static site generator in Go with a focus on performance and simplicity.</p>
-        <p class="project-links"><a href="https://github.com/dannyvankooten/gozer">GitHub</a></p>
-      </div>
-
-      <div class="project-card">
-        <h4>Nederlang</h4>
-        <p>An interpreted programming language with a bytecode compiler and stack-based virtual machine hosted in Rust.</p>
-        <p class="project-links"><a href="https://github.com/dannyvankooten/nederlang">GitHub</a> <a href="https://www.dannyvankooten.com/blog/2022/rewriting-interpreter-rust/">Blog post</a></p>
-      </div>
-
-      <div class="project-card">
-        <h4>Monkey-C</h4>
-        <p>An interpreted programming language hosted in C. This was my result of going through the wonderful <a href="https://interpreterbook.com/">interpreter book</a> by Thorsten Ball.</p>
-        <p class="project-links"><a href="https://github.com/dannyvankooten/monkey-c-monkey-do">GitHub</a> <a href="/blog/2020/writing-an-interpreter-compiler/">Blog post</a></p>
-      </div>
-
-      <div class="project-card">
-        <h4>Browserpass</h4>
-        <p>A browser extension for <a href="https://www.passwordstore.org/">Pass</a>, the unix password manager. I started hacking on this as I wanted to give <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">native messaging</a> a try, which was pretty new at the time.</p>
-        <p class="project-links"><a href="https://github.com/browserpass/browserpass-legacy">GitHub</a> <a href="/blog/2016/chrome-extension-for-pass/">Blog post</a></p>
-      </div>
-
-      <div class="project-card">
-        <h4>ibericode/vat</h4>
-        <p>A PHP library for dealing with European VAT rules.</p>
-        <p class="project-links"><a href="https://github.com/ibericode/vat">GitHub</a></p>
-      </div>
-
-      <div class="project-card">
-        <h4>AltoRouter</h4>
-        <p>A flexible routing class for PHP projects. My very first open-source project.</p>
-        <p class="project-links"><a href="https://altorouter.com/">Website</a> <a href="https://github.com/dannyvankooten/AltoRouter">GitHub</a> <a href="/blog/2012/altorouter-php-routing-class/">Blog post</a></p>
-      </div>
+      {projects.map(p => (
+        <div class="project-card">
+          <div class="project-header">
+            <h4>{p.name}</h4>
+            {p.repo && stars.has(p.repo) && (
+              <span class="project-stars">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+                {stars.get(p.repo)!.toLocaleString()}
+              </span>
+            )}
+          </div>
+          <p><Fragment set:html={p.description} /></p>
+          <p class="project-links">
+            {p.website && <a href={p.website}>Website</a>}
+            {p.repo && <a href={`https://github.com/${p.repo}`}>GitHub</a>}
+            {p.blog && <a href={p.blog}>Blog post</a>}
+          </p>
+        </div>
+      ))}
     </div>
   </main>
 </Layout>
@@ -105,7 +104,22 @@ import Layout from '../layouts/Layout.astro';
     background: #222;
   }
   .project-card h4 {
-    margin: 0 0 0.5rem;
+    margin: 0;
+  }
+  .project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .project-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    color: #cba328;
+    white-space: nowrap;
   }
   .project-card p {
     margin: 0.5rem 0;

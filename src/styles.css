@@ -73,6 +73,20 @@ h2, h3, h4, h5, h6 {
 p, ul, ol, table, blockquote, pre, img, figure, .alert {
   margin: 1.5rem 0;
 }
+figure {
+  padding: 0;
+  text-align: center;
+}
+figure img {
+  border-radius: 6px;
+  margin: 0;
+}
+figcaption {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 0.5rem;
+  text-align: center;
+}
 ul, ol {
   padding: 0 0 0 1.5rem;
 }
