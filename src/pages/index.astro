@@ -9,6 +9,7 @@ const posts = (await getCollection('blog')).reverse()
 
 <Layout title="Danny van Kooten">
     <main class="content">
+    <img src="/img/2025-spanje-small.webp" alt="Danny van Kooten" class="headshot" width="120" height="120" />
     <h1>Danny van Kooten</h1>
 <p>My name is Danny and I run <a href="https://www.ibericode.com/">ibericode</a>, a small bootstrapped software company from The Netherlands.</p>
 <p>I've been making a living from my products for well over 10 years now. On this site you can <a href="/about/">read some more about me</a> and find links to <a href="/projects/">a small selection of my work</a>.</p>
@@ -58,7 +59,6 @@ const posts = (await getCollection('blog')).reverse()
 </ul>
 <p>You can find <a href="/projects/">more of my projects here</a>.</p>
 
-
     <h2>Latest blog posts</h2>
     <ul class="list-unstyled p-0 m-0">
         {posts.slice(0, 5).map(p => (
@@ -71,3 +71,12 @@ const posts = (await getCollection('blog')).reverse()
     <p>View <a href="/blog/">all posts on my blog</a>.</p>
 </main>
 </Layout>
+<style>
+    .headshot {
+        float: right;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #444;
+        margin: 0 0 1rem 1.5rem;
+    }
+</style>

@@ -126,10 +126,11 @@ sup {
 hr {
   box-sizing: content-box;
   overflow: visible;
-  margin: 3rem 0;
+  margin: 3rem auto;
   border: 0;
   height: 1px;
-  background: #444;
+  max-width: 200px;
+  background: linear-gradient(to right, transparent, #555, transparent);
 }
 abbr {
   font-size: 0.9em;

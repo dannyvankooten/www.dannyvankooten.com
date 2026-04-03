@@ -1,17 +1,3 @@
-User-agent: anthropic-ai
-User-agent: CCBot
-User-Agent: ChatGPT
-User-agent: ChatGPT-User
-User-agent: ClaudeBot
-User-agent: Claude-Web
-User-agent: FacebookBot
-User-agent: GPTBot
-User-Agent: GPTBot-User
-User-agent: Google-Extended
-User-agent: Omgilibot
-User-agent: PerplexityBot
-Disallow: /
-
 User-agent: *
 Disallow:
 Allow: /
