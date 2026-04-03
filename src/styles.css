@@ -208,6 +208,50 @@ tr:nth-child(odd) th {
   text-decoration: none;
 }
 
+/* Featured projects */
+.featured-projects {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.featured-project {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #222;
+  color: #DDD;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+.featured-project:hover,
+.featured-project:focus {
+  border-color: #555;
+  color: #DDD;
+  text-decoration: none;
+}
+.featured-project img {
+  flex-shrink: 0;
+  margin: 0;
+  border-radius: 8px;
+}
+.featured-project strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+.featured-project span {
+  font-size: 0.9rem;
+  color: #AAA;
+}
+@media (min-width: 576px) {
+  .featured-projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* alerts */
 .alert {
   padding: 0.75rem 0.75rem 0.75rem 1.5rem;

@@ -3,7 +3,9 @@ import { getCollection, getEntry } from 'astro:content';
 import Layout from "../../layouts/Layout.astro"
 import { dateOptions } from '../../const';
 
-const posts = (await getCollection('blog')).reverse();
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.datePublished.valueOf() - a.data.datePublished.valueOf(),
+);
 const grouped = Object.groupBy(posts, p => p.data.datePublished.getFullYear());
 
 ---
