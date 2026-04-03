@@ -15,4 +15,4 @@ Disallow: /
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://www.dannyvankooten.com/sitemap.xml
+Sitemap: https://www.dannyvankooten.com/sitemap-index.xml

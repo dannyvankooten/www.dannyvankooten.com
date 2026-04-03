@@ -1,0 +1,84 @@
+---
+import { dateOptions } from '../const';
+import Layout from '../layouts/Layout.astro';
+
+interface GitHubRepo {
+  name: string;
+  description: string | null;
+  html_url: string;
+  license: { spdx_id: string } | null;
+  created_at: string;
+  pushed_at: string;
+  archived: boolean;
+  private: boolean;
+  fork: boolean;
+}
+
+interface Repo {
+  name: string;
+  desc: string;
+  url: string;
+  license: string;
+  created: Date;
+  updated: Date;
+}
+
+async function fetchRepos(source: string): Promise<Repo[]> {
+  const token = import.meta.env.GITHUB_ACCESS_TOKEN;
+  if (!token) {
+    throw new Error("Please set the GITHUB_ACCESS_TOKEN env variable");
+  }
+
+  const res = await fetch(`https://api.github.com/${source}/repos?per_page=100`, {
+    headers: {
+      'X-GitHub-Api-Version': '2022-11-28',
+      'Authorization': `Bearer ${token}`,
+      'Accept': 'application/vnd.github+json',
+    },
+  });
+
+  if (!res.ok) {
+    throw new Error(`GitHub API request failed: ${await res.text()}`);
+  }
+
+  const data: GitHubRepo[] = await res.json();
+  return data
+    .filter(repo => !repo.archived && !repo.private && !repo.fork)
+    .map(repo => ({
+      name: repo.name,
+      desc: repo.description ?? '',
+      url: repo.html_url,
+      license: repo.license?.spdx_id ?? '',
+      created: new Date(repo.created_at),
+      updated: new Date(repo.pushed_at),
+    }));
+}
+
+const repos = [
+  ...await fetchRepos('users/dannyvankooten'),
+  ...await fetchRepos('orgs/ibericode'),
+].sort((a, b) => b.updated.getTime() - a.updated.getTime());
+
+const now = new Date();
+const fmt = (d: Date) => d.toLocaleDateString('en-US', dateOptions);
+---
+
+<Layout title="Code">
+  <main class="content">
+    <h1>Code</h1>
+    <p>This page lists the various public git repositories I have on <a href="https://github.com/dannyvankooten/">GitHub</a>, sorted by recent activity.</p>
+    <p>Last updated: {now.toLocaleDateString("en-US", dateOptions)}</p>
+    {repos.map(r => (
+      <div>
+        <h4>{r.name}</h4>
+        <p>{r.desc}</p>
+        <p><small>
+          First commit on <time>{fmt(r.created)}</time><br />
+          Last commit on <time>{fmt(r.updated)}</time><br />
+          {r.license && <>Licensed under {r.license}<br /></>}
+          <a href={r.url}>{r.url}</a>
+        </small></p>
+      </div>
+    ))}
+  </main>
+</Layout>

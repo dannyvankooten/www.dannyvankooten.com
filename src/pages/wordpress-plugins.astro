@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+interface WPPluginInfo {
+  downloaded: number;
+}
+
+interface Plugin {
+  slug: string | null;
+  name: string;
+  url: string;
+  released: string;
+  downloads?: string;
+  note?: string;
+  strikethrough?: boolean;
+}
+
+function humanFormat(num: number): string {
+  let n = parseFloat(num.toPrecision(3));
+  const suffixes = ['', 'K', 'M', 'B', 'T'];
+  let magnitude = 0;
+  while (Math.abs(n) >= 1000) {
+    magnitude++;
+    n /= 1000;
+  }
+  return n.toString() + suffixes[magnitude];
+}
+
+const plugins = [
+  { slug: "mailchimp-for-wp", name: "Mailchimp for WordPress", url: "https://www.mc4wp.com/", released: "July 2013" },
+  { slug: "koko-analytics", name: "Koko Analytics", url: "https://www.kokoanalytics.com", released: "November 2019" },
+  { slug: "html-forms", name: "HTML Forms", url: "https://www.htmlformsplugin.com/", released: "October 2017", note: 'sold to <a href="https://linksoftwarellc.com/">Link Software LLC</a>', strikethrough: true },
+  { slug: "mailchimp-top-bar", name: "Mailchimp Top Bar", url: "https://wordpress.org/plugins/mailchimp-top-bar/", released: "February 2015" },
+  { slug: "boxzilla", name: "Boxzilla", url: "https://boxzillaplugin.com/", released: "November 2013" },
+  { slug: null, name: "Newsletter Sign-Up", url: "http://wordpress.org/plugins/newsletter-sign-up/", released: "March 2011", downloads: "400K", strikethrough: true },
+  { slug: "wysiwyg-widgets", name: "Widget Blocks", url: "https://wordpress.org/plugins/wysiwyg-widgets/", released: "June 2011" },
+  { slug: "dvk-social-sharing", name: "Social Sharing by Danny", url: "https://wordpress.org/plugins/dvk-social-sharing/", released: "November 2013" },
+  { slug: null, name: "Recent Facebook Posts", url: "https://wordpress.org/plugins/recent-facebook-posts/", released: "September 2012", downloads: "300K", strikethrough: true },
+  { slug: null, name: "Mailchimp User Sync", url: "https://wordpress.org/plugins/mailchimp-sync/", released: "January 2015", downloads: "200K", strikethrough: true },
+] satisfies Plugin[];
+
+// Fetch download counts for plugins with a slug
+const downloadCounts = new Map<string, string>();
+for (const plugin of plugins) {
+  if (!plugin.slug) continue;
+  const res = await fetch(`https://api.wordpress.org/plugins/info/1.0/${plugin.slug}.json`);
+  if (res.ok) {
+    const data: WPPluginInfo = await res.json();
+    downloadCounts.set(plugin.slug, humanFormat(data.downloaded));
+  }
+}
+---
+
+<Layout title="WordPress Plugins">
+  <main class="content">
+    <h1>WordPress Plugins</h1>
+    <p>In the last few years I developed quite a few WordPress plugins, together totalling well over <strong>54 million downloads</strong> now. All of these plugins combined are running on over 2 million websites right now.</p>
+    <p>Without further ado, here are some of the most important plugins for WordPress I developed.</p>
+
+    <div style="overflow-x: auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>Plugin Name</th>
+            <th># of downloads</th>
+            <th>Released in</th>
+          </tr>
+        </thead>
+        <tbody>
+          {plugins.map(p => (
+            <tr>
+              <td>
+                {p.strikethrough ? (
+                  <s><a href={p.url}>{p.name}</a></s>
+                ) : (
+                  <a href={p.url}>{p.name}</a>
+                )}
+                {p.note && <Fragment set:html={` (${p.note})`} />}
+              </td>
+              <td>{p.slug ? downloadCounts.get(p.slug) ?? '—' : p.downloads}</td>
+              <td>{p.released}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <p>For a full list of WordPress plugins that I developed, please have a look at <a href="https://profiles.wordpress.org/dvankooten/">my WordPress.org profile</a>.</p>
+  </main>
+</Layout>

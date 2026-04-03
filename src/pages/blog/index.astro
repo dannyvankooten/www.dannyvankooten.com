@@ -1,0 +1,32 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Layout from "../../layouts/Layout.astro"
+import { dateOptions } from '../../const';
+
+const posts = (await getCollection('blog')).reverse();
+const grouped = Object.groupBy(posts, p => p.data.datePublished.getFullYear());
+
+---
+
+<Layout title="Blog">
+    <h1>Blog</h1>
+    {Object.keys(grouped).reverse().map(year => {
+        const yearPosts = grouped[Number(year)];
+        if (!yearPosts) return null;
+        return (
+            <h2>{year}</h2>
+            <ul>
+                {yearPosts.map(post => {
+                    return (
+                    <li>
+                        <a href={`/blog/${post.id}`}>{post.data.title}</a>
+                        <small>{post.data.datePublished.toLocaleDateString("en-US", dateOptions)}</small>
+                    </li>)
+                })}
+            </ul>
+        )
+    })}
+</Layout>
+<style>
+    small { display: block; }
+</style>

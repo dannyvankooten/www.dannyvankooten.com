@@ -1,0 +1,30 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { dateOptions } from '../../const';
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { id: post.id },
+    props: post,
+  }));
+}
+
+type Props = CollectionEntry<'blog'>;
+
+// 2. For your template, you can get the entry directly from the prop
+const post = Astro.props;
+const { Content } = await render(post);
+
+---
+<Layout title={post.data.title}>
+  <article class="content h-entry">
+    <h1 class="p-name">{post.data.title}</h1>
+    <p class="post-date"><small>By <a class="p-author h-card" href="https://www.dannyvankooten.com/">Danny van Kooten</a> on <time class="dt-published" datetime={post.data.datePublished.toISOString()}>{post.data.datePublished.toLocaleDateString("en-US", dateOptions)}</time> on <a class="u-url" href={Astro.url}>Permalink</a>.</small></p>
+    <div class="e-content">
+      <Content />
+    </div>
+  </article>
+</Layout>

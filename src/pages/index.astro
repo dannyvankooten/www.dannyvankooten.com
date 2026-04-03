@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import { dateOptions } from '../const';
+
+const posts = (await getCollection('blog')).reverse()
+
+---
+
+<Layout title="Danny van Kooten">
+    <main class="content">
+    <h1>Danny van Kooten</h1>
+<p>My name is Danny and I run <a href="https://www.ibericode.com/">ibericode</a>, a small bootstrapped software company from The Netherlands.</p>
+<p>I've been making a living from my products for well over 10 years now. On this site you can <a href="/about/">read some more about me</a> and find links to <a href="/projects/">a small selection of my work</a>.</p>
+<p>Alternatively, you can find me on <a href="https://x.com/dannyvankooten" rel="me nofollow">X (Twitter)</a>, <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a> or <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a>.</p>
+<p>As of 2026, I am available as a <a href="/hire-me/">freelance PHP developer</a>.</p>
+<h2>Latest projects</h2>
+<ul class="list-unstyled m-0 p-0">
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://www.kokoanalytics.com/">Koko Analytics</a></h3>
+    <p class="m-0">Privacy-friendly and efficient analytics for your WordPress site.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://www.mc4wp.com/">MC4WP: Mailchimp for WordPress</a></h3>
+    <p class="m-0">A WordPress plugin for integrating Mailchimp with your site.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://www.boxzillaplugin.com/">Boxzilla: Pop-ups for WordPress</a></h3>
+    <p class="m-0">A WordPress plugin for adding pop-ups with various trigger methods to your site.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/gozer">Gozer</a></h3>
+    <p class="m-0">Simple, fast and opinionated static site generator.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/1brc">1 Billion Rows Challenge</a></h3>
+    <p class="m-0">C implementation of the <a href="/blog/2024/1brc/">1 Billion Rows Challenge</a>, in standard C99 with POSIX threads.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/nederlang">Nederlang</a></h3>
+    <p class="m-0">Bytecode compiler and stack based virtual machine for a toy programming language consisting of Dutch keywords.</p>
+  </li>
+  <li class="mt-0 mb-4">
+    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/advent-of-code">Advent of Code</a></h3>
+    <p class="m-0">My solutions for Advent of Code 2015 - 2025.</p>
+  </li>
+</ul>
+<p>You can find <a href="/projects/">more of my projects here</a>.</p>
+
+
+    <h2>Latest blog posts</h2>
+    <ul class="list-unstyled p-0 m-0">
+        {posts.slice(0, 5).map(p => (
+            <li class="mb-4 mt-0">
+                <h3 class="h6 mt-0 mb-2"><a href={`/blog/${p.id}`}>{p.data.title}</a></h3>
+                <p class="text-muted text-small m-0"><time>{p.data.datePublished.toLocaleDateString("en-US", dateOptions)}</time></p>
+            </li>
+        ))}        
+    </ul>
+    <p>View <a href="/blog/">all posts on my blog</a>.</p>
+</main>
+</Layout>
