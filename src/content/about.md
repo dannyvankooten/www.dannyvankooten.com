@@ -24,7 +24,7 @@ On a more personal note, I also love to walk my dog, sail small dinghies, ride m
 
 <figure>
 
-![Danny with stray dog in Koh Lanta, Thailand](/img/danny-rico.jpg)
+![Danny with stray dog in Koh Lanta, Thailand](../assets/danny-rico.jpg)
 <figcaption>With a stray dog in Koh Lanta, Thailand</figcaption>
 </figure>
 

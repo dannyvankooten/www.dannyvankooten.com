@@ -1,61 +1,6 @@
 ---
 title:  "Freelance PHP developer"
 ---
-	
-<style>
-	.p-name { display: none; }
-	.jumbotron {
-		background: #252629;
-		padding: 2.5rem;
-		border-radius: 8px;
-		display: flex;
-		align-items: center;
-		gap: 2.5rem;
-		border: 1px solid #333;
-	}
-	.jumbotron-body { flex: 1; }
-	.jumbotron-photo {
-		flex-shrink: 0;
-		width: 160px;
-		height: 160px;
-		border-radius: 50%;
-		object-fit: cover;
-		border: 3px solid #444;
-	}
-	.jumbotron h1,
-	.jumbotron h2 {
-		font-size: 1.5rem !important;
-		margin: 0 0 0.25rem;
-	}
-	.jumbotron h2 { font-weight: normal; color: #aaa; }
-	.jumbotron .lead {
-		font-size: 1.15rem;
-		margin: 1rem 0;
-		color: #ccc;
-	}
-	.btn {
-		background: #6699CC;
-		color: white;
-		padding: 0.75rem 1.75rem;
-		border-radius: 6px;
-		text-decoration: none;
-		display: inline-block;
-		font-weight: bold;
-	}
-	.btn:focus,
-	.btn:hover {
-		color: white;
-		background: #5588BB;
-	}
-	@media (max-width: 600px) {
-		.jumbotron {
-			flex-direction: column-reverse;
-			text-align: center;
-			padding: 2rem;
-			gap: 1.5rem;
-		}
-	}
-</style>
 
 <div class="jumbotron">
 	<div class="jumbotron-body">
@@ -64,7 +9,9 @@ title:  "Freelance PHP developer"
 		<p class="lead">I build and optimize PHP applications that handle millions of users. Available for freelance projects.</p>
 		<p class="mb-0"><a class="btn" href="mailto:hi@dvk.co">Get in touch</a></p>
 	</div>
-	<img class="jumbotron-photo" src="/img/2025-spanje-small.webp" alt="Danny during a winter getaway in Javea, Spain" width="160" height="160">
+
+![Danny during a winter getaway in Javea, Spain](../assets/headshot.webp)
+
 </div>
 
 ## Track record
@@ -91,3 +38,59 @@ While PHP is my bread and butter, I regularly work with JavaScript, Golang, Pyth
 Send a short description of your project to **hi@dvk.co**. I'll reply within 2 business days to let you know if I can help and what the next steps would be.
 
 <a class="btn" href="mailto:hi@dvk.co">Contact me over email</a>
+
+
+<style>
+.p-name { display: none; }
+.jumbotron {
+	background: #252629;
+	padding: 2.5rem;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	gap: 2.5rem;
+	border: 1px solid #333;
+}
+.jumbotron-body { flex: 1; }
+.jumbotron img {
+	flex-shrink: 0;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid #444;
+}
+.jumbotron h1,
+.jumbotron h2 {
+	font-size: 1.5rem !important;
+	margin: 0 0 0.25rem;
+}
+.jumbotron h2 { font-weight: normal; color: #aaa; }
+.jumbotron .lead {
+	font-size: 1.15rem;
+	margin: 1rem 0;
+	color: #ccc;
+}
+.btn {
+	background: #6699CC;
+	color: white;
+	padding: 0.75rem 1.75rem;
+	border-radius: 6px;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: bold;
+}
+.btn:focus,
+.btn:hover {
+	color: white;
+	background: #5588BB;
+}
+@media (max-width: 600px) {
+	.jumbotron {
+		flex-direction: column-reverse;
+		text-align: center;
+		padding: 2rem;
+		gap: 1.5rem;
+	}
+}
+</style>

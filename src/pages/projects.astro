@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import iconMC4WP from '../assets/mc4wp.svg';
+import iconKokoAnalytics from '../assets/koko-analytics.svg';
 
 interface Project {
   name: string;
@@ -50,14 +53,14 @@ if (token) {
     <p>These two WordPress plugins are my main products, actively maintained and used on millions of websites worldwide.</p>
     <div class="featured-projects">
       <a href="https://www.mc4wp.com/" class="featured-project">
-        <img src="/img/mc4wp.svg" alt="" width="48" height="48" />
+        <Image src={iconMC4WP} alt="Mailchimp for WordPress logo" width="48" height="48" />
         <div>
           <strong>Mailchimp for WordPress</strong>
           <span>The #1 Mailchimp plugin for WordPress. 73M+ downloads, 2M+ active installs.</span>
         </div>
       </a>
       <a href="https://www.kokoanalytics.com/" class="featured-project">
-        <img src="/img/koko-analytics.svg" alt="" width="48" height="48" />
+        <Image src={iconKokoAnalytics} alt="Koko Analytics logo" width="48" height="48" />
         <div>
           <strong>Koko Analytics</strong>
           <span>Privacy-friendly analytics for WordPress. Open-source, GDPR compliant, fast.</span>

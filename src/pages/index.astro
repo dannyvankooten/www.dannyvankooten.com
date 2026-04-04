@@ -7,59 +7,67 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.datePublished.valueOf() - a.data.datePublished.valueOf(),
 );
 
+import { Image } from 'astro:assets';
+import headshot from '../assets/headshot.webp';
+import iconMC4WP from '../assets/mc4wp.svg';
+import iconKokoAnalytics from '../assets/koko-analytics.svg';
+
 ---
 
+
+
 <Layout title="Danny van Kooten">
-    <main class="content">
-    <img src="/img/2025-spanje-small.webp" alt="Danny van Kooten" class="headshot" width="120" height="120" />
+  <main class="content">
+    <Image src={headshot} alt="Danny van Kooten" class="headshot" width="120" height="120" />
+    
     <h1>Danny van Kooten</h1>
-<p>My name is Danny and I run <a href="https://www.ibericode.com/">ibericode</a>, a small bootstrapped software company from The Netherlands.</p>
-<p>I've been making a living from my products for well over 10 years now. On this site you can <a href="/about/">read some more about me</a> and find links to <a href="/projects/">a small selection of my work</a>.</p>
-<p>Alternatively, you can find me on <a href="https://x.com/dannyvankooten" rel="me nofollow">X (Twitter)</a>, <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a> or <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a>.</p>
-<p>As of 2026, I am available as a <a href="/hire-me/">freelance PHP developer</a>.</p>
+    <p>My name is Danny and I run <a href="https://www.ibericode.com/">ibericode</a>, a small bootstrapped software company from The Netherlands.</p>
+    <p>I've been making a living from my products for well over 10 years now. On this site you can <a href="/about/">read some more about me</a> and find links to <a href="/projects/">a small selection of my work</a>.</p>
+    <p>Alternatively, you can find me on <a href="https://x.com/dannyvankooten" rel="me nofollow">X (Twitter)</a>, <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a> or <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a>.</p>
+    <p>As of 2026, I am available as a <a href="/hire-me/">freelance PHP developer</a>.</p>
 
-<h2>Featured projects</h2>
-<div class="featured-projects">
-  <a href="https://www.mc4wp.com/" class="featured-project">
-    <img src="/img/mc4wp.svg" alt="" width="48" height="48" />
-    <div>
-      <strong>Mailchimp for WordPress</strong>
-      <span>The #1 Mailchimp plugin for WordPress. 73M+ downloads, 2M+ active installs.</span>
+    <h2>Featured projects</h2>
+    <div class="featured-projects">
+      <a href="https://www.mc4wp.com/" class="featured-project">
+        <Image src={iconMC4WP} alt="Mailchimp for WordPress" width="48" height="48" />
+        <div>
+          <strong>Mailchimp for WordPress</strong>
+          <span>The #1 Mailchimp plugin for WordPress. 73M+ downloads, 2M+ active installs.</span>
+        </div>
+      </a>
+      <a href="https://www.kokoanalytics.com/" class="featured-project">
+        <Image src={iconKokoAnalytics} alt="" width="48" height="48" />
+        <div>
+          <strong>Koko Analytics</strong>
+          <span>Privacy-friendly analytics for WordPress. Open-source, GDPR compliant, fast.</span>
+        </div>
+      </a>
     </div>
-  </a>
-  <a href="https://www.kokoanalytics.com/" class="featured-project">
-    <img src="/img/koko-analytics.svg" alt="" width="48" height="48" />
-    <div>
-      <strong>Koko Analytics</strong>
-      <span>Privacy-friendly analytics for WordPress. Open-source, GDPR compliant, fast.</span>
-    </div>
-  </a>
-</div>
 
-<h2>More projects</h2>
-<ul class="list-unstyled m-0 p-0">
-  <li class="mt-0 mb-4">
-    <h3 class="mt-0 mb-2 h6"><a href="https://www.boxzillaplugin.com/">Boxzilla: Pop-ups for WordPress</a></h3>
-    <p class="m-0">A WordPress plugin for adding pop-ups with various trigger methods to your site.</p>
-  </li>
-  <li class="mt-0 mb-4">
-    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/gozer">Gozer</a></h3>
-    <p class="m-0">Simple, fast and opinionated static site generator.</p>
-  </li>
-  <li class="mt-0 mb-4">
-    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/1brc">1 Billion Rows Challenge</a></h3>
-    <p class="m-0">C implementation of the <a href="/blog/2024/1brc/">1 Billion Rows Challenge</a>, in standard C99 with POSIX threads.</p>
-  </li>
-  <li class="mt-0 mb-4">
-    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/nederlang">Nederlang</a></h3>
-    <p class="m-0">Bytecode compiler and stack based virtual machine for a toy programming language consisting of Dutch keywords.</p>
-  </li>
-  <li class="mt-0 mb-4">
-    <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/advent-of-code">Advent of Code</a></h3>
-    <p class="m-0">My solutions for Advent of Code 2015 - 2025.</p>
-  </li>
-</ul>
-<p>You can find <a href="/projects/">more of my projects here</a>.</p>
+    <h2>More projects</h2>
+    <ul class="list-unstyled m-0 p-0">
+      <li class="mt-0 mb-4">
+        <h3 class="mt-0 mb-2 h6"><a href="https://www.boxzillaplugin.com/">Boxzilla: Pop-ups for WordPress</a></h3>
+        <p class="m-0">A WordPress plugin for adding pop-ups with various trigger methods to your site.</p>
+      </li>
+      <li class="mt-0 mb-4">
+        <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/gozer">Gozer</a></h3>
+        <p class="m-0">Simple, fast and opinionated static site generator.</p>
+      </li>
+      <li class="mt-0 mb-4">
+        <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/1brc">1 Billion Rows Challenge</a></h3>
+        <p class="m-0">C implementation of the <a href="/blog/2024/1brc/">1 Billion Rows Challenge</a>, in standard C99 with POSIX threads.</p>
+      </li>
+      <li class="mt-0 mb-4">
+        <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/nederlang">Nederlang</a></h3>
+        <p class="m-0">Bytecode compiler and stack based virtual machine for a toy programming language consisting of Dutch keywords.</p>
+      </li>
+      <li class="mt-0 mb-4">
+        <h3 class="mt-0 mb-2 h6"><a href="https://github.com/dannyvankooten/advent-of-code">Advent of Code</a></h3>
+        <p class="m-0">My solutions for Advent of Code 2015 - 2025.</p>
+      </li>
+    </ul>
+    <p>You can find <a href="/projects/">more of my projects here</a>.</p>
 
     <h2>Latest blog posts</h2>
     <ul class="list-unstyled p-0 m-0">
@@ -71,7 +79,7 @@ const posts = (await getCollection('blog')).sort(
         ))}        
     </ul>
     <p>View <a href="/blog/">all posts on my blog</a>.</p>
-</main>
+  </main>
 </Layout>
 <style>
     .headshot {

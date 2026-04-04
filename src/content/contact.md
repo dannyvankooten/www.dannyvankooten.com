@@ -27,7 +27,7 @@ __...need my business details?__
 ibericode BV<br>
 6533BP Nijmegen<br>
 The Netherlands <br>
-VAT no: NL856102337B01<br>
+VAT number: NL856102337B01<br>
 </address>
 
 ---
@@ -35,5 +35,3 @@ VAT no: NL856102337B01<br>
 __Anything else?__
 
 Please send your email to [hi @ this domain](mailto:).
-
-Should it be private? Here's my [PGP public key](/public-key.txt).
