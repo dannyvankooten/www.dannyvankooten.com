@@ -1,6 +1,7 @@
 ---
 title:  "Using phpactor as a language server for WordPress development"
 datePublished: "2026-02-26"
+description: "Configuring phpactor as a language server for WordPress development by setting up include patterns for core files."
 ---
 
 In this post I want to share how I use [phpactor](https://phpactor.readthedocs.io/en/master/) as a language server for WordPress development. Phpactor is a great tool for PHP development, and it can be used with various editors and IDEs that support the Language Server Protocol (LSP).

@@ -2,6 +2,7 @@
 title:  "One million downloads (!!!)"
 date:  2015-02-15 05:59:42
 datePublished: "2015-02-15"
+description: "Mailchimp for WordPress crosses the one million downloads milestone in less than two years."
 ---
 
 Last Friday was a day of many milestones for [Mailchimp for WordPress](https://www.mc4wp.com), which is by far my most popular WordPress plugin.

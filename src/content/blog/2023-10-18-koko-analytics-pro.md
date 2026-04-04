@@ -1,6 +1,7 @@
 ---
 title:  "Introducing Koko Analytics Pro"
 datePublished: "2023-10-18"
+description: "Launching Koko Analytics Pro with custom event tracking for WordPress sites."
 ---
 
 We've just launched Koko Analytics Pro, which does custom event tracking for your WordPress site. You can read more about it on the Koko Analytics website:

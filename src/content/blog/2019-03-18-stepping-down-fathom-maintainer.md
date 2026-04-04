@@ -2,6 +2,7 @@
 title:  "Stepping down from Fathom"
 date:  2019-03-18
 datePublished: "2019-03-18"
+description: "Why I'm stepping down as maintainer of the open-source Fathom analytics project."
 ---
 
 <div class="alert" role="alert">

@@ -2,6 +2,7 @@
 title:  "CDN URL rewriting plugin for WordPress"
 date:  2015-05-22 17:49:00
 datePublished: "2015-05-22"
+description: "A lightweight WordPress plugin for rewriting asset URLs to serve them from a CDN."
 ---
 
 To make sure the [Mailchimp for WordPress](https://www.mc4wp.com/) site loads as fast as possible throughout the world we recently started using Amazon Cloudfront, a Content Delivery Network, for serving all public assets (CSS, JavaScript and image files). 

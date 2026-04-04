@@ -1,6 +1,7 @@
 ---
 title:  "Using CSS calc to make elements fullscreen"
 datePublished: "2024-01-02"
+description: "Using CSS calc, min and max functions to create full-width elements inside a centered container."
 ---
 
 > **Heads up.** The styling of my website changed since writing this post, so the element may look different than intended.

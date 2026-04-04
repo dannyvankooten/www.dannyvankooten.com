@@ -2,6 +2,7 @@
 title:  "Backtesting 12-month SMA investing strategy with Pandas"
 date:  2018-01-24 11:42:00
 datePublished: "2018-01-24"
+description: "Backtesting a 12-month Simple Moving Average investing strategy against buy-and-hold using Python and Pandas."
 ---
 
 In my quest to learn more about investing, I came across [this post](https://ofdollarsanddata.com/follow-the-money-eb1ae0c9a3bd).  The author writes _"How One Simple Rule Can Beat Buy and Hold Investing"_ and then explains how following the trend is likely to beat a more traditional buy and hold investment approach.

@@ -2,6 +2,7 @@
 title:  "Introducing HTML Forms for WordPress"
 date:  2017-11-01 
 datePublished: "2017-11-01"
+description: "Introducing HTML Forms, a WordPress plugin for creating forms using native HTML markup."
 ---
 
 Our most popular plugin [Mailchimp for WordPress](https://www.mc4wp.com/) was released in 2013. Inspired by [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) we built it in such a way that you could define the fields for your sign-up forms in native HTML. This has worked very well over the last 4 years.

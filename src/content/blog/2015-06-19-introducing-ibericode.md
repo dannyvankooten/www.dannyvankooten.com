@@ -2,6 +2,7 @@
 title:  "Introducing ibericode"
 date:  2015-06-19 10:40:20
 datePublished: "2015-06-19"
+description: "Announcing ibericode as the new company name for my WordPress plugin business."
 ---
 
 For the last 5 years, I've been doing business under my somewhat boring personal name.  The official name of my company was just "Danny van Kooten".

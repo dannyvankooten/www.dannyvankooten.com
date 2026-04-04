@@ -2,6 +2,7 @@
 title:  "Interview on WebWorkTravel"
 date:  2015-03-13 12:43:27
 datePublished: "2015-03-13"
+description: "My interview with WebWorkTravel about working remotely and traveling as a WordPress developer."
 ---
 
 I was recently interviewed by Johannes Voelkner, the guy behind [WebWorkTravel](https://www.webworktravel.com/) who seems to have visited just about any country in the world.

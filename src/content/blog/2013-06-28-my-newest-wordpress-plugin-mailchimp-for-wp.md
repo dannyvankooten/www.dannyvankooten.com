@@ -2,6 +2,7 @@
 title:  "My newest WP plugin: Mailchimp for WordPress"
 date:  2013-06-28 14:28:52
 datePublished: "2013-06-28"
+description: "Announcing my newest WordPress plugin: Mailchimp for WordPress, providing easy Mailchimp integration."
 ---
 
 > _Update (Sep 2013):_ Wow. 50.000 downloads in just 3 months! I did not expect this plugin to grow so popular this fast. There is now a Pro version containing some more advanced features: <a href="https://www.mc4wp.com/">Mailchimp for WordPress Pro</a>.

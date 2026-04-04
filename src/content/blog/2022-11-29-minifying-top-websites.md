@@ -1,6 +1,7 @@
 ---
 title:  "Minification and cache directives for the most popular websites of the internet"
 datePublished: "2022-11-29"
+description: "Analyzing the minification potential and cache directives of the most popular websites on the internet."
 ---
 
 While comparing various minification tools recently I soon discovered that there are plenty of options available.

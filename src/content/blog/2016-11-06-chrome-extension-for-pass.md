@@ -2,6 +2,7 @@
 title:  "Browserpass, a Chrome extension for Pass"
 date:  2016-11-06 15:30:00
 datePublished: "2016-11-06"
+description: "Introducing Browserpass, a Chrome extension for accessing the Pass password store from your browser."
 ---
 
 Last week I treated myself to some hardware upgrades for my desktop, which will be my main workstation from now on.

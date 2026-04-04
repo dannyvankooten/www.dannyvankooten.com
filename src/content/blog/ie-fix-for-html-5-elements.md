@@ -1,6 +1,7 @@
 ---
 title: "IE fix for HTML 5 elements"
 datePublished: "2010-12-29"
+description: "How to fix HTML5 element rendering issues in Internet Explorer using JavaScript's createElement or the HTML5 shiv."
 ---
 
 If you had a look at the source code of my site you might have noticed the use of some new HTML 5 elements. Nothing fancy, just trying to add some more semantic value to the different parts of a WordPress theme. The sidebar for example is no longer wrapped in a div element but is now wrapped in an `<aside>` element.

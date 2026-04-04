@@ -2,6 +2,7 @@
 title:  "Join me on Mastodon"
 date:  2018-08-14
 datePublished: "2018-08-14"
+description: "Why I'm moving to Mastodon, a decentralized and less toxic alternative to Twitter."
 ---
 
 > **Summary:** [Join me on Mastodon](https://joinmastodon.org/). It's like Twitter, but less angry and more decentralized.

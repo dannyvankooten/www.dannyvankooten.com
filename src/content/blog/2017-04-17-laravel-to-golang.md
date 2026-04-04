@@ -3,6 +3,7 @@
 title:  "Moving from PHP (Laravel) to Go"
 date:  2017-04-17 17:57:00
 datePublished: "2017-04-17"
+description: "Why and how I rewrote a Laravel PHP application in Go for better performance and simplicity."
 ---
 
 Earlier this year, I made an arguably bad business decision. I decided to rewrite the Laravel application powering [Boxzilla](https://my.boxzillaplugin.com/) in [Go](https://golang.org/). 

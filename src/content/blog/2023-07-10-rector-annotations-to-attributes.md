@@ -1,6 +1,7 @@
 ---
 title:  "Replacing annotations with PHP attributes - with Rector" 
 datePublished: "2023-07-10"
+description: "Using Rector to automatically convert Doctrine annotations to native PHP 8 attributes in a Symfony project."
 ---
 
 Recently I was updating a Symfony application to version 6.3 and working my way through all deprecations. One of them was the move to native [PHP attributes](https://www.php.net/manual/en/language.attributes.overview.php) (introduced in PHP8) instead of annotations supported by the Doctrine Annotations library.

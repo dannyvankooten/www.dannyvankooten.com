@@ -3,6 +3,7 @@
 title:  "Only load Contact Form 7 scripts when needed"
 date:  2013-12-14 18:33:20
 datePublished: "2013-12-14"
+description: "A WordPress snippet to only load Contact Form 7 scripts and styles on pages that actually contain a form."
 ---
 
 For the second year in a row, Elliot Richmond is hosting <a href="http://advent.squareonemd.co.uk/">WordPress Snippets Til Christmas</a>. The name says it pretty much: a useful WordPress snippet a day, until Christmas. Very useful, for both starters as experienced WordPress nerds.

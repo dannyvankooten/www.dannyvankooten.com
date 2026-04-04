@@ -2,6 +2,7 @@
 title:  "CodeIgniter Sessions in IE7"
 date:  "2011-01-31 07:53:31"
 datePublished: "2011-01-31"
+description: "Fixing CodeIgniter session issues in Internet Explorer 7 caused by underscores in the session cookie name."
 ---
 
 Yesterday, while working on a fairly simple application that required a login functionality I came across a very strange problem with CodeIgniter and sessions in Internet Explorer 7. While testing everything seemed to work fine in all browsers, even in IE6 (I use IETester to test for the older versions of IE).

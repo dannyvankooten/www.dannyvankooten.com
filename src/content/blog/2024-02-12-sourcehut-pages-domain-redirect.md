@@ -1,6 +1,7 @@
 ---
 title:  "sourcehut pages: redirect (sub)domain"
 datePublished: "2024-02-12"
+description: "How to set up a domain redirect on sourcehut pages using HTML meta refresh and JavaScript."
 ---
 
 Last weekend I moved this site over to [sourcehut pages](https://srht.site/). Deployment was a lot quicker than through GitHub pages and the SSL certificate was issued within seconds of me pushing the tarball to the sourcehut servers.

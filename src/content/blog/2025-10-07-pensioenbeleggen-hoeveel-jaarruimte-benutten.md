@@ -1,6 +1,7 @@
 ---
 title:  "Pensioenbeleggen: optimaal jaarruimte benutten?"
 datePublished: "2025-10-07"
+description: "Hoeveel jaarruimte benutten voor pensioenbeleggen als zelfstandige? Een methode om tot een redelijk bedrag te komen."
 ---
 
 <style>

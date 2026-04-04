@@ -2,6 +2,7 @@
 date:  2022-11-17
 title:  "(Re)writing an interpreter in Rust"
 datePublished: "2022-11-17"
+description: "Rewriting my Monkey language interpreter in Rust, fighting the borrow checker and aiming for C-level performance."
 ---
 
 Two years ago I [wrote my first interpreter](/blog/2020/writing-an-interpreter-compiler/) for a toy programming language called Monkey, in C.

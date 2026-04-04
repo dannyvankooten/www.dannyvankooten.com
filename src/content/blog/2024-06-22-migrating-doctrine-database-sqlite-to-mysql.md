@@ -1,6 +1,7 @@
 ---
 title:  "Migrating a Doctrine database from SQLite to MySQL"
 datePublished: "2024-06-22"
+description: "A step-by-step guide to migrating a Doctrine database from SQLite to MySQL in a Symfony application."
 ---
 
 Recently I had to migrate a production database from SQLite[^1] to MySQL for a Symfony application using Doctrine. I assumed this would be as easy as running a single command, but it turned out to be slightly more involved. Not hard by any means, but I did have to figure out a few things and piece together a few pieces of the puzzle.

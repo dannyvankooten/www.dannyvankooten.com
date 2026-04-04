@@ -1,6 +1,7 @@
 ---
 title:  "Benchmarking listing files in a local directory in PHP"
 datePublished: "2025-09-02"
+description: "Benchmarking scandir, readdir, glob and DirectoryIterator for listing files in a directory in PHP."
 ---
 
 Yesterday, I ran the benchmark no one was waiting for: all the different ways to list files in a local directory in PHP.

@@ -2,6 +2,7 @@
 title:  "Reviving Ana as Fathom: simple & transparent website analytics"
 date:  2018-05-12
 datePublished: "2018-05-12"
+description: "Reviving the open-source Ana analytics project as Fathom, a simple and privacy-focused alternative to Google Analytics."
 ---
 
 <div class="alert" role="alert">

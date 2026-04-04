@@ -2,6 +2,7 @@
 title:  "Configuring Newsletter Sign-Up - the definitive guide"
 date:  2011-07-03 13:22:45
 datePublished: "2011-07-03"
+description: "A definitive guide to downloading, installing and configuring the Newsletter Sign-Up WordPress plugin."
 ---
 
 <span id="top"></span>

@@ -2,6 +2,7 @@
 title:  "AltoRouter, another PHP Routing class."
 date:  2012-07-31 19:07:20
 datePublished: "2012-07-31"
+description: "Introducing AltoRouter, a lightweight PHP5.3+ routing class with named routes and URL type restrictions."
 ---
 
 A few months earlier I blogged about developing [PHP Router](/blog/2011/php-routing-class-with-rest-routes/), a PHP5.3+ routing class with support for REST routing and reversed routing.

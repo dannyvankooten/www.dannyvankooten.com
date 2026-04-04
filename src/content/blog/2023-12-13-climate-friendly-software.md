@@ -1,6 +1,7 @@
 ---
 title:  "Climate friendly software"
 datePublished: "2023-12-13"
+description: "Thoughts on building climate-friendly software: pick low-carbon datacenters, optimize for performance and battery life."
 ---
 
 Last week I read [Climate-friendly software, don't fight the wrong

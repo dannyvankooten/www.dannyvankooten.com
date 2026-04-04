@@ -3,6 +3,7 @@
 title:  "PHP Routing Class which supports REST routing"
 date:  2011-11-30 22:04:10
 datePublished: "2011-11-30"
+description: "A PHP routing class with REST routing support, inspired by the Ruby on Rails router."
 ---
 
 In the last few months I've been looking into all the different PHP frameworks and how they glue things together. One of the most important things in every framework is the way it handles routes. I've been developing Ruby on Rails applications extensively last year and I really like the way Rails handles it's routes. That's why I've decided to start programming a Routing class that mimics Rails routing functionality.

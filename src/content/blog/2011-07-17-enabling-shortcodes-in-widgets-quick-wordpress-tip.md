@@ -3,6 +3,7 @@
 title:  "Enabling shortcodes in widgets, quick WordPress tip."
 date:  2011-07-17 12:01:20
 datePublished: "2011-07-17"
+description: "A quick tip on enabling WordPress shortcodes in text widgets using a simple filter."
 ---
 
 Let's say you're developing a plugin that registers a shortcode so that a user can output some kind of form in his posts. Now, the user wants to output the form in one of his widget area's. One way to accomplish this would be to explicitly create a widget for it, add some fields like 'text_before'  and 'text_after' and use that to output the form along with some text before and after the actual form.

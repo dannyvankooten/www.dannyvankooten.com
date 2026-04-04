@@ -1,6 +1,7 @@
 ---
 title:  "Building self-hosted and privacy-friendly website analytics. Again."
 datePublished: "2025-01-16"
+description: "Building a standalone version of Koko Analytics for non-WordPress sites, using PHP with MySQL, PostgreSQL or SQLite."
 ---
 
 <div class="alert" role="alert">TLDR: I am building a standalone version of Koko Analytics so that you can use it for non-WordPress sites. You can follow the project on GitHub here: <a href="https://github.com/koko-analytics/koko-analytics">github.com/koko-analytics/koko-analytics</a>.</div>

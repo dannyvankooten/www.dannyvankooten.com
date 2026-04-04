@@ -3,6 +3,7 @@
 title:  "Show a Mailchimp sign-up checkbox in your checkout forms."
 date:  2013-09-12 10:49:15
 datePublished: "2013-09-12"
+description: "How to add a Mailchimp newsletter sign-up checkbox to your WooCommerce or e-commerce checkout forms."
 ---
 
 If you're running an e-commerce website on WordPress, you're in luck. You probably know how important it is to build your newsletter list throughout the years. One great way to get more people to subscribe to your newsletter is to show a sign-up checkbox in your checkout form.
@@ -20,8 +21,6 @@ That's why it is important to make it as easy as possible for them to sign-up fo
 <span style="line-height: 1.5;">Recently, I added automatic integration with two popular </span><span style="line-height: 1.5;">eCommerce</span><span style="line-height: 1.5;"> plugins for WordPress to my premium plugin, <a title="Mailchimp for WordPress Pro" href="https://www.mc4wp.com/">Mailchimp for WordPress</a>, that does just this. When activated, the plugin checks if you're running any plugins it can integrate with and then presents you with an option to show a newsletter sign-up checkbox at some of the available hooks.</span>
 
 <img class="aligncenter size-full wp-image-1403" alt="Show a checkbox at your Easy Digital Downloads checkout form." src="/media/2013/mc4wp-pro-checkbox-settings.jpg" width="937" height="304" />
-
-&nbsp;
 
 There is a live demo available on this website on the checkout page but here is a screenshot of what it looks like with my theme.
 

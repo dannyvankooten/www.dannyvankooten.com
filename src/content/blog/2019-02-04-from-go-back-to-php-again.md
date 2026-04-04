@@ -2,6 +2,7 @@
 title:  "Moving from Go to PHP again"
 date:  2019-02-04
 datePublished: "2019-02-04"
+description: "After two years on Go, moving our shop applications back to PHP."
 ---
 
 Remember when [I ditched Laravel for Golang](/blog/2017/laravel-to-golang/)?

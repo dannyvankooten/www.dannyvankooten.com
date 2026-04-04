@@ -2,6 +2,7 @@
 title:  "Introducing Koko Analytics"
 date:  2019-11-07
 datePublished: "2019-11-07"
+description: "Introducing Koko Analytics, a privacy-friendly analytics plugin for WordPress."
 ---
 
 After [stepping down from Fathom](/blog/2019/stepping-down-fathom-maintainer) earlier this year, I was happy working on [Mailchimp for WordPress](https://www.mc4wp.com/) for a good few months

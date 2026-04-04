@@ -2,6 +2,7 @@
 title:  "Writing a bytecode interpreter - in C"
 date:  2020-03-06
 datePublished: "2020-03-06"
+description: "Building a bytecode interpreter and virtual machine in C for the Monkey programming language."
 ---
 
 Some time during 2016 I got my hands on the book [Writing an interpreter in Go](https://interpreterbook.com/) by [Thorsten Ball](https://thorstenball.com/). I skimmed through the first few chapters, liked what I read and then... life happened and I never actually got around to building an interpreter. :(

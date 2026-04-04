@@ -1,6 +1,7 @@
 ---
 title:  "HTML compression on popular websites"
 datePublished: "2023-11-27"
+description: "Checking the top 10,000 websites for HTTP compression and finding that about 8% don't use any compression at all."
 ---
 
 > **TLDR:** I grabbed a list of the 10.000 most popular domains on the internet, downloaded their homepage and checked for compression techniques. Surprisingly, quite a few of them (~8%) are not applying any kind of compression at all with some of them leaving terabytes of potential monthly data savings on the table ($$$ + a slower website).

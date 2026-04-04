@@ -2,6 +2,7 @@
 title:  "Celebrating 2 million downloads for Mailchimp for WordPress"
 date:  2015-09-09 12:09:14
 datePublished: "2015-09-09"
+description: "Celebrating the 2 million downloads milestone for the Mailchimp for WordPress plugin."
 ---
 
 Earlier today, our [Mailchimp for WordPress plugin crossed the 2 million downloads mark](https://www.mc4wp.com/blog/celebrating-2-million-downloads/) and we're super proud of that.

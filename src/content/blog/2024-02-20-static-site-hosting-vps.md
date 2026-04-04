@@ -1,6 +1,7 @@
 ---
 title:  "Setting up a VPS for static site hosting"
 datePublished: "2024-02-20"
+description: "Setting up a cheap VPS with Caddy for hosting static sites, as documentation for future reference."
 ---
 
 Remember me moving this site over to [sourcehut pages](https://srht.site/) last

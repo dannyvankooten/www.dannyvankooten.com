@@ -3,13 +3,14 @@
 title:  "100.000 plugin downloads in under 6 months - Mailchimp for WordPress"
 date:  2013-12-06 10:46:58
 datePublished: "2013-12-06"
+description: "Mailchimp for WordPress reaches 100,000 downloads in under 6 months, a story that started from a hospital bed in Vietnam."
 ---
 
 <img src="/media/2013/danny-in-hospital-saigon.jpg" alt="Me in FV Hospital, Saigon." width="300" height="300" class="alignright size-medium wp-image-3916" />
 <em>Mailchimp for WordPress just broke through the 100.000 downloads mark. Less than 6 months ago, I wrote the first lines of code for it from a hospital bed in Vietnam..</em>
 
 <h3>It started with "a cute appendicitis"</h3>
-6 months ago I was in Vietnam and not feeling well. I went to see a (Vietnamese) doctor who ran some tests and then told me I had acute appendicitis, which I repeatedly mistook for "a cute appendicitis" due to his funny accent. :)
+6 months ago I was in Vietnam and not feeling well. I went to see a (Vietnamese) doctor who ran some tests and then told me I had acute appendicitis, which I repeatedly mistook for "a cute appendicitis" due to his accent and me being absoutely wiped.
 
 A few hours later my appendix was removed in surgery - I have a photo but I will spare you the details.
 
@@ -18,7 +19,7 @@ The next week I was on a lot of painkillers, bored and sleeping the days away in
 <h3>First lines of code</h3>
 A Dutch friend brought me flowers and my laptop - gold. I couldn't be more excited, after all I would have plenty of time to work on that idea I had for a new plugin.
 
-I started playing around (coding) and a few days later, the first version of <a href="https://www.mc4wp.com/">Mailchimp for WordPress</a> was available for download from the WordPress.org plugin repository. It didn't do much besides adding a sign-up checkbox to your registration and comment forms but it was enough to have users provide me with valuable feedback. :)
+I started playing around with the code and a few days later, the first version of <a href="https://www.mc4wp.com/">Mailchimp for WordPress</a> was available for download from the WordPress.org plugin repository. It didn't do much besides adding a sign-up checkbox to your registration and comment forms but it was enough to have users provide me with valuable feedback. 
 
 From there, I iterated on a weekly basis, continuously improving the plugin, adding new features and smashing bugs. I built a premium version as well, which allowed me to spend more time on this and several other plugins.
 

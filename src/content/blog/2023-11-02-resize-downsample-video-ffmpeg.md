@@ -1,6 +1,7 @@
 ---
 title:  "Preparing videos for Mastodon using ffmpeg"
 datePublished: "2023-11-02"
+description: "Using ffmpeg to resize, downsample and prepare videos for uploading to Mastodon."
 ---
 
 Recently I was recording a screencast of [me launching Koko Analytics as a Progressive Web App from my OS launcher](https://toot.re/@dvk/111342580812680580).

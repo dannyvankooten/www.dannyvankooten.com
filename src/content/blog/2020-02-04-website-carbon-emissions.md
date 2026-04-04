@@ -3,6 +3,7 @@ title:  "CO2 emissions on the web"
 date:  2020-02-04
 image: "/media/2020/co2-emissions.jpg"
 datePublished: "2020-02-04"
+description: "How optimizing code used on millions of websites can reduce global CO2 emissions by tens of thousands of kilograms per month."
 ---
 
 I've spent the last month trying to reduce the carbon footprint of the websites I have (some) control over. When talking about this with other people they often look at me blankly before asking "aren't you taking this a little too far?".

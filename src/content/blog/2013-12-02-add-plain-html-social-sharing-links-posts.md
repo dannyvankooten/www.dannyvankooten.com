@@ -2,6 +2,7 @@
 title:  "Add plain HTML social sharing links to your posts"
 date:  2013-12-02 23:23:17
 datePublished: "2013-12-02"
+description: "Adding lightweight HTML social sharing links for Twitter, Facebook and Google+ without heavy plugins."
 ---
 
 I was going through the social sharing plugins for WordPress and found that most were either too complicated, bloated, poorly coded or ugly for my liking. 

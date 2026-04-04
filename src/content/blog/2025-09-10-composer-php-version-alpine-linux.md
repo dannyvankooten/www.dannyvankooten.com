@@ -1,6 +1,7 @@
 ---
 title:  "Using Composer with a specific PHP version on Alpine Linux"
 datePublished: "2025-09-10"
+description: "Fixing Composer using the wrong PHP version on Alpine Linux due to a hardcoded shebang in the composer package."
 ---
 
 While updating some PHP applications to version 8.4 lately I ran into an issue with Composer on Alpine Linux using a different PHP version than what `/usr/bin/env php` resolved to.

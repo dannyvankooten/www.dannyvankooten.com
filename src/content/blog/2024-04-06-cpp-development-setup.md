@@ -1,6 +1,7 @@
 ---
 title:  "C++ development setup in 2024"
 datePublished: "2024-04-06"
+description: "My C++ development setup using Sublime Text 4 with Clangd as the language server."
 ---
 
 I've been doing a lot of C and C++ programming lately. After trying

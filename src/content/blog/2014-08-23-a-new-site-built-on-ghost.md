@@ -3,6 +3,7 @@
 title:  "A new site, built on Ghost"
 date:  2014-08-23 19:17:57
 datePublished: "2014-08-23"
+description: "Rebuilding my personal website on Ghost, the Node.js blogging platform."
 ---
 
 <blockquote>

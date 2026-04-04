@@ -3,6 +3,7 @@
 title:  "Delay scroll (and resize) handlers in JavaScript"
 date:  2013-11-14 16:34:02
 datePublished: "2013-11-14"
+description: "Why and how to debounce scroll and resize event handlers in JavaScript for better performance."
 ---
 
 While working on my latest [WordPress plugin](/wordpress-plugins/) I had to attach a handler to the scroll event of the browser window to determine whether a user scrolled down far enough. While the logic for this is pretty simple, I had to put some thought into handling this the correct way.

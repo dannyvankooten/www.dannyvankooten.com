@@ -2,6 +2,7 @@
 title:  "Solving Advent of Code 2020 in under a second"
 date:  2021-04-02
 datePublished: "2021-04-02"
+description: "Solving all Advent of Code 2020 challenges in C with a total runtime under one second."
 ---
 
 [Advent of Code](https://adventofcode.com/) is an annual event of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language. 

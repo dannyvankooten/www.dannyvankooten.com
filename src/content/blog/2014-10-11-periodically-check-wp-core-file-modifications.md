@@ -2,6 +2,7 @@
 title:  "Periodically check WordPress core for (malicious) modifications"
 date:  2014-10-11 15:13:04
 datePublished: "2014-10-11"
+description: "Using WP-CLI's verify-checksums command to detect unauthorized modifications to WordPress core files."
 ---
 
 Last Thursday I was at a WordPress meetup where [Jaime Martinez](https://www.jaimemartinez.nl/) did a talk about [WP-CLI](https://wp-cli.org/), a command line interface for WordPress.

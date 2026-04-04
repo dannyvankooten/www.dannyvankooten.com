@@ -3,6 +3,7 @@
 title:  "VATMOSS in practice "
 date:  2017-04-03 19:20:00
 datePublished: "2017-04-03"
+description: "Practical tips for dealing with EU VATMOSS rules when selling digital products online."
 ---
 
 If you're selling a product or service online, you probably know how much harder accepting payments from Europan consumers got since the new 2015 VATMOSS rulings.
