@@ -1,12 +1,12 @@
 ---
 
-title:  "Dynamic custom menu's in WordPress"
+title:  "Dynamic custom menus in WordPress"
 date:  2011-06-19 11:51:12
 datePublished: "2011-06-19"
 description: "How to dynamically assign different WordPress custom menus to specific pages or posts."
 ---
 
-Since WordPress 3.0 you can use custom menu's in your themes, which is great because of how easy to use they are for you or (if you're a developer) for your cliënts. You can register theme locations where menu's can be hooked to, which is particularly useful for site-wide menu's like a header menu. But what if you need to hook a menu to a certain page/post or maybe even multiple posts? I've looked around a bit and found no plugin yet that took care of this, while the coding part would be pretty simple. That's why i'm going to walk you trough the necessary steps to implement this in your theme. But first, let's talk a bit about the different functions that came with custom menu's and which we are going to need.
+Since WordPress 3.0 you can use custom menus in your themes, which is great because of how easy to use they are for you or (if you're a developer) for your clients. You can register theme locations where menus can be hooked to, which is particularly useful for site-wide menus like a header menu. But what if you need to hook a menu to a certain page/post or maybe even multiple posts? I've looked around a bit and found no plugin yet that took care of this, while the coding part would be pretty simple. That's why I'm going to walk you through the necessary steps to implement this in your theme. But first, let's talk a bit about the different functions that came with custom menus and which we are going to need.
 
 <a href="https://codex.wordpress.org/Function_Reference/wp_nav_menu">`wp_nav_menu()`</a> - This is the function that calls and echo's the custom menu. You can specify many parameters but the ones we care about at the moment are 'theme_location' and 'menu'. 'theme_location' calls the menu that is hooked to the given location, 'menu' calls the menu by ID, slug or name.
 

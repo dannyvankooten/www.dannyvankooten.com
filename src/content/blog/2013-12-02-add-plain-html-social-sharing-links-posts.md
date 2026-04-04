@@ -36,7 +36,7 @@ function my_add_social_sharing_links($content) {
 
     if(is_single() && get_post_type() == 'post') {
 
-        $title:  urlencode(get_the_title());
+        $title = urlencode(get_the_title());
         $url = urlencode(get_permalink());
         $twitter_username = 'DannyvanKooten';
 

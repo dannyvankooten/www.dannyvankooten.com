@@ -2,7 +2,7 @@
 title:  "Contact"
 ---
 
-Would you like get in contact? If so, please go through the questions below to help save us both some time.
+Would you like to get in contact? If so, please go through the questions below to help save us both some time.
 
 Do you...
 

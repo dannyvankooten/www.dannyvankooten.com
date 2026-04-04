@@ -18,7 +18,7 @@ Ideally this would be a HTTP redirect, but this does not seem possible right now
 
 ### Redirecting the homepage
 
-Create a filed called `index.html` with the following file contents:
+Create a file called `index.html` with the following file contents:
 
 ```filename
 index.html

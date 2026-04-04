@@ -46,13 +46,13 @@ We can add one more conditional to the snippet above to differentiate between AJ
 For AJAX requests, <code>is_admin()</code> will always return <code>true</code>, which makes it unnecessary to check for AJAX in requests for the public section. My complete initializing code usually looks something like this.
 
 ```php
-define( 'MYPLUGIN_DIR';, plugin_dir_path( __FILE__ ) );
+define( 'MYPLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 // all requests
 require MYPLUGIN_DIR . 'includes/init.php';
 
 if ( !is_admin() ) {
-	// public sectionrequests
+	// public section requests
 	require MYPLUGIN_DIR . 'includes/public.php';
 } else if ( defined( 'DOING_AJAX' ) &amp;&amp; DOING_AJAX ) {
 		// AJAX requests

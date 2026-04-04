@@ -342,7 +342,7 @@ enum Object {
 
 The `Object::Func` variant owns two `Vec` types. These hold the parameter names and the function body. But wait, can't we just keep the AST around in memory and use that? That way we'll only have to store a reference inside our `Object::Func` variant.
 
-Being lazy and coming from C, let's first get a feel for what kind of performance gain we can expect by simply storing a raw pointer and dereferencing it later. (Don't worry, I  promise to fix it properly later on.)
+Being lazy and coming from C, let's first get a feel for what kind of performance gain we can expect by simply storing a raw pointer and dereferencing it later. (Don't worry, I promise to fix it properly later on.)
 
 ```rust
 // Storing the raw pointer

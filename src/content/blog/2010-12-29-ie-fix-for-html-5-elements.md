@@ -21,7 +21,7 @@ That's one way to do it.
 
 Another way is to use the HTML 5 shiv that's hosted on googlecode by Remy Sharp. It's minified and wrapped in conditional tags so it's only a few bytes that have to be downloaded by browsers like IE 8 and below to be able to render the "new" elements. Just add the following script tags to your head section and all browsers should be fine rendering the "new" HTML 5 elements.
 
-```javascript
+```html
 <!--[if IE]>
 	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->

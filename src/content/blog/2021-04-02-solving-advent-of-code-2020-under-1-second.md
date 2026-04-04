@@ -18,9 +18,9 @@ I set out with two goals in mind:
 
 For this last goal I was inspired by [Tim Visee](https://timvisee.com/blog/solving-aoc-2020-in-under-a-second/) who did a really great write-up of some of the tricks he used to efficiently solve this year's challenges. It sounded like a really fun thing to do and I was already well underway for such a thing anyway. 
 
-Two weeks later, iet ies done! Total runtime is 548 ms on my laptop, so I'm quite pleased with the results. 
+Two weeks later, it's done! Total runtime is 548 ms on my laptop, so I'm quite pleased with the results. 
 
-I could probably squeeze out a few more miliseconds here and there, but I see no options for making the 2 bottlenecks ([day 15](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/15.c) and [day 23](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/23.c)) run any faster (except for throwing more hardware at it).
+I could probably squeeze out a few more milliseconds here and there, but I see no options for making the 2 bottlenecks ([day 15](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/15.c) and [day 23](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/23.c)) run any faster (except for throwing more hardware at it).
 
 The code is on GitHub here: [dannyvankooten/advent-of-code](https://github.com/dannyvankooten/advent-of-code/tree/main/2020)
 
@@ -29,7 +29,7 @@ To be honest, finishing all challenges was harder than getting them all to run i
 **Things I learned:**
 
 - You can represent a [hexagonal grid](https://www.redblobgames.com/grids/hexagons/) in a 2D array by simplify shifting every odd column or row ([day 24](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/24.c)). 
-- [Linear probing](https://en.wikipedia.org/wiki/Linear_probing) is a much simpler way to deal with hash collissions than a linked list and results in less cache misses because the values can reside in contiguous memory locations. 
+- [Linear probing](https://en.wikipedia.org/wiki/Linear_probing) is a much simpler way to deal with hash collisions than a linked list and results in less cache misses because the values can reside in contiguous memory locations. 
 - To check neighbors or directions in a 2D grid, it's a lot more concise to keep an array of `Δx` and `Δy` values versus writing out all the various directions in a separate loop.
 - You can't brute force your way out of everything. Sometimes, math is required to get decent performance. Specifically, [Chinese Remainder Theorem](https://en.wikipedia.org/wiki/Chinese_remainder_theorem) for [day 13](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/13.c) and any of the [algorithms for finding the discrete log](https://en.wikipedia.org/wiki/Baby-step_giant-step) for [day 25](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/25.c).
 - Tooling! I wouldn't want to write C without [Valgrind](https://valgrind.org/) and [Gprof](https://sourceware.org/binutils/docs/gprof/index.html). [Cachegrind](https://valgrind.org/docs/manual/cg-manual.html) can be useful too.
@@ -69,7 +69,7 @@ There is a possible optimization by skipping forward to the next passport whenev
 
 **[Day 5](https://adventofcode.com/2020/day/5)** / [code](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/05.c) / runtime: 24 μs
 
-My solution decodes each input line into a row and column, turns these into a seat ID and finds the highest seat ID. At the same tame it toggles a boolean value in a 2D array to keep track of all occupied seats.
+My solution decodes each input line into a row and column, turns these into a seat ID and finds the highest seat ID. At the same time it toggles a boolean value in a 2D array to keep track of all occupied seats.
 
 It then iterates over this array while skipping the first few rows to find the first seat that is empty. 
 
@@ -104,7 +104,7 @@ Dynamic programming! It took me a while to realise this though. For part 2 I go 
 
 **[Day 11](https://adventofcode.com/2020/day/11)** / [code](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/11.c) / runtime: 2163 μs
 
-A 2D square-grid problem where we have to look at all 8 neighbors for every point. I optimized this solution by keeping a list of neighbor indices for each seat, so these do not have to be recomputed on every transmutation.
+A 2D square-grid problem where we have to look at all 8 neighbors for every point. I optimized this solution by keeping a list of neighbor indices for each seat, so these do not have to be recomputed on every iteration.
 
 Another optimization is to keep a list of seats to check and remove a seat from this list once it reached its permanent state:
 
@@ -181,14 +181,14 @@ Day 20 was about putting together an image from various tiles that had to be rot
 
 My solution simply started with the first tile in the top-left corner in the image and then fitted any of the other tiles on any of its edges until all tiles were in the image. Instead of rotating the entire tile and then checking whether it fit, I only compared the edges of the tile and only rotated or flipped it when a match was found.
 
-If another tile fitted on the northern or western edge of the starting tile, I shifted all the tile in the image. Another option was to first find a corner tile and then work from there, but this approach proved to be faster.
+If another tile fitted on the northern or western edge of the starting tile, I shifted all the tiles in the image. Another option was to first find a corner tile and then work from there, but this approach proved to be faster.
 
 ---
 
 **[Day 21](https://adventofcode.com/2020/day/21)** / [code](https://github.com/dannyvankooten/advent-of-code/blob/main/2020/21.c) / runtime: 276 μs 
 
 
-Day 21 resembled day 16 in that we could decude which ingredients contained an allergen by repeatedly picking the only available option until we were done. 
+Day 21 resembled day 16 in that we could deduce which ingredients contained an allergen by repeatedly picking the only available option until we were done. 
 
 ---
 
@@ -196,7 +196,7 @@ Day 21 resembled day 16 in that we could decude which ingredients contained an a
 
 Today was fun! A game of cards with recursion. 
 
-Pre-allocating enough memory for at most 50 games gave a slight performance increase. The biggest improvement came from not recursing into a sub-game (and all of its descedentants) when the sub-game started with player 1 holding the highest card. 
+Pre-allocating enough memory for at most 50 games gave a slight performance increase. The biggest improvement came from not recursing into a sub-game (and all of its descendants) when the sub-game started with player 1 holding the highest card. 
 
 Because of the special rule this meant that player 1 would eventually emerge as the winner, so we could declare him winner right away and save on an awful lot of recursion.
 

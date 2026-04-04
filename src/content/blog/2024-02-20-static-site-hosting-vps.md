@@ -188,7 +188,7 @@ certbot --nginx -d dannyvankooten.com,www.dannyvankooten.com
 ```
 
 That's it! You can repeat the steps above for multiple sites. Unless your blog
-is getting millions of pageviews per dag, you can easily host a dozen of static
+is getting millions of pageviews per day, you can easily host a dozen of static
 sites like this without your server really having to work.
 
 ### Tweaks

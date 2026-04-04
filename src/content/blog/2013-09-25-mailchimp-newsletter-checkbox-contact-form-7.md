@@ -6,7 +6,7 @@ datePublished: "2013-09-25"
 description: "Adding a Mailchimp newsletter sign-up checkbox to Contact Form 7 forms, without writing any code."
 ---
 
-ontact Form 7 is one of the most popular free contact form plugins for WordPress and Mailchimp is an enormously powerful email marketing tool. There are quite a few guides on the internet telling you how to make the two work together. Unfortunately, most of them seem to overcomplicate things or use improper and unmaintainable code.
+Contact Form 7 is one of the most popular free contact form plugins for WordPress and Mailchimp is an enormously powerful email marketing tool. There are quite a few guides on the internet telling you how to make the two work together. Unfortunately, most of them seem to overcomplicate things or use improper and unmaintainable code.
 
 This post will show you how to add a Mailchimp sign-up checkbox to your Contact Form 7 form without writing a single line of code.
 

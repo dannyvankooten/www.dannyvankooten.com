@@ -8,7 +8,7 @@ description: "My interview with WebWorkTravel about working remotely and traveli
 I was recently interviewed by Johannes Voelkner, the guy behind [WebWorkTravel](https://www.webworktravel.com/) who seems to have visited just about any country in the world.
 We ran into each other last year while on a workation in Tarifa, a small kitesurfing town in Southern Spain.
 
-![Group of online entrepeneurs on workation in Tarifa, Spain](/media/2016/2016-workation-tarifa-spain.jpg)
+![Group of online entrepreneurs on workation in Tarifa, Spain](/media/2016/2016-workation-tarifa-spain.jpg)
 
 I've been following Johannes' adventures for a few years already as he was one of the first to share his stories of traveling while working.
 Johannes thought my story would be interesting for his readers so we did an interview.

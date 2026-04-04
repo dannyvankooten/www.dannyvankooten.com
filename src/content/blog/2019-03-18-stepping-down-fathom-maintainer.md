@@ -16,7 +16,7 @@ We managed to make a lot of progress during our first year and I'm more than a l
 
 ![Fathom screenshot](/media/2019/fathom-screenshot.png)
 
-The open-source community around Fathom is very much alive and kicking. The GitHub repository for Fathom currently boosts over 5.000 GitHub stars and Fathom has been a [trending Go project](https://github.com/trending/go) for pretty much every week over the last year!
+The open-source community around Fathom is very much alive and kicking. The GitHub repository for Fathom currently boasts over 5.000 GitHub stars and Fathom has been a [trending Go project](https://github.com/trending/go) for pretty much every week over the last year!
 
 And the Docker image has been pulled over a million times, even though Fathom is already a single static binary that is super easy to deploy to your infrastructure of choice. There's even a [one-click installer if you're on DigitalOcean](https://www.youtube.com/watch?v=KE0NKODYEAM).
 

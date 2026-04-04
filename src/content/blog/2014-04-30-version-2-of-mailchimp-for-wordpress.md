@@ -5,7 +5,7 @@ datePublished: "2014-04-30"
 description: "Version 2.0 of Mailchimp for WordPress brings CAPTCHA field support and other improvements."
 ---
 
-Almost a year after its initial release (June 2013) and close to 300.000 downloads later, I just pushed version 2.0 of <a href="https://wordpress.org/plugins/Mailchimp-for-wp/">Mailchimp for WordPress to the WordPress.org plugin repository</a>. Although the update doesn't come with too many changes or new features it brings some cool new features to the plugin.
+Almost a year after its initial release (June 2013) and close to 300.000 downloads later, I just pushed version 2.0 of <a href="https://wordpress.org/plugins/Mailchimp-for-wp/">Mailchimp for WordPress to the WordPress.org plugin repository</a>. Although the update doesn't come with too many changes, it brings some cool new features to the plugin.
 <h3>Support for CAPTCHA fields</h3>
 The biggest new feature is the ability to include (mathematical) Captcha fields in your sign-up forms. The option to include a Captcha field will only be visible if you're running the <a href="https://wordpress.org/plugins/captcha/">Captcha plugin by BestWebSoft</a>.
 

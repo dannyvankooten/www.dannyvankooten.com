@@ -21,7 +21,7 @@ The book takes you through all the stages to get an interpreter for the [Monkey 
 
 This tree-walking evaluator needs about 6 seconds to calculate the 35th fibonacci number using [a very sub-optimal algorithm with lots of recursion](https://github.com/dannyvankooten/monkey-c-monkey-do/blob/946311e77d33d584e6fcfd9f87d0199242973947/examples/fib35.monkey). That is certainly not bad, but it's also not great compared to any of today's production-grade interpreted languages. 
 
-For comparison, on the same machine Python 3.7 needs 2.3 seconds for that exact same algorithm and Node 15 only needs a whopping 200 miliseconds (due to its JIT compilation).
+For comparison, on the same machine Python 3.7 needs 2.3 seconds for that exact same algorithm and Node 15 only needs a whopping 200 milliseconds (due to its JIT compilation).
 
 Can we do better, without talking to the hardware directly?
 

@@ -8,7 +8,7 @@ Recently I had to migrate a production database from SQLite[^1] to MySQL for a S
 
 The first few searches lead me to SQLite's `.dump` command[^2], which dumps the entire database (including table structure and indices) to a text file. This approach requires you to manually edit out the differences between SQLite and MySQL in SQL syntax, but this seemed a bit tedious to me. Surely there must be a better way, especially when using Doctrine?
 
-In the end I came up with a reasonably short bash script which succesfully creates the MySQL database structure and copies over all data from the SQLite database with minimal downtime. In this post I'll walk you through the script, so that you can hopefully modify and use it for your own needs.
+In the end I came up with a reasonably short bash script which successfully creates the MySQL database structure and copies over all data from the SQLite database with minimal downtime. In this post I'll walk you through the script, so that you can hopefully modify and use it for your own needs.
 
 ### Setting up the bash script
 
@@ -22,7 +22,7 @@ set -o pipefail
 ```
 
 - `set -e`: The set -e option instructs bash to immediately exit if any command has a non-zero exit status.
-- `set -o pipefail`: This setting prevents errors in a pipeline from being masked by later succesfull commands. If any command in a pipeline fails, that return code will be used as the return code of the whole pipeline.
+- `set -o pipefail`: This setting prevents errors in a pipeline from being masked by later successful commands. If any command in a pipeline fails, that return code will be used as the return code of the whole pipeline.
 
 ### Connecting to the MySQL server
 

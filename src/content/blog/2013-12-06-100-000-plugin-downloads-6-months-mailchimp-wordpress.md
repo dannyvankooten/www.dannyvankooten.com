@@ -10,7 +10,7 @@ description: "Mailchimp for WordPress reaches 100,000 downloads in under 6 month
 <em>Mailchimp for WordPress just broke through the 100.000 downloads mark. Less than 6 months ago, I wrote the first lines of code for it from a hospital bed in Vietnam..</em>
 
 <h3>It started with "a cute appendicitis"</h3>
-6 months ago I was in Vietnam and not feeling well. I went to see a (Vietnamese) doctor who ran some tests and then told me I had acute appendicitis, which I repeatedly mistook for "a cute appendicitis" due to his accent and me being absoutely wiped.
+6 months ago I was in Vietnam and not feeling well. I went to see a (Vietnamese) doctor who ran some tests and then told me I had acute appendicitis, which I repeatedly mistook for "a cute appendicitis" due to his accent and me being absolutely wiped.
 
 A few hours later my appendix was removed in surgery - I have a photo but I will spare you the details.
 
@@ -34,4 +34,4 @@ I learned a ton and really enjoyed every minute I spent on the plugin.
 
 My mind is buzzing with ideas so I'll definitely be focusing on developing more and better plugins in 2014. If you like to stay in touch: <a href="https://twitter.com/dannyvankooten">follow me on Twitter</a> or <a href="#mc4wp-form-1">subscribe to the newsletter</a> I send out occasionally.
 
-<em>PS. Starting in February I will be doing my graduation internship at a company most (if not all) of you know, more about that later. :D </em>
+<em>PS. Starting in February I will be doing my graduation internship at a company most (if not all) of you know, but I'll talk more about that soon.</em>

@@ -94,7 +94,7 @@ Make sure to use an email address that is not already on your list as most newsl
 #### Still a bit lost? Try this.
 <ul>
 	<li><a href="http://unwireme.com/boost-your-e-mail-newsletter-sign-up-conversion-rate-with-this-free-tip/">Configuration guide by UnwireMe</a></li>
-	<li>Drop me a line trough the <a href="https://wordpress.org/tags/newsletter-sign-up?forum_id=10">support forums for Newsletter Sign-Up</a>, include your sign-up form and me or someone else will extract the correct values as soon as we find a spare minute!</li>
+	<li>Drop me a line through the <a href="https://wordpress.org/tags/newsletter-sign-up?forum_id=10">support forums for Newsletter Sign-Up</a>, include your sign-up form and me or someone else will extract the correct values as soon as we find a spare minute!</li>
 </ul>
 
 

@@ -122,7 +122,7 @@ Since we are using [Clangd](https://clangd.llvm.org/) as our Language Server, we
 clang-tidy is disabled by default, but we can enable it by modifying the settings for the LSP-clangd plugin.
 
 1. Go to **Preferences > Package Settings > LSP > Servers > Clangd**.
-1. Ensure `initialiationOptions.clangd["clang-tidy"]` is set to `true`:
+1. Ensure `initializationOptions.clangd["clang-tidy"]` is set to `true`:
 	```json
 	// Settings in here override those in "LSP-clangd/LSP-clangd.sublime-settings"
 	{
