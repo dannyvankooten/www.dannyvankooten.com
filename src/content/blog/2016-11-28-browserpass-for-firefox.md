@@ -7,7 +7,7 @@ description: "Browserpass, the browser extension for the Pass password manager, 
 
 Two weeks ago I announced Browserpass, a simple Chrome extension to access the [pass' passwordstore](https://www.passwordstore.org/) directly from your browser.
 
-![Browserpass in action](/media/browserpass.gif)
+![Browserpass in action](./media/browserpass.gif)
 
 After sharing my work on [/r/linux](https://www.reddit.com/r/linux/comments/5bhg0t/gopass_a_chrome_extension_for_pass/) and being generally well received, people started asking whether this could be ported to Firefox.
 
@@ -24,7 +24,7 @@ So, on my next "Google day" (days where I have to work with tech that is new for
 
 Please note that both extensions still rely on the Browserpass binary to be installed on your system, otherwise the extension will be unable to talk to your password store.
 
-![Browserpass installation](/media/browserpass-install-script.png)
+![Browserpass installation](./media/browserpass-install-script.png)
 
 Instructions for installing the binary can be found on the [Browserpass GitHub page](https://github.com/dannyvankooten/browserpass).
 

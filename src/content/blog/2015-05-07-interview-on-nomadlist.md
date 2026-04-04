@@ -13,7 +13,7 @@ A few weeks ago, Pieter reached out to me to ask if I was interested in doing an
 
 In the interview, I talk a bit about [my travel style and how traveling helps me stay creative](https://nomadlist.com/stories/slow-travel).
 
-[![Me near China's Great Wall](/media/2015/nomadlist.jpg)](https://nomadlist.com/stories/slow-travel)
+[![Me near China's Great Wall](./media/2015/nomadlist.jpg)](https://nomadlist.com/stories/slow-travel)
 
 At the end of the interview, things get a little personal and I even get to answer the dreaded _"do you think about settling down?"_ question. Uh oh..
 

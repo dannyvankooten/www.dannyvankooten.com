@@ -14,7 +14,7 @@ I have an announcement to make. Less than a year ago, Paul Jarvis and I [started
 
 We managed to make a lot of progress during our first year and I'm more than a little proud of what Fathom is today. I'm running it on most of my sites and I'd say it's very much a viable alternative for Google Analytics for a lot of websites already.
 
-![Fathom screenshot](/media/2019/fathom-screenshot.png)
+![Fathom screenshot](./media/2019/fathom-screenshot.png)
 
 The open-source community around Fathom is very much alive and kicking. The GitHub repository for Fathom currently boasts over 5.000 GitHub stars and Fathom has been a [trending Go project](https://github.com/trending/go) for pretty much every week over the last year!
 

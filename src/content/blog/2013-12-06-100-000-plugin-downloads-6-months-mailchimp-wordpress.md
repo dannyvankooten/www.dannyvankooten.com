@@ -6,7 +6,7 @@ datePublished: "2013-12-06"
 description: "Mailchimp for WordPress reaches 100,000 downloads in under 6 months, a story that started from a hospital bed in Vietnam."
 ---
 
-<img src="/media/2013/danny-in-hospital-saigon.jpg" alt="Me in FV Hospital, Saigon." width="300" height="300" class="alignright size-medium wp-image-3916" />
+![Me in FV Hospital, Saigon.](./media/2013/danny-in-hospital-saigon.jpg)
 <em>Mailchimp for WordPress just broke through the 100.000 downloads mark. Less than 6 months ago, I wrote the first lines of code for it from a hospital bed in Vietnam..</em>
 
 <h3>It started with "a cute appendicitis"</h3>
@@ -23,12 +23,12 @@ I started playing around with the code and a few days later, the first version o
 
 From there, I iterated on a weekly basis, continuously improving the plugin, adding new features and smashing bugs. I built a premium version as well, which allowed me to spend more time on this and several other plugins.
 
-<a href="https://www.mc4wp.com/"><img src="/media/2013/100k-downloads.png" alt="100discount" width="400" height="225" class="alignright size-full wp-image-3923" /></a>
+[![100discount](./media/2013/100k-downloads.png)](https://www.mc4wp.com/)
 
 <h3>100.000 plugin downloads!</h3>
 Today, barely 6 months later the plugin <a href="https://wordpress.org/plugins/Mailchimp-for-wp/stats/">has been downloaded</a> over <strong>100.000 times</strong>, I can't be more happy about that. It was well received by the WordPress community and the <a href="https://wordpress.org/support/view/plugin-reviews/Mailchimp-for-wp">plugin reviews</a> reflect that - thanks everyone.
 
-<a href="https://wordpress.org/support/view/plugin-reviews/Mailchimp-for-wp"><img src="/media/2013/75-plugin-reviews.png" alt="reviews" width="300" height="116" class="size-medium wp-image-3917" /></a>
+[![reviews](./media/2013/75-plugin-reviews.png)](https://wordpress.org/support/view/plugin-reviews/Mailchimp-for-wp)
 
 I learned a ton and really enjoyed every minute I spent on the plugin.
 

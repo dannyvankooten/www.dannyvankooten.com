@@ -10,7 +10,7 @@ Contact Form 7 is one of the most popular free contact form plugins for WordPres
 
 This post will show you how to add a Mailchimp sign-up checkbox to your Contact Form 7 form without writing a single line of code.
 
-<img class="alignright size-full wp-image-2191" alt="contact-form-7-example" src="/media/2013/mailchim-sign-up-checkbox-in-contact-form-7.jpg" width="352" height="374" />
+![contact-form-7-example](./media/2013/mailchim-sign-up-checkbox-in-contact-form-7.jpg)
 
 People who send you a message will be able to subscribe to your Mailchimp list(s) with ease. You can choose to have the checkbox pre-checked so it doesn't even require them to click.
 
@@ -43,6 +43,6 @@ The part after the dash should match the "merge tag" of the list field.
 
 Let's do another example but this time for a list field called `WEBSITE`. This time, we'll be using the Contact Form 7 "Generate Tag" tool.
 
-<img class="aligncenter size-full wp-image-2189" alt="Generating a Mailchimp website field using the CF7 tag wizard" src="/media/2013/contact-form-7-generate-tag.png" width="615" height="390" />
+![Generating a Mailchimp website field using the CF7 tag wizard](./media/2013/contact-form-7-generate-tag.png)
 
 Easy, right? It's a sure way to get more subscribers to your email lists as well. Want to see a live example? I am using it for my own <a href="https://www.mc4wp.com/contact/">contact form on the plugin site</a>.

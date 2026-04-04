@@ -29,11 +29,11 @@ It was relatively easy to port our old Laravel application to Symfony, implement
 
 A nice side effect is that I've managed to substantially increase our test coverage in the process. Writing the same application in terms of functionality for a ~~second~~ third time really helps in that regard.
 
-![Symfony's debug bar](/media/2019/symfony-debug-bar.png)
+![Symfony's debug bar](./media/2019/symfony-debug-bar.png)
 
 Symfony's debug bar is an amazing tool. It shows you what happened during the journey from request to response, notifies you of warnings & deprecations and comes with a built-in profiler that you can easily hook into to benchmark parts of your own code.
 
-![Symfony's profiler](/media/2019/symfony-profiler.jpg)
+![Symfony's profiler](./media/2019/symfony-profiler.jpg)
 
 After learning [Symfony's Form component](https://symfony.com/doc/current/forms.html), I'd rather not go without it again. It makes it trivial to render an accessible form that can be re-used in several places, validating the form upon submit and then populating a PHP object from the form data safely.
 

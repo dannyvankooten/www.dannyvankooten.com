@@ -160,7 +160,7 @@ Let's plot the values of both strategies in a single graph so that we can compar
 ax = sp500[['Trend', 'Buy & Hold']].plot(grid=True, kind='line', title="Trend (12 month SMA) vs. Buy & Hold", logy=True)
 ```
 
-![12-month SMA vs Buy & Hold](/media/2018/buy-and-hold-vs-trend-sma-365.png)
+![12-month SMA vs Buy & Hold](./media/2018/buy-and-hold-vs-trend-sma-365.png)
 
 This shows us that **a simple buy & hold investing approach actually outperformed our trend strategy when looking at the S&P 500 market data for 1960 to early 2018**.
 
@@ -170,7 +170,7 @@ Looking at the graph above, you can see that the trend did well during ongoing b
 
 So let's cheat a little and look at just "the lost decade", which contains not just one but two relatively long bear markets!
 
-![](/media/2018/buy-and-hold-vs-sma-365-2000s.png)
+![](./media/2018/buy-and-hold-vs-sma-365-2000s.png)
 
 This shows us that our trend strategy resulted in considerable outperformance during these 2 decades, but only because of the two bear markets.
 

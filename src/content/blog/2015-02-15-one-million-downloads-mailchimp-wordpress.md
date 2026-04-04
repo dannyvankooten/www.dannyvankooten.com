@@ -17,7 +17,7 @@ At _exactly midnight UTC last Friday_ the plugin was downloaded for the **millio
 
 Someone managed to grab a screenshot of it and sent it to me.
 
-![1 million plugin downloads!](/media/2015/1m-plugin-downloads.jpg)
+![1 million plugin downloads!](./media/2015/1m-plugin-downloads.jpg)
 
 Wow.
 

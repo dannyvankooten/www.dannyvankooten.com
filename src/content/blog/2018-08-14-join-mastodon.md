@@ -26,7 +26,7 @@ Here's a few things that make Mastodon great for me:
 
 **A sample of what it could look like (although there are many different clients)** 
 
-[![The Mastodon web app](/media/2018/mastodon.png)](https://joinmastodon.org/)
+[![The Mastodon web app](./media/2018/mastodon.png)](https://joinmastodon.org/)
 
 I'm enthusiastic about the direction that Mastodon is heading in and am really enjoying myself on there already. If you're looking for a place that feels a bit like Twitter in the early days, give Mastodon a proper try.
 

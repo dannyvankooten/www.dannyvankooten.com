@@ -25,7 +25,7 @@ You can configure each form to run several user-defined actions for each success
 
 Here's a quick screenshot of what editing a form in HTML Forms looks like.
 
-[![Screenshot of HTML Forms](/media/2017/html-forms.png)](/media/2017/html-forms.png)
+![Screenshot of HTML Forms](./media/2017/html-forms.png)
 
 Check out the [HTML Forms features](https://www.htmlformsplugin.com/features/) page for a more complete list of features.
 

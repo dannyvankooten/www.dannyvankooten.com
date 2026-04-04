@@ -10,7 +10,7 @@ Earlier this year, I made an arguably bad business decision. I decided to rewrit
 
 No regrets though. 
 
-<img style="height: 400px; width: auto;" class="small-margin" src="/media/2017/2017-04-boxzilla-platform.jpg">
+![](./media/2017/2017-04-boxzilla-platform.jpg)
 
 Just a few weeks later I was deploying the Go application. Building it was the most fun I had in months, I learned a ton and the end result is a huge improvement over the old application. Better performance, easier deployments and higher test coverage. 
 
@@ -65,10 +65,10 @@ Unfortunately, the Laravel application (or PHP-FPM socket) kept falling over onc
 [NetData](https://my-netdata.io/) provided the following graphs to see how the server was holding up under all this load. 
 
 **Go with 100 concurrent connections**
-[![Go with 100 concurrent connections](/media/2017/2017-benchmark-go-c100.jpg)](/media/2017/2017-benchmark-go-c100.jpg)
+![Go with 100 concurrent connections](./media/2017/2017-benchmark-go-c100.jpg)
 
 **Laravel with 100 concurrent connections**
-[![Laravel with 100 concurrent connections](/media/2017/2017-benchmark-laravel-c100.jpg)](/media/2017/2017-benchmark-laravel-c100.jpg)
+![Laravel with 100 concurrent connections](./media/2017/2017-benchmark-laravel-c100.jpg)
 
 Please note that I ran the benchmark from the same machine as the applications were running on, so this heavily influences both graphs. 
 

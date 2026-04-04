@@ -14,7 +14,7 @@ This post is mostly me praising a set of tools but also showcasing some of their
 
 The two most popular options right now are probably VSCode and CLion, yet I found neither of them performant or reliable enough for my taste. Instead, I am using good ol' [Sublime Text 4](https://www.sublimetext.com/) in combination with [their Language Server Protocol implementation](https://lsp.sublimetext.io/) and [Clangd](https://github.com/sublimelsp/LSP-clangd).
 
-![Sublime Text Editor in dark mode with Clangd as language server](/media/2024/sublime-text-clangd.png)
+![Sublime Text Editor in dark mode with Clangd as language server](./media/2024/sublime-text-clangd.png)
 
 Why Sublime, you ask?
 
@@ -117,7 +117,7 @@ If you don't care about portability and want to target your specific CPU, you co
 
 Since we are using [Clangd](https://clangd.llvm.org/) as our Language Server, we can instruct it to emit all sorts of diagnostics (besides just compiler warnings) through [clang-tidy](https://clang.llvm.org/extra/clang-tidy/).
 
-![clang-tidy diagnostics in Sublime Text](/media/2024/sublime-text-clangd-diagnostics.png)
+![clang-tidy diagnostics in Sublime Text](./media/2024/sublime-text-clangd-diagnostics.png)
 
 clang-tidy is disabled by default, but we can enable it by modifying the settings for the LSP-clangd plugin.
 

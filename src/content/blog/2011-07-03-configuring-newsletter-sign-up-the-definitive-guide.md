@@ -28,13 +28,13 @@ You can download and install the Newsletter Sign-Up plugin just like you would i
 
 Not familiar with installing WordPress plugins? The [WordPress codex has a helpful article on installing plugins](https://codex.wordpress.org/Managing_Plugins#Installing_Plugins) that might help.
 
-<img src="/media/2011/nsu-1.jpg" alt="" title="newsletter-sign-up-activated-plugin" width="726" height="45" class="aligncenter size-full wp-image-581" />
+![](./media/2011/nsu-1.jpg)
 
 ### Configuring
 
 Clicking the _settings_ link will take you to the settings page for the plugin. The most important configuration settings are located on the **general settings** screen. These settings are essential if you want to get Newsletter Sign-Up to work with your newsletter service.
 
-<img src="/media/2011/nsu-2.jpg" alt="" title="newsletter-sign-up-configuration-screen" width="758" height="431" class="aligncenter size-full wp-image-583" />
+![](./media/2011/nsu-2.jpg)
 
 If your newsletter service is included in the dropdown box, selecting it will prefill some fields for you. You could however just leave the select box at _other / advanced_ and provide all the necessary values yourself.
 
@@ -42,7 +42,7 @@ If you're using Mailchimp or YMLP then you have the option to use their API, whi
 
 #### Using the Mailchimp API
 
-<img src="/media/2011/nsu-3.jpg" alt="" title="newsletter-sign-up-Mailchimp-api" width="597" height="159" class="aligncenter size-full wp-image-585" />
+![](./media/2011/nsu-3.jpg)
 
 _**Update June 2013:** I suggest using my [Mailchimp for WordPress plugin](https://www.mc4wp.com/) to add sign-up methods for your Mailchimp lists to WordPress. It's free and a lot easier to use._
 
@@ -55,7 +55,7 @@ _**Update June 2013:** I suggest using my [Mailchimp for WordPress plugin](https
 2. Fill in your YMLP username and API key, which you can find by clicking the `?`-link.
 3. To find your YMLP group ID, go to your YMLP dashboard and take a look at the "Your Contacts" screen. Hover the icon for the list you want to use and take note of the URL which includes your `groupid`.
 
-<img src="/media/2011/nsu-4.jpg" alt="" title="newsletter-sign-up-ymlp-group-id" width="494" height="59" class="aligncenter size-full wp-image-587" />
+![](./media/2011/nsu-4.jpg)
 
 #### Other services & custom settings
 
@@ -80,7 +80,7 @@ The name identifier is the `name` attribute of the `input` field that holds the 
 **Additional Data**<br />
 Additional data can be anything in key / value pairs. Provide any other fields you find in the embed form as additional data, using the value of the `name` attribute as the key.
 
-<img src="/media/2011/nsu-5.jpg" alt="" title="newsletter-sign-up-extract-values" width="758" height="241" class="aligncenter size-full wp-image-591" />
+![](./media/2011/nsu-5.jpg)
 
 I made the image above a long time ago, I really hope it makes any sense at all...
 

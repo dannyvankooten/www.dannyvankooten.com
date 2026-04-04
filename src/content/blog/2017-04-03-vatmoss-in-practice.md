@@ -16,7 +16,7 @@ When asked how to handle VATMOSS, I usually advise to ignore it until at a later
 
 Apparently, this is also a feature that shop platforms have been offering for some time now. SendOwl, a company that helps you accept payments for your digital products, tweeted this earlier today:
 
-[![SendOwl's tweet on their new country-blocking feature](/media/sendowl-vatmoss-tweet.jpg)](https://www.sendowl.com/blog/fraud-filtering-now-available.html)
+[![SendOwl's tweet on their new country-blocking feature](./media/sendowl-vatmoss-tweet.jpg)](https://www.sendowl.com/blog/fraud-filtering-now-available.html)
 
 The blog post they link to is from late 2014, so they have been offering this feature right from the start of VATMOSS.
 

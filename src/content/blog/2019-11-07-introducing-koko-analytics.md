@@ -20,7 +20,7 @@ Add to that the following facts and an idea was born:
 
 That's why I set out to built [Koko Analytics](https://www.kokoanalytics.com/), a privacy-friendly analytics plugin for WordPress that does not use any external services.
 
-![Koko Analytics dashboard](/media/2019/koko-analytics-dashboard.png)
+![Koko Analytics dashboard](./media/2019/koko-analytics-dashboard.png)
 
 ### Metrics
 

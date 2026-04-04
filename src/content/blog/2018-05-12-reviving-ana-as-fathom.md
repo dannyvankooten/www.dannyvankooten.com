@@ -13,7 +13,7 @@ description: "Reviving the open-source Ana analytics project as Fathom, a simple
 
 As I was browsing my Twitter feed a few weeks ago, I came across the following tweet by Paul Jarvis.
 
-![Paul's tweet about Fathom](/media/2018/paul-fathom-tweet.jpg)
+![Paul's tweet about Fathom](./media/2018/paul-fathom-tweet.jpg)
 
 I had the same idea in late 2016 when I set out to build my own open-source website analytics alternative called [Ana](https://github.com/usefathom/fathom/blob/db170276fb6081a8e4ca67594480dbd4fb290c06/README.md). It even got some traction back then and a handful of users are running it on their own servers already.
 
@@ -25,7 +25,7 @@ Knowing Paul as a super knowledgeable power-user of our [Mailchimp for WordPress
 
 Together, we are setting out to build **website analytics that is simple, transparent and that respects your visitor's privacy**. We're a few weeks in at this point and already running a beta version of it on our personal sites:
 
-![Fathom dashboard for this site](/media/2018/fathom-preview.png)
+![Fathom dashboard for this site](./media/2018/fathom-preview.png)
 
 We're developing Fathom Analytics out in the open; here's Fathom on GitHub. Expects lots of development happening over the next few weeks.
 
