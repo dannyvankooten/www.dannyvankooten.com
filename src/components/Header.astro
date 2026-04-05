@@ -1,0 +1,149 @@
+---
+import { SITE_TITLE } from '../const';
+---
+
+<header>
+  <a href="/" class="site-title">{SITE_TITLE}</a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+  <nav>
+    <ul>
+      <li><a href="/" class={Astro.url.pathname === '/' ? 'active' : ''}>Home</a></li>
+      <li><a href="/about/" class={Astro.url.pathname === '/about/' ? 'active' : ''}>About</a></li>
+      <li><a href="/projects/" class={Astro.url.pathname === '/projects/' ? 'active' : ''}>Projects</a></li>
+      <li><a href="/blog/" class={Astro.url.pathname.startsWith('/blog/') ? 'active' : ''}>Blog</a></li>
+      <li><a href="/hire-me/" class={Astro.url.pathname === '/hire-me/' ? 'active' : ''}>Hire Me</a></li>
+    </ul>
+  </nav>
+</header>
+<style>
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 0 2rem;
+}
+.site-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  margin-right: auto;
+}
+.site-title:hover,
+.site-title:focus {
+  color: white;
+  opacity: 0.85;
+}
+
+/* Hamburger toggle (hidden checkbox) */
+.nav-toggle {
+  display: none !important;
+}
+.nav-toggle-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: #e1e1e1;
+  height: 2px;
+  width: 1.5rem;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+.nav-toggle-label span::before {
+  top: -6px;
+}
+.nav-toggle-label span::after {
+  top: 6px;
+}
+
+/* Animate hamburger to X */
+.nav-toggle:checked ~ .nav-toggle-label span {
+  background: transparent;
+}
+.nav-toggle:checked ~ .nav-toggle-label span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.nav-toggle:checked ~ .nav-toggle-label span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* Mobile nav (hidden by default) */
+nav {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.nav-toggle:checked ~ nav {
+  max-height: 300px;
+}
+ul {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+li {
+  margin: 0;
+}
+li a {
+  display: block;
+  color: #c0c0c0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+}
+li a:hover,
+li a:focus {
+  color: white;
+}
+li a.active {
+  color: white;
+}
+
+/* Desktop */
+@media (min-width: 576px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  nav {
+    width: auto;
+    max-height: none;
+    overflow: visible;
+  }
+  ul {
+    display: flex;
+    gap: 0.25rem;
+    margin: 0;
+  }
+  li a {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+  li a:hover,
+  li a:focus {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  li a.active {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+</style>

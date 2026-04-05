@@ -19,14 +19,6 @@ body {
   max-width: 760px;
   margin: 0 auto;
 }
-header {
-  padding-bottom: 3rem;
-}
-footer {
-  padding-top: 3rem;
-  font-size: 0.9rem;
-  color: #BBB;
-}
 main {
   display: block;
 }
@@ -38,9 +30,6 @@ a:hover,
 a:focus {
   color: rgb(164, 206, 254);
   text-decoration: none;
-}
-footer a {
-  color: rgba(222, 226, 230, 0.75);
 }
 
 /* Headings */
@@ -198,30 +187,7 @@ tr:nth-child(odd) td,
 tr:nth-child(odd) th {
   background-color: #222;
 }
-.site-header ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.site-header li {
-  display: block;
-  margin: 0;
-}
-.site-header a {
-  display: inline-block;
-  color: #e1e1e1;
-  font-weight: bold;
-  padding: 0 0 0.25rem 0;
-  margin-right: 0.5rem;
-}
-.site-header a:hover,
-.site-header a:focus {
-  color: white;
-}
-.site-header a.active {
-  color: white;
-  text-decoration: none;
-}
+
 
 /* Featured projects */
 .featured-projects {
@@ -247,7 +213,8 @@ tr:nth-child(odd) th {
   color: #DDD;
   text-decoration: none;
 }
-.featured-project img {
+.featured-project img,
+.featured-project svg {
   flex-shrink: 0;
   margin: 0;
   border-radius: 8px;
@@ -307,14 +274,6 @@ blockquote *:last-child,
   margin-bottom: 0;
 }
 
-@media (min-width: 576px) {
-  .site-header li {
-    display: inline-block;
-  }
-  .site-header a {
-    padding: 0 0.25rem 0 0;
-  }
-}
 
 @media (min-width: 768px) {
   .container {
