@@ -5,36 +5,37 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  color: #DDD;
-  background-color: #18191b;
-  font-family: system-ui, sans-serif;
+  color: #CCC;
+  background-color: #161d24;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.4;
   overflow-y: scroll;
   overflow-wrap: break-word;
   margin: 0;
 }
 .container {
   padding: 1rem;
-  max-width: 760px;
+  max-width: 720px;
   margin: 0 auto;
 }
 main {
   display: block;
 }
 a {
-  color: rgb(164, 206, 254);
+  color: #a4cefe;
   text-decoration: underline;
 }
 a:hover,
 a:focus {
-  color: rgb(164, 206, 254);
   text-decoration: none;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5 {
-  line-height: 1.15;
+  line-height: 1.1;
+  color: #EEE;
+  font-family: "Roboto Slab", serif;
 }
 h1 {
   font-size: 2.5rem;
@@ -190,34 +191,30 @@ tr:nth-child(odd) th {
 
 
 /* Featured projects */
-.featured-projects {
-  display: grid;
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
 .featured-project {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  border: 1px solid #333;
-  border-radius: 6px;
-  background: #222;
+  background: #1f2730;
   color: #DDD;
   text-decoration: none;
-  transition: border-color 0.15s;
+  margin-bottom: 1rem;
+  border-radius: 3px;
 }
 .featured-project:hover,
 .featured-project:focus {
-  border-color: #555;
   color: #DDD;
+  filter: brightness(110%);
   text-decoration: none;
+
+  img, svg { filter: grayscale(0.2); }
 }
 .featured-project img,
 .featured-project svg {
   flex-shrink: 0;
   margin: 0;
-  border-radius: 8px;
+  filter: grayscale(0.8);
 }
 .featured-project strong {
   display: block;
@@ -228,11 +225,7 @@ tr:nth-child(odd) th {
   font-size: 0.9rem;
   color: #AAA;
 }
-@media (min-width: 576px) {
-  .featured-projects {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+
 
 /* alerts */
 .alert {
