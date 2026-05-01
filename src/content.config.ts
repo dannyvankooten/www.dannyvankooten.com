@@ -9,8 +9,8 @@ const blog = defineCollection({
     generateId: ({ entry }) => entry.replace(/-\d{2}-\d{2}-/, '/').replace(/\.md$/, ''),
  }),
     schema: ({ image }) => z.object({
-        title: z.string(),
-        description: z.string().optional(),
+        title: z.string().min(5).max(120),
+        description: z.string().min(15).max(160),
         datePublished: z.coerce.date(),
         image: image().optional(),
     }),
@@ -21,7 +21,8 @@ const pages = defineCollection({
         base: "./src/content"
     }),
     schema: z.object({
-        title: z.string()
+        title: z.string().min(5).max(120),
+        description: z.string().min(15).max(160),
     }),
 });
 

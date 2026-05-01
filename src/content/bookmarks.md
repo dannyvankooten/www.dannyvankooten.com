@@ -1,5 +1,6 @@
 ---
 title:  "Bookmarks"
+description: "A collection of links on the internet from things that I like or endorse."
 ---
 
 A collection of links on the WWW which I use, admire or agree with.

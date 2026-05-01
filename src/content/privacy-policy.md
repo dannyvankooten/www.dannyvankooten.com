@@ -1,5 +1,6 @@
 ---
 title:  "Privacy Policy"
+description: "This website does not collect or store any personal data."
 ---
 
 **Last updated:** 2025-01-15

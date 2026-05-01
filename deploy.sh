@@ -7,6 +7,6 @@ set -e
 set -o pipefail
 
 npm run build
-rsync --recursive --times --verbose dist/. danny@eu1.ibericode.com:/var/www/www.dannyvankooten.com/
+rsync --recursive --checksum --times --verbose --delete dist/ danny@eu1.ibericode.com:/var/www/www.dannyvankooten.com/
 
 

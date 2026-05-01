@@ -1,5 +1,6 @@
 ---
 title:  "Freelance PHP developer"
+description: "Freelance PHP developer with 15+ years of experience. Code running on over 2 million websites."
 ---
 
 <div class="jumbotron">

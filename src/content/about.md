@@ -1,5 +1,6 @@
 ---
 title:  "About Danny"
+description: "Programmer from The Netherlands building open-source software used on millions of websites."
 ---
 
 Hello! I'm Danny van Kooten, a programmer from The Netherlands.

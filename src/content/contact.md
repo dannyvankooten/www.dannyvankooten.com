@@ -1,5 +1,6 @@
 ---
 title:  "Contact"
+description: "How to get in touch with Danny van Kooten"
 ---
 
 Would you like to get in contact? If so, please go through the questions below to help save us both some time.

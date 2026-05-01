@@ -1,5 +1,6 @@
 ---
-title:  "Now"
+title:  "Now focusing on..."
+description: "What I'm currently working on, learning and doing."
 ---
 
 ## Learning and fun
@@ -17,9 +18,8 @@ title:  "Now"
 
 ## Health
 
-- Rock climbing once per week.
-- General strength training once per week.
-- Aerobic exercise (mostly cycling or running) 2-3 times per week.
-
+- General strength training or rock climbing (bouldering) 1-2 times per week.
+- Aerobic exercise (mostly cycling or running) 2-4 times per week.
 
 _Last updated: Dec 4, 2025_
+

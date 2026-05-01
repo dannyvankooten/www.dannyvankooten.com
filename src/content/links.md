@@ -1,5 +1,6 @@
 ---
 title:  "Links"
+description: "Quick links to pages on this site and social profiles."
 ---
 
 This page contains quick links to various sections of this website.
@@ -21,7 +22,7 @@ This page contains quick links to various sections of this website.
 
 ## Social
 
+- [X (Twitter)](https://x.com/dannyvankooten)
 - [Mastodon](https://toot.re/@dvk)
 - [GitHub](https://github.com/dannyvankooten/)
-- [sourcehut](https://git.sr.ht/~dvko/)
 - [LinkedIn](https://www.linkedin.com/in/danny-van-kooten-55498824a/)

@@ -1,5 +1,6 @@
 ---
 title:  "Donate"
+description: "You can thank me for my open-source work by donating to these causes."
 ---
 
 Hey!
