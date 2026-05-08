@@ -14,7 +14,6 @@ export async function GET() {
     ``,
     `- [About](https://www.dannyvankooten.com/about/): About Danny van Kooten`,
     `- [Projects](https://www.dannyvankooten.com/projects/): Selection of projects and open-source work`,
-    `- [Hire Me](https://www.dannyvankooten.com/hire-me/): Freelance PHP developer for hire`,
     `- [WordPress Plugins](https://www.dannyvankooten.com/wordpress-plugins/): WordPress plugins by Danny`,
     ``,
     `## Blog Posts`,

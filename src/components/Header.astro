@@ -14,7 +14,6 @@ import { SITE_TITLE } from '../const';
       <li><a href="/about/" class={Astro.url.pathname === '/about/' ? 'active' : ''}>About</a></li>
       <li><a href="/projects/" class={Astro.url.pathname === '/projects/' ? 'active' : ''}>Projects</a></li>
       <li><a href="/blog/" class={Astro.url.pathname.startsWith('/blog/') ? 'active' : ''}>Blog</a></li>
-      <li><a href="/hire-me/" class={Astro.url.pathname === '/hire-me/' ? 'active' : ''}>Hire Me</a></li>
     </ul>
   </nav>
 </header>
@@ -23,12 +22,15 @@ header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1rem 0 2rem;
+  padding: 1rem 0 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px dashed #27272a;
 }
 .site-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #fafafa;
   text-decoration: none;
   margin-right: auto;
 }
@@ -103,20 +105,20 @@ li {
 }
 li a {
   display: block;
-  color: #c0c0c0;
+  color: #a1a1aa;
   text-decoration: none;
   font-weight: 500;
   padding: 0.4rem 0;
   font-size: 0.95rem;
   transition: color 0.15s ease;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 li a:hover,
 li a:focus {
-  color: white;
+  color: #fafafa;
 }
 li a.active {
-  color: white;
+  color: #fafafa;
 }
 
 /* Desktop */
@@ -139,10 +141,10 @@ li a.active {
   }
   li a:hover,
   li a:focus {
-    background: rgba(255, 255, 255, 0.08);
+    background: #18181b;
   }
   li a.active {
-    background: rgba(255, 255, 255, 0.1);
+    background: #27272a;
   }
 }
 </style>

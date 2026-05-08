@@ -8,7 +8,7 @@ const posts = (await getCollection('blog')).sort(
 );
 
 import { Image } from 'astro:assets';
-import headshot from '../assets/headshot.webp';
+import headerImage from '../assets/la-marmotte.jpg';
 
 ---
 
@@ -16,12 +16,11 @@ import headshot from '../assets/headshot.webp';
 
 <Layout title="Danny van Kooten">
   <main class="content">
-    <Image src={headshot} alt="Danny van Kooten" class="headshot" width="120" height="120" />
-    
-    <p>My name is Danny and I run <a href="https://www.ibericode.com/">ibericode</a>, a small bootstrapped software company from The Netherlands.</p>
-    <p>I've been making a living from my products for well over 10 years now. On this site you can <a href="/about/">read some more about me</a> and find links to <a href="/projects/">a small selection of my work</a>.</p>
-    <p>Alternatively, you can find me on <a href="https://x.com/dannyvankooten" rel="me nofollow">X (Twitter)</a>, <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a> or <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a>.</p>
-    <p>As of 2026, I am available as a <a href="/hire-me/">freelance PHP developer</a>.</p>
+    <p>My name is Danny. I'm the founder of <a href="https://www.ibericode.com/">ibericode</a>, where I build software used by millions of websites. That's not an exaggeration.</p>
+    <p>We're a small team. I develop our WordPress plugins myself, while two friends help me handle customer support. We've been working together completely remotely for well over a decade now.</p>
+    <p>Read more <a href="/about/">about me</a>, have a look at <a href="/projects/">my projects</a>, or find me on <a href="https://x.com/dannyvankooten" rel="me nofollow">X (Twitter)</a>, <a href="https://toot.re/@dvk" rel="me nofollow">Mastodon</a>, <a href="https://github.com/dannyvankooten/" rel="me nofollow">Github</a> or <a href="https://www.linkedin.com/in/danny-van-kooten-55498824a/" rel="me nofollow">LinkedIn</a>.</p>
+
+    <Image src={headerImage} alt="La Marmotte" class="header-image" />
 
     <h2>Featured projects</h2>
     <div class="featured-projects">
@@ -79,11 +78,10 @@ import headshot from '../assets/headshot.webp';
   </main>
 </Layout>
 <style>
-    .headshot {
-        float: right;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid #444;
-        margin: 0 0 1rem 1.5rem;
+    .header-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 2rem;
     }
 </style>
