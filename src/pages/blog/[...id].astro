@@ -5,17 +5,28 @@ import { dateOptions } from '../../const';
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  return posts.map(post => ({
+  const posts = (await getCollection('blog')).sort(
+    (a, b) => b.data.datePublished.valueOf() - a.data.datePublished.valueOf()
+  );
+
+  return posts.map((post, index) => ({
     params: { id: post.id },
-    props: post,
+    props: {
+      post,
+      prevPost: index + 1 !== posts.length ? posts[index + 1] : null,
+      nextPost: index !== 0 ? posts[index - 1] : null,
+    },
   }));
 }
 
-type Props = CollectionEntry<'blog'>;
+interface Props {
+  post: CollectionEntry<'blog'>;
+  prevPost: CollectionEntry<'blog'> | null;
+  nextPost: CollectionEntry<'blog'> | null;
+}
 
 // 2. For your template, you can get the entry directly from the prop
-const post = Astro.props;
+const { post, prevPost, nextPost } = Astro.props;
 const { Content } = await render(post);
 const words = post.body?.split(/\s+/).length ?? 0;
 const readingTime = Math.max(1, Math.round(words / 225));
@@ -28,5 +39,52 @@ const readingTime = Math.max(1, Math.round(words / 225));
     <div class="e-content">
       <Content />
     </div>
+    
+    {(prevPost || nextPost) && (
+      <nav class="post-navigation">
+        <div class="nav-links">
+          {prevPost && (
+            <a class="prev-post" href={`/blog/${prevPost.id}/`}>
+              <small>← Older</small><br />
+              {prevPost.data.title}
+            </a>
+          )}
+          {nextPost && (
+            <a class="next-post" href={`/blog/${nextPost.id}/`}>
+              <small>Newer →</small><br />
+              {nextPost.data.title}
+            </a>
+          )}
+        </div>
+      </nav>
+    )}
   </article>
 </Layout>
+
+<style>
+  .post-navigation {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #27272a;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .nav-links a {
+    flex: 1;
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    text-decoration: underline;
+  }
+  .next-post {
+    text-align: right;
+  }
+  small {
+    color: #a1a1aa;
+  }
+</style>

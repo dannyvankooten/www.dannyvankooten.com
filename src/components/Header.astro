@@ -22,9 +22,9 @@ header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1rem 0 1.5rem;
-  margin-bottom: 2rem;
-  border-bottom: 1px dashed #27272a;
+  padding: 1rem 1.5rem 1.5rem;
+  margin: 0 -1.5rem 2rem -1.5rem;
+  border-bottom: 1px solid #27272a;
 }
 .site-title {
   font-size: 1.1rem;
@@ -112,13 +112,18 @@ li a {
   font-size: 0.95rem;
   transition: color 0.15s ease;
   border-radius: 6px;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 li a:hover,
-li a:focus {
+li a:focus,
+li a:active {
   color: #fafafa;
+  background: transparent;
 }
 li a.active {
   color: #fafafa;
+  background: transparent;
 }
 
 /* Desktop */
@@ -133,18 +138,22 @@ li a.active {
   }
   ul {
     display: flex;
-    gap: 0.25rem;
+    gap: 1.5rem;
     margin: 0;
   }
   li a {
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0;
   }
   li a:hover,
-  li a:focus {
-    background: #18181b;
+  li a:focus,
+  li a:active {
+    color: #fafafa;
+    background: transparent;
   }
   li a.active {
-    background: #27272a;
+    color: #fafafa;
+    font-weight: 600;
+    background: transparent;
   }
 }
 </style>

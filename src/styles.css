@@ -172,26 +172,31 @@ code {
 }
 pre {
   display: block;
-}
-pre code {
-  display: block;
-  color: inherit;
-  background-color: #18181b;
-  color: #e4e4e7;
-  padding: 1rem;
-  font-size: 0.85rem;
   border-radius: 8px;
   border: 1px solid #27272a;
+  background-color: #18181b !important;
+  padding: 1rem;
   overflow-x: auto;
 }
+pre code {
+  color: inherit;
+  background-color: transparent;
+  padding: 0;
+  font-size: 0.85rem;
+  border-radius: 0;
+  border: none;
+}
 pre code.language-filename {
-    margin-bottom: -1.5rem;
-    border-bottom: 1px solid #666;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    display: block;
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #27272a;
+    background-color: #09090b !important;
+    border-radius: 8px 8px 0 0;
 }
 pre code.language-filename:before {
     content: "File: ";
+    color: #a1a1aa;
 }
 blockquote {
   border-left: 4px solid #27272a;
