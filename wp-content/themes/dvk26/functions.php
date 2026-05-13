@@ -19,6 +19,18 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('theme', get_stylesheet_uri(), [], filemtime($stylesheet));
 }, -10);
 
+function dvk26_default_og_image_url(): string {
+    return get_theme_file_uri('/assets/images/og-default.png');
+}
+
+add_filter('wpseo_opengraph_image', function($image) {
+    return $image ?: dvk26_default_og_image_url();
+});
+
+add_filter('wpseo_twitter_image', function($image) {
+    return $image ?: dvk26_default_og_image_url();
+});
+
 function dvk26_home_link() {
     ?>
     <a class="site-logo" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Danny van Kooten homepage">
