@@ -1,0 +1,41 @@
+# Version Control & Hidden Files
+.git
+.github
+.*
+
+# Development Tools & Build Files
+**/node_modules/
+/vendor
+/composer.json
+/composer.lock
+/scripts/
+/wp-cli.yml
+/phpcs.xml.dist
+/phpstan.neon.dist
+/phpunit.xml.dist
+
+# WordPress Dynamic & Server-Specific Content
+/wp-config.php
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/upgrade-temp-backup/
+/wp-content/languages/
+/wp-content/cache
+/wp-content/debug.log
+/llms.txt
+/koko-analytics-collect.php
+
+# Development Plugins & Drop-ins
+/wp-content/plugins/query-monitor/
+/wp-content/plugins/wp-crontrol/
+/wp-content/db.php
+
+# Database Dumps & Logs
+*.sql
+*.sql.gz
+*.log
+/error_log.txt
+
+# Custom Exclusions
+/config.php
+/*.py

@@ -1,0 +1,8 @@
+.distignore
+.editorconfig
+.git
+.gitignore
+.github
+composer.json
+composer.lock
+phpstan.neon.dist 

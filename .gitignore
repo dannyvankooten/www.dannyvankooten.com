@@ -1,28 +1,44 @@
-# build output
-dist/
+# WordPress Core
+/wp-admin/
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
 
-# generated types
-.astro/
+# WordPress Config & Content
+/wp-config.php
+/wp-content/upgrade
+/wp-content/uploads
+/wp-content/upgrade-temp-backup
+/wp-content/cache
+/koko-analytics-collect.php
+/llms.txt 
 
-# dependencies
-node_modules/
+# Logs
+*.log
+*.sql
+*_log.txt 
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+# Composer
+/vendor
 
-# environment variables
-.env
-.env.production
+# WP-CLI
+wp-cli.local.yml
+.idea
 
-# macOS-specific files
-.DS_Store
+# Secrets
+/wp-config.php
+/.env 
+/config.php
 
-# jetbrains setting folder
-.idea/
+# NPM 
+/node_modules
 
-# vscode folder
-.vscode 
+# IDE's
+.vscode
 
+# Tooling
+.phpcs-cache
+__pycache__

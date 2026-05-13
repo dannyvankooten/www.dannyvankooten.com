@@ -1,0 +1,56 @@
+#!/usr/bin/env bash 
+
+set -e 
+set -o pipefail
+
+# Configuration variables 
+REMOTE_HOST="eu1.ibericode.com"
+REMOTE_PATH="/var/www/www.dannyvankooten.com"
+
+# Site URLs for search-replace
+REMOTE_SITE_URL="https://www.dannyvankooten.com"
+LOCAL_SITE_URL="http://localhost:8080"
+
+# Name of back-up file
+TIMESTAMP=$(date +%Y%m%d_%H%M)
+DB_BACKUP="wp_backup_${TIMESTAMP}.sql"
+
+# Check if required commands exist
+command -v wp >/dev/null 2>&1 || { echo "WP-CLI is required but not installed. Aborting." >&2; exit 1; }
+
+# Connect to remote server and export database
+echo "Exporting remote database..."
+wp db export "/tmp/$DB_BACKUP" --ssh="$REMOTE_HOST" --path="$REMOTE_PATH"
+if [ $? -ne 0 ]; then
+    echo "Failed to export remote database. Aborting."
+    exit 1
+fi
+scp "$REMOTE_HOST:/tmp/$DB_BACKUP" "$DB_BACKUP"
+
+# Sync wp-content directory, but exclude cache and backup files
+echo "Syncing wp-content directory..."
+rsync --archive --recursive -z --delete \
+	"${REMOTE_HOST}:${REMOTE_PATH}/wp-content/uploads/" \
+	"wp-content/uploads/"
+
+if [ $? -ne 0 ]; then
+	echo "Error: Failed to sync wp-content/uploads directory"
+	exit 1
+fi
+echo "File sync completed successfully!"
+
+
+# Import the database locally
+echo "Importing database to local environment..."
+wp db import "$DB_BACKUP"
+if [ $? -ne 0 ]; then
+    echo "Failed to import database. Backup file is still available at $DB_BACKUP"
+    exit 1
+fi
+wp search-replace "$REMOTE_SITE_URL" "$LOCAL_SITE_URL" --all-tables
+wp cache flush
+rm "$DB_BACKUP"
+echo "Database sync completed successfully!"
+
+# Re-activate development plugins
+wp plugin install query-monitor --activate

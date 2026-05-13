@@ -1,0 +1,3 @@
+[submodule "wp-content/plugins/ibericode-mods"]
+	path = wp-content/plugins/ibericode-mods
+	url = git@github.com:ibericode/ibericode-mods.git

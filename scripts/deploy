@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -e
+set -o pipefail
+
+# Variables
+REMOTE_SERVER="dannyvankooten_wp@eu1.ibericode.com"
+REMOTE_DIR="/var/www/www.dannyvankooten.com"
+REMOTE="$REMOTE_SERVER:$REMOTE_DIR"
+
+# Ensure Git working directory is clean
+if [[ -n $(git status --porcelain) ]]; then
+    echo "🚨 Deployment aborted: You have uncommitted changes."
+    echo "Please commit your changes before deploying to keep Git as the single source of truth."
+    exit 1
+fi
+
+# Check if WP Core needs an update locally before deploying
+UPDATE_COUNT=$(wp core check-update --format=count)
+
+if [ "$UPDATE_COUNT" -gt 0 ]; then
+    echo "🚨 Deployment aborted: WordPress core is not at the latest version."
+    echo "Please run 'wp core update' locally, commit the changes, and try again."
+    exit 1
+fi
+
+# deploy to server
+echo "-- deploying to $REMOTE"
+rsync --recursive --checksum --times --verbose --delete  \
+	--exclude-from=".distignore" \
+	. $REMOTE
