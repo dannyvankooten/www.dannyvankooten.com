@@ -6,17 +6,17 @@
     </article>
         
     <section class="post-list">
-        <?php $posts_by_year = dvk26_get_posts_grouped_by_year(); ?>
-        <?php foreach ($posts_by_year as $year => $posts) : ?>
-            <section>
-                <h2><?php echo esc_html($year); ?></h2>
-                <ol>
-                    <?php foreach ($posts as [$permalink, $title]) : ?>
-                        <li><a href="<?php echo esc_url($permalink); ?>"><?php echo esc_html($title); ?></a></li>
-                    <?php endforeach; ?>
-                </ol>
-            </section>
-        <?php endforeach; ?>
+<?php $posts_by_year = dvk26_get_posts_grouped_by_year(); ?>
+<?php foreach ($posts_by_year as $year => $posts) : ?>
+        <section>
+            <h2><?php echo esc_html($year); ?></h2>
+            <ol>
+<?php foreach ($posts as [$permalink, $title]) : ?>
+                <li><a href="<?php echo esc_url($permalink); ?>"><?php echo esc_html($title); ?></a></li>
+<?php endforeach; ?>
+            </ol>
+        </section>
+<?php endforeach; ?>
     </section>
 </main>
 <?php get_footer(); ?>
