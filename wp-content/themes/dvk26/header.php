@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="<?php echo esc_url(dvk26_get_asset_url('style.css')); ?>">
+        <link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/fonts/Inter-Regular.woff2">
         <link rel="stylesheet" href="<?php echo esc_url(dvk26_get_asset_url('assets/fonts/inter.css')); ?>">
+        <link rel="stylesheet" href="<?php echo esc_url(dvk26_get_asset_url('style.css')); ?>">
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
