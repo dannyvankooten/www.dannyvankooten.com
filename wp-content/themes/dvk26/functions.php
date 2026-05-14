@@ -58,8 +58,6 @@ function dvk26_default_og_image_url(): string {
     return get_theme_file_uri('/assets/images/og-default.png');
 }
 
-
-
 function dvk26_get_posts_grouped_by_year(): array {
     $posts_by_year = [];
 
