@@ -5,10 +5,20 @@ if (! isset($content_width)) {
     $content_width = 540;
 }
 
+function dvk26_get_asset_url(string $filename): string {
+    $file = get_stylesheet_directory() . '/' . $filename;
+    $url = get_stylesheet_directory_uri() . '/' . $filename;
+    $time = filemtime($file) ?: 0;
+    return $url . "?v=" . $time;
+}
+
 // load theme stylesheet
 add_action('wp_enqueue_scripts', function() {
     $stylesheet = get_stylesheet_directory() . '/style.css';
     wp_enqueue_style('theme', get_stylesheet_uri(), [], filemtime($stylesheet));
+
+    $stylesheet = get_stylesheet_directory() . '/assets/fonts/inter.css';
+    wp_enqueue_style('inter', get_stylesheet_uri(), [], filemtime($stylesheet));
 }, -10);
 
 // declare theme support, remove some stuff
