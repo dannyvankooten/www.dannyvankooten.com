@@ -9,7 +9,7 @@
         <div class="e-content mm">
             <?php the_content(); ?>
         </div>
-        <?php the_post_navigation(); ?>
     </article>
+    <?php the_post_navigation(); ?>
 </main>
 <?php get_footer(); ?>
