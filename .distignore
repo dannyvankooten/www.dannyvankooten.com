@@ -13,6 +13,7 @@
 /phpcs.xml.dist
 /phpstan.neon.dist
 /phpunit.xml.dist
+/wp-cli.yml
 
 # WordPress Dynamic & Server-Specific Content
 /wp-config.php

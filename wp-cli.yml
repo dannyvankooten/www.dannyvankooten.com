@@ -1,0 +1,10 @@
+
+
+@prod:
+  ssh: dannyvankooten_wp@eu1.ibericode.com~/
+  disabled_commands:
+    - db drop
+    - core install
+    - plugin install 
+    
+

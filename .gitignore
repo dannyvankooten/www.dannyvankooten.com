@@ -42,3 +42,6 @@ wp-cli.local.yml
 # Tooling
 .phpcs-cache
 __pycache__
+
+# Writing
+drafts/
