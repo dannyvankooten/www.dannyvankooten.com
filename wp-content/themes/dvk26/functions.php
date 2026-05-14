@@ -12,15 +12,6 @@ function dvk26_get_asset_url(string $filename): string {
     return $url . "?v=" . $time;
 }
 
-// load theme stylesheet
-add_action('wp_enqueue_scripts', function() {
-    $stylesheet = get_stylesheet_directory() . '/style.css';
-    wp_enqueue_style('theme', get_stylesheet_uri(), [], filemtime($stylesheet));
-
-    $stylesheet = get_stylesheet_directory() . '/assets/fonts/inter.css';
-    wp_enqueue_style('inter', get_stylesheet_uri(), [], filemtime($stylesheet));
-}, -10);
-
 // declare theme support, remove some stuff
 add_action('after_setup_theme', function() {
     add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
