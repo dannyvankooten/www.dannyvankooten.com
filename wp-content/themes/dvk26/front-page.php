@@ -1,7 +1,5 @@
 <?php get_header(); the_post(); ?>
-<div class="container">
-    <?php dvk26_home_link(); ?>
-
+<main class="container">
     <article>
         <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
@@ -21,5 +19,5 @@
         <?php endforeach; ?>
     </section>
 
-</div>
+</main>
 <?php get_footer(); ?>

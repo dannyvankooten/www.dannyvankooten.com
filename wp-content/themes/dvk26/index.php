@@ -1,7 +1,5 @@
 <?php get_header(); ?>
-<div class="container">
-    <?php dvk26_home_link(); ?>
-
+<main class="container">
     <?php if(is_search()) : ?>
         <h1>Search results for "<?php the_search_query(); ?>"</h1>
     <?php elseif (is_archive()) : ?>
@@ -22,5 +20,5 @@
     <?php else : ?>
         <p>No results.</p>
     <?php endif; ?>
-</div>
+</main>
 <?php get_footer(); ?>

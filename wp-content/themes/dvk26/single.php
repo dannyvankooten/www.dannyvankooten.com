@@ -1,7 +1,6 @@
 <?php get_header(); the_post(); ?>
-<div class="container">
+<main class="container">
     <article <?php post_class('h-entry') ?>>
-        <?php dvk26_home_link(); ?>
         <h1 class="p-name"><?php the_title(); ?></h1>
         <p class="text-sm">Published by <a class="p-author h-card" href="<?php echo esc_url(get_the_author_meta('url')); ?>" rel="author"><?php echo esc_html(get_the_author()); ?></a> on 
             <time class="dt-published" datetime="<?php echo esc_attr(get_the_date('Y-m-d')); ?>"><?php the_date(); ?></time>.
@@ -12,5 +11,5 @@
         </div>
         <?php the_post_navigation(); ?>
     </article>
-</div>
+</main>
 <?php get_footer(); ?>
