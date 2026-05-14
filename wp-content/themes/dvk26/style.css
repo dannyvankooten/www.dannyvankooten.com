@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.2;
 	font-weight: bold;
 	text-wrap: balance;
-	margin-top: 3rem;
+	margin: 3rem 0 0 0;
 	font-size: 1rem;
 }
 h1 {
@@ -106,7 +106,7 @@ a:focus {
 	text-decoration-color: var(--color-headings);
 }
 
-p, figure, .wp-block-image, blockquote, pre, .e-content > div, .e-content > img, .e-content > table, .e-content > a, .e-content > center {
+p, figure, .wp-block-image, blockquote, pre, .e-content > div, .e-content > img, .e-content > table, .e-content > a, .e-content > center, math, form {
 	margin: 1rem 0 0 0;
 	padding: 0;
 }
