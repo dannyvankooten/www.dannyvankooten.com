@@ -33,14 +33,6 @@ add_action('after_setup_theme', function() {
 
     // remove comments feed
     add_filter( 'feed_links_show_comments_feed', '__return_false' );
-
-    // instruct Yoast SEO to use a default Open Graph image
-    add_filter('wpseo_opengraph_image', function($image) {
-        return $image ?: dvk26_default_og_image_url();
-    });
-    add_filter('wpseo_twitter_image', function($image) {
-        return $image ?: dvk26_default_og_image_url();
-    });
 });
 
 // disable XMLRPC
