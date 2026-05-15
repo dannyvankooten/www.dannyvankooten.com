@@ -17,9 +17,12 @@ add_action( 'wp_head', __NAMESPACE__ . '\output_meta_tags', 1 );
 add_filter( 'document_title_separator', __NAMESPACE__ . '\title_separator' );
 add_filter( 'document_title_parts', __NAMESPACE__ . '\title_parts' );
 add_filter( 'wp_robots', __NAMESPACE__ . '\robots_meta' );
+add_filter( 'wp_sitemaps_add_provider', __NAMESPACE__ . '\filter_sitemap_providers', 10, 2 );
 add_action( 'template_redirect', __NAMESPACE__ . '\redirect_sitemaps', 1 );
 add_action( 'init', __NAMESPACE__ . '\register_meta' );
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_editor_assets' );
+
+const META_DESCRIPTION_MAX_LENGTH = 160;
 
 function title_separator(): string {
     return '-';
@@ -45,6 +48,14 @@ function title_parts( array $parts ): array {
     return $parts;
 }
 
+function filter_sitemap_providers( $provider, string $name ) {
+    if ( in_array( $name, [ 'taxonomies', 'users' ], true ) ) {
+        return false;
+    }
+
+    return $provider;
+}
+
 function redirect_sitemaps(): void {
     $req = $_SERVER['REQUEST_URI'] ?? '';
     
@@ -59,9 +70,8 @@ function redirect_sitemaps(): void {
         $page = ! empty( $matches[1] ) ? $matches[1] : 1;
         wp_redirect( home_url( "/wp-sitemap-posts-page-{$page}.xml" ), 301 );
         exit;
-    } elseif ( preg_match( '/category-sitemap(\d*)\.xml/', $req, $matches ) ) {
-        $page = ! empty( $matches[1] ) ? $matches[1] : 1;
-        wp_redirect( home_url( "/wp-sitemap-taxonomies-category-{$page}.xml" ), 301 );
+    } elseif ( preg_match( '/(?:category|post_tag|author)-sitemap(\d*)\.xml/', $req ) ) {
+        wp_redirect( home_url( '/wp-sitemap.xml' ), 301 );
         exit;
     }
 }
@@ -73,9 +83,14 @@ function register_meta(): void {
             'show_in_rest'  => true,
             'single'        => true,
             'type'          => 'string',
-            'auth_callback' => fn() => current_user_can( 'edit_posts' ),
+            'sanitize_callback' => __NAMESPACE__ . '\sanitize_meta_description',
+            'auth_callback' => fn( $allowed, string $meta_key, int $post_id ) => current_user_can( 'edit_post', $post_id ),
         ] );
     }
+}
+
+function sanitize_meta_description( mixed $value ): string {
+    return mb_substr( trim( wp_strip_all_tags( (string) $value ) ), 0, META_DESCRIPTION_MAX_LENGTH );
 }
 
 function enqueue_editor_assets(): void {
@@ -95,25 +110,28 @@ function output_meta_tags(): void {
 
     $post_id = get_queried_object_id();
     
-    // Description logic using null coalescing and modern ternary
-    $desc = get_post_meta( $post_id, '_ibericode_seo_description', true )
+    $raw_desc = get_post_meta( $post_id, '_ibericode_seo_description', true )
          ?: get_post_meta( $post_id, '_yoast_wpseo_metadesc', true ) 
          ?: ( has_excerpt( $post_id ) ? get_the_excerpt( $post_id ) : '' )
          ?: ( is_front_page() ? get_bloginfo( 'description' ) : '' );
     
     // Fallback to content excerpt
-    if ( ! $desc ) {
+    if ( ! $raw_desc ) {
         $post = get_post( $post_id );
         if ( $post ) {
-            $desc = wp_trim_words( strip_shortcodes( $post->post_content ), 30, '' );
+            $raw_desc = wp_trim_words( strip_shortcodes( $post->post_content ), 30, '' );
         }
     }
 
-    $desc = esc_attr( wp_strip_all_tags( $desc ) );
+    $raw_desc = trim( wp_strip_all_tags( $raw_desc ) );
+    $desc     = esc_attr( $raw_desc );
 
-    $title     = wp_get_document_title();
-    $url       = is_front_page() ? home_url( '/' ) : get_permalink( $post_id );
-    $site_name = get_bloginfo( 'name' );
+    $title          = wp_get_document_title();
+    $schema_title   = html_entity_decode( wp_strip_all_tags( $title ), ENT_QUOTES | ENT_HTML5, get_bloginfo( 'charset' ) );
+    $article_title  = html_entity_decode( wp_strip_all_tags( get_the_title( $post_id ) ), ENT_QUOTES | ENT_HTML5, get_bloginfo( 'charset' ) );
+    $url            = is_front_page() ? home_url( '/' ) : get_permalink( $post_id );
+    $site_name      = get_bloginfo( 'name' );
+    $twitter_handle = get_twitter_handle();
 
     echo "<meta name=\"description\" content=\"{$desc}\" />\n";
 
@@ -141,9 +159,11 @@ function output_meta_tags(): void {
     }
 
     echo "<meta name=\"twitter:card\" content=\"summary_large_image\" />\n";
-    echo "<meta name=\"twitter:site\" content=\"@dannyvankooten\" />\n";
-    if ( is_singular() && ! is_front_page() ) {
-        echo "<meta name=\"twitter:creator\" content=\"@dannyvankooten\" />\n";
+    if ( $twitter_handle ) {
+        echo "<meta name=\"twitter:site\" content=\"" . esc_attr( $twitter_handle ) . "\" />\n";
+        if ( is_singular() && ! is_front_page() ) {
+            echo "<meta name=\"twitter:creator\" content=\"" . esc_attr( $twitter_handle ) . "\" />\n";
+        }
     }
 
     // Determine the OG image using PHP 8 match expression
@@ -172,17 +192,16 @@ function output_meta_tags(): void {
                 '@id' => $url . '#webpage',
             ],
             'author'           => [
-                '@type' => 'Person',
-                'name'  => $author_name ?? get_bloginfo( 'name' ),
+                '@id' => person_id(),
             ],
-            'headline'         => $title,
+            'headline'         => $article_title,
             'datePublished'    => $published_time ?? get_the_date( 'c', $post_id ),
             'dateModified'     => $modified_time ?? get_the_modified_date( 'c', $post_id ),
             'mainEntityOfPage' => [
                 '@id' => $url . '#webpage',
             ],
             'publisher'        => [
-                '@id' => home_url( '/#organization' ),
+                '@id' => person_id(),
             ],
         ];
     }
@@ -191,11 +210,11 @@ function output_meta_tags(): void {
         '@type'       => 'WebPage',
         '@id'         => $url . '#webpage',
         'url'         => $url,
-        'name'        => $title,
+        'name'        => $schema_title,
         'isPartOf'    => [
             '@id' => home_url( '/#website' ),
         ],
-        'description' => $desc,
+        'description' => $raw_desc,
     ];
 
     $schema['@graph'][] = [
@@ -205,9 +224,34 @@ function output_meta_tags(): void {
         'name'        => $site_name,
         'description' => get_bloginfo( 'description' ),
         'publisher'   => [
-            '@id' => home_url( '/#organization' ),
+            '@id' => person_id(),
         ],
     ];
 
+    $person = [
+        '@type' => 'Person',
+        '@id'   => person_id(),
+        'name'  => $site_name,
+        'url'   => home_url( '/' ),
+    ];
+
+    if ( $image ) {
+        $person['image'] = $image;
+    }
+
+    if ( $twitter_handle ) {
+        $person['sameAs'] = [ 'https://x.com/' . ltrim( $twitter_handle, '@' ) ];
+    }
+
+    $schema['@graph'][] = $person;
+
     echo '<script type="application/ld+json" class="ibericode-seo-schema">' . wp_json_encode( $schema ) . "</script>\n";
+}
+
+function get_twitter_handle(): string {
+    return (string) apply_filters( 'ibericode_seo_twitter_handle', '@dannyvankooten' );
+}
+
+function person_id(): string {
+    return home_url( '/#/schema/person/danny-van-kooten' );
 }
