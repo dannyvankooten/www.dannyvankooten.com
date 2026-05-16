@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="container">
+<main id="main-content" class="container">
     <?php if(is_search()) : ?>
         <h1>Search results for "<?php the_search_query(); ?>"</h1>
     <?php elseif (is_archive()) : ?>

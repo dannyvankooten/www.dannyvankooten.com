@@ -50,7 +50,7 @@ body {
 }
 
 .site-logo {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 2rem;
@@ -62,7 +62,7 @@ body {
 	transition: color .4s ease, text-decoration-color .4s ease, border-color .4s ease;
 }
 .site-logo:hover,
-.site-logo:focus {
+.site-logo:focus-visible {
 	color: var(--color-headings);
 	border-color: var(--color-headings);
 }
@@ -80,6 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-wrap: balance;
 	margin: 3rem 0 0 0;
 	font-size: 1rem;
+	scroll-margin-top: 2rem;
 }
 h1 {
 	font-size: 1.19rem;
@@ -101,7 +102,7 @@ a {
 	transition: color .4s ease, text-decoration-color .4s ease;
 }
 a:hover,
-a:focus {
+a:focus-visible {
 	color: var(--color-headings);
 	text-decoration-color: var(--color-headings);
 }
@@ -150,6 +151,7 @@ table {
 	table-layout: fixed;
 	font-size: 1rem;
 	width: 100%;
+	font-variant-numeric: tabular-nums;
 }
 thead, tfoot, tbody, tr { 
 	border: 0 !important; 
@@ -220,7 +222,7 @@ code {
 	transition: color .4s ease, text-decoration-color .4s ease;
 }
 .post-list a:hover,
-.post-list a:focus {
+.post-list a:focus-visible {
 	color: var(--color-headings);
 	text-decoration-color: var(--color-headings);
 } 

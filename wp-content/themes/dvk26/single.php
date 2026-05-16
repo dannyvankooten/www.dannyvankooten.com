@@ -1,5 +1,5 @@
 <?php get_header(); the_post(); ?>
-<main class="container">
+<main id="main-content" class="container">
     <article <?php post_class('h-entry') ?>>
         <h1 class="p-name"><?php the_title(); ?></h1>
         <p class="text-sm">Published by <a class="p-author h-card" href="<?php echo esc_url(get_the_author_meta('url')); ?>" rel="author"><?php echo esc_html(get_the_author()); ?></a> on 
