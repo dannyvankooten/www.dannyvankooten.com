@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<?php echo esc_url(dvk26_get_asset_url('assets/fonts/inter.css')); ?>">
     <link rel="stylesheet" href="<?php echo esc_url(dvk26_get_asset_url('style.css')); ?>">
     <?php wp_head(); ?>
+    <meta name="theme-color" content="#030303">
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
