@@ -33,6 +33,13 @@ add_action('after_setup_theme', function() {
 
     // remove comments feed
     add_filter( 'feed_links_show_comments_feed', '__return_false' );
+
+    // Tells WP to load editor styles into the block editor iframe
+    // and scope them under .editor-styles-wrapper.
+    add_theme_support( 'editor-styles' );
+
+    // Path is relative to the theme root.
+    add_editor_style( 'style.css' );
 });
 
 // disable XMLRPC
