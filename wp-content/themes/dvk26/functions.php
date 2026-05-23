@@ -5,15 +5,17 @@ if (! isset($content_width)) {
     $content_width = 540;
 }
 
+/**
+ * @return string Absolute URL with cache-bust based on the last file modification time
+ */
 function dvk26_get_asset_url(string $filename): string {
-    $file = get_stylesheet_directory() . '/' . $filename;
-    $url = get_stylesheet_directory_uri() . '/' . $filename;
+    $file = get_stylesheet_directory() . "/{$filename}";
     $time = filemtime($file) ?: 0;
-    return $url . "?v=" . $time;
+    return get_stylesheet_directory_uri() . "/{$filename}?v={$time}";
 }
 
 // declare theme support, remove some stuff
-add_action('after_setup_theme', function() {
+add_action('after_setup_theme', static function() {
     add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
     add_theme_support( 'title-tag' );
     add_theme_support( 'automatic-feed-links' );
@@ -46,7 +48,7 @@ add_action('after_setup_theme', function() {
 add_filter('xmlrpc_enabled', '__return_false');
 
 // remove the X-Pingback HTTP header
-add_filter('wp_headers', function($headers) {
+add_filter('wp_headers', static function(array $headers) {
     if (isset($headers['X-Pingback'])) {
         unset($headers['X-Pingback']);
     }
