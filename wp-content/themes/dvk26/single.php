@@ -10,6 +10,7 @@
             <?php the_content(); ?>
         </div>
     </article>
+    <?php comments_template(); ?>
     <?php the_post_navigation(); ?>
 </main>
 <?php get_footer(); ?>
