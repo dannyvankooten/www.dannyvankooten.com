@@ -483,11 +483,3 @@ code {
 @media (min-width: 768px) {
 	body { padding: 3rem; }
 }
-@view-transition {
-	navigation: auto;
-}
-@media (prefers-reduced-motion: reduce) {
-	@view-transition {
-		navigation: none;
-	}
-}
