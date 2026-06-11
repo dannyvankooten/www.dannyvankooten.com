@@ -2,6 +2,8 @@
 
 namespace ibericode;
 
+use WP_Post;
+
 // Prevent direct file access
 defined('ABSPATH') or exit;
 
@@ -28,21 +30,19 @@ function purge_cache_for_url(string $url)
     }
 }
 
-add_action('save_post', function ($post_id) {
+add_action('save_post', static function (int $post_id, WP_Post $post) {
     // No-op if BUNNY_API_KEY constant is not set
     if (! defined('BUNNY_API_KEY')) {
         return;
     }
 
     // Check if it's not an autosave
-    if ((defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) || wp_is_post_autosave($post_id) || wp_is_post_revision($post_id)) {
+    if (wp_is_post_autosave($post_id) || wp_is_post_revision($post_id)) {
         return;
     }
 
-
-    $post_type = get_post_type($post_id);
-    $post_type_object = $post_type ? get_post_type_object($post_type) : null;
-    if (! $post_type_object || ! $post_type_object->public) {
+    // Check if post is viewable
+    if (false === is_post_publicly_viewable($post)) {
         return;
     }
 
@@ -52,4 +52,5 @@ add_action('save_post', function ($post_id) {
     }
 
     purge_cache_for_url($permalink);
-});
+    purge_cache_for_url(get_home_url());
+}, 20, 2);

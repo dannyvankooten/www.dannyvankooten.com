@@ -4,7 +4,7 @@
 Plugin Name: ibericode mods
 Description: a collection of commonly needed WordPresss modifications or enhancements
 Author: Danny van Kooten
-Version: 1.0
+Version: 1.0.1
 Author URI: https://www.dannyvankooten.com/
 Requires at least: 6.5
 Requires PHP: 8.3 
