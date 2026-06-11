@@ -10,7 +10,9 @@ add_action('wp_footer', function() {
         return;
     }
 
-    ?><script>
+    ?>
+<!-- Koko Analytics v2.4.0 - https://www.kokoanalytics.com/ -->
+<script>
 (function(o, c) {
   window[o] = c;
   var s = document.createElement('script');
@@ -21,5 +23,6 @@ add_action('wp_footer', function() {
   url: 'https://standalone.kokoanalytics.com',
   domain: 'dannyvankooten.com'
 })
-</script><?php
+</script>
+<?php
 });
