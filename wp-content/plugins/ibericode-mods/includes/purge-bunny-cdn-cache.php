@@ -30,7 +30,7 @@ function purge_cache_for_url(string $url)
     }
 }
 
-add_action('save_post', static function (int $post_id, WP_Post $post) {
+add_action('save_post', static function (int $post_id, WP_Post $post, $update) {
     // No-op if BUNNY_API_KEY constant is not set
     if (! defined('BUNNY_API_KEY')) {
         return;
@@ -52,5 +52,9 @@ add_action('save_post', static function (int $post_id, WP_Post $post) {
     }
 
     purge_cache_for_url($permalink);
-    purge_cache_for_url(get_home_url());
-}, 20, 2);
+
+    // if this is a new post, purge home page for discoverability
+    if (! $update) {
+        purge_cache_for_url(get_home_url());
+    }
+}, 20, 3);
