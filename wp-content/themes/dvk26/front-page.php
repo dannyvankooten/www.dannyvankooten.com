@@ -1,4 +1,5 @@
-<?php get_header(); the_post(); ?>
+<?php get_header();
+the_post(); ?>
 <main id="main-content" class="container site-content">
     <article>
         <h1><?php the_title(); ?></h1>
@@ -11,9 +12,9 @@
         <section>
             <h2><?php echo esc_html($year); ?></h2>
             <ol>
-<?php foreach ($posts as [$permalink, $title]) : ?>
+    <?php foreach ($posts as [$permalink, $title]) : ?>
                 <li><a href="<?php echo esc_url($permalink); ?>"><?php echo esc_html($title); ?></a></li>
-<?php endforeach; ?>
+    <?php endforeach; ?>
             </ol>
         </section>
 <?php endforeach; ?>

@@ -1,0 +1,31 @@
+{
+    "name": "ibericode/www.dannyvankooten.com",
+    "description": "Website for www.dannyvankooten.com",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Danny van Kooten",
+            "email": "hi@dvk.co"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpstan/phpstan": "^2.2",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "phpstan/extension-installer": "^1.4",
+        "squizlabs/php_codesniffer": "^4.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "check": [
+            "@check-codestyle",
+            "@check-code"
+        ],
+        "check-codestyle": "phpcs -n",
+        "check-code": "phpstan"
+    }
+}

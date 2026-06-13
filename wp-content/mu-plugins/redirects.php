@@ -2,7 +2,7 @@
 
 defined('ABSPATH') or exit;
 
-add_action('init', static function() {
+add_action('init', static function () {
     $redirects = [
         "/atom.xml" => "/feed/",
         "/about-me/" => "/about/",

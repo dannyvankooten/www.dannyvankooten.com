@@ -1,0 +1,7 @@
+parameters:
+    level: 5
+    paths:
+        - wp-config.php
+        - wp-content/mu-plugins
+        - wp-content/plugins/ibericode-seo
+        - wp-content/themes/dvk26

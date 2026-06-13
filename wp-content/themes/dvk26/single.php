@@ -1,4 +1,5 @@
-<?php get_header(); the_post(); ?>
+<?php get_header();
+the_post(); ?>
 <main id="main-content" class="container site-content">
     <article <?php post_class('h-entry') ?>>
         <h1 class="p-name"><?php the_title(); ?></h1>
