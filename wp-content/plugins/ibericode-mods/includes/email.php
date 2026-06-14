@@ -24,6 +24,6 @@ add_action('phpmailer_init', function (PHPMailer $phpmailer) {
     $phpmailer->SMTPSecure = defined('SMTP_ENCRYPTION') ? constant('SMTP_ENCRYPTION') : PHPMailer::ENCRYPTION_STARTTLS;
 });
 
-add_filter('wp_mail_from', function ($from) {
+add_filter('wp_mail_from', static function (string $from) {
     return defined('SMTP_USER') ? constant('SMTP_USER') : $from;
 });

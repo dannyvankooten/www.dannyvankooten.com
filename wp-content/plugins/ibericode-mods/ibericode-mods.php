@@ -21,12 +21,7 @@ if (! defined('ABSPATH')) {
     return;
 }
 
-require __DIR__ . '/includes/allow-svg-uploads.php';
-require __DIR__ . '/includes/noindex-archive-pages.php';
-require __DIR__ . '/includes/disable-rest-api-users-endpoint.php';
-require __DIR__ . '/includes/purge-bunny-cdn-cache.php';
-require __DIR__ . '/includes/set-cache-headers.php';
-require __DIR__ . '/includes/protect-wp-login.php';
-require __DIR__ . '/includes/smtp-mailer.php';
-require __DIR__ . '/includes/stop-comment-spam.php';
-require __DIR__ . '/includes/disable-xmlrpc.php';
+$mods = apply_filters('ibericode_mods', ['cache', 'comments', 'email', 'misc', 'security', 'seo', 'uploads']);
+foreach ($mods as $f) {
+    require __DIR__ . "/includes/{$f}.php";
+}

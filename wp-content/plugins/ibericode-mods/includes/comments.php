@@ -27,7 +27,7 @@ defined('ABSPATH') or exit;
  * }
  */
 
-add_filter('pre_comment_approved', function ($approved, $commentdata) {
+add_filter('pre_comment_approved', static function ($approved, array $commentdata) {
     if (is_wp_error($approved) || $approved === 'spam' || $approved === 'trash') {
         return $approved;
     }
@@ -47,6 +47,9 @@ add_filter('pre_comment_approved', function ($approved, $commentdata) {
 
         // if URL is given and does not contain at least one dot
         || (strlen($commentdata['comment_author_url']) > 0 && !str_contains($commentdata['comment_author_url'], '.'))
+
+        // if URL hostname is example.com
+        || parse_url($commentdata['comment_author_url'], PHP_URL_HOST) === 'example.com'
 
         // if comment text does not contain at least one space
         || !str_contains($commentdata['comment_content'], ' ')
