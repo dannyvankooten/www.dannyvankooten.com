@@ -6,6 +6,28 @@
     <arg name="colors"/>
     <arg name="extensions" value="php"/>
     <rule ref="PSR12"/>
+    <rule ref="WordPress">
+        <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracket"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
+        <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"/>
+        <exclude name="Generic.Commenting.DocComment.MissingShort"/>
+        <exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"/>
+        <exclude name="Universal.Operators.DisallowShortTernary.Found"/>
+        <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterOpen"/>
+        <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingBeforeClose"/>
+        <exclude name="Squiz.Commenting"/>
+        <exclude name="WordPress.Arrays"/>
+        <exclude name="WordPress.WhiteSpace"/>
+        <exclude name="WordPress.WP.GlobalVariablesOverride"/>
+        <exclude name="WordPress.NamingConventions"/>
+        <exclude name="WordPress.Files"/>
+        <exclude name="WordPress.PHP.YodaConditions"/>
+        <exclude name="WordPress.PHP.POSIXFunctions"/>
+        <exclude name="WordPress.Security.ValidatedSanitizedInput.InputNotSanitized"/>
+    </rule>
     <file>wp-content/mu-plugins</file>
     <file>wp-content/plugins/ibericode-seo</file>
     <file>wp-content/themes/dvk26</file>

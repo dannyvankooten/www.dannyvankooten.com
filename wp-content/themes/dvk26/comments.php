@@ -10,6 +10,7 @@ if (have_comments() || comments_open()) :
         <h2 class="comments-title m0">
             <?php
             printf(
+                /* translators: %s refers to the number of comments on this post */
                 esc_html(_n('%s comment', '%s comments', get_comments_number(), 'dvk26')),
                 esc_html(number_format_i18n(get_comments_number()))
             );
@@ -18,11 +19,13 @@ if (have_comments() || comments_open()) :
 
         <ol class="comment-list">
             <?php
-            wp_list_comments([
+            wp_list_comments(
+                [
                 'style'      => 'ol',
                 'short_ping' => true,
                 'avatar_size' => 40,
-            ]);
+                ]
+            );
             ?>
         </ol>
 
