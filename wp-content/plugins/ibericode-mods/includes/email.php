@@ -1,5 +1,7 @@
 <?php
 
+// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+
 use PHPMailer\PHPMailer\PHPMailer;
 
 // Prevent direct file access

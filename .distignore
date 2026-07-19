@@ -1,7 +1,7 @@
 # Version Control & Hidden Files
-.git
-.github
-.*
+/.git
+/.github
+/.*
 
 # Development Tools & Build Files
 **/node_modules/
@@ -31,6 +31,7 @@
 /wp-content/plugins/query-monitor/
 /wp-content/plugins/wp-crontrol/
 /wp-content/db.php
+/wp-content/plugins/ibericode-mods/.git
 
 # Database Dumps & Logs
 *.sql

@@ -4,19 +4,18 @@ namespace ibericode;
 
 use WP_Post;
 
-
 add_filter('wp_headers', static function (array $headers) {
     if (WP_DEBUG || isset($headers['Cache-Control']) || is_admin()) {
         return $headers;
     }
 
     // only set cache-headers on safe HTTP methods
-    $method = $_SERVER['REQUEST_METHOD'] ?? 'POST';
+    $method = $_SERVER['REQUEST_METHOD'] ?? 'POST'; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
     if ($method !== 'GET' && $method !== 'HEAD') {
         return $headers;
     }
 
-    $url = trim($_SERVER['REQUEST_URI'] ?? '');
+    $url = trim($_SERVER['REQUEST_URI'] ?? ''); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 
     // never set cache headers for logged-in users
     if (is_user_logged_in()) {
@@ -64,7 +63,7 @@ function purge_cache_for_url(string $url)
 
 add_action('save_post', static function (int $post_id, WP_Post $post, $update) {
     // No-op if BUNNY_API_KEY constant is not set
-    if (! defined('BUNNY_API_KEY')) {
+    if (false === defined('BUNNY_API_KEY')) {
         return;
     }
 
@@ -79,14 +78,29 @@ add_action('save_post', static function (int $post_id, WP_Post $post, $update) {
     }
 
     $permalink = get_permalink($post_id);
-    if (! $permalink) {
+    if (false === $permalink) {
         return;
     }
 
     purge_cache_for_url($permalink);
 
     // if this is a new post, purge home page for discoverability
-    if (! $update) {
+    if (false === $update) {
         purge_cache_for_url(get_home_url());
     }
 }, 20, 3);
+
+add_action('draft_to_publish', static function (WP_Post $post) {
+    $permalink = get_permalink($post);
+    if (false === $permalink) {
+        return;
+    }
+
+    purge_cache_for_url($permalink);
+    purge_cache_for_url(get_home_url());
+
+    $archive_url = get_post_type_archive_link($post->post_type);
+    if ($archive_url !== false) {
+        purge_cache_for_url($archive_url);
+    }
+}, 10, 1);

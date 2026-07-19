@@ -17,10 +17,11 @@ add_filter('wp_robots', static function (array $robots): array {
 
 if ('production' !== wp_get_environment_type()) {
     // Block crawling.
-    add_filter('robots_txt', static function(string $output, bool $public) {
+    add_filter('robots_txt', static function (string $output, bool $public) {
         $output = '# Crawling is blocked for non-production environment' . PHP_EOL;
         $output .= 'User-agent: *' . PHP_EOL;
-        $output .= 'Disallow: /' . PHP_EOL;;
+        $output .= 'Disallow: /' . PHP_EOL;
+        ;
         return $output;
     }, 1000, 2);
 

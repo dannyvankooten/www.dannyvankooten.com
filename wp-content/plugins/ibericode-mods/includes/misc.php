@@ -1,6 +1,6 @@
 <?php
 
-defined('ABSPATH') or exit; 
+defined('ABSPATH') or exit;
 
 /**
  * Display plugin update notification when DISALLOW_FILE_MODS constant set to true.

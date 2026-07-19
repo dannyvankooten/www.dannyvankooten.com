@@ -16,4 +16,5 @@ jobs:
 
       - run: find . -name '*.php' -print0 | xargs -0 -n1 php --define error_reporting=-1 -l
       - run: composer install --no-progress
+      - run: vendor/bin/phpcs
       - run: vendor/bin/phpstan

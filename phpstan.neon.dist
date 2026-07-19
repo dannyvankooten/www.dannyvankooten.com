@@ -5,3 +5,4 @@ parameters:
         - wp-content/mu-plugins
         - wp-content/plugins/ibericode-seo
         - wp-content/themes/dvk26
+    treatPhpDocTypesAsCertain: false
