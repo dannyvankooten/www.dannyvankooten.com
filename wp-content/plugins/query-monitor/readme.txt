@@ -2,8 +2,8 @@
 
 Contributors: johnbillion
 Tags: debug, debug-bar, development, performance, query monitor
-Tested up to: 6.9
-Stable tag: 4.0.6
+Tested up to: 7.0
+Stable tag: 4.0.7
 License: GPL v2 or later
 Donate link: https://github.com/sponsors/johnbillion
 
@@ -47,6 +47,17 @@ In addition:
 By default, Query Monitor's output is only shown to Administrators on single-site installations, and Super Admins on Multisite installations.
 
 In addition to this, you can set an authentication cookie which allows you to view Query Monitor output when you're not logged in (or if you're logged in as a non-Administrator). See the Settings panel for details.
+
+### Browser extension
+
+Query Monitor is also available as an optional browser dev tools extension. This is an alternative to using the in-page panel that gets output into the admin toolbar.
+
+Using the browser extension has some advantages over the in-page panel:
+
+* The Query Monitor panel doesn't take up space within the page you are inspecting
+* The panel can be resized, undocked, and moved around like any other developer tools panel
+
+[Information about the Query Monitor browser extension can be found here](https://querymonitor.com/wordpress-debugging/browser-extension/).
 
 ### Other Plugins
 
@@ -146,6 +157,14 @@ Do not report security issues on the WordPress.org support forums or via email. 
 In addition, if you like the plugin then I'd love for you to [leave a review](https://wordpress.org/support/view/plugin-reviews/query-monitor). Tell all your friends about it too!
 ## Changelog ##
 
+### 4.0.7 (20 June 2026) ###
+
+- Confirms support for WordPress 7.0
+- Makes improvements to the admin bar menu
+- Shows database queries on the timeline even when db.php isn't in place
+- Adds more error highlighting for problems with enqueued JavaScript and CSS dependencies
+- Adds some back-compat for old versions of the Chrome browser
+
 ### 4.0.6 (11 April 2026) ###
 
 Version 4 of Query Monitor adds a new timeline view, and switches from rendering its panels server-side in PHP to efficiently rendering them client-side in Preact.
@@ -228,10 +247,6 @@ Version 4 of Query Monitor adds a new timeline view, and switches from rendering
 - Improvements to accessibility of the toggle buttons
 - Failed HTTP API GET requests now show a clickable link
 
-
-### 3.20.2 (11 December 2025) ###
-
-- Prevents a PHP error being triggered under certain conditions and when no database queries are performed.
 
 ### Earlier versions ###
 
