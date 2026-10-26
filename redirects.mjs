@@ -1,5 +1,6 @@
-// Ported from wp-content/mu-plugins/redirects.php, with chains collapsed.
-// Shared by astro.config.mjs and scripts/import-wordpress.mjs.
+// Ported from WordPress's wp-content/mu-plugins/redirects.php and the production
+// NGINX config, with chains collapsed.
+// Shared by astro.config.mjs, scripts/import-wordpress.mjs and src/pages/nginx-redirects.conf.ts.
 export default {
 	'/atom.xml': '/feed.xml',
 	'/about-me/': '/about/',
@@ -102,3 +103,9 @@ export default {
 	'/sitemap_index.xml': '/sitemap-index.xml',
 	'/wp-sitemap.xml': '/sitemap-index.xml',
 };
+
+// Redirects matching a regular expression. These are only served by NGINX, not the dev server.
+export const patternRedirects = [
+	// Pages of individual plugins, which now share a single page
+	{ pattern: '^/wordpress-plugins/(.+)/$', to: '/wordpress-plugins/' },
+];
