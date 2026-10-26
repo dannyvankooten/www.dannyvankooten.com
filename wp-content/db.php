@@ -1,1 +1,0 @@
-/home/dvk/Code/2026/wp.dvk.co/wp-content/plugins/query-monitor/wp-content/db.php

@@ -1,47 +1,24 @@
-# WordPress Core
-/wp-admin/
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# build output
+dist/
+# generated types
+.astro/
 
-# WordPress Config & Content
-/wp-config.php
-/wp-content/upgrade
-/wp-content/uploads
-/wp-content/upgrade-temp-backup
-/wp-content/cache
-/koko-analytics-collect.php
-/llms.txt 
+# dependencies
+node_modules/
 
-# Logs
-*.log
-*.sql
-*_log.txt 
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Composer
-/vendor
 
-# WP-CLI
-wp-cli.local.yml
-.idea
+# environment variables
+.env
+.env.production
 
-# Secrets
-/wp-config.php
-/.env 
-/config.php
+# macOS-specific files
+.DS_Store
 
-# NPM 
-/node_modules
-
-# IDE's
-.vscode
-
-# Tooling
-.phpcs-cache
-__pycache__
-
-# Writing
-drafts/
+# jetbrains setting folder
+.idea/

@@ -1,0 +1,17 @@
+name: build
+
+on: [ push, pull_request ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx astro check
+      # also runs the SEO checks from @jdevalk/astro-seo-graph, which report warnings
+      - run: npm run build

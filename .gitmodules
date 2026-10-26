@@ -1,3 +1,0 @@
-[submodule "wp-content/mu-plugins/ibericode-mods"]
-	path = wp-content/mu-plugins/ibericode-mods
-	url = git@github.com:ibericode/ibericode-mods.git
