@@ -1,0 +1,37 @@
+---
+import { getEntry, render } from 'astro:content';
+import ContentImage from '../components/ContentImage.astro';
+import Base from '../layouts/Base.astro';
+import { description, getPosts, groupByYear, postUrl } from '../lib/content';
+
+const page = await getEntry('pages', 'index');
+if (!page) {
+	throw new Error('Missing front page: src/content/pages/index.md');
+}
+const { Content } = await render(page);
+const postsByYear = groupByYear(await getPosts());
+---
+
+<Base description={description(page)} image={page.data.image}>
+	<article>
+		<h1>{page.data.title}</h1>
+		<Content components={{ img: ContentImage }} />
+	</article>
+
+	<section class="post-list">
+		{
+			postsByYear.map(([year, posts]) => (
+				<section>
+					<h2>{year}</h2>
+					<ol>
+						{posts.map((post) => (
+							<li>
+								<a href={postUrl(post)}>{post.data.title}</a>
+							</li>
+						))}
+					</ol>
+				</section>
+			))
+		}
+	</section>
+</Base>

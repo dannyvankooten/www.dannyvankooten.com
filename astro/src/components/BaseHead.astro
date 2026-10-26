@@ -1,0 +1,126 @@
+---
+// Head metadata, ported from the ibericode-seo WordPress plugin.
+import '../styles/global.css';
+import type { ImageMetadata } from 'astro';
+import { Font, getImage } from 'astro:assets';
+import { AUTHOR_NAME, AUTHOR_PROFILES, DEFAULT_OG_IMAGE, SITE_DESCRIPTION, SITE_LOCALE, SITE_TITLE, TWITTER_HANDLE } from '../consts';
+
+interface Props {
+	/** Entry title; the site title is appended unless this is the front page */
+	title?: string;
+	description?: string;
+	/** Open Graph image: an imported image, or a path in public/ */
+	image?: ImageMetadata | string;
+	article?: {
+		published: Date;
+		modified?: Date;
+	};
+	noindex?: boolean;
+}
+
+const { title, description = SITE_DESCRIPTION, image = DEFAULT_OG_IMAGE, article, noindex = false } = Astro.props;
+
+const site = Astro.site!;
+const url = new URL(Astro.url.pathname, site).href;
+const home = new URL('/', site).href;
+const documentTitle = title ? `${title} – ${SITE_TITLE}` : SITE_TITLE;
+const imagePath = typeof image === 'string' ? image : (await getImage({ src: image, width: Math.min(image.width, 1200), format: 'jpg' })).src;
+const imageUrl = new URL(imagePath, site).href;
+const personId = `${home}#/schema/person/danny-van-kooten`;
+const published = article?.published.toISOString();
+const modified = (article?.modified ?? article?.published)?.toISOString();
+
+const graph: Record<string, unknown>[] = [];
+if (article) {
+	graph.push({
+		'@type': 'BlogPosting',
+		'@id': `${url}#article`,
+		isPartOf: { '@id': `${url}#webpage` },
+		author: { '@id': personId },
+		headline: title,
+		description,
+		image: imageUrl,
+		inLanguage: SITE_LOCALE,
+		datePublished: published,
+		dateModified: modified,
+		mainEntityOfPage: { '@id': `${url}#webpage` },
+		publisher: { '@id': personId },
+	});
+}
+graph.push(
+	{
+		'@type': 'WebPage',
+		'@id': `${url}#webpage`,
+		url,
+		name: documentTitle,
+		isPartOf: { '@id': `${home}#website` },
+		description,
+		inLanguage: SITE_LOCALE,
+	},
+	{
+		'@type': 'WebSite',
+		'@id': `${home}#website`,
+		url: home,
+		name: SITE_TITLE,
+		description: SITE_DESCRIPTION,
+		inLanguage: SITE_LOCALE,
+		publisher: { '@id': personId },
+	},
+	{
+		'@type': 'Person',
+		'@id': personId,
+		name: AUTHOR_NAME,
+		url: home,
+		image: new URL(DEFAULT_OG_IMAGE, site).href,
+		sameAs: AUTHOR_PROFILES,
+	},
+);
+const schema = { '@context': 'https://schema.org', '@graph': graph };
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{documentTitle}</title>
+<Font cssVariable="--font-inter" preload />
+{
+	// Google advises against a canonical on noindex pages
+	noindex ? (
+		<meta name="robots" content="noindex, follow" />
+	) : (
+		<>
+			<link rel="canonical" href={url} />
+			<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		</>
+	)
+}
+<meta name="description" content={description} />
+
+<meta property="og:locale" content={SITE_LOCALE.replace('-', '_')} />
+<meta property="og:type" content={article ? 'article' : 'website'} />
+<meta property="og:title" content={documentTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+<meta property="og:site_name" content={SITE_TITLE} />
+<meta property="og:image" content={imageUrl} />
+{
+	article && (
+		<>
+			<meta property="article:published_time" content={published} />
+			<meta property="article:modified_time" content={modified} />
+			<meta name="author" content={AUTHOR_NAME} />
+		</>
+	)
+}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={TWITTER_HANDLE} />
+{article && <meta name="twitter:creator" content={TWITTER_HANDLE} />}
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={new URL('/feed.xml', site)} />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="32x32" />
+<link rel="apple-touch-icon" href="/favicon-512.png" />
+<meta name="theme-color" content="#030303" />

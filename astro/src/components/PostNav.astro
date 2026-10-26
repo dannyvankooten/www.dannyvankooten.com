@@ -1,0 +1,37 @@
+---
+import type { Post } from '../lib/content';
+import { postUrl } from '../lib/content';
+
+interface Props {
+	/** The older post */
+	previous?: Post;
+	/** The newer post */
+	next?: Post;
+}
+
+const { previous, next } = Astro.props;
+---
+
+{
+	(previous || next) && (
+		<nav class="post-navigation" aria-label="Posts">
+			<h2 class="screen-reader-text">Post navigation</h2>
+			<div class="nav-links">
+				{previous && (
+					<div class="nav-previous">
+						<a href={postUrl(previous)} rel="prev">
+							{previous.data.title}
+						</a>
+					</div>
+				)}
+				{next && (
+					<div class="nav-next">
+						<a href={postUrl(next)} rel="next">
+							{next.data.title}
+						</a>
+					</div>
+				)}
+			</div>
+		</nav>
+	)
+}

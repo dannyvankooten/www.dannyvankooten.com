@@ -1,0 +1,41 @@
+---
+import { render } from 'astro:content';
+import ContentImage from '../../components/ContentImage.astro';
+import PostNav from '../../components/PostNav.astro';
+import { AUTHOR_NAME } from '../../consts';
+import Base from '../../layouts/Base.astro';
+import { type Post, description, formatDate, getPosts, isoDate, postUrl } from '../../lib/content';
+
+export async function getStaticPaths() {
+	const posts = await getPosts();
+	return posts.map((post, i) => ({
+		params: { id: post.id },
+		props: { post, next: posts[i - 1], previous: posts[i + 1] },
+	}));
+}
+
+interface Props {
+	post: Post;
+	previous?: Post;
+	next?: Post;
+}
+
+const { post, previous, next } = Astro.props;
+const { Content } = await render(post);
+const { title, date, modified, image } = post.data;
+---
+
+<Base title={title} description={description(post)} image={image} article={{ published: date, modified }}>
+	<article class="h-entry">
+		<h1 class="p-name">{title}</h1>
+		<p class="text-sm">
+			Published by <a class="p-author h-card" href="/" rel="author">{AUTHOR_NAME}</a> on
+			<time class="dt-published" datetime={isoDate(date)}>{formatDate(date)}</time>.
+			<a class="u-url" hidden href={postUrl(post)}>Permalink</a>
+		</p>
+		<div class="e-content mm">
+			<Content components={{ img: ContentImage }} />
+		</div>
+	</article>
+	<PostNav previous={previous} next={next} />
+</Base>

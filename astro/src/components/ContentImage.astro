@@ -1,0 +1,33 @@
+---
+// Renders Markdown images in MDX content: <Content components={{ img: ContentImage }} />
+import type { ImageMetadata } from 'astro';
+import { Image, Picture } from 'astro:assets';
+
+interface Props {
+	src: ImageMetadata | string;
+	alt?: string;
+	title?: string;
+}
+
+const { src, alt = '', title } = Astro.props;
+
+// Width of the content column, see .container in global.css
+const CONTENT_WIDTH = 540;
+const sizes = `(max-width: ${CONTENT_WIDTH + 32}px) calc(100vw - 2rem), ${CONTENT_WIDTH}px`;
+
+const width = typeof src === 'string' ? undefined : Math.min(src.width, CONTENT_WIDTH);
+// 1x and 2x the column width, but never larger than the original
+const widths = typeof src === 'string' ? [] : [...new Set([width!, Math.min(src.width, CONTENT_WIDTH * 2)])];
+// Keep SVGs as vectors and GIFs animated
+const keepFormat = typeof src !== 'string' && (src.format === 'svg' || src.format === 'gif');
+---
+
+{
+	typeof src === 'string' ? (
+		<img src={src} alt={alt} title={title} loading="lazy" decoding="async" />
+	) : keepFormat ? (
+		<Image src={src} alt={alt} title={title} width={width} format={src.format} />
+	) : (
+		<Picture src={src} alt={alt} title={title} width={width} widths={widths} sizes={sizes} formats={['avif', 'webp']} />
+	)
+}

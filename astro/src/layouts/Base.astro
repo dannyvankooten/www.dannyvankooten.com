@@ -1,0 +1,23 @@
+---
+import type { ComponentProps } from 'astro/types';
+import Analytics from '../components/Analytics.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import { SITE_LOCALE } from '../consts';
+
+type Props = ComponentProps<typeof BaseHead>;
+---
+
+<!doctype html>
+<html lang={SITE_LOCALE}>
+	<head>
+		<BaseHead {...Astro.props} />
+	</head>
+	<body>
+		<Header />
+		<main id="main-content" class="container site-content">
+			<slot />
+		</main>
+		<Analytics />
+	</body>
+</html>
