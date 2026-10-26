@@ -77,6 +77,10 @@ body {
 	width: 100%;
 	height: 100%;
 }
+/* The font-family attribute can't reference Astro's generated family name */
+.site-logo text {
+	font-family: var(--font-stack);
+}
 
 .site-nav-menu {
 	align-items: center;

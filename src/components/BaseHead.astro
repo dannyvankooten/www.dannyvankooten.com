@@ -81,7 +81,14 @@ const schema = { '@context': 'https://schema.org', '@graph': graph };
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{documentTitle}</title>
-<Font cssVariable="--font-inter" preload />
+<!-- Every page has regular text and bold headings; italics are loaded when used -->
+<Font
+	cssVariable="--font-inter"
+	preload={[
+		{ weight: 400, style: 'normal' },
+		{ weight: 700, style: 'normal' },
+	]}
+/>
 {
 	// Google advises against a canonical on noindex pages
 	noindex ? (

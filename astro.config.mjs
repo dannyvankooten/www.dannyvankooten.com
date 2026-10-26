@@ -64,20 +64,14 @@ export default defineConfig({
 			name: 'Inter',
 			cssVariable: '--font-inter',
 			fallbacks: ['Helvetica Neue', 'Nimbus Sans', 'Arial', 'sans-serif'],
+			// Static files for the weights the theme uses; browsers only download
+			// the ones a page needs. A variable font would be 3x as large.
 			options: {
 				variants: [
-					{
-						src: ['./src/assets/fonts/InterVariable.woff2'],
-						weight: '100 900',
-						style: 'normal',
-						display: 'swap',
-					},
-					{
-						src: ['./src/assets/fonts/InterVariable-Italic.woff2'],
-						weight: '100 900',
-						style: 'italic',
-						display: 'swap',
-					},
+					{ src: ['./src/assets/fonts/Inter-Regular.woff2'], weight: 400, style: 'normal', display: 'swap' },
+					{ src: ['./src/assets/fonts/Inter-Italic.woff2'], weight: 400, style: 'italic', display: 'swap' },
+					{ src: ['./src/assets/fonts/Inter-Bold.woff2'], weight: 700, style: 'normal', display: 'swap' },
+					{ src: ['./src/assets/fonts/Inter-BoldItalic.woff2'], weight: 700, style: 'italic', display: 'swap' },
 				],
 			},
 		},
